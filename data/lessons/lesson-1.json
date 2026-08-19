@@ -26,22 +26,6 @@
       "id": "vocabulary-match-a",
       "title": "a Match verbs 1–9 to the nouns.",
       "hideAnswersOnError": true,
-      "wordBanks": [
-        {
-          "label": "Nouns",
-          "words": [
-            "a  a film, a TV series",
-            "b  in a house, with friends",
-            "c  an email, a magazine",
-            "d  two sisters, a pet",
-            "e  to the cinema, on holiday",
-            "f  exercise, sport",
-            "g  a foreign language, English",
-            "h  dance music, R&B",
-            "i  in Kraków, Poland, in 1997"
-          ]
-        }
-      ],
       "items": [
         {
           "id": "1",
