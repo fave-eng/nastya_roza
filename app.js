@@ -1227,6 +1227,58 @@
     });
   }
 
+  function exerciseBlockIsComplete(blockNode) {
+    if (!blockNode) return false;
+    const items = [...blockNode.querySelectorAll('[data-exercise-item]')]
+      .filter((itemNode) => !itemNode.classList.contains('exercise-example'));
+    if (!items.length) return false;
+
+    return items.every((itemNode) => {
+      const inputType = safeText(itemNode.dataset.inputType);
+      if (inputType === 'gaps') {
+        const gaps = [...itemNode.querySelectorAll('[data-gap-index]')];
+        return gaps.length > 0 && gaps.every((input) => safeText(input.value).trim());
+      }
+      if (inputType === 'multiple') {
+        return Boolean(itemNode.querySelector('input[type="checkbox"]:checked'));
+      }
+      if (inputType === 'single' || inputType === 'circle-or-tick') {
+        return Boolean(itemNode.querySelector('input[type="radio"]:checked'));
+      }
+      if (inputType === 'select') {
+        return Boolean(safeText(itemNode.querySelector('select')?.value).trim());
+      }
+      if (inputType === 'odd-one-out') {
+        const selected = itemNode.querySelector('input[type="radio"]:checked');
+        const reason = itemNode.querySelector('[data-odd-reason]');
+        return Boolean(selected && safeText(reason?.value).trim());
+      }
+      if (inputType === 'crossword-word') {
+        const letters = [...itemNode.querySelectorAll('[data-crossword-letter]')];
+        return letters.length > 0 && letters.every((input) => safeText(input.value).trim());
+      }
+      const control = itemNode.querySelector('input, textarea, select');
+      return Boolean(control && safeText(control.value).trim());
+    });
+  }
+
+  function wireConditionalLessonBlocks(root) {
+    const gatedBlocks = [...root.querySelectorAll('[data-reveal-after-complete]')];
+    if (!gatedBlocks.length) return;
+
+    const update = () => {
+      gatedBlocks.forEach((blockNode) => {
+        const sourceId = safeText(blockNode.dataset.revealAfterComplete).trim();
+        const sourceBlock = sourceId ? root.querySelector(`[data-task="${CSS.escape(sourceId)}"]`) : null;
+        blockNode.hidden = !exerciseBlockIsComplete(sourceBlock);
+      });
+    };
+
+    root.addEventListener('input', update);
+    root.addEventListener('change', update);
+    update();
+  }
+
   function renderExerciseItem(item, blockId, index, inlineNumberedItems = false) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
@@ -1465,7 +1517,11 @@
       const exerciseBody = hasStickyImage
         ? `<div class="exercise-sticky-layout"><div class="exercise-sticky-media">${image}</div><div class="exercise-sticky-content">${intro}${exerciseContent}</div></div>`
         : `${image}${intro}${exerciseContent}`;
-      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}" data-task="${escapeHtml(id)}" data-type="exercise">
+      const revealAfterComplete = safeText(block.revealAfterComplete).trim();
+      const revealAttrs = revealAfterComplete
+        ? ` data-reveal-after-complete="${escapeHtml(revealAfterComplete)}" hidden`
+        : '';
+      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}" data-task="${escapeHtml(id)}" data-type="exercise"${revealAttrs}>
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${exerciseBody}
       </article>`;
@@ -1772,6 +1828,7 @@
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
     wireLessonInteractiveInputs(root);
+    wireConditionalLessonBlocks(root);
 
     root.querySelectorAll('[data-reorder-source]').forEach((source) => {
       source.addEventListener('click', (event) => {
