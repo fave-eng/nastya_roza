@@ -1,0 +1,216 @@
+{
+  "id": "lesson-N",
+  "number": "N",
+  "title": "New A1 homework",
+  "subtitle": "Greetings, introductions and the verb be",
+  "status": "draft",
+  "publishedAt": "YYYY-MM-DD",
+  "totalPoints": 12,
+  "vocabularyId": "vocab-lesson-1",
+  "grammarIds": [
+    "grammar-to-be"
+  ],
+  "notification": {
+    "enabled": false,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "A1 · Lesson 1",
+      "title": "HELLO!",
+      "text": "Practise introductions and the verb be."
+    },
+    {
+      "type": "exercise",
+      "id": "be-choice",
+      "title": "Choose the correct form of be.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "I ___ Anastasia.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "She ___ my classmate.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "We ___ students.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "You ___ in my English class.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "He ___ from Spain.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "They ___ friends.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "introductions",
+      "title": "Complete the mini-dialogues.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "segments": [
+            "Hello! My name ",
+            " Rozalina."
+          ],
+          "answers": [
+            [
+              "is",
+              "'s",
+              "’s"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Hi! I ",
+            " Maria."
+          ],
+          "answers": [
+            [
+              "am",
+              "'m",
+              "’m"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Where ",
+            " you from?"
+          ],
+          "answers": [
+            [
+              "are"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " from Latvia."
+          ],
+          "answers": [
+            [
+              "am",
+              "'m",
+              "’m"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Nice to ",
+            " you!"
+          ],
+          "answers": [
+            [
+              "meet"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Nice to meet you, ",
+            "!"
+          ],
+          "answers": [
+            [
+              "too"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "about-me",
+      "title": "Write 3 short sentences about yourself.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "textarea",
+          "prompt": "Example: I am Anastasia. I am from ... I am a student.",
+          "placeholder": "Write here...",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}

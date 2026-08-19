@@ -1,0 +1,192 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "title": "At home",
+  "subtitle": "Rooms, furniture, there is / there are and prepositions",
+  "status": "available",
+  "publishedAt": "2026-08-15",
+  "totalPoints": 12,
+  "vocabularyId": "vocab-lesson-4",
+  "grammarIds": [
+    "grammar-there-is-are"
+  ],
+  "notification": {
+    "enabled": false,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "A1 · Lesson 4",
+      "title": "AT HOME",
+      "text": "Describe a room and say where things are."
+    },
+    {
+      "type": "exercise",
+      "id": "there-is-are",
+      "title": "Choose there is or there are.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "___ a sofa in the living room.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "___ two chairs in the kitchen.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "___ a bed next to the window.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "___ three pictures on the wall.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "___ a table in my room.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "___ books on the shelf.",
+          "options": [
+            "There is",
+            "There are"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "prepositions",
+      "title": "Choose the correct preposition.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "The lamp is ___ the table.",
+          "options": [
+            "on",
+            "under",
+            "between"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "The shoes are ___ the bed.",
+          "options": [
+            "in",
+            "under",
+            "next to"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "The sofa is ___ the window.",
+          "options": [
+            "next to",
+            "on",
+            "in"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "The cat is ___ the box.",
+          "options": [
+            "in",
+            "between",
+            "on"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "The table is ___ the two chairs.",
+          "options": [
+            "under",
+            "between",
+            "in"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "The picture is ___ the wall.",
+          "options": [
+            "on",
+            "under",
+            "next to"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "room-writing",
+      "title": "Describe your room.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "textarea",
+          "prompt": "Write 4–6 sentences with there is / there are.",
+          "placeholder": "There is... There are...",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}

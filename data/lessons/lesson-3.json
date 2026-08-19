@@ -1,0 +1,204 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "title": "My day",
+  "subtitle": "Daily routines and the present simple",
+  "status": "available",
+  "publishedAt": "2026-08-10",
+  "totalPoints": 12,
+  "vocabularyId": "vocab-lesson-3",
+  "grammarIds": [
+    "grammar-present-simple"
+  ],
+  "notification": {
+    "enabled": false,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "A1 · Lesson 3",
+      "title": "MY DAY",
+      "text": "Practise everyday routines and present simple sentences."
+    },
+    {
+      "type": "exercise",
+      "id": "present-simple-choice",
+      "title": "Choose the correct verb form.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "I ___ at 7 o’clock.",
+          "options": [
+            "get up",
+            "gets up"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "She ___ breakfast at home.",
+          "options": [
+            "have",
+            "has"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "We ___ English on Tuesdays.",
+          "options": [
+            "study",
+            "studies"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "My friend ___ to work by bus.",
+          "options": [
+            "go",
+            "goes"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "They ___ TV in the evening.",
+          "options": [
+            "watch",
+            "watches"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "He ___ to bed at 11.",
+          "options": [
+            "go",
+            "goes"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "do-does",
+      "title": "Complete the questions with do or does.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "segments": [
+            "",
+            " you work?"
+          ],
+          "answers": [
+            [
+              "Do"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            " she study English?"
+          ],
+          "answers": [
+            [
+              "Does"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "What time ",
+            " they get up?"
+          ],
+          "answers": [
+            [
+              "do"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "Where ",
+            " he live?"
+          ],
+          "answers": [
+            [
+              "does"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " you like coffee?"
+          ],
+          "answers": [
+            [
+              "Do"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "",
+            " your friend play sport?"
+          ],
+          "answers": [
+            [
+              "Does"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "routine-writing",
+      "title": "Describe your weekday.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "textarea",
+          "prompt": "Write 4–6 simple sentences.",
+          "placeholder": "I get up at... Then I...",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}
