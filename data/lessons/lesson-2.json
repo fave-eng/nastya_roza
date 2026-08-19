@@ -30,20 +30,27 @@
           "number": 1,
           "example": true,
           "input": "single",
-          "prompt": "A · K · E",
-          "exampleAnswer": "E"
+          "prompt": "train",
+          "options": [
+            "A",
+            "K",
+            "E"
+          ],
+          "answer": 2,
+          "optionStyle": "circle"
         },
         {
           "id": "2",
           "number": 2,
           "input": "single",
-          "prompt": "train",
+          "prompt": "tree",
           "options": [
             "G",
             "V",
             "R"
           ],
-          "answer": 2
+          "answer": 2,
+          "optionStyle": "circle"
         },
         {
           "id": "3",
@@ -55,7 +62,8 @@
             "B",
             "F"
           ],
-          "answer": 1
+          "answer": 1,
+          "optionStyle": "circle"
         },
         {
           "id": "4",
@@ -67,7 +75,8 @@
             "P",
             "J"
           ],
-          "answer": 1
+          "answer": 1,
+          "optionStyle": "circle"
         },
         {
           "id": "5",
@@ -79,7 +88,8 @@
             "S",
             "K"
           ],
-          "answer": 2
+          "answer": 2,
+          "optionStyle": "circle"
         },
         {
           "id": "6",
@@ -91,7 +101,8 @@
             "C",
             "D"
           ],
-          "answer": 0
+          "answer": 0,
+          "optionStyle": "circle"
         },
         {
           "id": "7",
@@ -103,11 +114,10 @@
             "I",
             "U"
           ],
-          "answer": 1
+          "answer": 1,
+          "optionStyle": "circle"
         }
-      ],
-      "image": "images/lesson-2-pronunciation-a.png",
-      "imageAlt": "Original workbook exercise: pronunciation, the alphabet, part a."
+      ]
     },
     {
       "type": "audio",
@@ -129,52 +139,48 @@
           "example": true,
           "input": "text",
           "prompt": "my",
-          "exampleAnswer": "I"
+          "exampleAnswer": "I",
+          "exampleLayout": "inline"
         },
         {
           "id": "2",
           "number": 2,
           "input": "text",
           "prompt": "play",
-          "answer": "A",
-          "placeholder": "Letter"
+          "answer": "A"
         },
         {
           "id": "3",
           "number": 3,
           "input": "text",
           "prompt": "you",
-          "answer": "U",
-          "placeholder": "Letter"
+          "answer": "U"
         },
         {
           "id": "4",
           "number": 4,
           "input": "text",
           "prompt": "see",
-          "answer": "P",
-          "placeholder": "Letter"
+          "answer": "P"
         },
         {
           "id": "5",
           "number": 5,
           "input": "text",
           "prompt": "go",
-          "answer": "O",
-          "placeholder": "Letter"
+          "answer": "O"
         },
         {
           "id": "6",
           "number": 6,
           "input": "text",
           "prompt": "why",
-          "answer": "Y",
-          "placeholder": "Letter"
+          "answer": "Y"
         }
       ],
-      "image": "images/lesson-2-alphabet-quiz.png",
-      "imageAlt": "Original workbook alphabet quiz for pronunciation part c.",
-      "inlineNumberedItems": true
+      "inlineNumberedItems": true,
+      "introTitle": "Alphabet Quiz",
+      "introText": "A + O P U Y"
     },
     {
       "type": "section",
@@ -193,8 +199,15 @@
           "number": 1,
           "example": true,
           "input": "single",
-          "prompt": "hair — red · curly · straight · tall",
-          "exampleAnswer": "tall"
+          "prompt": "hair",
+          "options": [
+            "red",
+            "curly",
+            "straight",
+            "tall"
+          ],
+          "answer": 3,
+          "optionStyle": "cross-out"
         },
         {
           "id": "2",
@@ -207,7 +220,8 @@
             "blue",
             "brown"
           ],
-          "answer": 0
+          "answer": 0,
+          "optionStyle": "cross-out"
         },
         {
           "id": "3",
@@ -220,7 +234,8 @@
             "long",
             "overweight"
           ],
-          "answer": 2
+          "answer": 2,
+          "optionStyle": "cross-out"
         },
         {
           "id": "4",
@@ -233,7 +248,8 @@
             "beautiful",
             "bald"
           ],
-          "answer": 3
+          "answer": 3,
+          "optionStyle": "cross-out"
         }
       ]
     },

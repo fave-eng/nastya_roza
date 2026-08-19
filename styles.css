@@ -2785,3 +2785,113 @@ label.odd-option {
     transform: rotate(90deg);
   }
 }
+
+
+/* Lesson 2 workbook-style text recreation: no source screenshots needed. */
+.workbook-option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.workbook-option-list .option {
+  position: relative;
+  min-width: 48px;
+  min-height: 40px;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 6px 9px;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.workbook-option-list .option:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  transform: none;
+}
+
+.workbook-option-list .option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.workbook-option-list .option span,
+.workbook-example-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 32px;
+  padding: 4px 8px;
+  color: var(--dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.workbook-option-list.option-style-circle .option:has(input:checked),
+.workbook-option-list.option-style-cross-out .option:has(input:checked) {
+  border-color: transparent;
+  background: transparent;
+  color: var(--dark);
+}
+
+.workbook-option-list.option-style-circle .option:has(input:checked) span,
+.workbook-example-options.option-style-circle .is-example-selected {
+  border: 2px solid var(--indigo);
+  border-radius: 999px;
+  background: #eef2ff;
+}
+
+.workbook-option-list.option-style-cross-out .option:has(input:checked) span,
+.workbook-example-options.option-style-cross-out .is-example-selected {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #be123c;
+}
+
+.workbook-example-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.workbook-inline-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--dark);
+  font-size: .98rem;
+  line-height: 1.65;
+}
+
+.workbook-inline-example strong {
+  min-width: 42px;
+  padding: 0 8px 2px;
+  border-bottom: 1px solid #94a3b8;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .workbook-option-list,
+  .workbook-example-options {
+    gap: 7px 8px;
+  }
+
+  .workbook-option-list .option {
+    min-width: 42px;
+    padding: 5px 7px;
+  }
+}

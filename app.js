@@ -1289,6 +1289,7 @@
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
     const context = renderExerciseContext(item);
+    const optionStyle = ['circle', 'cross-out'].includes(safeText(item.optionStyle)) ? safeText(item.optionStyle) : '';
     const itemWordBank = Array.isArray(item.wordBank) && item.wordBank.length
       ? `<div class="word-bank exercise-item-word-bank" aria-label="Слова для задания"><strong class="word-bank-label">Слова</strong>${item.wordBank.map((word) => `<span>${escapeHtml(word)}</span>`).join('')}</div>`
       : '';
@@ -1349,6 +1350,21 @@
       </div>`;
     }
 
+    if (item.example && item.input === 'single' && optionStyle && Array.isArray(item.options) && item.options.length) {
+      const selectedIndex = Number(item.answer);
+      const options = item.options.map((option, optionIndex) => `<span class="workbook-example-option${optionIndex === selectedIndex ? ' is-example-selected' : ''}">${escapeHtml(option)}</span>`).join('');
+      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}" data-input-type="single">
+        <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
+        <div class="exercise-control"><div class="workbook-example-options option-style-${escapeHtml(optionStyle)}">${options}</div></div>
+      </div>`;
+    }
+
+    if (item.example && item.exampleLayout === 'inline') {
+      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}">
+        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content workbook-inline-example"><span>${prompt}</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div></div>
+      </div>`;
+    }
+
     if (item.example && item.input === 'odd-one-out') {
       const selectedIndex = Number(item.answer);
       const options = (item.options || []).map((option, optionIndex) => `<span class="odd-option ${optionIndex === selectedIndex ? 'selected' : ''}">${escapeHtml(option)}</span>`).join('');
@@ -1377,7 +1393,8 @@
       control = `<div class="circle-or-tick-sentence"><span>${escapeHtml(segments[0] || '')}</span>${options.map((option, optionIndex) => `<label class="circle-choice"><input type="radio" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>${optionIndex === 0 ? '<span class="choice-slash"> / </span>' : ''}`).join('')}<span>${escapeHtml(segments[1] || '')}</span><label class="circle-tick" title="Both are correct"><input type="radio" name="${escapeHtml(inputId)}" value="both"><span aria-hidden="true">✓</span><span class="sr-only">Both are correct</span></label></div>`;
     } else if (item.input === 'multiple' || item.input === 'single') {
       const inputType = item.input === 'multiple' ? 'checkbox' : 'radio';
-      control = `<div class="option-list compact-options">${(item.options || []).map((option, optionIndex) => `<label class="option"><input type="${inputType}" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div>`;
+      const workbookClass = optionStyle ? ` workbook-option-list option-style-${escapeHtml(optionStyle)}` : '';
+      control = `<div class="option-list compact-options${workbookClass}">${(item.options || []).map((option, optionIndex) => `<label class="option"><input type="${inputType}" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div>`;
     } else if (item.input === 'select') {
       control = `<select id="${escapeHtml(inputId)}"><option value="">Choose an answer</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
     } else if (item.input === 'textarea') {
