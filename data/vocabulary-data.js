@@ -2,330 +2,142 @@
 window.VOCABULARY_DATA = [
   {
     "id": "vocab-lesson-1",
-    "title": "Greetings & introductions",
-    "label": "Lesson 1 · Hello! Nice to meet you",
-    "icon": "👋",
+    "title": "Common verb phrases",
+    "label": "Lesson 1 · 1A Are you? Can you? Do you? Did you?",
+    "icon": "💬",
     "type": "lesson",
     "linkedLessonId": "lesson-1",
     "page": "vocabulary.html?id=vocab-lesson-1",
     "words": [
       {
         "id": "vocab-lesson-1-1",
-        "en": "hello",
-        "ru": "привет"
+        "en": "be born",
+        "ru": "родиться"
       },
       {
         "id": "vocab-lesson-1-2",
-        "en": "hi",
-        "ru": "привет"
+        "en": "do exercise",
+        "ru": "делать упражнения; заниматься"
       },
       {
         "id": "vocab-lesson-1-3",
-        "en": "good morning",
-        "ru": "доброе утро"
+        "en": "do sport",
+        "ru": "заниматься спортом"
       },
       {
         "id": "vocab-lesson-1-4",
-        "en": "good afternoon",
-        "ru": "добрый день"
+        "en": "listen to music",
+        "ru": "слушать музыку"
       },
       {
         "id": "vocab-lesson-1-5",
-        "en": "good evening",
-        "ru": "добрый вечер"
+        "en": "dance music",
+        "ru": "танцевальная музыка"
       },
       {
         "id": "vocab-lesson-1-6",
-        "en": "goodbye",
-        "ru": "до свидания"
+        "en": "read an email",
+        "ru": "читать электронное письмо"
       },
       {
         "id": "vocab-lesson-1-7",
-        "en": "name",
-        "ru": "имя"
+        "en": "read a magazine",
+        "ru": "читать журнал"
       },
       {
         "id": "vocab-lesson-1-8",
-        "en": "first name",
-        "ru": "имя"
+        "en": "speak a foreign language",
+        "ru": "говорить на иностранном языке"
       },
       {
         "id": "vocab-lesson-1-9",
-        "en": "surname",
-        "ru": "фамилия"
+        "en": "live in a house",
+        "ru": "жить в доме"
       },
       {
         "id": "vocab-lesson-1-10",
-        "en": "country",
-        "ru": "страна"
+        "en": "live with friends",
+        "ru": "жить с друзьями"
       },
       {
         "id": "vocab-lesson-1-11",
-        "en": "city",
-        "ru": "город"
+        "en": "watch a film",
+        "ru": "смотреть фильм"
       },
       {
         "id": "vocab-lesson-1-12",
-        "en": "student",
-        "ru": "ученик / студент"
+        "en": "watch a TV series",
+        "ru": "смотреть сериал"
       },
       {
         "id": "vocab-lesson-1-13",
-        "en": "teacher",
-        "ru": "учитель"
+        "en": "go to the cinema",
+        "ru": "ходить в кино"
       },
       {
         "id": "vocab-lesson-1-14",
-        "en": "nice to meet you",
-        "ru": "приятно познакомиться"
-      }
-    ]
-  },
-  {
-    "id": "vocab-lesson-2",
-    "title": "Family",
-    "label": "Lesson 2 · My family",
-    "icon": "👨‍👩‍👧‍👦",
-    "type": "lesson",
-    "linkedLessonId": "lesson-2",
-    "page": "vocabulary.html?id=vocab-lesson-2",
-    "words": [
-      {
-        "id": "vocab-lesson-2-1",
-        "en": "family",
-        "ru": "семья"
+        "en": "go on holiday",
+        "ru": "ездить в отпуск"
       },
       {
-        "id": "vocab-lesson-2-2",
-        "en": "mother",
-        "ru": "мама"
+        "id": "vocab-lesson-1-15",
+        "en": "have two sisters",
+        "ru": "иметь двух сестёр"
       },
       {
-        "id": "vocab-lesson-2-3",
-        "en": "father",
-        "ru": "папа"
+        "id": "vocab-lesson-1-16",
+        "en": "have a pet",
+        "ru": "иметь домашнего питомца"
       },
       {
-        "id": "vocab-lesson-2-4",
-        "en": "parents",
-        "ru": "родители"
+        "id": "vocab-lesson-1-17",
+        "en": "last weekend",
+        "ru": "в прошлые выходные"
       },
       {
-        "id": "vocab-lesson-2-5",
-        "en": "sister",
-        "ru": "сестра"
+        "id": "vocab-lesson-1-18",
+        "en": "railway station",
+        "ru": "железнодорожная станция"
       },
       {
-        "id": "vocab-lesson-2-6",
-        "en": "brother",
-        "ru": "брат"
+        "id": "vocab-lesson-1-19",
+        "en": "learn English",
+        "ru": "учить английский"
       },
       {
-        "id": "vocab-lesson-2-7",
-        "en": "daughter",
-        "ru": "дочь"
+        "id": "vocab-lesson-1-20",
+        "en": "boyfriend",
+        "ru": "парень"
       },
       {
-        "id": "vocab-lesson-2-8",
-        "en": "son",
-        "ru": "сын"
+        "id": "vocab-lesson-1-21",
+        "en": "girlfriend",
+        "ru": "девушка"
       },
       {
-        "id": "vocab-lesson-2-9",
-        "en": "husband",
-        "ru": "муж"
+        "id": "vocab-lesson-1-22",
+        "en": "birthday",
+        "ru": "день рождения"
       },
       {
-        "id": "vocab-lesson-2-10",
-        "en": "wife",
-        "ru": "жена"
+        "id": "vocab-lesson-1-23",
+        "en": "go out",
+        "ru": "выходить куда-либо; гулять"
       },
       {
-        "id": "vocab-lesson-2-11",
-        "en": "grandmother",
-        "ru": "бабушка"
+        "id": "vocab-lesson-1-24",
+        "en": "have a nice time",
+        "ru": "хорошо провести время"
       },
       {
-        "id": "vocab-lesson-2-12",
-        "en": "grandfather",
-        "ru": "дедушка"
+        "id": "vocab-lesson-1-25",
+        "en": "last night",
+        "ru": "вчера вечером / прошлой ночью"
       },
       {
-        "id": "vocab-lesson-2-13",
-        "en": "child",
-        "ru": "ребёнок"
-      },
-      {
-        "id": "vocab-lesson-2-14",
-        "en": "children",
-        "ru": "дети"
-      }
-    ]
-  },
-  {
-    "id": "vocab-lesson-3",
-    "title": "Daily routine",
-    "label": "Lesson 3 · My day",
-    "icon": "⏰",
-    "type": "lesson",
-    "linkedLessonId": "lesson-3",
-    "page": "vocabulary.html?id=vocab-lesson-3",
-    "words": [
-      {
-        "id": "vocab-lesson-3-1",
-        "en": "get up",
-        "ru": "вставать"
-      },
-      {
-        "id": "vocab-lesson-3-2",
-        "en": "have breakfast",
-        "ru": "завтракать"
-      },
-      {
-        "id": "vocab-lesson-3-3",
-        "en": "go to work",
-        "ru": "идти / ехать на работу"
-      },
-      {
-        "id": "vocab-lesson-3-4",
-        "en": "go to school",
-        "ru": "идти / ехать в школу"
-      },
-      {
-        "id": "vocab-lesson-3-5",
-        "en": "study",
-        "ru": "учиться"
-      },
-      {
-        "id": "vocab-lesson-3-6",
-        "en": "work",
-        "ru": "работать"
-      },
-      {
-        "id": "vocab-lesson-3-7",
-        "en": "have lunch",
-        "ru": "обедать"
-      },
-      {
-        "id": "vocab-lesson-3-8",
-        "en": "come home",
-        "ru": "приходить домой"
-      },
-      {
-        "id": "vocab-lesson-3-9",
-        "en": "have dinner",
-        "ru": "ужинать"
-      },
-      {
-        "id": "vocab-lesson-3-10",
-        "en": "watch TV",
-        "ru": "смотреть телевизор"
-      },
-      {
-        "id": "vocab-lesson-3-11",
-        "en": "read",
-        "ru": "читать"
-      },
-      {
-        "id": "vocab-lesson-3-12",
-        "en": "go to bed",
-        "ru": "ложиться спать"
-      },
-      {
-        "id": "vocab-lesson-3-13",
-        "en": "morning",
-        "ru": "утро"
-      },
-      {
-        "id": "vocab-lesson-3-14",
-        "en": "evening",
-        "ru": "вечер"
-      }
-    ]
-  },
-  {
-    "id": "vocab-lesson-4",
-    "title": "Home & furniture",
-    "label": "Lesson 4 · At home",
-    "icon": "🏠",
-    "type": "lesson",
-    "linkedLessonId": "lesson-4",
-    "page": "vocabulary.html?id=vocab-lesson-4",
-    "words": [
-      {
-        "id": "vocab-lesson-4-1",
-        "en": "house",
-        "ru": "дом"
-      },
-      {
-        "id": "vocab-lesson-4-2",
-        "en": "flat",
-        "ru": "квартира"
-      },
-      {
-        "id": "vocab-lesson-4-3",
-        "en": "room",
-        "ru": "комната"
-      },
-      {
-        "id": "vocab-lesson-4-4",
-        "en": "kitchen",
-        "ru": "кухня"
-      },
-      {
-        "id": "vocab-lesson-4-5",
-        "en": "bedroom",
-        "ru": "спальня"
-      },
-      {
-        "id": "vocab-lesson-4-6",
-        "en": "living room",
-        "ru": "гостиная"
-      },
-      {
-        "id": "vocab-lesson-4-7",
-        "en": "bathroom",
-        "ru": "ванная"
-      },
-      {
-        "id": "vocab-lesson-4-8",
-        "en": "table",
-        "ru": "стол"
-      },
-      {
-        "id": "vocab-lesson-4-9",
-        "en": "chair",
-        "ru": "стул"
-      },
-      {
-        "id": "vocab-lesson-4-10",
-        "en": "sofa",
-        "ru": "диван"
-      },
-      {
-        "id": "vocab-lesson-4-11",
-        "en": "bed",
-        "ru": "кровать"
-      },
-      {
-        "id": "vocab-lesson-4-12",
-        "en": "lamp",
-        "ru": "лампа"
-      },
-      {
-        "id": "vocab-lesson-4-13",
-        "en": "window",
-        "ru": "окно"
-      },
-      {
-        "id": "vocab-lesson-4-14",
-        "en": "door",
-        "ru": "дверь"
-      },
-      {
-        "id": "vocab-lesson-4-15",
-        "en": "shelf",
-        "ru": "полка"
+        "id": "vocab-lesson-1-26",
+        "en": "last year",
+        "ru": "в прошлом году"
       }
     ]
   }

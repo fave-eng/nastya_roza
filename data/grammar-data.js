@@ -1,576 +1,363 @@
 /** A1 grammar for Anastasia and Rozalina. */
 window.GRAMMAR_DATA = [
   {
-    "id": "grammar-to-be",
+    "id": "grammar-word-order-questions",
     "order": 1,
-    "title": "Verb be: am, is, are",
+    "title": "Word order in questions",
     "level": "A1",
     "status": "available",
-    "page": "grammar-topic.html?id=grammar-to-be",
+    "page": "grammar-topic.html?id=grammar-word-order-questions",
     "passed": false,
     "attempts": 0,
-    "lockOnPass": false,
-    "revealAnswersOnError": true,
-    "explanation": "Глагол be нужен, когда мы говорим, кто мы, откуда мы, сколько нам лет или в каком мы состоянии.",
-    "formula": "I am · he/she/it is · you/we/they are",
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "explanation": "В английском вопросе порядок слов зависит от типа глагола. С be мы ставим am / is / are / was / were перед подлежащим. С can ставим can перед подлежащим. С обычными глаголами в Present Simple нужны do / does, а в Past Simple — did. После do / does / did основной глагол используется в базовой форме.",
+    "formula": "Question word + be / can / do / does / did + subject + main verb ...?",
     "glanceCards": [
       {
-        "icon": "🙋",
-        "label": "I",
-        "hint": "только am",
-        "pattern": "I am",
-        "example": "I am a student."
+        "icon": "🔹",
+        "label": "be",
+        "hint": "am / is / are / was / were",
+        "pattern": "Where are you from?",
+        "example": "When is your birthday?"
       },
       {
-        "icon": "👤",
-        "label": "He / She / It",
-        "hint": "используем is",
-        "pattern": "He is · She is · It is",
-        "example": "She is from Riga."
+        "icon": "🟣",
+        "label": "can",
+        "hint": "can + subject + base verb",
+        "pattern": "Can I help you?",
+        "example": "Can you speak English?"
       },
       {
-        "icon": "👥",
-        "label": "You / We / They",
-        "hint": "используем are",
-        "pattern": "You are · We are · They are",
-        "example": "We are friends."
+        "icon": "🟢",
+        "label": "Present Simple",
+        "hint": "do / does",
+        "pattern": "What do you do?",
+        "example": "Does your sister have a job?"
+      },
+      {
+        "icon": "🟠",
+        "label": "Past Simple",
+        "hint": "did",
+        "pattern": "Where did you go?",
+        "example": "Did you see the match?"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Утверждение",
-        "text": "Поставь am / is / are после подлежащего.",
-        "example": "They are at home."
+        "title": "1. Вопросы с be",
+        "text": "Поставь форму be перед подлежащим. Дополнительный do / does / did не нужен.",
+        "example": "You are from Poland. → Where are you from?"
       },
       {
-        "title": "2. Отрицание",
-        "text": "Добавь not после am / is / are.",
-        "example": "He is not tired."
+        "title": "2. Вопросы с can",
+        "text": "Can ставится перед подлежащим, а следующий глагол остаётся в базовой форме без to.",
+        "example": "You can swim. → Can you swim?"
       },
       {
-        "title": "3. Вопрос",
-        "text": "Поставь am / is / are перед подлежащим.",
-        "example": "Are you ready?"
+        "title": "3. Present Simple",
+        "text": "С обычным глаголом используй do для I / you / we / they и does для he / she / it. После does глагол без -s.",
+        "example": "She works here. → Where does she work?"
+      },
+      {
+        "title": "4. Past Simple",
+        "text": "С обычным глаголом используй did для всех лиц. После did глагол возвращается в базовую форму.",
+        "example": "You went out. → Where did you go?"
+      },
+      {
+        "title": "5. Question words",
+        "text": "What, where, when, why, how и how often обычно стоят в самом начале вопроса.",
+        "example": "How often do you go out?"
+      },
+      {
+        "title": "6. Короткие ответы",
+        "text": "Повтори вспомогательный или модальный глагол из вопроса.",
+        "example": "Do you work? — Yes, I do. / No, I don’t."
       }
     ],
     "tables": [
       {
-        "title": "Forms of be",
+        "title": "Question patterns",
         "headers": [
-          "Subject",
-          "Positive",
-          "Negative",
+          "Type",
+          "Statement / negative",
           "Question"
         ],
         "rows": [
           [
-            "I",
-            "am",
-            "am not",
-            "Am I...?"
+            "be",
+            "You are / You aren’t tired.",
+            "Are you tired?"
           ],
           [
-            "he / she / it",
-            "is",
-            "is not / isn’t",
-            "Is he...?"
+            "can",
+            "You can / can’t drive.",
+            "Can you drive?"
           ],
           [
-            "you / we / they",
-            "are",
-            "are not / aren’t",
-            "Are you...?"
+            "Present Simple",
+            "She works / doesn’t work.",
+            "Does she work?"
+          ],
+          [
+            "Past Simple",
+            "They went / didn’t go.",
+            "Did they go?"
+          ]
+        ]
+      },
+      {
+        "title": "Short answers",
+        "headers": [
+          "Question",
+          "Yes",
+          "No"
+        ],
+        "rows": [
+          [
+            "Are you...?",
+            "Yes, I am.",
+            "No, I’m not."
+          ],
+          [
+            "Can you...?",
+            "Yes, I can.",
+            "No, I can’t."
+          ],
+          [
+            "Do you...?",
+            "Yes, I do.",
+            "No, I don’t."
+          ],
+          [
+            "Did you...?",
+            "Yes, I did.",
+            "No, I didn’t."
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Examples",
+        "title": "Compare the word order",
         "items": [
-          "I am Anastasia.",
-          "She is my friend.",
-          "We are in English class.",
-          "Are you from Latvia?"
+          "Where are you from?",
+          "Can I help you?",
+          "What do you do at the weekend?",
+          "Where did you go last Saturday?"
         ]
       }
     ],
     "commonMistakes": [
-      "I is ✗ → I am ✓",
-      "She are ✗ → She is ✓",
-      "You is ✗ → You are ✓"
+      "Where you live? ✗ → Where do you live? ✓",
+      "Does she works here? ✗ → Does she work here? ✓",
+      "Where did you went? ✗ → Where did you go? ✓",
+      "Can you to help me? ✗ → Can you help me? ✓"
     ],
     "exercises": [
       {
-        "id": "be-practice",
-        "title": "Choose the correct form.",
+        "id": "questions-step-1",
+        "title": "Choose the correct question word helper.",
         "difficulty": "Starter",
         "items": [
           {
             "id": "1",
             "input": "single",
-            "prompt": "I ___ happy.",
+            "prompt": "___ your sister have a job?",
             "options": [
-              "am",
-              "is",
-              "are"
+              "Does",
+              "Is",
+              "Did"
             ],
             "answer": 0
           },
           {
             "id": "2",
             "input": "single",
-            "prompt": "He ___ my teacher.",
+            "prompt": "___ you born in Budapest?",
             "options": [
-              "am",
-              "is",
-              "are"
+              "Were",
+              "Did",
+              "Do"
             ],
-            "answer": 1
+            "answer": 0
           },
           {
             "id": "3",
             "input": "single",
-            "prompt": "They ___ at home.",
+            "prompt": "Hello. ___ I help you?",
             "options": [
-              "am",
-              "is",
-              "are"
+              "Can",
+              "Am",
+              "Does"
             ],
-            "answer": 2
+            "answer": 0
           },
           {
             "id": "4",
             "input": "single",
-            "prompt": "We ___ ready.",
+            "prompt": "___ you see the match last night?",
             "options": [
-              "am",
-              "is",
-              "are"
+              "Did",
+              "Do",
+              "Were"
             ],
-            "answer": 2
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "questions-step-2",
+        "title": "Complete the questions with do, does, or did.",
+        "difficulty": "Practice",
+        "instructions": "Write one word in each gap.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "Where ",
+              " you live?"
+            ],
+            "answers": [
+              [
+                "do"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "What ",
+              " your boyfriend do?"
+            ],
+            "answers": [
+              [
+                "does"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "Where ",
+              " she learn English?"
+            ],
+            "answers": [
+              [
+                "did"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "What time ",
+              " you get up?"
+            ],
+            "answers": [
+              [
+                "do"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "questions-step-3",
+        "title": "Choose the correct word order.",
+        "difficulty": "Challenge",
+        "items": [
+          {
+            "id": "1",
+            "input": "circle-or-tick",
+            "segments": [
+              "Where ",
+              " last Saturday?"
+            ],
+            "options": [
+              "did you go",
+              "did you went"
+            ],
+            "answer": "0"
+          },
+          {
+            "id": "2",
+            "input": "circle-or-tick",
+            "segments": [
+              "Does ",
+              " a job?"
+            ],
+            "options": [
+              "your sister have",
+              "your sister has"
+            ],
+            "answer": "0"
+          },
+          {
+            "id": "3",
+            "input": "circle-or-tick",
+            "segments": [
+              "Can ",
+              " English?"
+            ],
+            "options": [
+              "you speak",
+              "you to speak"
+            ],
+            "answer": "0"
+          },
+          {
+            "id": "4",
+            "input": "circle-or-tick",
+            "segments": [
+              "When ",
+              "?"
+            ],
+            "options": [
+              "is your birthday",
+              "your birthday is"
+            ],
+            "answer": "0"
+          }
+        ]
+      },
+      {
+        "id": "questions-step-4",
+        "title": "Write the complete question.",
+        "difficulty": "Build it",
+        "instructions": "Use the words in brackets.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "(your parents / do / what)",
+            "answer": "What do your parents do?"
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "(your girlfriend / be / a student)",
+            "answer": "Is your girlfriend a student?"
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "(you / have / a nice time / last weekend)",
+            "answer": "Did you have a nice time last weekend?"
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "(your best friend / can / drive)",
+            "answer": "Can your best friend drive?"
           }
         ]
       }
     ],
     "linkedLessonId": "lesson-1"
-  },
-  {
-    "id": "grammar-have-got",
-    "order": 2,
-    "title": "Have got / has got",
-    "level": "A1",
-    "status": "available",
-    "page": "grammar-topic.html?id=grammar-have-got",
-    "passed": false,
-    "attempts": 0,
-    "lockOnPass": false,
-    "revealAnswersOnError": true,
-    "explanation": "Have got означает «иметь». Форма зависит от подлежащего.",
-    "formula": "I/you/we/they have got · he/she/it has got",
-    "glanceCards": [
-      {
-        "icon": "🎒",
-        "label": "I / You / We / They",
-        "hint": "have got",
-        "pattern": "We have got",
-        "example": "We have got a dog."
-      },
-      {
-        "icon": "👤",
-        "label": "He / She / It",
-        "hint": "has got",
-        "pattern": "She has got",
-        "example": "She has got a sister."
-      }
-    ],
-    "miniRules": [
-      {
-        "title": "1. I / you / we / they",
-        "text": "Используй have got.",
-        "example": "I have got a brother."
-      },
-      {
-        "title": "2. he / she / it",
-        "text": "Используй has got.",
-        "example": "He has got a car."
-      },
-      {
-        "title": "3. Вопрос",
-        "text": "Have / Has ставим в начало.",
-        "example": "Have you got a sister?"
-      }
-    ],
-    "tables": [
-      {
-        "title": "Have got forms",
-        "headers": [
-          "Subject",
-          "Positive",
-          "Negative",
-          "Question"
-        ],
-        "rows": [
-          [
-            "I / you / we / they",
-            "have got",
-            "haven’t got",
-            "Have ... got?"
-          ],
-          [
-            "he / she / it",
-            "has got",
-            "hasn’t got",
-            "Has ... got?"
-          ]
-        ]
-      }
-    ],
-    "exampleGroups": [
-      {
-        "title": "Examples",
-        "items": [
-          "I have got two sisters.",
-          "Tom has got a new phone.",
-          "Have you got a pet?",
-          "She hasn’t got a car."
-        ]
-      }
-    ],
-    "commonMistakes": [
-      "She have got ✗ → She has got ✓",
-      "I has got ✗ → I have got ✓"
-    ],
-    "exercises": [
-      {
-        "id": "have-got-practice",
-        "title": "Choose have got or has got.",
-        "difficulty": "Starter",
-        "items": [
-          {
-            "id": "1",
-            "input": "single",
-            "prompt": "I ___ a cat.",
-            "options": [
-              "have got",
-              "has got"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "2",
-            "input": "single",
-            "prompt": "Anna ___ a brother.",
-            "options": [
-              "have got",
-              "has got"
-            ],
-            "answer": 1
-          },
-          {
-            "id": "3",
-            "input": "single",
-            "prompt": "They ___ two children.",
-            "options": [
-              "have got",
-              "has got"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "4",
-            "input": "single",
-            "prompt": "My dad ___ a bike.",
-            "options": [
-              "have got",
-              "has got"
-            ],
-            "answer": 1
-          }
-        ]
-      }
-    ],
-    "linkedLessonId": "lesson-2"
-  },
-  {
-    "id": "grammar-present-simple",
-    "order": 3,
-    "title": "Present simple",
-    "level": "A1",
-    "status": "available",
-    "page": "grammar-topic.html?id=grammar-present-simple",
-    "passed": false,
-    "attempts": 0,
-    "lockOnPass": false,
-    "revealAnswersOnError": true,
-    "explanation": "Present simple используем для регулярных действий, привычек и фактов.",
-    "formula": "I/you/we/they work · he/she/it works · Do/Does ...?",
-    "glanceCards": [
-      {
-        "icon": "🔁",
-        "label": "Routine",
-        "hint": "регулярное действие",
-        "pattern": "I work every day.",
-        "example": "We study on Mondays."
-      },
-      {
-        "icon": "➕",
-        "label": "He / She / It",
-        "hint": "обычно добавляем -s",
-        "pattern": "She works",
-        "example": "He gets up at 7."
-      },
-      {
-        "icon": "❓",
-        "label": "Questions",
-        "hint": "do / does",
-        "pattern": "Do you...? · Does she...?",
-        "example": "Does she work here?"
-      }
-    ],
-    "miniRules": [
-      {
-        "title": "1. I / you / we / they",
-        "text": "Используй базовую форму глагола.",
-        "example": "They live in Riga."
-      },
-      {
-        "title": "2. he / she / it",
-        "text": "Обычно добавь -s к глаголу.",
-        "example": "She lives in Riga."
-      },
-      {
-        "title": "3. Вопрос",
-        "text": "Do для I/you/we/they, does для he/she/it.",
-        "example": "Does he work?"
-      }
-    ],
-    "tables": [
-      {
-        "title": "Present simple forms",
-        "headers": [
-          "Subject",
-          "Positive",
-          "Negative",
-          "Question"
-        ],
-        "rows": [
-          [
-            "I / you / we / they",
-            "work",
-            "don’t work",
-            "Do ... work?"
-          ],
-          [
-            "he / she / it",
-            "works",
-            "doesn’t work",
-            "Does ... work?"
-          ]
-        ]
-      }
-    ],
-    "exampleGroups": [
-      {
-        "title": "Examples",
-        "items": [
-          "I get up at 7.",
-          "She goes to work by bus.",
-          "We don’t work on Sunday.",
-          "Does he like coffee?"
-        ]
-      }
-    ],
-    "commonMistakes": [
-      "He work ✗ → He works ✓",
-      "Does she works? ✗ → Does she work? ✓"
-    ],
-    "exercises": [
-      {
-        "id": "present-simple-practice",
-        "title": "Choose the correct form.",
-        "difficulty": "Starter",
-        "items": [
-          {
-            "id": "1",
-            "input": "single",
-            "prompt": "I ___ English.",
-            "options": [
-              "study",
-              "studies"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "2",
-            "input": "single",
-            "prompt": "She ___ coffee.",
-            "options": [
-              "like",
-              "likes"
-            ],
-            "answer": 1
-          },
-          {
-            "id": "3",
-            "input": "single",
-            "prompt": "They ___ at 8.",
-            "options": [
-              "start",
-              "starts"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "4",
-            "input": "single",
-            "prompt": "He ___ TV in the evening.",
-            "options": [
-              "watch",
-              "watches"
-            ],
-            "answer": 1
-          }
-        ]
-      }
-    ],
-    "linkedLessonId": "lesson-3"
-  },
-  {
-    "id": "grammar-there-is-are",
-    "order": 4,
-    "title": "There is / There are",
-    "level": "A1",
-    "status": "available",
-    "page": "grammar-topic.html?id=grammar-there-is-are",
-    "passed": false,
-    "attempts": 0,
-    "lockOnPass": false,
-    "revealAnswersOnError": true,
-    "explanation": "There is / there are используем, чтобы сказать, что что-то находится или существует в каком-то месте.",
-    "formula": "There is + singular · There are + plural",
-    "glanceCards": [
-      {
-        "icon": "1️⃣",
-        "label": "One thing",
-        "hint": "единственное число",
-        "pattern": "There is",
-        "example": "There is a table."
-      },
-      {
-        "icon": "🔢",
-        "label": "Two or more",
-        "hint": "множественное число",
-        "pattern": "There are",
-        "example": "There are two chairs."
-      }
-    ],
-    "miniRules": [
-      {
-        "title": "1. Один предмет",
-        "text": "Используй there is.",
-        "example": "There is a bed in the room."
-      },
-      {
-        "title": "2. Несколько предметов",
-        "text": "Используй there are.",
-        "example": "There are books on the shelf."
-      },
-      {
-        "title": "3. Вопрос",
-        "text": "Is there...? / Are there...?",
-        "example": "Is there a kitchen?"
-      }
-    ],
-    "tables": [
-      {
-        "title": "There is / are forms",
-        "headers": [
-          "Number",
-          "Positive",
-          "Negative",
-          "Question"
-        ],
-        "rows": [
-          [
-            "one",
-            "There is",
-            "There isn’t",
-            "Is there...?"
-          ],
-          [
-            "two or more",
-            "There are",
-            "There aren’t",
-            "Are there...?"
-          ]
-        ]
-      }
-    ],
-    "exampleGroups": [
-      {
-        "title": "Examples",
-        "items": [
-          "There is a sofa in the living room.",
-          "There are three windows.",
-          "Is there a bathroom?",
-          "There aren’t any chairs."
-        ]
-      }
-    ],
-    "commonMistakes": [
-      "There are a table ✗ → There is a table ✓",
-      "There is two chairs ✗ → There are two chairs ✓"
-    ],
-    "exercises": [
-      {
-        "id": "there-practice",
-        "title": "Choose there is or there are.",
-        "difficulty": "Starter",
-        "items": [
-          {
-            "id": "1",
-            "input": "single",
-            "prompt": "___ a lamp on the desk.",
-            "options": [
-              "There is",
-              "There are"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "2",
-            "input": "single",
-            "prompt": "___ two beds in the room.",
-            "options": [
-              "There is",
-              "There are"
-            ],
-            "answer": 1
-          },
-          {
-            "id": "3",
-            "input": "single",
-            "prompt": "___ a picture on the wall.",
-            "options": [
-              "There is",
-              "There are"
-            ],
-            "answer": 0
-          },
-          {
-            "id": "4",
-            "input": "single",
-            "prompt": "___ books on the table.",
-            "options": [
-              "There is",
-              "There are"
-            ],
-            "answer": 1
-          }
-        ]
-      }
-    ],
-    "linkedLessonId": "lesson-4"
   }
 ];

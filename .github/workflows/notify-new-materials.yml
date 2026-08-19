@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       lesson_id:
-        description: 'Lesson ID, for example lesson-5'
+        description: 'Lesson ID, for example lesson-1'
         required: true
         type: string
 

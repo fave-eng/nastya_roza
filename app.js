@@ -1188,15 +1188,56 @@
       });
       updateCrosswordHiddenAnswer(workspace);
     });
+
+    const sourceAnswerText = (sourceItem) => {
+      if (!sourceItem) return '';
+      const inputType = safeText(sourceItem.dataset.inputType);
+      if (inputType === 'gaps') {
+        return [...sourceItem.querySelectorAll('[data-gap-index]')]
+          .map((input) => safeText(input.value).trim())
+          .filter(Boolean)
+          .join(' ');
+      }
+      if (inputType === 'single' || inputType === 'multiple' || inputType === 'select') return '';
+      return safeText(sourceItem.querySelector('input, textarea')?.value).trim();
+    };
+
+    root.querySelectorAll('[data-dependent-prompt]').forEach((target) => {
+      const blockId = safeText(target.dataset.responseFromBlock).trim();
+      const itemId = safeText(target.dataset.responseFromItem).trim();
+      const template = safeText(target.dataset.responseTemplate, '{answer}');
+      const sourceBlock = blockId ? root.querySelector(`[data-task="${CSS.escape(blockId)}"]`) : null;
+      const sourceItem = sourceBlock && itemId
+        ? sourceBlock.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`)
+        : null;
+      const dependentItem = target.closest('[data-exercise-item]');
+      const dependentControls = dependentItem ? [...dependentItem.querySelectorAll('input, textarea, select')] : [];
+
+      const update = () => {
+        const answer = sourceAnswerText(sourceItem);
+        target.textContent = answer ? template.replaceAll('{answer}', answer) : '';
+        dependentControls.forEach((control) => { control.disabled = !answer; });
+      };
+
+      sourceItem?.querySelectorAll('input, textarea, select').forEach((control) => {
+        control.addEventListener('input', update);
+        control.addEventListener('change', update);
+      });
+      update();
+    });
   }
 
   function renderExerciseItem(item, blockId, index, inlineNumberedItems = false) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
-    const prompt = escapeHtml(item.prompt || '');
+    const promptFrom = item.promptFrom && typeof item.promptFrom === 'object' ? item.promptFrom : null;
+    const prompt = promptFrom
+      ? `<span data-dependent-prompt data-response-from-block="${escapeHtml(promptFrom.blockId || '')}" data-response-from-item="${escapeHtml(promptFrom.itemId || '')}" data-response-template="${escapeHtml(promptFrom.template || '{answer}')}"></span>`
+      : escapeHtml(item.prompt || '');
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
     const context = renderExerciseContext(item);
+    const afterText = item.afterText ? `<div class="exercise-source-line exercise-source-after">${escapeHtml(item.afterText)}</div>` : '';
 
     if (item.displayOnly) {
       const className = item.displayStyle === 'heading' ? 'exercise-display-heading' : 'exercise-display-copy';
@@ -1297,7 +1338,7 @@
 
     if (inlineNumberedItems && numberMarkup && !prompt && (item.input === 'gaps' || item.input === 'circle-or-tick')) {
       return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
-        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${context}${control}</div></div>
+        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${context}${control}${afterText}</div></div>
         <div class="feedback" aria-live="polite"></div>
       </div>`;
     }
@@ -1307,7 +1348,7 @@
       : '';
     return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
       ${itemHeader}
-      <div class="exercise-control">${context}${control}</div>
+      <div class="exercise-control">${context}${control}${afterText}</div>
       <div class="feedback" aria-live="polite"></div>
     </div>`;
   }
