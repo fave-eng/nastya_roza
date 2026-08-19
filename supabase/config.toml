@@ -1,4 +1,4 @@
-project_id = "svejqcrkxkiheucglikq"
+project_id = "zqzgarvmpqqqaobeicpc"
 
-[functions.notify-telegram]
-verify_jwt = false
+[functions.notify-anastasia-rozalina]
+verify_jwt = true

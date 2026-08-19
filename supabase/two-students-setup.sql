@@ -1,58 +1,36 @@
--- Anastasia & Rozalina English Space
--- Run in Supabase Dashboard -> SQL Editor once before using cloud progress.
--- This script creates/updates the progress tables for two profiles and lets both
--- student IDs use the same teacher Telegram chat.
+-- Anastasia + Rozalina: additive setup inside the EXISTING shared Supabase project.
+-- This script does not delete data, policies, recipients or functions of other sites.
 
 create extension if not exists pgcrypto;
 
-create table if not exists public.homework_progress (
-  student_id text not null,
-  student_name text,
-  lesson_id text not null,
-  lesson_title text,
-  status text not null default 'checked',
-  answers jsonb not null default '{}'::jsonb,
-  score_correct integer,
-  score_total integer,
-  score_percent integer,
-  checked_at timestamptz,
-  submitted_at timestamptz,
-  updated_at timestamptz not null default now(),
-  primary key (student_id, lesson_id)
+-- The progress tables are shared across sites and separated by student_id.
+-- Add only columns required by the pair site's current progress/report protocol.
+alter table public.homework_progress add column if not exists student_name text;
+alter table public.homework_progress add column if not exists lesson_title text;
+alter table public.homework_progress add column if not exists answers jsonb not null default '{}'::jsonb;
+alter table public.homework_progress add column if not exists score_correct integer;
+alter table public.homework_progress add column if not exists score_total integer;
+alter table public.homework_progress add column if not exists score_percent integer;
+alter table public.homework_progress add column if not exists checked_at timestamptz;
+alter table public.homework_progress add column if not exists submitted_at timestamptz;
+alter table public.homework_progress add column if not exists locked_at timestamptz;
+alter table public.homework_progress add column if not exists report_status text not null default 'not_sent';
+alter table public.homework_progress add column if not exists report_sent_at timestamptz;
+alter table public.homework_progress add column if not exists report_error text;
+alter table public.homework_progress add column if not exists updated_at timestamptz not null default now();
+
+-- Pair-only server tables. They intentionally have their own names so Telegram
+-- setup for this pair cannot interfere with another site's routing/logs.
+create table if not exists public.pair_telegram_recipients (
+  student_id text primary key,
+  chat_id bigint not null,
+  message_thread_id bigint,
+  enabled boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
 );
 
-create table if not exists public.vocabulary_progress (
-  student_id text not null,
-  word_key text not null,
-  word_id text,
-  en text,
-  ru text,
-  source_topic_id text,
-  status text not null,
-  learned_at timestamptz,
-  updated_at timestamptz not null default now(),
-  primary key (student_id, word_key)
-);
-
-create table if not exists public.vocabulary_topic_progress (
-  student_id text not null,
-  topic_id text not null,
-  tests jsonb not null default '[]'::jsonb,
-  updated_at timestamptz not null default now(),
-  primary key (student_id, topic_id)
-);
-
-create table if not exists public.grammar_progress (
-  student_id text not null,
-  topic_id text not null,
-  passed boolean not null default false,
-  attempts integer not null default 0,
-  best_score integer not null default 0,
-  updated_at timestamptz not null default now(),
-  primary key (student_id, topic_id)
-);
-
-create table if not exists public.homework_reports (
+create table if not exists public.pair_homework_reports (
   id uuid primary key default gen_random_uuid(),
   student_id text not null,
   lesson_id text not null,
@@ -70,16 +48,7 @@ create table if not exists public.homework_reports (
   unique (student_id, lesson_id, submission_key)
 );
 
-create table if not exists public.telegram_recipients (
-  id uuid primary key default gen_random_uuid(),
-  student_id text not null unique,
-  chat_id bigint not null,
-  enabled boolean not null default true,
-  created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now()
-);
-
-create table if not exists public.material_publications (
+create table if not exists public.pair_material_publications (
   id uuid primary key default gen_random_uuid(),
   student_id text not null,
   material_type text not null,
@@ -95,106 +64,63 @@ create table if not exists public.material_publications (
   unique (student_id, material_type, material_id, notification_version)
 );
 
--- The original one-student project had chat_id UNIQUE. A pair course needs the
--- same teacher chat to be reusable for both student IDs.
-do $$
-declare c record;
-begin
-  for c in
-    select conname
-    from pg_constraint
-    where conrelid = 'public.telegram_recipients'::regclass
-      and contype = 'u'
-      and pg_get_constraintdef(oid) ilike '%(chat_id)%'
-  loop
-    execute format('alter table public.telegram_recipients drop constraint %I', c.conname);
-  end loop;
-end $$;
-
-create or replace function public.set_pair_course_updated_at()
-returns trigger
-language plpgsql
-as $$
-begin
-  new.updated_at = now();
-  return new;
-end;
-$$;
-
-do $$
-declare t text;
-begin
-  foreach t in array array[
-    'homework_progress','vocabulary_progress','vocabulary_topic_progress',
-    'grammar_progress','homework_reports','telegram_recipients','material_publications'
-  ] loop
-    execute format('drop trigger if exists pair_course_updated_at on public.%I', t);
-    execute format('create trigger pair_course_updated_at before update on public.%I for each row execute function public.set_pair_course_updated_at()', t);
-  end loop;
-end $$;
-
--- Replace any old browser policies with policies for the two selectable profiles.
-do $$
-declare p record;
-begin
-  for p in
-    select schemaname, tablename, policyname
-    from pg_policies
-    where schemaname = 'public'
-      and tablename in ('homework_progress','vocabulary_progress','vocabulary_topic_progress','grammar_progress')
-  loop
-    execute format('drop policy %I on %I.%I', p.policyname, p.schemaname, p.tablename);
-  end loop;
-end $$;
-
+-- Pair-specific browser access. Existing policies stay untouched.
 alter table public.homework_progress enable row level security;
 alter table public.vocabulary_progress enable row level security;
 alter table public.vocabulary_topic_progress enable row level security;
 alter table public.grammar_progress enable row level security;
 
-create policy pair_homework_access on public.homework_progress
-for all to anon, authenticated
-using (student_id in ('anastasia','rozalina'))
-with check (student_id in ('anastasia','rozalina'));
+do $$
+begin
+  if not exists (select 1 from pg_policies where schemaname='public' and tablename='homework_progress' and policyname='pair_anastasia_rozalina_homework') then
+    execute $p$create policy pair_anastasia_rozalina_homework on public.homework_progress
+      for all to anon, authenticated using (student_id in ('anastasia','rozalina'))
+      with check (student_id in ('anastasia','rozalina'))$p$;
+  end if;
 
-create policy pair_vocabulary_access on public.vocabulary_progress
-for all to anon, authenticated
-using (student_id in ('anastasia','rozalina'))
-with check (student_id in ('anastasia','rozalina'));
+  if not exists (select 1 from pg_policies where schemaname='public' and tablename='vocabulary_progress' and policyname='pair_anastasia_rozalina_vocabulary') then
+    execute $p$create policy pair_anastasia_rozalina_vocabulary on public.vocabulary_progress
+      for all to anon, authenticated using (student_id in ('anastasia','rozalina'))
+      with check (student_id in ('anastasia','rozalina'))$p$;
+  end if;
 
-create policy pair_vocabulary_topics_access on public.vocabulary_topic_progress
-for all to anon, authenticated
-using (student_id in ('anastasia','rozalina'))
-with check (student_id in ('anastasia','rozalina'));
+  if not exists (select 1 from pg_policies where schemaname='public' and tablename='vocabulary_topic_progress' and policyname='pair_anastasia_rozalina_vocabulary_topics') then
+    execute $p$create policy pair_anastasia_rozalina_vocabulary_topics on public.vocabulary_topic_progress
+      for all to anon, authenticated using (student_id in ('anastasia','rozalina'))
+      with check (student_id in ('anastasia','rozalina'))$p$;
+  end if;
 
-create policy pair_grammar_access on public.grammar_progress
-for all to anon, authenticated
-using (student_id in ('anastasia','rozalina'))
-with check (student_id in ('anastasia','rozalina'));
+  if not exists (select 1 from pg_policies where schemaname='public' and tablename='grammar_progress' and policyname='pair_anastasia_rozalina_grammar') then
+    execute $p$create policy pair_anastasia_rozalina_grammar on public.grammar_progress
+      for all to anon, authenticated using (student_id in ('anastasia','rozalina'))
+      with check (student_id in ('anastasia','rozalina'))$p$;
+  end if;
+end $$;
 
 grant select, insert, update, delete on public.homework_progress to anon, authenticated;
 grant select, insert, update, delete on public.vocabulary_progress to anon, authenticated;
 grant select, insert, update, delete on public.vocabulary_topic_progress to anon, authenticated;
 grant select, insert, update, delete on public.grammar_progress to anon, authenticated;
 
--- Server-only Telegram/report tables.
-alter table public.homework_reports enable row level security;
-alter table public.telegram_recipients enable row level security;
-alter table public.material_publications enable row level security;
-revoke all on public.homework_reports from anon, authenticated;
-revoke all on public.telegram_recipients from anon, authenticated;
-revoke all on public.material_publications from anon, authenticated;
-grant all on public.homework_reports to service_role;
-grant all on public.telegram_recipients to service_role;
-grant all on public.material_publications to service_role;
+-- Pair Telegram/report tables are server-only.
+alter table public.pair_telegram_recipients enable row level security;
+alter table public.pair_homework_reports enable row level security;
+alter table public.pair_material_publications enable row level security;
+revoke all on public.pair_telegram_recipients from anon, authenticated;
+revoke all on public.pair_homework_reports from anon, authenticated;
+revoke all on public.pair_material_publications from anon, authenticated;
+grant all on public.pair_telegram_recipients to service_role;
+grant all on public.pair_homework_reports to service_role;
+grant all on public.pair_material_publications to service_role;
 
--- Telegram group for both profiles: https://t.me/c/4474379239/2
--- Group chat_id: -1004474379239. Topic/thread ID 2 is configured in the Edge Function.
-insert into public.telegram_recipients (student_id, chat_id, enabled)
+-- Both students use the same Telegram group and forum topic:
+-- https://t.me/c/4474379239/2
+insert into public.pair_telegram_recipients (student_id, chat_id, message_thread_id, enabled)
 values
-  ('anastasia', -1004474379239, true),
-  ('rozalina', -1004474379239, true)
+  ('anastasia', -1004474379239, 2, true),
+  ('rozalina',  -1004474379239, 2, true)
 on conflict (student_id) do update
 set chat_id = excluded.chat_id,
+    message_thread_id = excluded.message_thread_id,
     enabled = excluded.enabled,
     updated_at = now();

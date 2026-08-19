@@ -304,7 +304,21 @@
 
       const baseUrl = safeText(config.supabase?.url).replace(/\/+$/, '');
       const anonKey = safeText(config.supabase?.anonKey).trim();
-      const endpoint = `${baseUrl}/functions/v1/notify-telegram`;
+      const endpoint = `${baseUrl}/functions/v1/notify-anastasia-rozalina`;
+      const lesson = HOMEWORK_DATA.find((item) => item.id === lessonId) || {};
+      let homeworkUrl = '';
+      let resultUrl = '';
+      try {
+        const target = new URL(lesson.page || `lesson.html?id=${encodeURIComponent(lessonId)}`, document.baseURI);
+        target.searchParams.set('student', studentId);
+        target.hash = '';
+        homeworkUrl = target.toString();
+        target.hash = 'lesson-result';
+        resultUrl = target.toString();
+      } catch (error) {
+        console.warn('Could not build homework report links:', error);
+      }
+
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
@@ -313,10 +327,12 @@
           authorization: `Bearer ${anonKey}`
         },
         body: JSON.stringify({
-          eventType: 'homework_report',
+          kind: 'homework_submit_report',
           studentId,
           lessonId,
-          lessonUrl: window.location.href
+          lessonTitle: safeText(lesson.title, lessonId),
+          homeworkUrl,
+          resultUrl
         })
       });
 
@@ -412,12 +428,16 @@
               checkedAt: row.checked_at || row.updated_at
             };
           }
-          if (row.status === 'submitted') {
-            homework.submissions[row.lesson_id] = { savedAt: row.submitted_at || row.updated_at, status: 'cloud' };
-            // A homework assignment is counted as complete after it is submitted,
-            // even if some answers are incorrect.
-            homework.completedIds.push(row.lesson_id);
-          } else if (Number(row.score_total) > 0 && Number(row.score_correct) === Number(row.score_total)) {
+          const cloudSubmitted = ['submitted_pending_report', 'submitted'].includes(String(row.status || ''));
+          if (cloudSubmitted) {
+            homework.submissions[row.lesson_id] = {
+              savedAt: row.submitted_at || row.updated_at,
+              status: row.status === 'submitted' ? 'cloud' : 'cloud-pending-report',
+              cloudStatus: row.status || null,
+              reportStatus: row.report_status || null,
+              reportSentAt: row.report_sent_at || null,
+              reportError: row.report_error || null
+            };
             homework.completedIds.push(row.lesson_id);
           }
         });
@@ -471,25 +491,51 @@
 
       if (sections.includes('homework')) {
         const progress = this.loadHomeworkProgress();
-        const lessonIds = unique([...Object.keys(progress.results), ...Object.keys(progress.submissions)]);
+        const { data: cloudHomeworkRows, error: cloudHomeworkReadError } = await client
+          .from(tables.homework)
+          .select('lesson_id,status,report_status')
+          .eq('student_id', studentId);
+        if (cloudHomeworkReadError) throw cloudHomeworkReadError;
+
+        const finalCloudLessonIds = new Set(
+          (cloudHomeworkRows || [])
+            .filter((row) => row.status === 'submitted' && row.report_status === 'sent')
+            .map((row) => row.lesson_id)
+        );
+        const lessonIds = unique([...Object.keys(progress.results), ...Object.keys(progress.submissions)])
+          .filter((lessonId) => !finalCloudLessonIds.has(lessonId));
+
         const rows = lessonIds.map((lessonId) => {
           const result = progress.results[lessonId] || {};
           const submission = progress.submissions[lessonId];
           const lesson = HOMEWORK_DATA.find((item) => item.id === lessonId) || {};
           const total = Number(result.total || 0);
           const correct = Number(result.correct || 0);
+          const hasSubmission = Boolean(submission);
+          const isFinalCloudSubmission = submission?.cloudStatus === 'submitted' && submission?.reportStatus === 'sent';
+          const pendingReportStatus = submission?.reportStatus === 'failed' || submission?.status === 'report-failed'
+            ? 'failed'
+            : 'pending';
           return {
             student_id: studentId,
-            student_name: safeText(student.nameEn || student.nameRu),
+            student_name: safeText(student.nameRu || student.nameEn),
             lesson_id: lessonId,
-            lesson_title: [safeText(lesson.title, lessonId), safeText(lesson.subtitle)].filter(Boolean).join(' — '),
-            status: submission ? 'submitted' : 'checked',
+            lesson_title: safeText(lesson.title, lessonId),
+            status: hasSubmission
+              ? (isFinalCloudSubmission ? 'submitted' : 'submitted_pending_report')
+              : 'draft',
             answers: result.answers && typeof result.answers === 'object' ? result.answers : {},
             score_correct: total > 0 ? correct : null,
             score_total: total > 0 ? total : null,
             score_percent: total > 0 ? safePercent(correct, total) : null,
             checked_at: result.checkedAt || null,
-            submitted_at: submission?.savedAt || null
+            submitted_at: submission?.savedAt || null,
+            locked_at: submission?.savedAt || null,
+            report_status: hasSubmission
+              ? (isFinalCloudSubmission ? 'sent' : pendingReportStatus)
+              : 'not_sent',
+            report_sent_at: isFinalCloudSubmission ? (submission?.reportSentAt || submission?.savedAt || null) : null,
+            report_error: isFinalCloudSubmission ? null : (submission?.reportError || null)
           };
         });
         if (rows.length) {
@@ -1763,7 +1809,11 @@
       const submittedAt = new Date().toISOString();
       updatedProgress.submissions[lesson.id] = {
         savedAt: submittedAt,
-        status: CloudService.isConfigured() ? 'pending-cloud' : 'local'
+        status: CloudService.isConfigured() ? 'pending-cloud' : 'local',
+        cloudStatus: CloudService.isConfigured() ? 'submitted_pending_report' : null,
+        reportStatus: CloudService.isConfigured() ? 'pending' : null,
+        reportSentAt: null,
+        reportError: null
       };
       // Submission, not a perfect score, marks the homework as completed.
       if (!updatedProgress.completedIds.includes(lesson.id)) updatedProgress.completedIds.push(lesson.id);
@@ -1781,7 +1831,11 @@
           const latest = window.ProgressService.loadHomeworkProgress();
           latest.submissions[lesson.id] = {
             savedAt: submittedAt,
-            status: report?.skipped ? 'cloud' : 'report-sent'
+            status: 'report-sent',
+            cloudStatus: 'submitted',
+            reportStatus: 'sent',
+            reportSentAt: report?.reportSentAt || new Date().toISOString(),
+            reportError: null
           };
           window.ProgressService.saveHomeworkProgress(latest);
           showToast(report?.skipped ? 'Homework saved in Supabase.' : 'Homework submitted. The teacher received the Telegram report.');
@@ -1791,7 +1845,14 @@
       } catch (error) {
         console.error('Homework submission/report error:', error);
         const latest = window.ProgressService.loadHomeworkProgress();
-        latest.submissions[lesson.id] = { savedAt: submittedAt, status: 'report-failed' };
+        latest.submissions[lesson.id] = {
+          savedAt: submittedAt,
+          status: 'report-failed',
+          cloudStatus: 'submitted_pending_report',
+          reportStatus: 'failed',
+          reportSentAt: null,
+          reportError: safeText(error?.message, 'unknown error')
+        };
         window.ProgressService.saveHomeworkProgress(latest);
         showToast(`Homework saved, but the Telegram report was not sent: ${safeText(error?.message, 'unknown error')}`);
       } finally {

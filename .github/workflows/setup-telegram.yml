@@ -1,0 +1,17 @@
+name: 1 - Telegram setup info (no PAT required)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup instructions
+        run: |
+          echo "No SUPABASE_ACCESS_TOKEN is required for this repository."
+          echo "Create/deploy the dedicated Edge Function 'notify-anastasia-rozalina' directly in the Supabase Dashboard."
+          echo "This does not replace Telegram functions used by any other site."
