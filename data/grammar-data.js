@@ -11,160 +11,114 @@ window.GRAMMAR_DATA = [
     "attempts": 0,
     "lockOnPass": true,
     "revealAnswersOnError": false,
-    "explanation": "В этой теме тренируем только ПОРЯДОК СЛОВ в английском вопросе. Тебе не нужно выбирать между do / does / did — если такое слово нужно, оно уже будет дано. Смотри на готовые части вопроса и ставь их в правильном порядке.",
-    "formula": "Question word + helper + subject + main verb ...?  |  With be: Question word + be + subject ...?",
+    "questionScheme": {
+      "title": "Как строится английский вопрос",
+      "subtitle": "Запомни порядок цветных блоков — так будет легче собирать вопросы.",
+      "withQuestionWord": {
+        "label": "Если есть вопросительное слово",
+        "parts": [
+          {"word": "Where", "translation": "где?", "role": "Вопросительное слово", "kind": "question"},
+          {"word": "do", "translation": "не переводим", "role": "Помощник / форма be", "kind": "helper"},
+          {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
+          {"word": "live?", "translation": "живёшь?", "role": "Действие / остальное", "kind": "action"}
+        ]
+      },
+      "withoutQuestionWord": {
+        "label": "Если вопросительного слова нет",
+        "parts": [
+          {"word": "Can", "translation": "можешь?", "role": "Помощник / форма be", "kind": "helper"},
+          {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
+          {"word": "speak English?", "translation": "говорить по-английски?", "role": "Действие / остальное", "kind": "action"}
+        ]
+      },
+      "memoryTip": "Главное: в вопросе помощник или форма be обычно стоит ПЕРЕД тем, о ком мы спрашиваем."
+    },
     "glanceCards": [
       {
-        "icon": "1️⃣",
-        "label": "Question word",
-        "hint": "Если есть What / Where / When / How..., оно обычно стоит первым.",
+        "icon": "1",
+        "label": "Вопросительное слово",
+        "hint": "What — что/какой, Where — где/куда, When — когда, How — как. Если оно есть, ставим его первым.",
         "pattern": "Where ...?",
-        "example": "Where do you live?"
+        "example": "Where do you live? — Где ты живёшь?"
       },
       {
-        "icon": "2️⃣",
-        "label": "Helper / be",
-        "hint": "Следом идёт уже данное слово: do, does, did, can, are, is, were и т. п.",
+        "icon": "2",
+        "label": "Помощник / форма be",
+        "hint": "Затем идёт служебное слово do / does / did / can или форма глагола be («быть»): am / is / are / was / were.",
         "pattern": "Where + do ...?",
-        "example": "Where do you live?"
+        "example": "Where are you from? — Откуда ты?"
       },
       {
-        "icon": "3️⃣",
-        "label": "Subject",
-        "hint": "После helper / be ставим человека или предмет: I, you, she, your parents...",
+        "icon": "3",
+        "label": "Кто? / подлежащее",
+        "hint": "Дальше ставим того, о ком спрашиваем: I, you, she, your sister, your parents и т. д.",
         "pattern": "Where + do + you ...?",
-        "example": "Where do you live?"
+        "example": "Can your friend drive? — Твой друг умеет водить?"
       },
       {
-        "icon": "4️⃣",
-        "label": "Rest of the question",
-        "hint": "После подлежащего идёт оставшаяся часть вопроса.",
+        "icon": "4",
+        "label": "Действие и остальные слова",
+        "hint": "После подлежащего ставим основной глагол и всё, что осталось в вопросе.",
         "pattern": "Where + do + you + live?",
-        "example": "What kind of music do you listen to?"
+        "example": "What music do you listen to? — Какую музыку ты слушаешь?"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Если есть вопросительное слово",
-        "text": "What, Where, When, How, How often, What time и другие вопросительные слова ставим в начало.",
-        "example": "Where do you live? | What do your parents do?"
+        "title": "1. Есть What / Where / When / How?",
+        "text": "Поставь вопросительное слово в самое начало.",
+        "example": "Where do you live? — Где ты живёшь?"
       },
       {
-        "title": "2. После него идёт helper или be",
-        "text": "В этой теме helper уже дан: do, does, did, can и т. п. Если в вопросе используется be, его форма тоже уже дана: am, is, are, was, were.",
-        "example": "Where + do ...? | Where + were ...? | Can ...?"
+        "title": "2. После него — помощник или форма be",
+        "text": "После вопросительного слова ставим помощник (do / does / did / can) или форму be: am / is / are / was / were.",
+        "example": "Where DO you live?  •  Where ARE you from?"
       },
       {
-        "title": "3. Потом ставим подлежащее",
-        "text": "После helper / be обычно идёт тот, о ком мы спрашиваем: I, you, she, your sister, your parents...",
-        "example": "Where do YOU live? | Where were YOU born? | Can YOUR FRIEND drive?"
+        "title": "3. Потом — кто?",
+        "text": "Следующим идёт подлежащее: человек или предмет, о котором мы спрашиваем.",
+        "example": "Where do YOU live?  •  Can YOUR SISTER swim?"
       },
       {
-        "title": "4. Потом — оставшаяся часть",
-        "text": "После подлежащего ставим основной глагол и остальные слова вопроса.",
-        "example": "How often do you GO OUT? | What kind of music do you LISTEN TO?"
+        "title": "4. Затем — действие и остальные слова",
+        "text": "После подлежащего ставим основной глагол и оставшуюся часть вопроса.",
+        "example": "How often do you GO OUT? — Как часто ты куда-нибудь выходишь?"
       },
       {
-        "title": "Yes / No questions",
-        "text": "Если вопросительного слова нет, вопрос начинается сразу с helper / be.",
-        "example": "Can you speak English? | Did you see the match? | Is your sister at home?"
-      },
-      {
-        "title": "Важно для этой темы",
-        "text": "Не нужно решать, почему в одном вопросе стоит do, а в другом does или did. Это отдельная тема. Здесь эти слова уже даны — твоя задача только поставить слова в правильном порядке.",
-        "example": "does / your father / work / here → Does your father work here?"
-      }
-    ],
-    "tables": [
-      {
-        "title": "The basic order",
-        "headers": [
-          "Part",
-          "Position",
-          "Example"
-        ],
-        "rows": [
-          [
-            "Question word",
-            "1",
-            "Where"
-          ],
-          [
-            "Helper / be",
-            "2",
-            "do"
-          ],
-          [
-            "Subject",
-            "3",
-            "you"
-          ],
-          [
-            "Main verb / rest",
-            "4",
-            "live?"
-          ]
-        ]
-      },
-      {
-        "title": "Two useful patterns",
-        "headers": [
-          "Type",
-          "Pattern",
-          "Example"
-        ],
-        "rows": [
-          [
-            "Wh-question",
-            "Question word + helper / be + subject + rest",
-            "Where do you live?"
-          ],
-          [
-            "Yes / No question",
-            "Helper / be + subject + rest",
-            "Can you speak English?"
-          ]
-        ]
+        "title": "5. Вопрос без What / Where / When / How",
+        "text": "Тогда начинай сразу с помощника или формы be.",
+        "example": "Can you speak English? — Ты умеешь говорить по-английски?"
       }
     ],
     "exampleGroups": [
       {
-        "title": "See the order",
+        "title": "Собираем вопрос по порядку",
         "items": [
-          "where / do / you / live → Where do you live?",
-          "where / were / you / born → Where were you born?",
-          "can / you / speak / English → Can you speak English?",
-          "what kind of music / do / you / listen to → What kind of music do you listen to?"
-        ]
-      },
-      {
-        "title": "The helper is already given",
-        "items": [
-          "do / you / live / here → Do you live here?",
-          "does / your sister / work / here → Does your sister work here?",
-          "did / you / see / the match → Did you see the match?",
-          "are / you / from / Poland → Are you from Poland?"
+          "where / do / you / live → Where do you live? — Где ты живёшь?",
+          "where / were / you / born → Where were you born? — Где ты родился / родилась?",
+          "can / you / speak / English → Can you speak English? — Ты умеешь говорить по-английски?",
+          "what kind of music / do / you / listen to → What kind of music do you listen to? — Какую музыку ты слушаешь?"
         ]
       }
     ],
     "commonMistakes": [
-      "Where you do live? ✗ → Where do you live? ✓",
-      "Where you are from? ✗ → Where are you from? ✓",
-      "Can speak you English? ✗ → Can you speak English? ✓",
-      "Where did go you last Saturday? ✗ → Where did you go last Saturday? ✓",
-      "What kind of music you do listen to? ✗ → What kind of music do you listen to? ✓"
+      "Where you do live? ✗ → Where do you live? ✓ — помощник do ставим перед you.",
+      "Where you are from? ✗ → Where are you from? ✓ — are ставим перед you.",
+      "Can speak you English? ✗ → Can you speak English? ✓ — после can сначала идёт you.",
+      "Where did go you last Saturday? ✗ → Where did you go last Saturday? ✓ — после did сначала идёт you.",
+      "What kind of music you do listen to? ✗ → What kind of music do you listen to? ✓ — do ставим перед you."
     ],
     "exercises": [
       {
         "id": "word-order-v2-step-1",
-        "title": "1. Choose the correct question.",
-        "difficulty": "Easy",
-        "instructions": "Choose the sentence with the correct word order. The helper is already given.",
+        "title": "1. Выбери правильный вопрос.",
+        "difficulty": "Легко",
+        "instructions": "Выбери предложение с правильным порядком слов.",
         "items": [
           {
             "id": "1",
             "input": "single",
-            "prompt": "Choose the correct question.",
+            "prompt": "Выбери правильный вопрос.",
             "options": [
               "Where do you live?",
               "Where you do live?"
@@ -174,7 +128,7 @@ window.GRAMMAR_DATA = [
           {
             "id": "2",
             "input": "single",
-            "prompt": "Choose the correct question.",
+            "prompt": "Выбери правильный вопрос.",
             "options": [
               "Can you speak English?",
               "Can speak you English?"
@@ -184,7 +138,7 @@ window.GRAMMAR_DATA = [
           {
             "id": "3",
             "input": "single",
-            "prompt": "Choose the correct question.",
+            "prompt": "Выбери правильный вопрос.",
             "options": [
               "When is your birthday?",
               "When your birthday is?"
@@ -194,7 +148,7 @@ window.GRAMMAR_DATA = [
           {
             "id": "4",
             "input": "single",
-            "prompt": "Choose the correct question.",
+            "prompt": "Выбери правильный вопрос.",
             "options": [
               "Did you see the match?",
               "Did see you the match?"
@@ -205,9 +159,9 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "word-order-v2-step-2",
-        "title": "2. Complete the question with the words in the correct order.",
-        "difficulty": "Easy → Medium",
-        "instructions": "Write the missing words as one phrase. Do not change the words.",
+        "title": "2. Поставь слова в правильном порядке.",
+        "difficulty": "Легко → Средне",
+        "instructions": "Впиши пропущенные слова одной фразой. Слова не изменяй.",
         "items": [
           {
             "id": "1",
@@ -265,9 +219,9 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "word-order-v2-step-3",
-        "title": "3. Choose the correct word order.",
-        "difficulty": "Medium",
-        "instructions": "The helper is already correct. Choose only the correct order of the other words.",
+        "title": "3. Выбери правильный порядок слов.",
+        "difficulty": "Средне",
+        "instructions": "Выбери вариант, в котором слова стоят в правильном порядке.",
         "items": [
           {
             "id": "1",
@@ -325,9 +279,9 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "word-order-v2-step-4",
-        "title": "4. Put all the words in the correct order.",
-        "difficulty": "Challenge",
-        "instructions": "All the words you need are given. Do not add a different helper.",
+        "title": "4. Собери вопрос из всех слов.",
+        "difficulty": "Сложнее",
+        "instructions": "Используй все данные слова и поставь их в правильном порядке.",
         "items": [
           {
             "id": "1",
