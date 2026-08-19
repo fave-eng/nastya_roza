@@ -2,7 +2,9 @@ import { withSupabase } from 'npm:@supabase/server@^1'
 
 const encoder = new TextEncoder()
 const ALLOWED_STUDENTS = new Set(['anastasia', 'rozalina'])
-const FUNCTION_VERSION = 'anastasia-rozalina-telegram-v1'
+const FUNCTION_VERSION = 'anastasia-rozalina-telegram-v2-diagnostics'
+const DIAGNOSTIC_VERSION = 'anastasia-rozalina-diagnostics-v1'
+const lastDiagnosticTelegramSendAt = new Map<string, number>()
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-notify-secret',
@@ -285,6 +287,361 @@ async function handleMaterialNotification(payload: any, req: Request, ctx: any, 
   }
 }
 
+
+function diagnosticsApiKey(req: Request): string {
+  const direct = req.headers.get('apikey') ?? ''
+  if (direct) return direct.trim()
+  const authorization = req.headers.get('authorization') ?? ''
+  return authorization.replace(/^Bearer\s+/i, '').trim()
+}
+
+function isDiagnosticsAuthorized(req: Request, studentId: string): boolean {
+  if (!ALLOWED_STUDENTS.has(studentId)) return false
+  const expected = Deno.env.get('SUPABASE_ANON_KEY') ?? ''
+  const actual = diagnosticsApiKey(req)
+  return Boolean(expected && actual && secureEqual(actual, expected))
+}
+
+async function telegramApi(token: string, method: string, body: Record<string, unknown> = {}) {
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+    const result = await response.json().catch(() => null)
+    if (!response.ok || !result?.ok) {
+      return { ok: false, error: result?.description || `Telegram HTTP ${response.status}` }
+    }
+    return { ok: true, result: result.result }
+  } catch (error) {
+    return { ok: false, error: error instanceof Error ? error.message : String(error) }
+  }
+}
+
+function diagnoseHomeworkRow(row: any): string | null {
+  const status = String(row?.status || '')
+  const reportStatus = String(row?.report_status || '')
+  if (status === 'draft') {
+    if (reportStatus && reportStatus !== 'not_sent') return `draft имеет report_status=${reportStatus}`
+    if (row?.submitted_at || row?.locked_at || row?.report_sent_at) return 'draft содержит финальные даты'
+    return null
+  }
+  if (status === 'submitted_pending_report') {
+    if (!['pending', 'failed'].includes(reportStatus)) return `submitted_pending_report имеет report_status=${reportStatus || 'NULL'}`
+    if (!row?.submitted_at || !row?.locked_at) return 'submitted_pending_report без submitted_at/locked_at'
+    return null
+  }
+  if (status === 'submitted') {
+    if (reportStatus !== 'sent') return `submitted имеет report_status=${reportStatus || 'NULL'}`
+    if (!row?.submitted_at || !row?.locked_at || !row?.report_sent_at) return 'submitted без обязательных финальных дат'
+    return null
+  }
+  return `неизвестный status=${status || 'NULL'}`
+}
+
+async function diagnosticHealth(studentId: string, ctx: any, botToken: string) {
+  let staleDiagnosticProbesRemoved = 0
+  let database: any = { ok: false, homeworkRows: 0, staleDiagnosticProbesRemoved: 0, suspiciousHomework: [], pendingHomework: [] }
+
+  try {
+    const { data: probes, error: probesError } = await ctx.supabaseAdmin
+      .from('homework_progress')
+      .select('lesson_id')
+      .eq('student_id', studentId)
+      .like('lesson_id', '__diagnostic_probe__%')
+
+    if (probesError) throw probesError
+    const probeIds = (probes || []).map((row: any) => String(row.lesson_id || '')).filter(Boolean)
+    if (probeIds.length) {
+      const { error: cleanupError } = await ctx.supabaseAdmin
+        .from('homework_progress')
+        .delete()
+        .eq('student_id', studentId)
+        .in('lesson_id', probeIds)
+      if (cleanupError) throw cleanupError
+      staleDiagnosticProbesRemoved = probeIds.length
+    }
+
+    const { data: homeworkRows, error: homeworkError } = await ctx.supabaseAdmin
+      .from('homework_progress')
+      .select('lesson_id,status,report_status,report_error,score_correct,score_total,submitted_at,locked_at,report_sent_at')
+      .eq('student_id', studentId)
+
+    if (homeworkError) throw homeworkError
+    const rows = homeworkRows || []
+    const suspiciousHomework = rows
+      .map((row: any) => ({ lessonId: String(row.lesson_id || 'unknown'), reason: diagnoseHomeworkRow(row) }))
+      .filter((item: any) => Boolean(item.reason))
+    const pendingHomework = rows
+      .filter((row: any) => String(row.status || '') === 'submitted_pending_report' || ['pending', 'failed'].includes(String(row.report_status || '')))
+      .map((row: any) => ({
+        lessonId: String(row.lesson_id || 'unknown'),
+        status: String(row.status || 'unknown'),
+        reportStatus: String(row.report_status || 'unknown'),
+        error: row.report_error || null,
+      }))
+
+    database = {
+      ok: true,
+      homeworkRows: rows.length,
+      staleDiagnosticProbesRemoved,
+      suspiciousHomework,
+      pendingHomework,
+    }
+  } catch (error) {
+    database = {
+      ok: false,
+      homeworkRows: 0,
+      staleDiagnosticProbesRemoved,
+      suspiciousHomework: [],
+      pendingHomework: [],
+      error: error instanceof Error ? error.message : String(error),
+    }
+  }
+
+  let reportLog: any = { ok: true, pendingOrFailed: [] }
+  try {
+    const { data: reportRows, error: reportError } = await ctx.supabaseAdmin
+      .from('pair_homework_reports')
+      .select('lesson_id,status,error_message')
+      .eq('student_id', studentId)
+      .limit(50)
+
+    if (reportError) throw reportError
+    reportLog = {
+      ok: true,
+      pendingOrFailed: (reportRows || [])
+        .filter((row: any) => String(row.status || '') !== 'sent')
+        .map((row: any) => ({
+          lessonId: String(row.lesson_id || 'unknown'),
+          status: String(row.status || 'unknown'),
+          error: row.error_message || null,
+        })),
+    }
+  } catch (error) {
+    reportLog = { ok: false, pendingOrFailed: [], error: error instanceof Error ? error.message : String(error) }
+  }
+
+  let recipientInfo: any = { ok: false, enabled: false, source: 'pair_telegram_recipients', threadId: null }
+  let recipient: any = null
+  try {
+    recipient = await getRecipient(ctx, studentId)
+    recipientInfo = {
+      ok: true,
+      enabled: Boolean(recipient.enabled),
+      source: 'pair_telegram_recipients',
+      threadId: recipient.message_thread_id == null ? null : Number(recipient.message_thread_id),
+    }
+  } catch (error) {
+    recipientInfo = { ...recipientInfo, error: error instanceof Error ? error.message : String(error) }
+  }
+
+  const botCheck = await telegramApi(botToken, 'getMe')
+  const chatCheck = recipient
+    ? await telegramApi(botToken, 'getChat', { chat_id: Number(recipient.chat_id) })
+    : { ok: false, error: 'Recipient is not configured' }
+
+  return json({
+    ok: true,
+    diagnosticVersion: DIAGNOSTIC_VERSION,
+    database,
+    reportLog,
+    recipient: recipientInfo,
+    telegram: {
+      bot: botCheck.ok
+        ? { ok: true, username: botCheck.result?.username || null, id: botCheck.result?.id || null }
+        : { ok: false, error: botCheck.error || 'getMe failed' },
+      chat: chatCheck.ok
+        ? { ok: true, type: chatCheck.result?.type || null, title: chatCheck.result?.title || null }
+        : { ok: false, error: chatCheck.error || 'getChat failed' },
+    },
+  })
+}
+
+async function diagnosticHomeworkProbe(payload: any, ctx: any) {
+  const studentId = String(payload.studentId || '').trim().toLowerCase()
+  const lessonId = String(payload.lessonId || '').trim()
+  if (!ALLOWED_STUDENTS.has(studentId)) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Unknown student for diagnostics' }, 403)
+  }
+  if (!lessonId.startsWith('__diagnostic_probe__')) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Invalid diagnostic lessonId' }, 400)
+  }
+
+  const { data: before, error: beforeError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .select('lesson_id,status,report_status,submitted_at,locked_at,report_sent_at')
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+    .maybeSingle()
+
+  if (beforeError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: beforeError.message }, 500)
+  if (!before) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Browser diagnostic row was not found' }, 404)
+  if (String(before.status || '') !== 'draft' || String(before.report_status || '') !== 'not_sent') {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: `Expected draft/not_sent, got ${before.status || 'NULL'}/${before.report_status || 'NULL'}` }, 409)
+  }
+
+  const submittedAt = new Date().toISOString()
+  const { error: pendingError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .update({
+      status: 'submitted_pending_report',
+      submitted_at: submittedAt,
+      locked_at: submittedAt,
+      report_status: 'pending',
+      report_sent_at: null,
+      report_error: null,
+      updated_at: submittedAt,
+    })
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+
+  if (pendingError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: pendingError.message }, 500)
+
+  const { data: pending, error: pendingReadError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .select('status,report_status,submitted_at,locked_at')
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+    .maybeSingle()
+  if (pendingReadError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: pendingReadError.message }, 500)
+  if (!pending || String(pending.status || '') !== 'submitted_pending_report' || String(pending.report_status || '') !== 'pending' || !pending.submitted_at || !pending.locked_at) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Server transition to submitted_pending_report was not persisted' }, 409)
+  }
+
+  const sentAt = new Date().toISOString()
+  const { error: finalError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .update({
+      status: 'submitted',
+      report_status: 'sent',
+      report_sent_at: sentAt,
+      report_error: null,
+      updated_at: sentAt,
+    })
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+
+  if (finalError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: finalError.message }, 500)
+
+  const { data: finalRow, error: finalReadError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .select('status,report_status,submitted_at,locked_at,report_sent_at')
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+    .maybeSingle()
+  if (finalReadError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: finalReadError.message }, 500)
+  if (!finalRow || String(finalRow.status || '') !== 'submitted' || String(finalRow.report_status || '') !== 'sent' || !finalRow.submitted_at || !finalRow.locked_at || !finalRow.report_sent_at) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Server transition to submitted/sent was not persisted' }, 409)
+  }
+
+  const { error: deleteError } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .delete()
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+  if (deleteError) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: deleteError.message }, 500)
+
+  return json({
+    ok: true,
+    diagnosticVersion: DIAGNOSTIC_VERSION,
+    stages: {
+      browserWrite: 'draft/not_sent',
+      serverPending: 'submitted_pending_report/pending',
+      serverFinal: 'submitted/sent',
+      cleanup: 'deleted',
+    },
+  })
+}
+
+async function diagnosticCleanupProbe(payload: any, ctx: any) {
+  const studentId = String(payload.studentId || '').trim().toLowerCase()
+  const lessonId = String(payload.lessonId || '').trim()
+  if (!ALLOWED_STUDENTS.has(studentId)) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Unknown student for diagnostics' }, 403)
+  }
+  if (!lessonId.startsWith('__diagnostic_probe__')) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Invalid diagnostic lessonId' }, 400)
+  }
+  const { error } = await ctx.supabaseAdmin
+    .from('homework_progress')
+    .delete()
+    .eq('student_id', studentId)
+    .eq('lesson_id', lessonId)
+  if (error) return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: error.message }, 500)
+  return json({ ok: true, diagnosticVersion: DIAGNOSTIC_VERSION })
+}
+
+async function diagnosticSendReport(studentId: string, ctx: any, botToken: string, pageUrl: unknown) {
+  const now = Date.now()
+  const cooldownMs = 30_000
+  const previous = lastDiagnosticTelegramSendAt.get(studentId) || 0
+  if (previous && now - previous < cooldownMs) {
+    const retryAfterSeconds = Math.max(1, Math.ceil((cooldownMs - (now - previous)) / 1000))
+    return json({
+      ok: true,
+      diagnosticVersion: DIAGNOSTIC_VERSION,
+      skipped: true,
+      retryAfterSeconds,
+      threadId: null,
+    })
+  }
+
+  let recipient
+  try {
+    recipient = await getRecipient(ctx, studentId)
+  } catch (error) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: error instanceof Error ? error.message : String(error) }, (error as any)?.status || 500)
+  }
+
+  const names: Record<string, string> = { anastasia: 'Анастасия', rozalina: 'Розалина' }
+  const source = isHttpUrl(pageUrl) ? String(pageUrl) : 'diagnostics.html'
+  const threadId = recipient.message_thread_id == null ? null : Number(recipient.message_thread_id)
+  const text = [
+    '🧪 <b>Диагностика English Space</b>',
+    '',
+    `👤 <b>Ученица:</b> ${escapeHtml(names[studentId] || studentId)}`,
+    '✅ Связка Edge Function → Telegram работает.',
+    `🧵 <b>Тема:</b> ${threadId ?? 'не задана'}`,
+    `🌐 <b>Источник:</b> ${escapeHtml(source)}`,
+  ].join('\n')
+
+  try {
+    const telegramMessage = await sendTelegramMessage(botToken, recipient, text)
+    lastDiagnosticTelegramSendAt.set(studentId, now)
+    return json({
+      ok: true,
+      diagnosticVersion: DIAGNOSTIC_VERSION,
+      skipped: false,
+      telegramMessageId: telegramMessage.message_id,
+      threadId,
+    })
+  } catch (error) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: error instanceof Error ? error.message : String(error) }, 502)
+  }
+}
+
+async function handleDiagnostics(payload: any, req: Request, ctx: any, botToken: string) {
+  const studentId = typeof payload.studentId === 'string' ? payload.studentId.trim().toLowerCase() : ''
+  if (!isDiagnosticsAuthorized(req, studentId)) {
+    return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Unauthorized diagnostics request' }, 401)
+  }
+
+  switch (payload.kind) {
+    case 'diagnostics_health':
+      return diagnosticHealth(studentId, ctx, botToken)
+    case 'diagnostics_homework_probe':
+      return diagnosticHomeworkProbe(payload, ctx)
+    case 'diagnostics_cleanup_probe':
+      return diagnosticCleanupProbe(payload, ctx)
+    case 'diagnostics_send_report':
+      return diagnosticSendReport(studentId, ctx, botToken, payload.pageUrl)
+    default:
+      return json({ ok: false, diagnosticVersion: DIAGNOSTIC_VERSION, error: 'Unknown diagnostics request' }, 400)
+  }
+}
+
 export default {
   fetch: withSupabase({ auth: 'none' }, async (req, ctx) => {
     if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders })
@@ -296,6 +653,9 @@ export default {
     let payload: any
     try { payload = await req.json() } catch { return json({ ok: false, error: 'Invalid JSON' }, 400) }
 
+    if (typeof payload?.kind === 'string' && payload.kind.startsWith('diagnostics_')) {
+      return handleDiagnostics(payload, req, ctx, botToken)
+    }
     if (payload?.kind === 'homework_submit_report' || payload?.eventType === 'homework_report') {
       return handleHomeworkReport(payload, ctx, botToken)
     }
