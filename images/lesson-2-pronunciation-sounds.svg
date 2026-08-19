@@ -106,9 +106,12 @@
 
   <!-- Row 7 -->
   <rect x="64" y="798" width="592" height="58" rx="18" class="row" stroke="#e3e8f0" stroke-width="2"/>
-  <g transform="translate(101 800)">
-    <path d="M9 8h29v31c0 11-6 16-16 16H7V42h9V13H9z" fill="#e9edff" stroke="#3457d5" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M38 15h13v20H38" class="iconline"/>
+  <g transform="translate(92 799)">
+    <!-- clear ankle-boot silhouette -->
+    <path d="M18 4h27v29c0 6 3 10 9 12l13 4c8 2 12 7 12 14v5H10V51h11V14h-3z"
+          fill="#e9edff" stroke="#3457d5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 14h27M10 68h69" class="iconline"/>
+    <path d="M45 45c7 0 12 1 18 4" class="iconline"/>
   </g>
   <text x="184" y="837" class="t" font-size="25" font-weight="750">boot</text>
   <text x="398" y="838" class="t" font-size="27" font-weight="700">Q</text>
