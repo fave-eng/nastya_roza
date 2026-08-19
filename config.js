@@ -12,16 +12,16 @@ window.APP_CONFIG = {
       nameRu: "Анастасия",
       nameEn: "Anastasia",
       level: "A1",
-      textbook: "English Course",
-      textbookEdition: "A1 · Pair lessons"
+      textbook: "English File",
+      textbookEdition: "4th Edition · Pre-Intermediate"
     },
     {
       id: "rozalina",
       nameRu: "Розалина",
       nameEn: "Rozalina",
       level: "A1",
-      textbook: "English Course",
-      textbookEdition: "A1 · Pair lessons"
+      textbook: "English File",
+      textbookEdition: "4th Edition · Pre-Intermediate"
     }
   ],
 
@@ -32,8 +32,8 @@ window.APP_CONFIG = {
     nameRu: "Анастасия",
     nameEn: "Anastasia",
     level: "A1",
-    textbook: "English Course",
-    textbookEdition: "A1 · Pair lessons"
+    textbook: "English File",
+    textbookEdition: "4th Edition · Pre-Intermediate"
   },
 
   supabase: {

@@ -1,11 +1,11 @@
 import { withSupabase } from 'npm:@supabase/server@^1'
 
 const encoder = new TextEncoder()
-const FUNCTION_VERSION = 'pair-course-homework-reports-v1'
-const DIAGNOSTIC_VERSION = 'pair-course-diagnostics-v1'
+const FUNCTION_VERSION = 'pair-course-homework-reports-v2-topic-2'
+const DIAGNOSTIC_VERSION = 'pair-course-diagnostics-v2-topic-2'
 const DIAGNOSTIC_STUDENT_IDS = new Set(['anastasia', 'rozalina'])
 let lastDiagnosticTelegramSendAt = 0
-const TELEGRAM_MESSAGE_THREAD_ID = 39
+const TELEGRAM_MESSAGE_THREAD_ID = 2
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-notify-secret',

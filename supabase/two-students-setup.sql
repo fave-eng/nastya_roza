@@ -188,11 +188,12 @@ grant all on public.homework_reports to service_role;
 grant all on public.telegram_recipients to service_role;
 grant all on public.material_publications to service_role;
 
--- Same teacher chat for both profiles. Change this chat_id if needed.
+-- Telegram group for both profiles: https://t.me/c/4474379239/2
+-- Group chat_id: -1004474379239. Topic/thread ID 2 is configured in the Edge Function.
 insert into public.telegram_recipients (student_id, chat_id, enabled)
 values
-  ('anastasia', -1003987027739, true),
-  ('rozalina', -1003987027739, true)
+  ('anastasia', -1004474379239, true),
+  ('rozalina', -1004474379239, true)
 on conflict (student_id) do update
 set chat_id = excluded.chat_id,
     enabled = excluded.enabled,
