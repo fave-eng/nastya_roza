@@ -11,276 +11,274 @@ window.GRAMMAR_DATA = [
     "attempts": 0,
     "lockOnPass": true,
     "revealAnswersOnError": false,
-    "explanation": "В английском вопросе порядок слов зависит от типа глагола. С be мы ставим am / is / are / was / were перед подлежащим. С can ставим can перед подлежащим. С обычными глаголами в Present Simple нужны do / does, а в Past Simple — did. После do / does / did основной глагол используется в базовой форме.",
-    "formula": "Question word + be / can / do / does / did + subject + main verb ...?",
+    "explanation": "В этой теме тренируем только ПОРЯДОК СЛОВ в английском вопросе. Тебе не нужно выбирать между do / does / did — если такое слово нужно, оно уже будет дано. Смотри на готовые части вопроса и ставь их в правильном порядке.",
+    "formula": "Question word + helper + subject + main verb ...?  |  With be: Question word + be + subject ...?",
     "glanceCards": [
       {
-        "icon": "🔹",
-        "label": "be",
-        "hint": "am / is / are / was / were",
-        "pattern": "Where are you from?",
-        "example": "When is your birthday?"
+        "icon": "1️⃣",
+        "label": "Question word",
+        "hint": "Если есть What / Where / When / How..., оно обычно стоит первым.",
+        "pattern": "Where ...?",
+        "example": "Where do you live?"
       },
       {
-        "icon": "🟣",
-        "label": "can",
-        "hint": "can + subject + base verb",
-        "pattern": "Can I help you?",
-        "example": "Can you speak English?"
+        "icon": "2️⃣",
+        "label": "Helper / be",
+        "hint": "Следом идёт уже данное слово: do, does, did, can, are, is, were и т. п.",
+        "pattern": "Where + do ...?",
+        "example": "Where do you live?"
       },
       {
-        "icon": "🟢",
-        "label": "Present Simple",
-        "hint": "do / does",
-        "pattern": "What do you do?",
-        "example": "Does your sister have a job?"
+        "icon": "3️⃣",
+        "label": "Subject",
+        "hint": "После helper / be ставим человека или предмет: I, you, she, your parents...",
+        "pattern": "Where + do + you ...?",
+        "example": "Where do you live?"
       },
       {
-        "icon": "🟠",
-        "label": "Past Simple",
-        "hint": "did",
-        "pattern": "Where did you go?",
-        "example": "Did you see the match?"
+        "icon": "4️⃣",
+        "label": "Rest of the question",
+        "hint": "После подлежащего идёт оставшаяся часть вопроса.",
+        "pattern": "Where + do + you + live?",
+        "example": "What kind of music do you listen to?"
       }
     ],
     "miniRules": [
       {
-        "title": "1. Вопросы с be",
-        "text": "Поставь форму be перед подлежащим. Дополнительный do / does / did не нужен.",
-        "example": "You are from Poland. → Where are you from?"
+        "title": "1. Если есть вопросительное слово",
+        "text": "What, Where, When, How, How often, What time и другие вопросительные слова ставим в начало.",
+        "example": "Where do you live? | What do your parents do?"
       },
       {
-        "title": "2. Вопросы с can",
-        "text": "Can ставится перед подлежащим, а следующий глагол остаётся в базовой форме без to.",
-        "example": "You can swim. → Can you swim?"
+        "title": "2. После него идёт helper или be",
+        "text": "В этой теме helper уже дан: do, does, did, can и т. п. Если в вопросе используется be, его форма тоже уже дана: am, is, are, was, were.",
+        "example": "Where + do ...? | Where + were ...? | Can ...?"
       },
       {
-        "title": "3. Present Simple",
-        "text": "С обычным глаголом используй do для I / you / we / they и does для he / she / it. После does глагол без -s.",
-        "example": "She works here. → Where does she work?"
+        "title": "3. Потом ставим подлежащее",
+        "text": "После helper / be обычно идёт тот, о ком мы спрашиваем: I, you, she, your sister, your parents...",
+        "example": "Where do YOU live? | Where were YOU born? | Can YOUR FRIEND drive?"
       },
       {
-        "title": "4. Past Simple",
-        "text": "С обычным глаголом используй did для всех лиц. После did глагол возвращается в базовую форму.",
-        "example": "You went out. → Where did you go?"
+        "title": "4. Потом — оставшаяся часть",
+        "text": "После подлежащего ставим основной глагол и остальные слова вопроса.",
+        "example": "How often do you GO OUT? | What kind of music do you LISTEN TO?"
       },
       {
-        "title": "5. Question words",
-        "text": "What, where, when, why, how и how often обычно стоят в самом начале вопроса.",
-        "example": "How often do you go out?"
+        "title": "Yes / No questions",
+        "text": "Если вопросительного слова нет, вопрос начинается сразу с helper / be.",
+        "example": "Can you speak English? | Did you see the match? | Is your sister at home?"
       },
       {
-        "title": "6. Короткие ответы",
-        "text": "Повтори вспомогательный или модальный глагол из вопроса.",
-        "example": "Do you work? — Yes, I do. / No, I don’t."
+        "title": "Важно для этой темы",
+        "text": "Не нужно решать, почему в одном вопросе стоит do, а в другом does или did. Это отдельная тема. Здесь эти слова уже даны — твоя задача только поставить слова в правильном порядке.",
+        "example": "does / your father / work / here → Does your father work here?"
       }
     ],
     "tables": [
       {
-        "title": "Question patterns",
+        "title": "The basic order",
         "headers": [
-          "Type",
-          "Statement / negative",
-          "Question"
+          "Part",
+          "Position",
+          "Example"
         ],
         "rows": [
           [
-            "be",
-            "You are / You aren’t tired.",
-            "Are you tired?"
+            "Question word",
+            "1",
+            "Where"
           ],
           [
-            "can",
-            "You can / can’t drive.",
-            "Can you drive?"
+            "Helper / be",
+            "2",
+            "do"
           ],
           [
-            "Present Simple",
-            "She works / doesn’t work.",
-            "Does she work?"
+            "Subject",
+            "3",
+            "you"
           ],
           [
-            "Past Simple",
-            "They went / didn’t go.",
-            "Did they go?"
+            "Main verb / rest",
+            "4",
+            "live?"
           ]
         ]
       },
       {
-        "title": "Short answers",
+        "title": "Two useful patterns",
         "headers": [
-          "Question",
-          "Yes",
-          "No"
+          "Type",
+          "Pattern",
+          "Example"
         ],
         "rows": [
           [
-            "Are you...?",
-            "Yes, I am.",
-            "No, I’m not."
+            "Wh-question",
+            "Question word + helper / be + subject + rest",
+            "Where do you live?"
           ],
           [
-            "Can you...?",
-            "Yes, I can.",
-            "No, I can’t."
-          ],
-          [
-            "Do you...?",
-            "Yes, I do.",
-            "No, I don’t."
-          ],
-          [
-            "Did you...?",
-            "Yes, I did.",
-            "No, I didn’t."
+            "Yes / No question",
+            "Helper / be + subject + rest",
+            "Can you speak English?"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Compare the word order",
+        "title": "See the order",
         "items": [
-          "Where are you from?",
-          "Can I help you?",
-          "What do you do at the weekend?",
-          "Where did you go last Saturday?"
+          "where / do / you / live → Where do you live?",
+          "where / were / you / born → Where were you born?",
+          "can / you / speak / English → Can you speak English?",
+          "what kind of music / do / you / listen to → What kind of music do you listen to?"
+        ]
+      },
+      {
+        "title": "The helper is already given",
+        "items": [
+          "do / you / live / here → Do you live here?",
+          "does / your sister / work / here → Does your sister work here?",
+          "did / you / see / the match → Did you see the match?",
+          "are / you / from / Poland → Are you from Poland?"
         ]
       }
     ],
     "commonMistakes": [
-      "Where you live? ✗ → Where do you live? ✓",
-      "Does she works here? ✗ → Does she work here? ✓",
-      "Where did you went? ✗ → Where did you go? ✓",
-      "Can you to help me? ✗ → Can you help me? ✓"
+      "Where you do live? ✗ → Where do you live? ✓",
+      "Where you are from? ✗ → Where are you from? ✓",
+      "Can speak you English? ✗ → Can you speak English? ✓",
+      "Where did go you last Saturday? ✗ → Where did you go last Saturday? ✓",
+      "What kind of music you do listen to? ✗ → What kind of music do you listen to? ✓"
     ],
     "exercises": [
       {
-        "id": "questions-step-1",
-        "title": "Choose the correct question word helper.",
-        "difficulty": "Starter",
+        "id": "word-order-v2-step-1",
+        "title": "1. Choose the correct question.",
+        "difficulty": "Easy",
+        "instructions": "Choose the sentence with the correct word order. The helper is already given.",
         "items": [
           {
             "id": "1",
             "input": "single",
-            "prompt": "___ your sister have a job?",
+            "prompt": "Choose the correct question.",
             "options": [
-              "Does",
-              "Is",
-              "Did"
+              "Where do you live?",
+              "Where you do live?"
             ],
             "answer": 0
           },
           {
             "id": "2",
             "input": "single",
-            "prompt": "___ you born in Budapest?",
+            "prompt": "Choose the correct question.",
             "options": [
-              "Were",
-              "Did",
-              "Do"
+              "Can you speak English?",
+              "Can speak you English?"
             ],
             "answer": 0
           },
           {
             "id": "3",
             "input": "single",
-            "prompt": "Hello. ___ I help you?",
+            "prompt": "Choose the correct question.",
             "options": [
-              "Can",
-              "Am",
-              "Does"
+              "When is your birthday?",
+              "When your birthday is?"
             ],
             "answer": 0
           },
           {
             "id": "4",
             "input": "single",
-            "prompt": "___ you see the match last night?",
+            "prompt": "Choose the correct question.",
             "options": [
-              "Did",
-              "Do",
-              "Were"
+              "Did you see the match?",
+              "Did see you the match?"
             ],
             "answer": 0
           }
         ]
       },
       {
-        "id": "questions-step-2",
-        "title": "Complete the questions with do, does, or did.",
-        "difficulty": "Practice",
-        "instructions": "Write one word in each gap.",
+        "id": "word-order-v2-step-2",
+        "title": "2. Complete the question with the words in the correct order.",
+        "difficulty": "Easy → Medium",
+        "instructions": "Write the missing words as one phrase. Do not change the words.",
         "items": [
           {
             "id": "1",
             "input": "gaps",
             "segments": [
               "Where ",
-              " you live?"
+              " from?"
             ],
             "answers": [
               [
-                "do"
+                "are you"
               ]
             ]
           },
           {
             "id": "2",
+            "input": "gaps",
+            "segments": [
+              "Can ",
+              " English?"
+            ],
+            "answers": [
+              [
+                "you speak"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "Where ",
+              " born?"
+            ],
+            "answers": [
+              [
+                "were you"
+              ]
+            ]
+          },
+          {
+            "id": "4",
             "input": "gaps",
             "segments": [
               "What ",
-              " your boyfriend do?"
+              " do?"
             ],
             "answers": [
               [
-                "does"
-              ]
-            ]
-          },
-          {
-            "id": "3",
-            "input": "gaps",
-            "segments": [
-              "Where ",
-              " she learn English?"
-            ],
-            "answers": [
-              [
-                "did"
-              ]
-            ]
-          },
-          {
-            "id": "4",
-            "input": "gaps",
-            "segments": [
-              "What time ",
-              " you get up?"
-            ],
-            "answers": [
-              [
-                "do"
+                "do your parents"
               ]
             ]
           }
         ]
       },
       {
-        "id": "questions-step-3",
-        "title": "Choose the correct word order.",
-        "difficulty": "Challenge",
+        "id": "word-order-v2-step-3",
+        "title": "3. Choose the correct word order.",
+        "difficulty": "Medium",
+        "instructions": "The helper is already correct. Choose only the correct order of the other words.",
         "items": [
           {
             "id": "1",
             "input": "circle-or-tick",
             "segments": [
               "Where ",
-              " last Saturday?"
+              "?"
             ],
             "options": [
-              "did you go",
-              "did you went"
+              "do you work",
+              "you do work"
             ],
             "answer": "0"
           },
@@ -289,11 +287,11 @@ window.GRAMMAR_DATA = [
             "input": "circle-or-tick",
             "segments": [
               "Does ",
-              " a job?"
+              "?"
             ],
             "options": [
-              "your sister have",
-              "your sister has"
+              "your sister live here",
+              "live your sister here"
             ],
             "answer": "0"
           },
@@ -301,12 +299,12 @@ window.GRAMMAR_DATA = [
             "id": "3",
             "input": "circle-or-tick",
             "segments": [
-              "Can ",
-              " English?"
+              "How often ",
+              "?"
             ],
             "options": [
-              "you speak",
-              "you to speak"
+              "do you go out",
+              "you do go out"
             ],
             "answer": "0"
           },
@@ -314,46 +312,46 @@ window.GRAMMAR_DATA = [
             "id": "4",
             "input": "circle-or-tick",
             "segments": [
-              "When ",
-              "?"
+              "Where ",
+              " last Saturday?"
             ],
             "options": [
-              "is your birthday",
-              "your birthday is"
+              "did you go",
+              "did go you"
             ],
             "answer": "0"
           }
         ]
       },
       {
-        "id": "questions-step-4",
-        "title": "Write the complete question.",
-        "difficulty": "Build it",
-        "instructions": "Use the words in brackets.",
+        "id": "word-order-v2-step-4",
+        "title": "4. Put all the words in the correct order.",
+        "difficulty": "Challenge",
+        "instructions": "All the words you need are given. Do not add a different helper.",
         "items": [
           {
             "id": "1",
             "input": "text",
-            "prompt": "(your parents / do / what)",
-            "answer": "What do your parents do?"
+            "prompt": "where / do / you / live",
+            "answer": "Where do you live?"
           },
           {
             "id": "2",
             "input": "text",
-            "prompt": "(your girlfriend / be / a student)",
-            "answer": "Is your girlfriend a student?"
+            "prompt": "what / does / your father / do",
+            "answer": "What does your father do?"
           },
           {
             "id": "3",
             "input": "text",
-            "prompt": "(you / have / a nice time / last weekend)",
-            "answer": "Did you have a nice time last weekend?"
+            "prompt": "where / did / you / go / last Saturday",
+            "answer": "Where did you go last Saturday?"
           },
           {
             "id": "4",
             "input": "text",
-            "prompt": "(your best friend / can / drive)",
-            "answer": "Can your best friend drive?"
+            "prompt": "what kind of music / do / you / listen to",
+            "answer": "What kind of music do you listen to?"
           }
         ]
       }
