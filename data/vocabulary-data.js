@@ -9,136 +9,73 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-1",
     "page": "vocabulary.html?id=vocab-lesson-1",
     "words": [
-      {
-        "id": "vocab-lesson-1-1",
-        "en": "be born",
-        "ru": "родиться"
-      },
-      {
-        "id": "vocab-lesson-1-2",
-        "en": "do exercise",
-        "ru": "делать упражнения; заниматься"
-      },
-      {
-        "id": "vocab-lesson-1-3",
-        "en": "do sport",
-        "ru": "заниматься спортом"
-      },
-      {
-        "id": "vocab-lesson-1-4",
-        "en": "listen to music",
-        "ru": "слушать музыку"
-      },
-      {
-        "id": "vocab-lesson-1-5",
-        "en": "dance music",
-        "ru": "танцевальная музыка"
-      },
-      {
-        "id": "vocab-lesson-1-6",
-        "en": "read an email",
-        "ru": "читать электронное письмо"
-      },
-      {
-        "id": "vocab-lesson-1-7",
-        "en": "read a magazine",
-        "ru": "читать журнал"
-      },
-      {
-        "id": "vocab-lesson-1-8",
-        "en": "speak a foreign language",
-        "ru": "говорить на иностранном языке"
-      },
-      {
-        "id": "vocab-lesson-1-9",
-        "en": "live in a house",
-        "ru": "жить в доме"
-      },
-      {
-        "id": "vocab-lesson-1-10",
-        "en": "live with friends",
-        "ru": "жить с друзьями"
-      },
-      {
-        "id": "vocab-lesson-1-11",
-        "en": "watch a film",
-        "ru": "смотреть фильм"
-      },
-      {
-        "id": "vocab-lesson-1-12",
-        "en": "watch a TV series",
-        "ru": "смотреть сериал"
-      },
-      {
-        "id": "vocab-lesson-1-13",
-        "en": "go to the cinema",
-        "ru": "ходить в кино"
-      },
-      {
-        "id": "vocab-lesson-1-14",
-        "en": "go on holiday",
-        "ru": "ездить в отпуск"
-      },
-      {
-        "id": "vocab-lesson-1-15",
-        "en": "have two sisters",
-        "ru": "иметь двух сестёр"
-      },
-      {
-        "id": "vocab-lesson-1-16",
-        "en": "have a pet",
-        "ru": "иметь домашнего питомца"
-      },
-      {
-        "id": "vocab-lesson-1-17",
-        "en": "last weekend",
-        "ru": "в прошлые выходные"
-      },
-      {
-        "id": "vocab-lesson-1-18",
-        "en": "railway station",
-        "ru": "железнодорожная станция"
-      },
-      {
-        "id": "vocab-lesson-1-19",
-        "en": "learn English",
-        "ru": "учить английский"
-      },
-      {
-        "id": "vocab-lesson-1-20",
-        "en": "boyfriend",
-        "ru": "парень"
-      },
-      {
-        "id": "vocab-lesson-1-21",
-        "en": "girlfriend",
-        "ru": "девушка"
-      },
-      {
-        "id": "vocab-lesson-1-22",
-        "en": "birthday",
-        "ru": "день рождения"
-      },
-      {
-        "id": "vocab-lesson-1-23",
-        "en": "go out",
-        "ru": "выходить куда-либо; гулять"
-      },
-      {
-        "id": "vocab-lesson-1-24",
-        "en": "have a nice time",
-        "ru": "хорошо провести время"
-      },
-      {
-        "id": "vocab-lesson-1-25",
-        "en": "last night",
-        "ru": "вчера вечером / прошлой ночью"
-      },
-      {
-        "id": "vocab-lesson-1-26",
-        "en": "last year",
-        "ru": "в прошлом году"
-      }
+      { "id": "vocab-lesson-1-1", "en": "be born", "ru": "родиться" },
+      { "id": "vocab-lesson-1-2", "en": "do exercise", "ru": "делать упражнения; заниматься" },
+      { "id": "vocab-lesson-1-3", "en": "do sport", "ru": "заниматься спортом" },
+      { "id": "vocab-lesson-1-4", "en": "listen to music", "ru": "слушать музыку" },
+      { "id": "vocab-lesson-1-5", "en": "dance music", "ru": "танцевальная музыка" },
+      { "id": "vocab-lesson-1-6", "en": "read an email", "ru": "читать электронное письмо" },
+      { "id": "vocab-lesson-1-7", "en": "read a magazine", "ru": "читать журнал" },
+      { "id": "vocab-lesson-1-8", "en": "speak a foreign language", "ru": "говорить на иностранном языке" },
+      { "id": "vocab-lesson-1-9", "en": "live in a house", "ru": "жить в доме" },
+      { "id": "vocab-lesson-1-10", "en": "live with friends", "ru": "жить с друзьями" },
+      { "id": "vocab-lesson-1-11", "en": "watch a film", "ru": "смотреть фильм" },
+      { "id": "vocab-lesson-1-12", "en": "watch a TV series", "ru": "смотреть сериал" },
+      { "id": "vocab-lesson-1-13", "en": "go to the cinema", "ru": "ходить в кино" },
+      { "id": "vocab-lesson-1-14", "en": "go on holiday", "ru": "ездить в отпуск" },
+      { "id": "vocab-lesson-1-15", "en": "have two sisters", "ru": "иметь двух сестёр" },
+      { "id": "vocab-lesson-1-16", "en": "have a pet", "ru": "иметь домашнего питомца" },
+      { "id": "vocab-lesson-1-17", "en": "last weekend", "ru": "в прошлые выходные" },
+      { "id": "vocab-lesson-1-18", "en": "railway station", "ru": "железнодорожная станция" },
+      { "id": "vocab-lesson-1-19", "en": "learn English", "ru": "учить английский" },
+      { "id": "vocab-lesson-1-20", "en": "boyfriend", "ru": "парень" },
+      { "id": "vocab-lesson-1-21", "en": "girlfriend", "ru": "девушка" },
+      { "id": "vocab-lesson-1-22", "en": "birthday", "ru": "день рождения" },
+      { "id": "vocab-lesson-1-23", "en": "go out", "ru": "выходить куда-либо; гулять" },
+      { "id": "vocab-lesson-1-24", "en": "have a nice time", "ru": "хорошо провести время" },
+      { "id": "vocab-lesson-1-25", "en": "last night", "ru": "вчера вечером / прошлой ночью" },
+      { "id": "vocab-lesson-1-26", "en": "last year", "ru": "в прошлом году" }
+    ]
+  },
+  {
+    "id": "vocab-lesson-2",
+    "title": "Describing people",
+    "label": "Lesson 2 · 1B The perfect date?",
+    "icon": "👤",
+    "type": "lesson",
+    "linkedLessonId": "lesson-2",
+    "page": "vocabulary.html?id=vocab-lesson-2",
+    "words": [
+      { "id": "vocab-lesson-2-1", "en": "curly hair", "ru": "кудрявые волосы" },
+      { "id": "vocab-lesson-2-2", "en": "straight hair", "ru": "прямые волосы" },
+      { "id": "vocab-lesson-2-3", "en": "blonde", "ru": "блондинка; светловолосая" },
+      { "id": "vocab-lesson-2-4", "en": "bald", "ru": "лысый" },
+      { "id": "vocab-lesson-2-5", "en": "thin", "ru": "худой" },
+      { "id": "vocab-lesson-2-6", "en": "overweight", "ru": "с лишним весом" },
+      { "id": "vocab-lesson-2-7", "en": "slim", "ru": "стройный" },
+      { "id": "vocab-lesson-2-8", "en": "beard", "ru": "борода" },
+      { "id": "vocab-lesson-2-9", "en": "moustache", "ru": "усы" },
+      { "id": "vocab-lesson-2-10", "en": "look like", "ru": "выглядеть; быть похожим внешне" },
+      { "id": "vocab-lesson-2-11", "en": "funny", "ru": "смешной; забавный" },
+      { "id": "vocab-lesson-2-12", "en": "friendly", "ru": "дружелюбный" },
+      { "id": "vocab-lesson-2-13", "en": "lazy", "ru": "ленивый" },
+      { "id": "vocab-lesson-2-14", "en": "clever", "ru": "умный; сообразительный" },
+      { "id": "vocab-lesson-2-15", "en": "unkind", "ru": "недобрый" },
+      { "id": "vocab-lesson-2-16", "en": "stupid", "ru": "глупый" },
+      { "id": "vocab-lesson-2-17", "en": "shy", "ru": "стеснительный" },
+      { "id": "vocab-lesson-2-18", "en": "quiet", "ru": "тихий; неразговорчивый" },
+      { "id": "vocab-lesson-2-19", "en": "extrovert", "ru": "экстраверт; общительный человек" },
+      { "id": "vocab-lesson-2-20", "en": "hard-working", "ru": "трудолюбивый" },
+      { "id": "vocab-lesson-2-21", "en": "talkative", "ru": "разговорчивый" },
+      { "id": "vocab-lesson-2-22", "en": "serious", "ru": "серьёзный" },
+      { "id": "vocab-lesson-2-23", "en": "mean", "ru": "скупой; жадный" },
+      { "id": "vocab-lesson-2-24", "en": "generous", "ru": "щедрый" },
+      { "id": "vocab-lesson-2-25", "en": "fun", "ru": "весёлый; с ним интересно проводить время" },
+      { "id": "vocab-lesson-2-26", "en": "warm", "ru": "тёплый; сердечный" },
+      { "id": "vocab-lesson-2-27", "en": "romantic", "ru": "романтичный" },
+      { "id": "vocab-lesson-2-28", "en": "independent", "ru": "самостоятельный; независимый" },
+      { "id": "vocab-lesson-2-29", "en": "close", "ru": "близкий; в близких отношениях" },
+      { "id": "vocab-lesson-2-30", "en": "get divorced", "ru": "развестись" }
     ]
   }
 ];

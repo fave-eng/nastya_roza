@@ -1,0 +1,529 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "title": "1B The perfect date?",
+  "subtitle": "Alphabet pronunciation + describing people: appearance and personality",
+  "status": "available",
+  "publishedAt": "2026-08-19",
+  "totalPoints": 31,
+  "vocabularyId": "vocab-lesson-2",
+  "grammarIds": [],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "1A",
+      "title": "PRONUNCIATION",
+      "text": "the alphabet"
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-alphabet-a",
+      "title": "a Circle the letter with a different vowel sound.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "single",
+          "prompt": "A · K · E",
+          "exampleAnswer": "E"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "train",
+          "options": [
+            "G",
+            "V",
+            "R"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "egg",
+          "options": [
+            "N",
+            "B",
+            "F"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "train",
+          "options": [
+            "H",
+            "P",
+            "J"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "egg",
+          "options": [
+            "X",
+            "S",
+            "K"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "tree",
+          "options": [
+            "M",
+            "C",
+            "D"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "single",
+          "prompt": "boot",
+          "options": [
+            "Q",
+            "I",
+            "U"
+          ],
+          "answer": 1
+        }
+      ],
+      "image": "images/lesson-2-pronunciation-a.png",
+      "imageAlt": "Original workbook exercise: pronunciation, the alphabet, part a."
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-alphabet-b",
+      "title": "b 1.1 Listen and check. Then listen again and repeat the letters.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.1.mp3",
+      "response": false
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-alphabet-c",
+      "title": "c Complete the alphabet quiz.",
+      "instructions": "Which letter of the alphabet sounds like...?",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "my",
+          "exampleAnswer": "I"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "play",
+          "answer": "A",
+          "placeholder": "Letter"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "you",
+          "answer": "U",
+          "placeholder": "Letter"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "see",
+          "answer": "P",
+          "placeholder": "Letter"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "go",
+          "answer": "O",
+          "placeholder": "Letter"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "why",
+          "answer": "Y",
+          "placeholder": "Letter"
+        }
+      ],
+      "image": "images/lesson-2-alphabet-quiz.png",
+      "imageAlt": "Original workbook alphabet quiz for pronunciation part c.",
+      "inlineNumberedItems": true
+    },
+    {
+      "type": "section",
+      "eyebrow": "1B",
+      "title": "VOCABULARY",
+      "text": "describing people"
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-describing-people-a",
+      "title": "a Cross out the word which can’t be used with the bold noun.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "single",
+          "prompt": "hair — red · curly · straight · tall",
+          "exampleAnswer": "tall"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "eyes",
+          "options": [
+            "blonde",
+            "big",
+            "blue",
+            "brown"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "man",
+          "options": [
+            "thin",
+            "short",
+            "long",
+            "overweight"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "woman",
+          "options": [
+            "medium height",
+            "slim",
+            "beautiful",
+            "bald"
+          ],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-anagrams-b",
+      "title": "b Order the letters to make words that complete the sentences.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "Thanks for paying for dinner – that was very ________ (enersuog).",
+          "exampleAnswer": "generous"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Sarah’s really ",
+            " (nynfu). She makes me laugh."
+          ],
+          "answers": [
+            [
+              "funny"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Sam’s very ",
+            " (rdfylnei). Everybody likes him."
+          ],
+          "answers": [
+            [
+              "friendly"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "John never does his homework. He’s very ",
+            " (alzy)."
+          ],
+          "answers": [
+            [
+              "lazy"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Imogen is a ",
+            " (eervlc) girl. She’ll do well in her exams."
+          ],
+          "answers": [
+            [
+              "clever"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "That was a very ",
+            " (dinukn) thing to say."
+          ],
+          "answers": [
+            [
+              "unkind"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "David is quite intelligent, but sometimes he says really ",
+            " (updits) things."
+          ],
+          "answers": [
+            [
+              "stupid"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "Paula is really ",
+            " (hsy) – she doesn’t like meeting new people."
+          ],
+          "answers": [
+            [
+              "shy"
+            ]
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "Laura’s usually very ",
+            " (iuetq) – she doesn’t talk very much."
+          ],
+          "answers": [
+            [
+              "quiet"
+            ]
+          ]
+        }
+      ],
+      "inlineNumberedItems": true
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-complete-c",
+      "title": "c Complete the sentences.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "Does your boyfriend have brown eyes or blue eyes?",
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Tanya’s dad doesn’t have any hair. He’s b",
+            "."
+          ],
+          "answers": [
+            [
+              "ald"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Jamie’s new girlfriend is really e",
+            " – she loves meeting new people."
+          ],
+          "answers": [
+            [
+              "xtrovert"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "My dad never shaves. He has a b",
+            " and a m",
+            "."
+          ],
+          "answers": [
+            [
+              "eard"
+            ],
+            [
+              "oustache"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "What does your sister look l",
+            "? Is she tall and blonde, too?"
+          ],
+          "answers": [
+            [
+              "ike"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "When Jake was young, he was very th",
+            ", but now he’s a bit o",
+            "."
+          ],
+          "answers": [
+            [
+              "in"
+            ],
+            [
+              "verweight"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "My dad is really h",
+            "-w",
+            " – he starts work at 7.00 and gets home at 6.00."
+          ],
+          "answers": [
+            [
+              "ard"
+            ],
+            [
+              "orking"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "I’m not l",
+            " my sister. I don’t say much, but she’s very t",
+            " – in fact she never stops talking."
+          ],
+          "answers": [
+            [
+              "ike"
+            ],
+            [
+              "alkative"
+            ]
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "George is a very s",
+            " student – he works hard and wants to do well."
+          ],
+          "answers": [
+            [
+              "erious"
+            ]
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "segments": [
+            "Dan is really m",
+            " – he never pays for anything."
+          ],
+          "answers": [
+            [
+              "ean"
+            ]
+          ]
+        }
+      ],
+      "inlineNumberedItems": true
+    }
+  ]
+}
