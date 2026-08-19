@@ -17,13 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
-      NOTIFY_WEBHOOK_SECRET: ${{ secrets.NOTIFY_WEBHOOK_SECRET }}
+      NOTIFY_WEBHOOK_SECRET: ${{ secrets.NASTYA_ROZA_NOTIFY_WEBHOOK_SECRET }}
       LESSON_ID: ${{ inputs.lesson_id }}
 
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+
       - name: Send one notification to the pair Telegram topic
         run: node scripts/prepare-notification.mjs
