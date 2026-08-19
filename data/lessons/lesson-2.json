@@ -22,7 +22,7 @@
     {
       "type": "exercise",
       "id": "pronunciation-alphabet-a",
-      "title": "a Circle the letter with a different vowel sound.",
+      "title": "a Обведи букву, которая произносится с другим гласным звуком.",
       "hideAnswersOnError": true,
       "items": [
         {
@@ -117,20 +117,24 @@
           "answer": 1,
           "optionStyle": "circle"
         }
-      ]
+      ],
+      "instructions": "Смотри на слово-образец слева. В каждой строке выбери одну букву, которая звучит иначе, чем две другие. Первая строка — готовый пример.",
+      "image": "images/lesson-2-pronunciation-sounds.svg",
+      "imageAlt": "Схема со словами-образцами train, tree, egg и boot и группами букв для сравнения произношения.",
+      "stickyImage": true
     },
     {
       "type": "audio",
       "id": "pronunciation-alphabet-b",
-      "title": "b 1.1 Listen and check. Then listen again and repeat the letters.",
+      "title": "b 1.1 Прослушай и проверь ответы. Затем прослушай ещё раз и повтори буквы.",
       "audio": "audio/English_File_4e_Pre-intermediate_WB_1.1.mp3",
       "response": false
     },
     {
       "type": "exercise",
       "id": "pronunciation-alphabet-c",
-      "title": "c Complete the alphabet quiz.",
-      "instructions": "Which letter of the alphabet sounds like...?",
+      "title": "c Закончи алфавитную викторину.",
+      "instructions": "Впиши букву английского алфавита, название которой звучит как слово слева. Первая строка my → I — готовый пример.",
       "hideAnswersOnError": true,
       "items": [
         {
@@ -179,8 +183,9 @@
         }
       ],
       "inlineNumberedItems": true,
-      "introTitle": "Alphabet Quiz",
-      "introText": "A + O P U Y"
+      "image": "images/lesson-2-alphabet-quiz.svg",
+      "imageAlt": "Alphabet Quiz с набором букв A, O, P, U, Y и словами my, play, you, see, go, why.",
+      "stickyImage": true
     },
     {
       "type": "section",

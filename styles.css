@@ -2895,3 +2895,27 @@ label.odd-option {
     padding: 5px 7px;
   }
 }
+
+/* Lesson 2: reconstructed workbook visuals stay attached to their exercise on desktop. */
+[data-task="pronunciation-alphabet-a"].has-sticky-image .exercise-sticky-layout,
+[data-task="pronunciation-alphabet-c"].has-sticky-image .exercise-sticky-layout {
+  grid-template-columns: minmax(300px, .96fr) minmax(0, 1.04fr);
+}
+
+[data-task="pronunciation-alphabet-a"] .exercise-sticky-media .exercise-image-link,
+[data-task="pronunciation-alphabet-c"] .exercise-sticky-media .exercise-image-link {
+  border-color: #d6deea;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+}
+
+[data-task="pronunciation-alphabet-a"] .exercise-sticky-media .exercise-images,
+[data-task="pronunciation-alphabet-c"] .exercise-sticky-media .exercise-images {
+  top: 18px;
+}
+
+@media (max-width: 760px) {
+  [data-task="pronunciation-alphabet-a"].has-sticky-image .exercise-sticky-layout,
+  [data-task="pronunciation-alphabet-c"].has-sticky-image .exercise-sticky-layout {
+    grid-template-columns: 1fr;
+  }
+}
