@@ -795,6 +795,15 @@ body[data-view="lesson"] #lesson-root {
   font-weight: 700;
 }
 
+.exercise-item-word-bank {
+  margin: 0 0 12px;
+  padding: 9px 10px;
+}
+
+.exercise-item-word-bank .word-bank-label {
+  margin-bottom: 0;
+}
+
 .exercise-example {
   background: #fbfcfe;
 }
@@ -2623,20 +2632,20 @@ label.odd-option {
 .grammar-scheme-flow {
   display: flex;
   align-items: stretch;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 2px 2px 8px;
-  scrollbar-width: thin;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  padding: 2px 0 4px;
 }
 
 .grammar-scheme-part {
-  min-width: 132px;
-  flex: 1 0 132px;
+  min-width: 0;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 124px;
-  padding: 14px 12px;
+  padding: 13px 8px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.78);
   text-align: center;
@@ -2669,33 +2678,41 @@ label.odd-option {
 }
 
 .grammar-scheme-word {
-  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  font-size: clamp(1.08rem, 2.7vw, 1.55rem);
   font-weight: 900;
+  line-height: 1.15;
   letter-spacing: -.02em;
+  overflow-wrap: anywhere;
 }
 
 .grammar-scheme-translation {
-  margin-top: 3px;
-  font-size: .88rem;
+  margin-top: 4px;
+  font-size: .82rem;
+  line-height: 1.25;
   font-weight: 700;
   opacity: .82;
+  overflow-wrap: anywhere;
 }
 
 .grammar-scheme-role {
-  margin-top: 10px;
-  padding-top: 9px;
+  margin-top: 9px;
+  padding-top: 8px;
   border-top: 1px solid currentColor;
-  font-size: .72rem;
+  font-size: .68rem;
   line-height: 1.25;
   font-weight: 800;
-  opacity: .68;
+  opacity: .7;
+  overflow-wrap: anywhere;
 }
 
 .grammar-scheme-arrow {
   align-self: center;
-  flex: 0 0 auto;
+  flex: 0 0 14px;
+  width: 14px;
   color: #94a3b8;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  text-align: center;
   font-weight: 900;
 }
 
@@ -2732,17 +2749,39 @@ label.odd-option {
     padding: 12px;
   }
 
+  .grammar-scheme-part {
+    min-height: 112px;
+    padding: 11px 6px;
+  }
+
+  .grammar-scheme-word {
+    font-size: 1.08rem;
+  }
+
+  .grammar-scheme-translation {
+    font-size: .75rem;
+  }
+
+  .grammar-scheme-role {
+    font-size: .63rem;
+  }
+}
+
+@media (max-width: 500px) {
   .grammar-scheme-flow {
-    gap: 6px;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .grammar-scheme-part {
-    min-width: 116px;
-    flex-basis: 116px;
-    min-height: 116px;
+    flex-basis: auto;
+    min-height: 0;
+    padding: 12px 14px;
   }
 
   .grammar-scheme-arrow {
-    font-size: 1.05rem;
+    flex-basis: auto;
+    width: auto;
+    transform: rotate(90deg);
   }
 }

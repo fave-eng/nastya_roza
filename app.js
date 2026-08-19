@@ -1289,6 +1289,9 @@
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
     const context = renderExerciseContext(item);
+    const itemWordBank = Array.isArray(item.wordBank) && item.wordBank.length
+      ? `<div class="word-bank exercise-item-word-bank" aria-label="Слова для задания"><strong class="word-bank-label">Слова</strong>${item.wordBank.map((word) => `<span>${escapeHtml(word)}</span>`).join('')}</div>`
+      : '';
     const afterText = item.afterText ? `<div class="exercise-source-line exercise-source-after">${escapeHtml(item.afterText)}</div>` : '';
 
     if (item.displayOnly) {
@@ -1400,7 +1403,7 @@
       : '';
     return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
       ${itemHeader}
-      <div class="exercise-control">${context}${control}${afterText}</div>
+      <div class="exercise-control">${itemWordBank}${context}${control}${afterText}</div>
       <div class="feedback" aria-live="polite"></div>
     </div>`;
   }

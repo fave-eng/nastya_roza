@@ -18,17 +18,17 @@ window.GRAMMAR_DATA = [
         "label": "Если есть вопросительное слово",
         "parts": [
           {"word": "Where", "translation": "где?", "role": "Вопросительное слово", "kind": "question"},
-          {"word": "do", "translation": "не переводим", "role": "Помощник / форма be", "kind": "helper"},
+          {"word": "do", "translation": "не переводим", "role": "Помощник / be", "kind": "helper"},
           {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
-          {"word": "live?", "translation": "живёшь?", "role": "Действие / остальное", "kind": "action"}
+          {"word": "live?", "translation": "живёшь?", "role": "Глагол + остальное", "kind": "action"}
         ]
       },
       "withoutQuestionWord": {
         "label": "Если вопросительного слова нет",
         "parts": [
-          {"word": "Can", "translation": "можешь?", "role": "Помощник / форма be", "kind": "helper"},
+          {"word": "Can", "translation": "можешь?", "role": "Помощник / be", "kind": "helper"},
           {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
-          {"word": "speak English?", "translation": "говорить по-английски?", "role": "Действие / остальное", "kind": "action"}
+          {"word": "speak English?", "translation": "говорить по-английски?", "role": "Глагол + остальное", "kind": "action"}
         ]
       },
       "memoryTip": "Главное: в вопросе помощник или форма be обычно стоит ПЕРЕД тем, о ком мы спрашиваем."
@@ -161,11 +161,14 @@ window.GRAMMAR_DATA = [
         "id": "word-order-v2-step-2",
         "title": "2. Поставь слова в правильном порядке.",
         "difficulty": "Легко → Средне",
-        "instructions": "Впиши пропущенные слова одной фразой. Слова не изменяй.",
+        "instructions": "В каждой строке даны слова для пропуска. Поставь их в правильном порядке и впиши только пропущенную часть. Слова не изменяй.",
         "items": [
           {
             "id": "1",
             "input": "gaps",
+            "prompt": "Поставь слова в правильном порядке: ",
+            "wordBank": ["you", "are"],
+            "inputSize": "wide",
             "segments": [
               "Where ",
               " from?"
@@ -179,6 +182,9 @@ window.GRAMMAR_DATA = [
           {
             "id": "2",
             "input": "gaps",
+            "prompt": "Поставь слова в правильном порядке: ",
+            "wordBank": ["speak", "you"],
+            "inputSize": "wide",
             "segments": [
               "Can ",
               " English?"
@@ -192,6 +198,9 @@ window.GRAMMAR_DATA = [
           {
             "id": "3",
             "input": "gaps",
+            "prompt": "Поставь слова в правильном порядке: ",
+            "wordBank": ["you", "were"],
+            "inputSize": "wide",
             "segments": [
               "Where ",
               " born?"
@@ -205,6 +214,9 @@ window.GRAMMAR_DATA = [
           {
             "id": "4",
             "input": "gaps",
+            "prompt": "Поставь слова в правильном порядке: ",
+            "wordBank": ["your parents", "do"],
+            "inputSize": "wide",
             "segments": [
               "What ",
               " do?"
@@ -281,30 +293,38 @@ window.GRAMMAR_DATA = [
         "id": "word-order-v2-step-4",
         "title": "4. Собери вопрос из всех слов.",
         "difficulty": "Сложнее",
-        "instructions": "Используй все данные слова и поставь их в правильном порядке.",
+        "instructions": "Слова в карточках перемешаны. Используй все слова и напиши полный вопрос в правильном порядке.",
         "items": [
           {
             "id": "1",
             "input": "text",
-            "prompt": "where / do / you / live",
+            "prompt": "Собери полный вопрос.",
+            "wordBank": ["live", "you", "where", "do"],
+            "placeholder": "Напиши полный вопрос",
             "answer": "Where do you live?"
           },
           {
             "id": "2",
             "input": "text",
-            "prompt": "what / does / your father / do",
+            "prompt": "Собери полный вопрос.",
+            "wordBank": ["your father", "do", "what", "does"],
+            "placeholder": "Напиши полный вопрос",
             "answer": "What does your father do?"
           },
           {
             "id": "3",
             "input": "text",
-            "prompt": "where / did / you / go / last Saturday",
+            "prompt": "Собери полный вопрос.",
+            "wordBank": ["last Saturday", "go", "did", "where", "you"],
+            "placeholder": "Напиши полный вопрос",
             "answer": "Where did you go last Saturday?"
           },
           {
             "id": "4",
             "input": "text",
-            "prompt": "what kind of music / do / you / listen to",
+            "prompt": "Собери полный вопрос.",
+            "wordBank": ["listen to", "you", "what kind of music", "do"],
+            "placeholder": "Напиши полный вопрос",
             "answer": "What kind of music do you listen to?"
           }
         ]
