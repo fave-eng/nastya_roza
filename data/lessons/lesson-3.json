@@ -81,9 +81,6 @@
       "id":"pronunciation-final-s-a",
       "title":"a Circle the verb with a different final sound.",
       "hideAnswersOnError":true,
-      "image":"images/lesson-3-final-s-es.svg",
-      "imageAlt":"Pronunciation guide with snake for the final s sound, zebra for the final z sound, and the phonetic ending iz.",
-      "stickyImage":true,
       "items":[
         {"id":"1","number":1,"example":true,"input":"single","prompt":"snake","options":["works","laughs","watches"],"answer":2,"optionStyle":"circle"},
         {"id":"2","number":2,"input":"single","prompt":"snake","options":["lives","thinks","drinks"],"answer":0,"optionStyle":"circle"},

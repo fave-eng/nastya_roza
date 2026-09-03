@@ -858,6 +858,27 @@ body[data-view="lesson"] #lesson-root {
   outline: none;
 }
 
+/* Short workbook blanks show exactly where one or two missing letters belong. */
+.letter-gaps {
+  flex-wrap: nowrap;
+  gap: 2px;
+  line-height: 1.5;
+}
+
+.gap-input-letter {
+  width: calc(22px + var(--gap-chars, 1) * 1.05ch);
+  min-width: 38px;
+  min-height: 38px;
+  padding: 4px 5px 2px;
+  border-radius: 0;
+  background: transparent;
+  font-weight: 800;
+}
+
+.gap-input-letter:focus {
+  background: #eef2ff;
+}
+
 .audio-card {
   display: flex;
   gap: 17px;

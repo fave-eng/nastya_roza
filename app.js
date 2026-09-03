@@ -1402,8 +1402,17 @@
     } else if (item.input === 'gaps') {
       const answers = Array.isArray(item.answers) ? item.answers : [];
       const segments = Array.isArray(item.segments) ? item.segments : [];
-      const gapClass = item.inputSize === 'wide' ? 'gap-input gap-input-wide' : 'gap-input';
-      control = `<div class="sentence-gaps" aria-label="${prompt}">${answers.map((answer, gapIndex) => `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="${gapClass}" data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
+      const gapClass = item.inputSize === 'wide'
+        ? 'gap-input gap-input-wide'
+        : item.inputSize === 'letter' ? 'gap-input gap-input-letter' : 'gap-input';
+      control = `<div class="sentence-gaps${item.inputSize === 'letter' ? ' letter-gaps' : ''}" aria-label="${prompt}">${answers.map((answer, gapIndex) => {
+        const accepted = Array.isArray(answer) ? answer : [answer];
+        const gapChars = Math.max(1, ...accepted.map((value) => safeText(value).trim().length));
+        const letterAttributes = item.inputSize === 'letter'
+          ? ` style="--gap-chars:${Math.min(gapChars, 8)}" maxlength="${Math.min(gapChars, 24)}"`
+          : '';
+        return `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="${gapClass}"${letterAttributes} data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`;
+      }).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
