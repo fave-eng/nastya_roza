@@ -1296,7 +1296,7 @@
     const afterText = item.afterText ? `<div class="exercise-source-line exercise-source-after">${escapeHtml(item.afterText)}</div>` : '';
     const itemImageSrc = safeText(item.image).trim();
     const itemMedia = itemImageSrc
-      ? `<div class="exercise-item-media"><img src="${escapeHtml(itemImageSrc)}" alt="${escapeHtml(item.imageAlt || '')}" loading="lazy"></div>`
+      ? `<div class="exercise-item-media" role="img" aria-label="${escapeHtml(item.imageAlt || '')}" style="background-image:url('${escapeHtml(itemImageSrc)}')"></div>`
       : '';
     const itemMediaClass = itemMedia ? ' has-item-media' : '';
 
