@@ -77,5 +77,36 @@ window.VOCABULARY_DATA = [
       { "id": "vocab-lesson-2-29", "en": "close", "ru": "близкий; в близких отношениях" },
       { "id": "vocab-lesson-2-30", "en": "get divorced", "ru": "развестись" }
     ]
+  },
+  {
+    "id": "vocab-lesson-3",
+    "title": "Present simple and frequency",
+    "label": "Lesson 3 · 1B The perfect date?",
+    "icon": "🗓️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-3",
+    "page": "vocabulary.html?id=vocab-lesson-3",
+    "words": [
+      { "id": "vocab-lesson-3-1", "en": "together", "ru": "вместе" },
+      { "id": "vocab-lesson-3-2", "en": "perhaps", "ru": "возможно; может быть" },
+      { "id": "vocab-lesson-3-3", "en": "weather", "ru": "погода" },
+      { "id": "vocab-lesson-3-4", "en": "in winter", "ru": "зимой" },
+      { "id": "vocab-lesson-3-5", "en": "in summer", "ru": "летом" },
+      { "id": "vocab-lesson-3-6", "en": "in the evenings", "ru": "по вечерам" },
+      { "id": "vocab-lesson-3-7", "en": "Monday to Friday", "ru": "с понедельника по пятницу" },
+      { "id": "vocab-lesson-3-8", "en": "on Saturdays", "ru": "по субботам" },
+      { "id": "vocab-lesson-3-9", "en": "often", "ru": "часто" },
+      { "id": "vocab-lesson-3-10", "en": "never", "ru": "никогда" },
+      { "id": "vocab-lesson-3-11", "en": "every day", "ru": "каждый день" },
+      { "id": "vocab-lesson-3-12", "en": "sometimes", "ru": "иногда" },
+      { "id": "vocab-lesson-3-13", "en": "always", "ru": "всегда" },
+      { "id": "vocab-lesson-3-14", "en": "hardly ever", "ru": "почти никогда" },
+      { "id": "vocab-lesson-3-15", "en": "during the week", "ru": "в течение недели; по будням" },
+      { "id": "vocab-lesson-3-16", "en": "get married", "ru": "жениться; выйти замуж" },
+      { "id": "vocab-lesson-3-17", "en": "live alone", "ru": "жить одному / одной" },
+      { "id": "vocab-lesson-3-18", "en": "too old", "ru": "слишком взрослый; слишком старый" },
+      { "id": "vocab-lesson-3-19", "en": "these days", "ru": "в настоящее время; сейчас" },
+      { "id": "vocab-lesson-3-20", "en": "wife", "ru": "жена" }
+    ]
   }
 ];

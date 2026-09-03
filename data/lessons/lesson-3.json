@@ -1,0 +1,292 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "title": "1B The perfect date?",
+  "subtitle": "Present simple + final -s and -es",
+  "status": "available",
+  "publishedAt": "2026-09-03",
+  "totalPoints": 18,
+  "vocabularyId": "vocab-lesson-3",
+  "grammarIds": [
+    "grammar-present-simple"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "1B",
+      "title": "GRAMMAR present simple",
+      "titleLead": "GRAMMAR",
+      "titleTail": "present simple"
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-present-simple-a",
+      "title": "a Complete the conversation with the present simple form of the verbs in brackets.",
+      "layout": "dialogue",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "prompt": "Do your parents live together? (live)"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "",
+            " Louisa ",
+            " to marry her boyfriend? (want)"
+          ],
+          "answers": [
+            ["Does"],
+            ["want"]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "It rains a lot in the winter, but it ",
+            " often ",
+            " in the summer. (not rain)"
+          ],
+          "answers": [
+            ["doesn't", "does not"],
+            ["rain"]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "He ",
+            " a lot of TV. (watch)"
+          ],
+          "answers": [
+            ["watches"]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " your sister ",
+            " Spanish? (speak)"
+          ],
+          "answers": [
+            ["Does"],
+            ["speak"]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "",
+            " you ",
+            " Monday to Friday? (work)"
+          ],
+          "answers": [
+            ["Do"],
+            ["work"]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "We ",
+            " very often because it’s cold and wet. (not play)"
+          ],
+          "answers": [
+            ["don't play", "do not play"]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "Yes, she ",
+            " it. (love)"
+          ],
+          "answers": [
+            ["loves"]
+          ]
+        }
+      ],
+      "dialogueLines": [
+        { "speaker": "A", "itemIds": ["1"] },
+        { "speaker": "B", "text": "No, they don’t. They’re divorced now." },
+        { "speaker": "A", "itemIds": ["2"] },
+        { "speaker": "B", "text": "In a few years perhaps." },
+        { "speaker": "A", "text": "What’s the weather like where you live?" },
+        { "speaker": "B", "itemIds": ["3"] },
+        { "speaker": "A", "text": "What does José do in the evenings?" },
+        { "speaker": "B", "itemIds": ["4"] },
+        { "speaker": "A", "itemIds": ["5"] },
+        { "speaker": "B", "text": "No, but she speaks English and Italian." },
+        { "speaker": "A", "itemIds": ["6"] },
+        { "speaker": "B", "text": "Yes, and I usually work on Saturdays, too." },
+        { "speaker": "A", "text": "How often do you play tennis in winter?" },
+        { "speaker": "B", "itemIds": ["7"] },
+        { "speaker": "A", "text": "Does your sister like living in Italy?" },
+        { "speaker": "B", "itemIds": ["8"] }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-adverbs-b",
+      "title": "b Rewrite the sentences with the words in brackets in the correct place. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "My dad lives alone and he does not go out. (often)",
+          "exampleAnswer": "My dad lives alone and he doesn’t often go out."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "prompt": "You are too old to get married. (never)",
+          "answer": "You’re never too old to get married."
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "Candice sees her boyfriend. (every day)",
+          "answer": "Candice sees her boyfriend every day."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "Alice meets people on the internet. (sometimes)",
+          "answer": "Alice sometimes meets people on the internet."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "It is fun to go on a date. (always)",
+          "answer": "It’s always fun to go on a date."
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "prompt": "I see my wife these days. (hardly ever)",
+          "answer": "I hardly ever see my wife these days."
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "I go out during the week. (never)",
+          "answer": "I never go out during the week."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "1B",
+      "title": "PRONUNCIATION final -s and -es",
+      "titleLead": "PRONUNCIATION",
+      "titleTail": "final -s and -es"
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-final-s-a",
+      "title": "a Circle the verb with a different final sound.",
+      "hideAnswersOnError": true,
+      "image": "images/lesson-3-final-s-es.svg",
+      "imageAlt": "Pronunciation guide with snake for the final s sound, zebra for the final z sound, and the phonetic ending iz.",
+      "stickyImage": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "single",
+          "prompt": "snake",
+          "options": ["works", "laughs", "watches"],
+          "answer": 2,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "snake",
+          "options": ["lives", "thinks", "drinks"],
+          "answer": 0,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "zebra",
+          "options": ["knows", "rains", "likes"],
+          "answer": 2,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "zebra",
+          "options": ["runs", "starts", "goes"],
+          "answer": 1,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "/ɪz/",
+          "options": ["leaves", "dresses", "washes"],
+          "answer": 0,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "/ɪz/",
+          "options": ["teaches", "cooks", "uses"],
+          "answer": 1,
+          "optionStyle": "circle"
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-final-s-b",
+      "title": "b 1.2 Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.2.mp3",
+      "response": false
+    }
+  ]
+}
