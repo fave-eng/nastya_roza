@@ -572,35 +572,5 @@ window.VOCABULARY_DATA = [
         "ru": "под"
       }
     ]
-  },
-  {
-    "id": "vocab-lesson-5",
-    "title": "Art and actions",
-    "label": "Lesson 5 · 1C The Remake Project",
-    "icon": "🎨",
-    "linkedLessonId": "lesson-5",
-    "page": "vocabulary.html?id=vocab-lesson-5",
-    "words": [
-      {"id": "vocab-lesson-5-1", "en": "painting", "ru": "картина"},
-      {"id": "vocab-lesson-5-2", "en": "online", "ru": "в интернете; онлайн"},
-      {"id": "vocab-lesson-5-3", "en": "poster", "ru": "плакат; постер"},
-      {"id": "vocab-lesson-5-4", "en": "living room", "ru": "гостиная"},
-      {"id": "vocab-lesson-5-5", "en": "dining room", "ru": "столовая"},
-      {"id": "vocab-lesson-5-6", "en": "art course", "ru": "курс рисования; художественный курс"},
-      {"id": "vocab-lesson-5-7", "en": "at the moment", "ru": "в данный момент; сейчас"},
-      {"id": "vocab-lesson-5-8", "en": "pearl earring", "ru": "жемчужная серьга"},
-      {"id": "vocab-lesson-5-9", "en": "order", "ru": "заказывать"},
-      {"id": "vocab-lesson-5-10", "en": "beautiful", "ru": "красивый"},
-      {"id": "vocab-lesson-5-11", "en": "interesting", "ru": "интересный"},
-      {"id": "vocab-lesson-5-12", "en": "look at", "ru": "смотреть на"},
-      {"id": "vocab-lesson-5-13", "en": "bench", "ru": "скамейка"},
-      {"id": "vocab-lesson-5-14", "en": "newspaper", "ru": "газета"},
-      {"id": "vocab-lesson-5-15", "en": "ride a bike", "ru": "ехать на велосипеде"},
-      {"id": "vocab-lesson-5-16", "en": "carry a bag", "ru": "нести сумку"},
-      {"id": "vocab-lesson-5-17", "en": "runner", "ru": "бегун"},
-      {"id": "vocab-lesson-5-18", "en": "theatre", "ru": "театр"},
-      {"id": "vocab-lesson-5-19", "en": "exam", "ru": "экзамен"},
-      {"id": "vocab-lesson-5-20", "en": "in the country", "ru": "за городом; в сельской местности"}
-    ]
   }
 ];
