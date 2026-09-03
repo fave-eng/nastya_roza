@@ -333,143 +333,146 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-1"
   },
   {
-    "id": "grammar-present-simple",
+    "id": "grammar-present-continuous",
     "order": 2,
-    "title": "Present Simple",
+    "title": "Present Continuous",
     "level": "A1",
     "status": "available",
-    "page": "grammar-topic.html?id=grammar-present-simple",
+    "page": "grammar-topic.html?id=grammar-present-continuous",
     "passed": false,
     "attempts": 0,
     "lockOnPass": true,
     "revealAnswersOnError": false,
     "questionScheme": {
-      "title": "Как строится вопрос в Present Simple",
-      "subtitle": "В вопросе do или does ставим перед подлежащим, а основной глагол используем без окончания -s.",
+      "title": "Как строится вопрос в Present Continuous",
+      "subtitle": "Форму am, is или are ставим перед подлежащим, а смысловой глагол используем с окончанием -ing.",
       "withQuestionWord": {
         "label": "Если есть вопросительное слово",
         "parts": [
-          { "word": "Where", "translation": "где?", "role": "Вопросительное слово", "kind": "question" },
-          { "word": "does", "translation": "не переводим", "role": "Помощник", "kind": "helper" },
-          { "word": "Anna", "translation": "Анна", "role": "Кто?", "kind": "subject" },
-          { "word": "live?", "translation": "живёт?", "role": "Глагол без -s", "kind": "action" }
+          { "word": "What", "translation": "что?", "role": "Вопросительное слово", "kind": "question" },
+          { "word": "is", "translation": "не переводим", "role": "Форма be", "kind": "helper" },
+          { "word": "she", "translation": "она", "role": "Кто?", "kind": "subject" },
+          { "word": "wearing?", "translation": "на ней надето?", "role": "Глагол + -ing", "kind": "action" }
         ]
       },
       "withoutQuestionWord": {
         "label": "Если вопросительного слова нет",
         "parts": [
-          { "word": "Do", "translation": "не переводим", "role": "Помощник", "kind": "helper" },
-          { "word": "you", "translation": "ты / вы", "role": "Кто?", "kind": "subject" },
-          { "word": "work?", "translation": "работаешь?", "role": "Глагол без -s", "kind": "action" }
+          { "word": "Is", "translation": "не переводим", "role": "Форма be", "kind": "helper" },
+          { "word": "he", "translation": "он", "role": "Кто?", "kind": "subject" },
+          { "word": "sleeping?", "translation": "спит?", "role": "Глагол + -ing", "kind": "action" }
         ]
       },
-      "memoryTip": "После does и doesn’t основной глагол всегда возвращается в начальную форму: Does she live? She doesn’t live."
+      "memoryTip": "В Present Continuous всегда нужны две части: подходящая форма be и смысловой глагол с -ing."
     },
     "glanceCards": [
       {
         "icon": "1",
         "label": "Когда используем",
-        "hint": "Для привычек, регулярных действий, расписаний, фактов и постоянных ситуаций.",
-        "pattern": "usually / every day / always",
-        "example": "I usually work on Saturdays. — Я обычно работаю по субботам."
+        "hint": "Для действия, которое происходит сейчас, около настоящего момента или временно.",
+        "pattern": "now / at the moment",
+        "example": "She’s wearing a tracksuit now. — Сейчас на ней спортивный костюм."
       },
       {
         "icon": "2",
         "label": "Утверждение",
-        "hint": "С I / you / we / they используем обычную форму. С he / she / it добавляем -s или -es.",
-        "pattern": "I work. · She works.",
-        "example": "He watches a lot of TV. — Он смотрит много телевизора."
+        "hint": "Используем am, is или are и добавляем -ing к смысловому глаголу.",
+        "pattern": "subject + am / is / are + verb-ing",
+        "example": "They’re playing football. — Они играют в футбол."
       },
       {
         "icon": "3",
         "label": "Отрицание",
-        "hint": "Используем don’t или doesn’t и основной глагол без окончания -s.",
-        "pattern": "don’t / doesn’t + verb",
-        "example": "It doesn’t rain in summer. — Летом дождь не идёт."
+        "hint": "Добавляем not после am, is или are. Часто используем сокращения isn’t и aren’t.",
+        "pattern": "am not / isn’t / aren’t + verb-ing",
+        "example": "He isn’t smiling. — Он не улыбается."
       },
       {
         "icon": "4",
         "label": "Вопрос",
-        "hint": "Начинаем с do или does. После подлежащего ставим глагол без окончания -s.",
-        "pattern": "Do / Does + subject + verb?",
-        "example": "Does Louisa want to get married? — Луиза хочет выйти замуж?"
+        "hint": "Переносим am, is или are перед подлежащим.",
+        "pattern": "Am / Is / Are + subject + verb-ing?",
+        "example": "Are you looking at the photo? — Ты смотришь на фотографию?"
       }
     ],
     "miniRules": [
       {
         "title": "1. Значение",
-        "text": "Present Simple описывает то, что происходит регулярно или обычно, а также факты и постоянные ситуации.",
-        "example": "We play tennis in winter. · She lives in Italy."
+        "text": "Present Continuous описывает действие, которое происходит сейчас, около настоящего момента или в течение временного периода.",
+        "example": "The woman is carrying a bag. · I’m studying this week."
       },
       {
         "title": "2. Утверждение",
-        "text": "С I, you, we, they форма глагола не меняется. С he, she, it обычно добавляем -s.",
-        "example": "I work. · Anna works."
+        "text": "После подлежащего ставим am, is или are, затем смысловой глагол с окончанием -ing.",
+        "example": "I’m looking. · She’s riding. · They’re playing."
       },
       {
         "title": "3. Отрицание",
-        "text": "С I, you, we, they используем don’t. С he, she, it — doesn’t. После них глагол стоит без -s.",
-        "example": "We don’t play. · He doesn’t play."
+        "text": "Частицу not ставим после am, is или are. Возможны сокращения isn’t и aren’t; форма am not обычно сокращается как I’m not.",
+        "example": "I’m not sleeping. · He isn’t smiling. · They aren’t working."
       },
       {
         "title": "4. Вопрос",
-        "text": "Do ставим перед I, you, we, they; does — перед he, she, it. Основной глагол в вопросе используется без -s.",
-        "example": "Do you work? · Does she speak Spanish?"
+        "text": "Форму am, is или are ставим перед подлежащим. После подлежащего идёт глагол с -ing.",
+        "example": "What is she doing? · Are they playing football?"
       },
       {
         "title": "5. Короткий ответ",
-        "text": "В коротком ответе повторяем do или does, а не основной глагол.",
-        "example": "Do they live together? — No, they don’t. · Does she work? — Yes, she does."
+        "text": "В коротком ответе повторяем am, is или are. Смысловой глагол не повторяем.",
+        "example": "Is he sleeping? — Yes, he is. / No, he isn’t."
       },
       {
-        "title": "6. Окончания -s и -es",
-        "text": "После -s, -sh, -ch, -x и -o обычно добавляем -es. Если глагол заканчивается на согласную + y, меняем y на -ies. У have особая форма has.",
-        "example": "watch → watches · go → goes · study → studies · have → has"
+        "title": "6. Как добавить -ing",
+        "text": "Обычно просто добавляем -ing. Конечную немую e убираем. После короткого ударного гласного конечную согласную часто удваиваем. В lie буквы ie меняются на y.",
+        "example": "work → working · live → living · run → running · lie → lying"
       },
       {
-        "title": "7. Наречия частотности",
-        "text": "Always, usually, often, sometimes, hardly ever и never обычно стоят перед смысловым глаголом, но после формы be. Every day и during the week обычно ставим в конце.",
-        "example": "I never go out. · She is always busy. · Candice sees him every day."
+        "title": "7. Глаголы состояния",
+        "text": "Глаголы like, love, want, know, understand и believe обычно не используют в Continuous, когда они обозначают состояние, а не действие.",
+        "example": "I like this painting. ✓ · I’m liking this painting. ✗"
       },
       {
-        "title": "8. Не путай с Present Continuous",
-        "text": "Present Simple говорит о привычке или факте. Present Continuous описывает действие, которое происходит прямо сейчас или временно.",
-        "example": "I work on Saturdays. · I’m working now."
+        "title": "8. Не путай с Present Simple",
+        "text": "Present Simple описывает привычку или факт, а Present Continuous — действие сейчас или временную ситуацию.",
+        "example": "He sleeps eight hours every night. · He’s sleeping now."
       }
     ],
     "tables": [
       {
-        "title": "Утверждения",
-        "headers": ["Кто?", "Форма", "Пример"],
+        "title": "Формы be",
+        "headers": ["Кто?", "Полная форма", "Сокращение"],
         "rows": [
-          ["I / you / we / they", "verb", "They live together."],
-          ["he / she / it", "verb + s / es", "She speaks Italian."]
+          ["I", "am", "I’m"],
+          ["he / she / it", "is", "he’s / she’s / it’s"],
+          ["you / we / they", "are", "you’re / we’re / they’re"]
         ]
       },
       {
-        "title": "Отрицания и вопросы",
-        "headers": ["Форма", "I / you / we / they", "he / she / it"],
+        "title": "Утверждение, отрицание и вопрос",
+        "headers": ["Форма", "Схема", "Пример"],
         "rows": [
-          ["Отрицание", "don’t + verb", "doesn’t + verb"],
-          ["Вопрос", "Do … + verb?", "Does … + verb?"]
+          ["Утверждение", "subject + be + verb-ing", "She is wearing a dress."],
+          ["Отрицание", "subject + be + not + verb-ing", "She isn’t wearing a dress."],
+          ["Вопрос", "be + subject + verb-ing?", "Is she wearing a dress?"]
         ]
       },
       {
         "title": "Короткие ответы",
         "headers": ["Вопрос", "Да", "Нет"],
         "rows": [
-          ["Do you / they …?", "Yes, I / they do.", "No, I / they don’t."],
-          ["Does he / she …?", "Yes, he / she does.", "No, he / she doesn’t."]
+          ["Am I …?", "Yes, you are.", "No, you aren’t."],
+          ["Is he / she / it …?", "Yes, he / she / it is.", "No, he / she / it isn’t."],
+          ["Are you / we / they …?", "Yes, you / we / they are.", "No, you / we / they aren’t."]
         ]
       },
       {
-        "title": "Написание формы he / she / it",
-        "headers": ["Окончание глагола", "Что делаем", "Пример"],
+        "title": "Написание формы -ing",
+        "headers": ["Тип глагола", "Что делаем", "Пример"],
         "rows": [
-          ["обычно", "+ s", "work → works"],
-          ["-s, -sh, -ch, -x, -o", "+ es", "watch → watches"],
-          ["согласная + y", "y → ies", "study → studies"],
-          ["have", "особая форма", "have → has"]
+          ["обычно", "+ ing", "wear → wearing"],
+          ["немая -e", "убираем e", "ride → riding"],
+          ["короткая гласная + согласная", "удваиваем согласную", "sit → sitting"],
+          ["-ie", "ie → y", "lie → lying"]
         ]
       }
     ],
@@ -477,174 +480,103 @@ window.GRAMMAR_DATA = [
       {
         "title": "Одна мысль в четырёх формах",
         "items": [
-          "Утверждение: Louisa wants to get married. — Луиза хочет выйти замуж.",
-          "Отрицание: Louisa doesn’t want to get married. — Луиза не хочет выходить замуж.",
-          "Вопрос: Does Louisa want to get married? — Луиза хочет выйти замуж?",
-          "Короткий ответ: Yes, she does. / No, she doesn’t."
+          "Утверждение: She’s wearing a tracksuit. — На ней спортивный костюм.",
+          "Отрицание: She isn’t wearing a tracksuit. — На ней не спортивный костюм.",
+          "Вопрос: Is she wearing a tracksuit? — На ней спортивный костюм?",
+          "Короткий ответ: Yes, she is. / No, she isn’t."
         ]
       },
       {
-        "title": "Где ставить наречие",
+        "title": "Present Simple или Present Continuous",
         "items": [
-          "I often play tennis. — often стоит перед play.",
-          "He doesn’t often go out. — often стоит после doesn’t.",
-          "She is always friendly. — с be наречие стоит после is.",
-          "Candice sees her boyfriend every day. — every day стоит в конце."
+          "He rides a bike every day. — регулярное действие.",
+          "He’s riding a bike now. — действие происходит сейчас.",
+          "She usually wears jeans. — привычка.",
+          "She’s wearing a dress today. — временная ситуация сегодня."
         ]
       }
     ],
     "commonMistakes": [
-      "She work on Saturdays. ✗ → She works on Saturdays. ✓ — с she добавляем -s.",
-      "Does she speaks Spanish? ✗ → Does she speak Spanish? ✓ — после does глагол без -s.",
-      "He doesn’t watches TV. ✗ → He doesn’t watch TV. ✓ — после doesn’t глагол без -s.",
-      "I go never out. ✗ → I never go out. ✓ — never ставим перед смысловым глаголом.",
-      "I’m work every day. ✗ → I work every day. ✓ — для обычного действия форма am не нужна."
+      "She wearing a dress. ✗ → She is wearing a dress. ✓ — нужна форма be.",
+      "They is playing football. ✗ → They are playing football. ✓ — с they используем are.",
+      "He is rideing a bike. ✗ → He is riding a bike. ✓ — конечную e убираем.",
+      "Is wearing she a tracksuit? ✗ → Is she wearing a tracksuit? ✓ — после is ставим подлежащее.",
+      "I’m knowing the answer. ✗ → I know the answer. ✓ — know обычно не используется в Continuous."
     ],
     "exercises": [
       {
-        "id": "present-simple-step-1",
+        "id": "present-continuous-step-1",
         "title": "1. Выбери правильную форму.",
         "difficulty": "Легко",
         "instructions": "Выбери вариант, который правильно завершает предложение.",
         "items": [
-          {
-            "id": "1",
-            "input": "single",
-            "prompt": "I ___ from Monday to Friday.",
-            "options": ["work", "works"],
-            "answer": 0
-          },
-          {
-            "id": "2",
-            "input": "single",
-            "prompt": "Anna ___ in Italy.",
-            "options": ["live", "lives"],
-            "answer": 1
-          },
-          {
-            "id": "3",
-            "input": "single",
-            "prompt": "We ___ play tennis very often.",
-            "options": ["don’t", "doesn’t"],
-            "answer": 0
-          },
-          {
-            "id": "4",
-            "input": "single",
-            "prompt": "___ your brother work on Saturdays?",
-            "options": ["Does", "Do"],
-            "answer": 0
-          }
+          { "id": "1", "input": "single", "prompt": "I ___ looking at the photo.", "options": ["am", "is"], "answer": 0 },
+          { "id": "2", "input": "single", "prompt": "She ___ wearing a tracksuit.", "options": ["is", "are"], "answer": 0 },
+          { "id": "3", "input": "single", "prompt": "They ___ playing football.", "options": ["is", "are"], "answer": 1 },
+          { "id": "4", "input": "single", "prompt": "He is ___ a bike.", "options": ["riding", "rideing"], "answer": 0 }
         ]
       },
       {
-        "id": "present-simple-step-2",
-        "title": "2. Поставь глагол в правильную форму.",
+        "id": "present-continuous-step-2",
+        "title": "2. Поставь глагол в Present Continuous.",
         "difficulty": "Средне",
-        "instructions": "Впиши правильную форму глагола в Present Simple.",
+        "instructions": "Впиши полную правильную форму глагола в Present Continuous.",
         "items": [
-          {
-            "id": "1",
-            "input": "gaps",
-            "segments": ["My sister ", " Italian. (speak)"],
-            "answers": [["speaks"]]
-          },
-          {
-            "id": "2",
-            "input": "gaps",
-            "segments": ["They ", " together. (not live)"],
-            "answers": [["don't live", "do not live"]]
-          },
-          {
-            "id": "3",
-            "input": "gaps",
-            "segments": ["", " you ", " in the evenings? (work)"],
-            "answers": [["Do"], ["work"]]
-          },
-          {
-            "id": "4",
-            "input": "gaps",
-            "segments": ["It ", " a lot in winter. (rain)"],
-            "answers": [["rains"]]
-          }
+          { "id": "1", "input": "gaps", "segments": ["The woman ", " a bag. (carry)"], "answers": [["is carrying", "'s carrying"]] },
+          { "id": "2", "input": "gaps", "segments": ["We ", " shorts today. (wear)"], "answers": [["are wearing", "'re wearing"]] },
+          { "id": "3", "input": "gaps", "segments": ["He ", ". (not smile)"], "answers": [["isn't smiling", "is not smiling"]] },
+          { "id": "4", "input": "gaps", "segments": ["I ", " my homework. (do)"], "answers": [["am doing", "'m doing"]] }
         ]
       },
       {
-        "id": "present-simple-step-3",
-        "title": "3. Выбери правильный вариант.",
+        "id": "present-continuous-step-3",
+        "title": "3. Выбери форму по контексту.",
         "difficulty": "Повышенная сложность",
-        "instructions": "Выбери форму, которая подходит по смыслу и правилу.",
+        "instructions": "Выбери Present Simple или Present Continuous по смыслу предложения.",
         "items": [
-          {
-            "id": "1",
-            "input": "circle-or-tick",
-            "segments": ["He ", " TV in the evenings."],
-            "options": ["watch", "watches"],
-            "answer": "1"
-          },
-          {
-            "id": "2",
-            "input": "circle-or-tick",
-            "segments": ["I ", " during the week."],
-            "options": ["don’t go out", "doesn’t go out"],
-            "answer": "0"
-          },
-          {
-            "id": "3",
-            "input": "circle-or-tick",
-            "segments": ["", " Louisa want to get married?"],
-            "options": ["Do", "Does"],
-            "answer": "1"
-          },
-          {
-            "id": "4",
-            "input": "circle-or-tick",
-            "segments": ["It ", " in summer."],
-            "options": ["doesn’t rain", "doesn’t rains"],
-            "answer": "0"
-          }
+          { "id": "1", "input": "circle-or-tick", "segments": ["Look! They ", " football."], "options": ["play", "are playing"], "answer": "1" },
+          { "id": "2", "input": "circle-or-tick", "segments": ["He usually ", " a bike to work."], "options": ["rides", "is riding"], "answer": "0" },
+          { "id": "3", "input": "circle-or-tick", "segments": ["She ", " a dress today."], "options": ["wears", "is wearing"], "answer": "1" },
+          { "id": "4", "input": "circle-or-tick", "segments": ["I ", " this painting."], "options": ["like", "am liking"], "answer": "0" }
         ]
       },
       {
-        "id": "present-simple-step-4",
+        "id": "present-continuous-step-4",
         "title": "4. Построй полное предложение или вопрос.",
         "difficulty": "Самое сложное",
-        "instructions": "Используй все слова и напиши полное предложение или вопрос в Present Simple.",
+        "instructions": "Используй все слова и напиши полное предложение или вопрос в Present Continuous.",
         "items": [
           {
             "id": "1",
             "input": "text",
             "prompt": "Составь утверждение.",
-            "wordBank": ["José", "watch", "a lot of TV", "in the evenings"],
+            "wordBank": ["the woman", "wear", "a dress and a cardigan"],
             "placeholder": "Напиши полное предложение",
-            "answer": "José watches a lot of TV in the evenings."
+            "acceptedAnswers": ["The woman is wearing a dress and a cardigan.", "The woman’s wearing a dress and a cardigan."]
           },
           {
             "id": "2",
             "input": "text",
             "prompt": "Составь отрицание.",
-            "wordBank": ["we", "not play", "tennis", "very often"],
+            "wordBank": ["he", "not sleep"],
             "placeholder": "Напиши полное предложение",
-            "acceptedAnswers": [
-              "We don’t play tennis very often.",
-              "We do not play tennis very often."
-            ]
+            "acceptedAnswers": ["He isn’t sleeping.", "He is not sleeping."]
           },
           {
             "id": "3",
             "input": "text",
             "prompt": "Составь вопрос.",
-            "wordBank": ["your sister", "speak", "Spanish"],
+            "wordBank": ["what", "she", "do"],
             "placeholder": "Напиши полный вопрос",
-            "answer": "Does your sister speak Spanish?"
+            "answer": "What is she doing?"
           },
           {
             "id": "4",
             "input": "text",
-            "prompt": "Составь предложение с наречием в правильном месте.",
-            "wordBank": ["Alice", "meet", "people", "on the internet", "sometimes"],
-            "placeholder": "Напиши полное предложение",
-            "answer": "Alice sometimes meets people on the internet."
+            "prompt": "Составь вопрос.",
+            "wordBank": ["they", "play football"],
+            "placeholder": "Напиши полный вопрос",
+            "answer": "Are they playing football?"
           }
         ]
       }

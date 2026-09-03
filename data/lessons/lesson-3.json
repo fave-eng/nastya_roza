@@ -1,14 +1,14 @@
 {
   "id": "lesson-3",
   "number": 3,
-  "title": "1B The perfect date?",
-  "subtitle": "Present simple + final -s and -es",
+  "title": "1C The Remake Project",
+  "subtitle": "Clothes, prepositions of place, and pronunciation /ə/ and /ɜː/",
   "status": "available",
   "publishedAt": "2026-09-03",
-  "totalPoints": 18,
+  "totalPoints": 36,
   "vocabularyId": "vocab-lesson-3",
   "grammarIds": [
-    "grammar-present-simple"
+    "grammar-present-continuous"
   ],
   "notification": {
     "enabled": true,
@@ -17,275 +17,386 @@
   "blocks": [
     {
       "type": "section",
-      "sectionNumber": 2,
-      "eyebrow": "1B",
-      "title": "GRAMMAR present simple",
-      "titleLead": "GRAMMAR",
-      "titleTail": "present simple"
+      "sectionNumber": 1,
+      "eyebrow": "1C",
+      "title": "VOCABULARY clothes, prepositions of place",
+      "titleLead": "VOCABULARY",
+      "titleTail": "clothes, prepositions of place"
     },
     {
       "type": "exercise",
-      "id": "grammar-present-simple-a",
-      "title": "a Complete the conversation with the present simple form of the verbs in brackets.",
-      "layout": "dialogue",
+      "id": "vocabulary-clothes-a",
+      "title": "a Complete the words.",
       "hideAnswersOnError": true,
+      "image": "images/lesson-3-clothes.svg",
+      "imageAlt": "Twelve numbered clothes and accessories: a ring, leggings, trousers, a shirt, a cap, a tracksuit, trainers, a belt, a coat, a dress, a tie, and shorts.",
+      "stickyImage": true,
+      "inlineNumberedItems": true,
       "items": [
         {
           "id": "1",
           "number": 1,
           "example": true,
-          "input": "gaps",
-          "prompt": "Do your parents live together? (live)"
+          "input": "text",
+          "prompt": "r__ng",
+          "exampleAnswer": "ring"
         },
         {
           "id": "2",
           "number": 2,
           "input": "gaps",
-          "segments": [
-            "",
-            " Louisa ",
-            " to marry her boyfriend? (want)"
-          ],
-          "answers": [
-            ["Does"],
-            ["want"]
-          ]
+          "segments": ["l", "gg", "ngs"],
+          "answers": [["e"], ["i"]]
         },
         {
           "id": "3",
           "number": 3,
           "input": "gaps",
-          "segments": [
-            "It rains a lot in the winter, but it ",
-            " often ",
-            " in the summer. (not rain)"
-          ],
-          "answers": [
-            ["doesn't", "does not"],
-            ["rain"]
-          ]
+          "segments": ["tr", "s", "rs"],
+          "answers": [["ou"], ["e"]]
         },
         {
           "id": "4",
           "number": 4,
           "input": "gaps",
-          "segments": [
-            "He ",
-            " a lot of TV. (watch)"
-          ],
-          "answers": [
-            ["watches"]
-          ]
+          "segments": ["sh", "rt"],
+          "answers": [["i"]]
         },
         {
           "id": "5",
           "number": 5,
           "input": "gaps",
-          "segments": [
-            "",
-            " your sister ",
-            " Spanish? (speak)"
-          ],
-          "answers": [
-            ["Does"],
-            ["speak"]
-          ]
+          "segments": ["c", "p"],
+          "answers": [["a"]]
         },
         {
           "id": "6",
           "number": 6,
           "input": "gaps",
-          "segments": [
-            "",
-            " you ",
-            " Monday to Friday? (work)"
-          ],
-          "answers": [
-            ["Do"],
-            ["work"]
-          ]
+          "segments": ["tr", "cks", "t"],
+          "answers": [["a"], ["ui"]]
         },
         {
           "id": "7",
           "number": 7,
           "input": "gaps",
-          "segments": [
-            "We ",
-            " very often because it’s cold and wet. (not play)"
-          ],
-          "answers": [
-            ["don't play", "do not play"]
-          ]
+          "segments": ["tr", "n", "rs"],
+          "answers": [["ai"], ["e"]]
         },
         {
           "id": "8",
           "number": 8,
           "input": "gaps",
-          "segments": [
-            "Yes, she ",
-            " it. (love)"
-          ],
-          "answers": [
-            ["loves"]
-          ]
+          "segments": ["b", "lt"],
+          "answers": [["e"]]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": ["c", "t"],
+          "answers": [["oa"]]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "segments": ["dr", "ss"],
+          "answers": [["e"]]
+        },
+        {
+          "id": "11",
+          "number": 11,
+          "input": "gaps",
+          "segments": ["t", ""],
+          "answers": [["ie"]]
+        },
+        {
+          "id": "12",
+          "number": 12,
+          "input": "gaps",
+          "segments": ["sh", "rts"],
+          "answers": [["o"]]
         }
-      ],
-      "dialogueLines": [
-        { "speaker": "A", "itemIds": ["1"] },
-        { "speaker": "B", "text": "No, they don’t. They’re divorced now." },
-        { "speaker": "A", "itemIds": ["2"] },
-        { "speaker": "B", "text": "In a few years perhaps." },
-        { "speaker": "A", "text": "What’s the weather like where you live?" },
-        { "speaker": "B", "itemIds": ["3"] },
-        { "speaker": "A", "text": "What does José do in the evenings?" },
-        { "speaker": "B", "itemIds": ["4"] },
-        { "speaker": "A", "itemIds": ["5"] },
-        { "speaker": "B", "text": "No, but she speaks English and Italian." },
-        { "speaker": "A", "itemIds": ["6"] },
-        { "speaker": "B", "text": "Yes, and I usually work on Saturdays, too." },
-        { "speaker": "A", "text": "How often do you play tennis in winter?" },
-        { "speaker": "B", "itemIds": ["7"] },
-        { "speaker": "A", "text": "Does your sister like living in Italy?" },
-        { "speaker": "B", "itemIds": ["8"] }
       ]
     },
     {
       "type": "exercise",
-      "id": "grammar-adverbs-b",
-      "title": "b Rewrite the sentences with the words in brackets in the correct place. Use contractions where possible.",
+      "id": "vocabulary-clothes-b",
+      "title": "b Match descriptions 1–10 to a–j.",
       "hideAnswersOnError": true,
       "items": [
         {
           "id": "1",
           "number": 1,
           "example": true,
-          "input": "text",
-          "prompt": "My dad lives alone and he does not go out. (often)",
-          "exampleAnswer": "My dad lives alone and he doesn’t often go out."
+          "input": "select",
+          "prompt": "They keep your hands warm.",
+          "exampleAnswer": "e — gloves"
         },
         {
           "id": "2",
           "number": 2,
-          "input": "text",
-          "prompt": "You are too old to get married. (never)",
-          "answer": "You’re never too old to get married."
+          "input": "select",
+          "prompt": "This is like a shirt, but for women.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 0
         },
         {
           "id": "3",
           "number": 3,
-          "input": "text",
-          "prompt": "Candice sees her boyfriend. (every day)",
-          "answer": "Candice sees her boyfriend every day."
+          "input": "select",
+          "prompt": "They keep your feet warm.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 8
         },
         {
           "id": "4",
           "number": 4,
-          "input": "text",
-          "prompt": "Alice meets people on the internet. (sometimes)",
-          "answer": "Alice sometimes meets people on the internet."
+          "input": "select",
+          "prompt": "This keeps your neck warm.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 7
         },
         {
           "id": "5",
           "number": 5,
-          "input": "text",
-          "prompt": "It is fun to go on a date. (always)",
-          "answer": "It’s always fun to go on a date."
+          "input": "select",
+          "prompt": "You wear this on your head.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 5
         },
         {
           "id": "6",
           "number": 6,
-          "input": "text",
-          "prompt": "I see my wife these days. (hardly ever)",
-          "answer": "I hardly ever see my wife these days."
+          "input": "select",
+          "prompt": "You wear these in your ears.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 2
         },
         {
           "id": "7",
           "number": 7,
-          "input": "text",
-          "prompt": "I go out during the week. (never)",
-          "answer": "I never go out during the week."
+          "input": "select",
+          "prompt": "People often wear this to a job interview.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "prompt": "You wear these when you go to bed.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 6
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "prompt": "You wear this under your trousers and top.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 9
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "prompt": "People wear these shoes to the beach.",
+          "options": ["a — blouse", "b — suit", "c — earrings", "d — flip-flops", "e — gloves", "f — hat", "g — pyjamas", "h — scarf", "i — socks", "j — underwear"],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "vocabulary-prepositions-c",
+      "title": "c Look at the photo, a remake of van Gogh’s painting The bedroom. Complete the sentences with a preposition from the list.",
+      "hideAnswersOnError": true,
+      "image": "images/lesson-3-bedroom.svg",
+      "imageAlt": "A digital reconstruction of the bedroom: a bed on the right, a table on the left, a window above the chair, a chair between the table and the bed, two pillows, clothes behind the bed, a mirror above the table, two jugs and a cup on the table, and two portraits on the wall.",
+      "stickyImage": true,
+      "wordBank": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "select",
+          "prompt": "There’s a painting of a man ___ of the painting of the woman.",
+          "exampleAnswer": "on the left"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "prompt": "There are some clothes ___ the bed.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "prompt": "There’s a chair ___ the bed and the table.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "prompt": "There’s a small cup ___ the two jugs on the table.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "prompt": "The two pillows on the bed are ___ each other.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 4
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "prompt": "There’s a mirror ___ the table.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 0
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "prompt": "The chair by the bed is ___ the window.",
+          "options": ["above", "behind", "between", "in front of", "next to", "on", "on the left", "under"],
+          "answer": 7
         }
       ]
     },
     {
       "type": "section",
-      "sectionNumber": 3,
-      "eyebrow": "1B",
-      "title": "PRONUNCIATION final -s and -es",
+      "sectionNumber": 2,
+      "eyebrow": "1C",
+      "title": "PRONUNCIATION /ə/ and /ɜː/",
       "titleLead": "PRONUNCIATION",
-      "titleTail": "final -s and -es"
+      "titleTail": "/ə/ and /ɜː/"
     },
     {
       "type": "exercise",
-      "id": "pronunciation-final-s-a",
-      "title": "a Circle the verb with a different final sound.",
+      "id": "pronunciation-schwa-bird-a",
+      "title": "a Write the words in the chart.",
       "hideAnswersOnError": true,
-      "image": "images/lesson-3-final-s-es.svg",
-      "imageAlt": "Pronunciation guide with snake for the final s sound, zebra for the final z sound, and the phonetic ending iz.",
+      "image": "images/lesson-3-pronunciation.svg",
+      "imageAlt": "A two-row pronunciation chart: computer with the schwa sound and the example cardigan, and bird with the sound er and the example prefer.",
       "stickyImage": true,
+      "wordBank": ["cardigan", "fashion", "prefer", "sandals", "shirt", "skirt", "sweater", "third", "trainers", "trousers", "T-shirt", "world"],
       "items": [
         {
-          "id": "1",
-          "number": 1,
+          "id": "cardigan-example",
+          "number": "",
           "example": true,
           "input": "single",
-          "prompt": "snake",
-          "options": ["works", "laughs", "watches"],
-          "answer": 2,
-          "optionStyle": "circle"
+          "prompt": "cardigan",
+          "exampleAnswer": "/ə/ — computer"
         },
         {
-          "id": "2",
+          "id": "prefer-example",
+          "number": "",
+          "example": true,
+          "input": "single",
+          "prompt": "prefer",
+          "exampleAnswer": "/ɜː/ — bird"
+        },
+        {
+          "id": "fashion",
+          "number": 1,
+          "input": "single",
+          "prompt": "fashion",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 0
+        },
+        {
+          "id": "sandals",
           "number": 2,
           "input": "single",
-          "prompt": "snake",
-          "options": ["lives", "thinks", "drinks"],
-          "answer": 0,
-          "optionStyle": "circle"
+          "prompt": "sandals",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 0
         },
         {
-          "id": "3",
+          "id": "sweater",
           "number": 3,
           "input": "single",
-          "prompt": "zebra",
-          "options": ["knows", "rains", "likes"],
-          "answer": 2,
-          "optionStyle": "circle"
+          "prompt": "sweater",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 0
         },
         {
-          "id": "4",
+          "id": "trainers",
           "number": 4,
           "input": "single",
-          "prompt": "zebra",
-          "options": ["runs", "starts", "goes"],
-          "answer": 1,
-          "optionStyle": "circle"
+          "prompt": "trainers",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 0
         },
         {
-          "id": "5",
+          "id": "trousers",
           "number": 5,
           "input": "single",
-          "prompt": "/ɪz/",
-          "options": ["leaves", "dresses", "washes"],
-          "answer": 0,
-          "optionStyle": "circle"
+          "prompt": "trousers",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 0
         },
         {
-          "id": "6",
+          "id": "shirt",
           "number": 6,
           "input": "single",
-          "prompt": "/ɪz/",
-          "options": ["teaches", "cooks", "uses"],
-          "answer": 1,
-          "optionStyle": "circle"
+          "prompt": "shirt",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 1
+        },
+        {
+          "id": "skirt",
+          "number": 7,
+          "input": "single",
+          "prompt": "skirt",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 1
+        },
+        {
+          "id": "third",
+          "number": 8,
+          "input": "single",
+          "prompt": "third",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 1
+        },
+        {
+          "id": "t-shirt",
+          "number": 9,
+          "input": "single",
+          "prompt": "T-shirt",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 1
+        },
+        {
+          "id": "world",
+          "number": 10,
+          "input": "single",
+          "prompt": "world",
+          "options": ["/ə/ — computer", "/ɜː/ — bird"],
+          "answer": 1
         }
       ]
     },
     {
       "type": "audio",
-      "id": "pronunciation-final-s-b",
-      "title": "b 1.2 Listen and check. Then listen again and repeat the words.",
-      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.2.mp3",
+      "id": "pronunciation-schwa-bird-b",
+      "title": "b 1.3 Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_1.3.mp3",
       "response": false
     }
   ]
