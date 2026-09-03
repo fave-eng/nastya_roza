@@ -77,15 +77,16 @@
       "id": "grammar-present-simple-continuous-b",
       "title": "b Complete the sentences with the present simple or present continuous form of a verb from the list. Use contractions where possible.",
       "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
       "wordBank": ["drink", "drive", "like", "live", "rain", "sleep", "study", "wear"],
       "items": [
         {
           "id": "1",
           "number": 1,
           "example": true,
-          "input": "text",
-          "prompt": "We like this painting very much – it’s really interesting.",
-          "exampleTextOnly": true
+          "input": "gaps",
+          "segments": ["We ", " this painting very much – it’s really interesting."],
+          "exampleAnswers": ["like"]
         },
         {
           "id": "2",
@@ -140,21 +141,21 @@
     },
     {
       "type": "exercise",
-      "id": "grammar-present-continuous-cd",
+      "id": "grammar-present-continuous-c",
       "title": "c Look at the picture. Complete the questions with the present simple or present continuous form of the verb in brackets.",
-      "layout": "item-groups",
       "hideAnswersOnError": true,
       "image": "images/lesson-5-park-scan.png",
       "imageAlt": "The original workbook illustration of people in a park: boys playing football, a woman riding a bike, a man reading on a bench, a woman carrying a bag, and a runner.",
       "stickyImage": true,
+      "inlineNumberedItems": true,
       "items": [
         {
           "id": "c1",
           "number": 1,
           "example": true,
-          "input": "text",
-          "prompt": "What is the man on the bench reading? (read)",
-          "exampleTextOnly": true
+          "input": "gaps",
+          "segments": ["What ", " the man on the bench ", "? (read)"],
+          "exampleAnswers": ["is", "reading"]
         },
         {
           "id": "c2",
@@ -204,76 +205,77 @@
           "input": "gaps",
           "segments": ["What ", " the man under the tree ", "? (do)"],
           "answers": [["is"], ["doing"]]
-        },
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-present-continuous-d",
+      "title": "d Answer questions 1–8 in c.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
         {
           "id": "d1",
           "number": 1,
           "example": true,
-          "input": "text",
-          "prompt": "What is the man on the bench reading?",
-          "exampleAnswer": "The man on the bench is reading a newspaper."
+          "input": "gaps",
+          "segments": ["The man on the bench ", "."],
+          "exampleAnswers": ["is reading a newspaper"]
         },
         {
           "id": "d2",
           "number": 2,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c2", "template": "What {answer1} the boys under the tree {answer2}?"},
-          "answer": "The boys are playing football."
+          "input": "gaps",
+          "segments": ["The boys are ", "."],
+          "answers": [["playing football"]]
         },
         {
           "id": "d3",
           "number": 3,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c3", "template": "What {answer1} the woman on the left {answer2}?"},
-          "answer": "The woman on the left is riding a bike."
+          "input": "gaps",
+          "segments": ["The woman on the left ", "."],
+          "answers": [["is riding a bike"]]
         },
         {
           "id": "d4",
           "number": 4,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c4", "template": "What {answer1} she {answer2}?"},
-          "answer": ["She’s wearing a tracksuit and trainers.", "She is wearing a tracksuit and trainers."]
+          "input": "gaps",
+          "inputSize": "wide",
+          "segments": ["", ""],
+          "answers": [["She’s wearing a tracksuit and trainers.", "She is wearing a tracksuit and trainers."]]
         },
         {
           "id": "d5",
           "number": 5,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c5", "template": "What {answer1} the woman on the right {answer2}?"},
-          "answer": "The woman on the right is wearing a dress and a cardigan."
+          "input": "gaps",
+          "inputSize": "wide",
+          "segments": ["", ""],
+          "answers": [["The woman on the right is wearing a dress and a cardigan."]]
         },
         {
           "id": "d6",
           "number": 6,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c6", "template": "What {answer1} she {answer2}?"},
-          "answer": ["She’s carrying a bag.", "She is carrying a bag."]
+          "input": "gaps",
+          "inputSize": "wide",
+          "segments": ["", ""],
+          "answers": [["She’s carrying a bag.", "She is carrying a bag."]]
         },
         {
           "id": "d7",
           "number": 7,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c7", "template": "What {answer1} the runner {answer2}?"},
-          "answer": ["He’s wearing shorts, a T-shirt and trainers.", "He is wearing shorts, a T-shirt and trainers."]
+          "input": "gaps",
+          "inputSize": "wide",
+          "segments": ["", ""],
+          "answers": [["He’s wearing shorts, a T-shirt and trainers.", "He is wearing shorts, a T-shirt and trainers."]]
         },
         {
           "id": "d8",
           "number": 8,
-          "input": "text",
-          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c8", "template": "What {answer1} the man under the tree {answer2}?"},
-          "answer": ["He’s sleeping.", "He is sleeping."]
-        }
-      ],
-      "itemGroups": [
-        {
-          "id": "questions-c",
-          "inlineNumberedItems": true,
-          "itemIds": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"]
-        },
-        {
-          "id": "answers-d",
-          "title": "d Answer questions 1–8 in c.",
-          "revealAfterItems": ["c2", "c3", "c4", "c5", "c6", "c7", "c8"],
-          "itemIds": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8"]
+          "input": "gaps",
+          "inputSize": "wide",
+          "segments": ["", ""],
+          "answers": [["He’s sleeping.", "He is sleeping."]]
         }
       ]
     }

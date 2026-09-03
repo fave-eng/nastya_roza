@@ -647,6 +647,27 @@ body[data-view="lesson"] #lesson-root {
   background: #f6f8fb;
 }
 
+.exercise-item-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.exercise-item-group + .exercise-item-group {
+  border-top: 1px solid var(--border);
+}
+
+.exercise-subheading {
+  padding: 20px 20px 0;
+  background: #f6f8fb;
+}
+
+.exercise-subheading h4 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
 .exercise-item {
   padding: 18px 19px;
   border: 1px solid #dce4ee;
@@ -1916,6 +1937,13 @@ label.odd-option {
 .inline-gap-number {
   color: var(--indigo);
   font-weight: 900;
+}
+
+.example-sentence-gaps .inline-example-answer {
+  padding: 0 5px 2px;
+  border-bottom: 2px solid var(--indigo);
+  border-radius: 5px 5px 2px 2px;
+  background: #eef2ff;
 }
 
 .inline-example-answer b,
