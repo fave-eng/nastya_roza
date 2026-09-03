@@ -17,18 +17,53 @@ window.GRAMMAR_DATA = [
       "withQuestionWord": {
         "label": "Если есть вопросительное слово",
         "parts": [
-          {"word": "Where", "translation": "где?", "role": "Вопросительное слово", "kind": "question"},
-          {"word": "do", "translation": "не переводим", "role": "Помощник / be", "kind": "helper"},
-          {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
-          {"word": "live?", "translation": "живёшь?", "role": "Глагол + остальное", "kind": "action"}
+          {
+            "word": "Where",
+            "translation": "где?",
+            "role": "Вопросительное слово",
+            "kind": "question"
+          },
+          {
+            "word": "do",
+            "translation": "не переводим",
+            "role": "Помощник / be",
+            "kind": "helper"
+          },
+          {
+            "word": "you",
+            "translation": "ты",
+            "role": "Кто? / подлежащее",
+            "kind": "subject"
+          },
+          {
+            "word": "live?",
+            "translation": "живёшь?",
+            "role": "Глагол + остальное",
+            "kind": "action"
+          }
         ]
       },
       "withoutQuestionWord": {
         "label": "Если вопросительного слова нет",
         "parts": [
-          {"word": "Can", "translation": "можешь?", "role": "Помощник / be", "kind": "helper"},
-          {"word": "you", "translation": "ты", "role": "Кто? / подлежащее", "kind": "subject"},
-          {"word": "speak English?", "translation": "говорить по-английски?", "role": "Глагол + остальное", "kind": "action"}
+          {
+            "word": "Can",
+            "translation": "можешь?",
+            "role": "Помощник / be",
+            "kind": "helper"
+          },
+          {
+            "word": "you",
+            "translation": "ты",
+            "role": "Кто? / подлежащее",
+            "kind": "subject"
+          },
+          {
+            "word": "speak English?",
+            "translation": "говорить по-английски?",
+            "role": "Глагол + остальное",
+            "kind": "action"
+          }
         ]
       },
       "memoryTip": "Главное: в вопросе помощник или форма be обычно стоит ПЕРЕД тем, о ком мы спрашиваем."
@@ -167,7 +202,10 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "gaps",
             "prompt": "Поставь слова в правильном порядке: ",
-            "wordBank": ["you", "are"],
+            "wordBank": [
+              "you",
+              "are"
+            ],
             "inputSize": "wide",
             "segments": [
               "Where ",
@@ -183,7 +221,10 @@ window.GRAMMAR_DATA = [
             "id": "2",
             "input": "gaps",
             "prompt": "Поставь слова в правильном порядке: ",
-            "wordBank": ["speak", "you"],
+            "wordBank": [
+              "speak",
+              "you"
+            ],
             "inputSize": "wide",
             "segments": [
               "Can ",
@@ -199,7 +240,10 @@ window.GRAMMAR_DATA = [
             "id": "3",
             "input": "gaps",
             "prompt": "Поставь слова в правильном порядке: ",
-            "wordBank": ["you", "were"],
+            "wordBank": [
+              "you",
+              "were"
+            ],
             "inputSize": "wide",
             "segments": [
               "Where ",
@@ -215,7 +259,10 @@ window.GRAMMAR_DATA = [
             "id": "4",
             "input": "gaps",
             "prompt": "Поставь слова в правильном порядке: ",
-            "wordBank": ["your parents", "do"],
+            "wordBank": [
+              "your parents",
+              "do"
+            ],
             "inputSize": "wide",
             "segments": [
               "What ",
@@ -299,7 +346,12 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "text",
             "prompt": "Собери полный вопрос.",
-            "wordBank": ["live", "you", "where", "do"],
+            "wordBank": [
+              "live",
+              "you",
+              "where",
+              "do"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "Where do you live?"
           },
@@ -307,7 +359,12 @@ window.GRAMMAR_DATA = [
             "id": "2",
             "input": "text",
             "prompt": "Собери полный вопрос.",
-            "wordBank": ["your father", "do", "what", "does"],
+            "wordBank": [
+              "your father",
+              "do",
+              "what",
+              "does"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "What does your father do?"
           },
@@ -315,7 +372,13 @@ window.GRAMMAR_DATA = [
             "id": "3",
             "input": "text",
             "prompt": "Собери полный вопрос.",
-            "wordBank": ["last Saturday", "go", "did", "where", "you"],
+            "wordBank": [
+              "last Saturday",
+              "go",
+              "did",
+              "where",
+              "you"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "Where did you go last Saturday?"
           },
@@ -323,7 +386,12 @@ window.GRAMMAR_DATA = [
             "id": "4",
             "input": "text",
             "prompt": "Собери полный вопрос.",
-            "wordBank": ["listen to", "you", "what kind of music", "do"],
+            "wordBank": [
+              "listen to",
+              "you",
+              "what kind of music",
+              "do"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "What kind of music do you listen to?"
           }
@@ -333,8 +401,385 @@ window.GRAMMAR_DATA = [
     "linkedLessonId": "lesson-1"
   },
   {
-    "id": "grammar-present-continuous",
+    "id": "grammar-present-simple",
     "order": 2,
+    "title": "Present Simple",
+    "level": "A1",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-present-simple",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "questionScheme": {
+      "title": "Present Simple: обычные и повторяющиеся действия",
+      "subtitle": "Используем для привычек, расписаний, фактов и постоянных состояний.",
+      "withQuestionWord": {
+        "label": "Вопрос с вопросительным словом",
+        "parts": [
+          {
+            "word": "Where",
+            "translation": "где?",
+            "role": "Вопросительное слово",
+            "kind": "question"
+          },
+          {
+            "word": "does",
+            "translation": "не переводим",
+            "role": "Помощник",
+            "kind": "helper"
+          },
+          {
+            "word": "Anna",
+            "translation": "Анна",
+            "role": "Подлежащее",
+            "kind": "subject"
+          },
+          {
+            "word": "live?",
+            "translation": "живёт?",
+            "role": "Глагол без -s",
+            "kind": "action"
+          }
+        ]
+      },
+      "withoutQuestionWord": {
+        "label": "Общий вопрос",
+        "parts": [
+          {
+            "word": "Do",
+            "translation": "не переводим",
+            "role": "Помощник",
+            "kind": "helper"
+          },
+          {
+            "word": "you",
+            "translation": "ты",
+            "role": "Подлежащее",
+            "kind": "subject"
+          },
+          {
+            "word": "work?",
+            "translation": "работаешь?",
+            "role": "Глагол",
+            "kind": "action"
+          }
+        ]
+      },
+      "memoryTip": "Только в утвердительном предложении с he / she / it основной глагол получает -s или -es. После does / doesn't глагол снова без -s."
+    },
+    "glanceCards": [
+      {
+        "icon": "+",
+        "label": "Утверждение",
+        "hint": "I / you / we / they + глагол. He / she / it + глагол с -s / -es.",
+        "pattern": "She works.  •  They work.",
+        "example": "José watches TV in the evenings. — Хосе смотрит телевизор по вечерам."
+      },
+      {
+        "icon": "−",
+        "label": "Отрицание",
+        "hint": "Используй don't или doesn't. После них основной глагол стоит в начальной форме.",
+        "pattern": "I don't work.  •  She doesn't work.",
+        "example": "It doesn't rain in summer. — Летом дождя не бывает."
+      },
+      {
+        "icon": "?",
+        "label": "Вопрос",
+        "hint": "Do ставим с I / you / we / they, does — с he / she / it.",
+        "pattern": "Do you work?  •  Does she work?",
+        "example": "Does your sister speak Spanish? — Твоя сестра говорит по-испански?"
+      },
+      {
+        "icon": "✓",
+        "label": "Короткий ответ",
+        "hint": "Повторяем помощник do / does, а не основной глагол.",
+        "pattern": "Yes, I do.  •  No, she doesn't.",
+        "example": "Do they live together? — No, they don't."
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Когда используем Present Simple",
+        "text": "Для привычек, регулярных действий, расписаний, фактов и постоянных состояний.",
+        "example": "I work Monday to Friday. — Я работаю с понедельника по пятницу."
+      },
+      {
+        "title": "2. Утверждение",
+        "text": "С I / you / we / they используем начальную форму. С he / she / it добавляем -s или -es.",
+        "example": "We play tennis.  •  She loves Italy."
+      },
+      {
+        "title": "3. Окончания -s и -es",
+        "text": "Обычно добавляем -s. После -s, -ss, -sh, -ch, -x, -o обычно добавляем -es. Согласная + y меняется на -ies.",
+        "example": "live → lives, watch → watches, study → studies"
+      },
+      {
+        "title": "4. Исключения",
+        "text": "У have форма has, у do — does, у go — goes.",
+        "example": "He has a car.  •  She does yoga.  •  Anna goes out."
+      },
+      {
+        "title": "5. Отрицание",
+        "text": "С I / you / we / they ставим don't, с he / she / it — doesn't. Основной глагол после них без -s.",
+        "example": "We don't play.  •  He doesn't like parties."
+      },
+      {
+        "title": "6. Вопрос",
+        "text": "Do / Does ставим перед подлежащим. После подлежащего основной глагол идёт без -s.",
+        "example": "Do you work?  •  Does Louisa want to marry him?"
+      },
+      {
+        "title": "7. Слова частоты",
+        "text": "Always, often, sometimes, hardly ever, never обычно стоят перед смысловым глаголом, но после be.",
+        "example": "I often go out.  •  She is always friendly."
+      },
+      {
+        "title": "8. Present Simple и действие сейчас",
+        "text": "Present Simple описывает привычку или факт, а не действие, которое происходит прямо сейчас.",
+        "example": "I work every day. — привычка; I am working now. — прямо сейчас."
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Формы в одном примере",
+        "items": [
+          "She speaks English. — Она говорит по-английски.",
+          "She doesn't speak Spanish. — Она не говорит по-испански.",
+          "Does she speak Italian? — Она говорит по-итальянски?",
+          "Yes, she does. / No, she doesn't. — Да. / Нет."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "He watch TV. ✗ → He watches TV. ✓ — с he нужен -s / -es.",
+      "She doesn't likes parties. ✗ → She doesn't like parties. ✓ — после doesn't глагол без -s.",
+      "Does Anna lives here? ✗ → Does Anna live here? ✓ — после does глагол без -s.",
+      "I never don't go out. ✗ → I never go out. ✓ — never уже содержит отрицательное значение."
+    ],
+    "exercises": [
+      {
+        "id": "present-simple-step-1",
+        "title": "1. Выбери правильную форму.",
+        "difficulty": "Легко",
+        "instructions": "Выбери правильный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "I ___ from Monday to Friday.",
+            "options": [
+              "work",
+              "works"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "Anna ___ in Italy.",
+            "options": [
+              "live",
+              "lives"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "We ___ play tennis very often.",
+            "options": [
+              "don't",
+              "doesn't"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "___ your brother work on Saturdays?",
+            "options": [
+              "Does",
+              "Do"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "present-simple-step-2",
+        "title": "2. Заполни пропуски.",
+        "difficulty": "Легко → Средне",
+        "instructions": "Поставь слова в Present Simple.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "prompt": "speak",
+            "segments": [
+              "My sister ",
+              " Italian."
+            ],
+            "answers": [
+              [
+                "speaks"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "prompt": "not live",
+            "segments": [
+              "They ",
+              " together."
+            ],
+            "answers": [
+              [
+                "don't live",
+                "do not live"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "prompt": "work",
+            "segments": [
+              "",
+              " you ",
+              " in the evenings?"
+            ],
+            "answers": [
+              [
+                "Do"
+              ],
+              [
+                "work"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "prompt": "rain",
+            "segments": [
+              "It ",
+              " a lot in winter."
+            ],
+            "answers": [
+              [
+                "rains"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "present-simple-step-3",
+        "title": "3. Обведи правильный вариант.",
+        "difficulty": "Средне",
+        "instructions": "Выбери грамматически правильную форму.",
+        "items": [
+          {
+            "id": "1",
+            "input": "circle-or-tick",
+            "segments": [
+              "He ",
+              " TV in the evenings."
+            ],
+            "options": [
+              "watch",
+              "watches"
+            ],
+            "answer": "1"
+          },
+          {
+            "id": "2",
+            "input": "circle-or-tick",
+            "segments": [
+              "I ",
+              " go out during the week."
+            ],
+            "options": [
+              "don't",
+              "doesn't"
+            ],
+            "answer": "0"
+          },
+          {
+            "id": "3",
+            "input": "circle-or-tick",
+            "segments": [
+              "",
+              " Louisa want to get married?"
+            ],
+            "options": [
+              "Do",
+              "Does"
+            ],
+            "answer": "1"
+          },
+          {
+            "id": "4",
+            "input": "circle-or-tick",
+            "segments": [
+              "It ",
+              " in summer."
+            ],
+            "options": [
+              "doesn't rain",
+              "doesn't rains"
+            ],
+            "answer": "0"
+          }
+        ]
+      },
+      {
+        "id": "present-simple-step-4",
+        "title": "4. Напиши полное предложение.",
+        "difficulty": "Средне",
+        "instructions": "Используй подсказку и напиши предложение или вопрос полностью.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "José / watch / a lot of TV / in the evenings",
+            "placeholder": "Напиши предложение",
+            "answer": "José watches a lot of TV in the evenings."
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "We / not play / tennis / very often",
+            "placeholder": "Напиши предложение",
+            "answer": [
+              "We don't play tennis very often.",
+              "We do not play tennis very often."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "your sister / speak / Spanish?",
+            "placeholder": "Напиши вопрос",
+            "answer": "Does your sister speak Spanish?"
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "Alice / sometimes / meet / people / on the internet",
+            "placeholder": "Напиши предложение",
+            "answer": "Alice sometimes meets people on the internet."
+          }
+        ]
+      }
+    ],
+    "linkedLessonId": "lesson-3"
+  },
+  {
+    "id": "grammar-present-continuous",
+    "order": 3,
     "title": "Present Continuous",
     "level": "A1",
     "status": "available",
@@ -349,18 +794,53 @@ window.GRAMMAR_DATA = [
       "withQuestionWord": {
         "label": "Если есть вопросительное слово",
         "parts": [
-          { "word": "What", "translation": "что?", "role": "Вопросительное слово", "kind": "question" },
-          { "word": "is", "translation": "не переводим", "role": "Форма be", "kind": "helper" },
-          { "word": "she", "translation": "она", "role": "Кто?", "kind": "subject" },
-          { "word": "wearing?", "translation": "на ней надето?", "role": "Глагол + -ing", "kind": "action" }
+          {
+            "word": "What",
+            "translation": "что?",
+            "role": "Вопросительное слово",
+            "kind": "question"
+          },
+          {
+            "word": "is",
+            "translation": "не переводим",
+            "role": "Форма be",
+            "kind": "helper"
+          },
+          {
+            "word": "she",
+            "translation": "она",
+            "role": "Кто?",
+            "kind": "subject"
+          },
+          {
+            "word": "wearing?",
+            "translation": "на ней надето?",
+            "role": "Глагол + -ing",
+            "kind": "action"
+          }
         ]
       },
       "withoutQuestionWord": {
         "label": "Если вопросительного слова нет",
         "parts": [
-          { "word": "Is", "translation": "не переводим", "role": "Форма be", "kind": "helper" },
-          { "word": "he", "translation": "он", "role": "Кто?", "kind": "subject" },
-          { "word": "sleeping?", "translation": "спит?", "role": "Глагол + -ing", "kind": "action" }
+          {
+            "word": "Is",
+            "translation": "не переводим",
+            "role": "Форма be",
+            "kind": "helper"
+          },
+          {
+            "word": "he",
+            "translation": "он",
+            "role": "Кто?",
+            "kind": "subject"
+          },
+          {
+            "word": "sleeping?",
+            "translation": "спит?",
+            "role": "Глагол + -ing",
+            "kind": "action"
+          }
         ]
       },
       "memoryTip": "В Present Continuous всегда нужны две части: подходящая форма be и смысловой глагол с -ing."
@@ -440,39 +920,107 @@ window.GRAMMAR_DATA = [
     "tables": [
       {
         "title": "Формы be",
-        "headers": ["Кто?", "Полная форма", "Сокращение"],
+        "headers": [
+          "Кто?",
+          "Полная форма",
+          "Сокращение"
+        ],
         "rows": [
-          ["I", "am", "I’m"],
-          ["he / she / it", "is", "he’s / she’s / it’s"],
-          ["you / we / they", "are", "you’re / we’re / they’re"]
+          [
+            "I",
+            "am",
+            "I’m"
+          ],
+          [
+            "he / she / it",
+            "is",
+            "he’s / she’s / it’s"
+          ],
+          [
+            "you / we / they",
+            "are",
+            "you’re / we’re / they’re"
+          ]
         ]
       },
       {
         "title": "Утверждение, отрицание и вопрос",
-        "headers": ["Форма", "Схема", "Пример"],
+        "headers": [
+          "Форма",
+          "Схема",
+          "Пример"
+        ],
         "rows": [
-          ["Утверждение", "subject + be + verb-ing", "She is wearing a dress."],
-          ["Отрицание", "subject + be + not + verb-ing", "She isn’t wearing a dress."],
-          ["Вопрос", "be + subject + verb-ing?", "Is she wearing a dress?"]
+          [
+            "Утверждение",
+            "subject + be + verb-ing",
+            "She is wearing a dress."
+          ],
+          [
+            "Отрицание",
+            "subject + be + not + verb-ing",
+            "She isn’t wearing a dress."
+          ],
+          [
+            "Вопрос",
+            "be + subject + verb-ing?",
+            "Is she wearing a dress?"
+          ]
         ]
       },
       {
         "title": "Короткие ответы",
-        "headers": ["Вопрос", "Да", "Нет"],
+        "headers": [
+          "Вопрос",
+          "Да",
+          "Нет"
+        ],
         "rows": [
-          ["Am I …?", "Yes, you are.", "No, you aren’t."],
-          ["Is he / she / it …?", "Yes, he / she / it is.", "No, he / she / it isn’t."],
-          ["Are you / we / they …?", "Yes, you / we / they are.", "No, you / we / they aren’t."]
+          [
+            "Am I …?",
+            "Yes, you are.",
+            "No, you aren’t."
+          ],
+          [
+            "Is he / she / it …?",
+            "Yes, he / she / it is.",
+            "No, he / she / it isn’t."
+          ],
+          [
+            "Are you / we / they …?",
+            "Yes, you / we / they are.",
+            "No, you / we / they aren’t."
+          ]
         ]
       },
       {
         "title": "Написание формы -ing",
-        "headers": ["Тип глагола", "Что делаем", "Пример"],
+        "headers": [
+          "Тип глагола",
+          "Что делаем",
+          "Пример"
+        ],
         "rows": [
-          ["обычно", "+ ing", "wear → wearing"],
-          ["немая -e", "убираем e", "ride → riding"],
-          ["короткая гласная + согласная", "удваиваем согласную", "sit → sitting"],
-          ["-ie", "ie → y", "lie → lying"]
+          [
+            "обычно",
+            "+ ing",
+            "wear → wearing"
+          ],
+          [
+            "немая -e",
+            "убираем e",
+            "ride → riding"
+          ],
+          [
+            "короткая гласная + согласная",
+            "удваиваем согласную",
+            "sit → sitting"
+          ],
+          [
+            "-ie",
+            "ie → y",
+            "lie → lying"
+          ]
         ]
       }
     ],
@@ -510,10 +1058,46 @@ window.GRAMMAR_DATA = [
         "difficulty": "Легко",
         "instructions": "Выбери вариант, который правильно завершает предложение.",
         "items": [
-          { "id": "1", "input": "single", "prompt": "I ___ looking at the photo.", "options": ["am", "is"], "answer": 0 },
-          { "id": "2", "input": "single", "prompt": "She ___ wearing a tracksuit.", "options": ["is", "are"], "answer": 0 },
-          { "id": "3", "input": "single", "prompt": "They ___ playing football.", "options": ["is", "are"], "answer": 1 },
-          { "id": "4", "input": "single", "prompt": "He is ___ a bike.", "options": ["riding", "rideing"], "answer": 0 }
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "I ___ looking at the photo.",
+            "options": [
+              "am",
+              "is"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "She ___ wearing a tracksuit.",
+            "options": [
+              "is",
+              "are"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "They ___ playing football.",
+            "options": [
+              "is",
+              "are"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "He is ___ a bike.",
+            "options": [
+              "riding",
+              "rideing"
+            ],
+            "answer": 0
+          }
         ]
       },
       {
@@ -522,10 +1106,62 @@ window.GRAMMAR_DATA = [
         "difficulty": "Средне",
         "instructions": "Впиши полную правильную форму глагола в Present Continuous.",
         "items": [
-          { "id": "1", "input": "gaps", "segments": ["The woman ", " a bag. (carry)"], "answers": [["is carrying", "'s carrying"]] },
-          { "id": "2", "input": "gaps", "segments": ["We ", " shorts today. (wear)"], "answers": [["are wearing", "'re wearing"]] },
-          { "id": "3", "input": "gaps", "segments": ["He ", ". (not smile)"], "answers": [["isn't smiling", "is not smiling"]] },
-          { "id": "4", "input": "gaps", "segments": ["I ", " my homework. (do)"], "answers": [["am doing", "'m doing"]] }
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "The woman ",
+              " a bag. (carry)"
+            ],
+            "answers": [
+              [
+                "is carrying",
+                "'s carrying"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "We ",
+              " shorts today. (wear)"
+            ],
+            "answers": [
+              [
+                "are wearing",
+                "'re wearing"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "He ",
+              ". (not smile)"
+            ],
+            "answers": [
+              [
+                "isn't smiling",
+                "is not smiling"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "I ",
+              " my homework. (do)"
+            ],
+            "answers": [
+              [
+                "am doing",
+                "'m doing"
+              ]
+            ]
+          }
         ]
       },
       {
@@ -534,10 +1170,58 @@ window.GRAMMAR_DATA = [
         "difficulty": "Повышенная сложность",
         "instructions": "Выбери Present Simple или Present Continuous по смыслу предложения.",
         "items": [
-          { "id": "1", "input": "circle-or-tick", "segments": ["Look! They ", " football."], "options": ["play", "are playing"], "answer": "1" },
-          { "id": "2", "input": "circle-or-tick", "segments": ["He usually ", " a bike to work."], "options": ["rides", "is riding"], "answer": "0" },
-          { "id": "3", "input": "circle-or-tick", "segments": ["She ", " a dress today."], "options": ["wears", "is wearing"], "answer": "1" },
-          { "id": "4", "input": "circle-or-tick", "segments": ["I ", " this painting."], "options": ["like", "am liking"], "answer": "0" }
+          {
+            "id": "1",
+            "input": "circle-or-tick",
+            "segments": [
+              "Look! They ",
+              " football."
+            ],
+            "options": [
+              "play",
+              "are playing"
+            ],
+            "answer": "1"
+          },
+          {
+            "id": "2",
+            "input": "circle-or-tick",
+            "segments": [
+              "He usually ",
+              " a bike to work."
+            ],
+            "options": [
+              "rides",
+              "is riding"
+            ],
+            "answer": "0"
+          },
+          {
+            "id": "3",
+            "input": "circle-or-tick",
+            "segments": [
+              "She ",
+              " a dress today."
+            ],
+            "options": [
+              "wears",
+              "is wearing"
+            ],
+            "answer": "1"
+          },
+          {
+            "id": "4",
+            "input": "circle-or-tick",
+            "segments": [
+              "I ",
+              " this painting."
+            ],
+            "options": [
+              "like",
+              "am liking"
+            ],
+            "answer": "0"
+          }
         ]
       },
       {
@@ -550,23 +1234,40 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "text",
             "prompt": "Составь утверждение.",
-            "wordBank": ["the woman", "wear", "a dress and a cardigan"],
+            "wordBank": [
+              "the woman",
+              "wear",
+              "a dress and a cardigan"
+            ],
             "placeholder": "Напиши полное предложение",
-            "acceptedAnswers": ["The woman is wearing a dress and a cardigan.", "The woman’s wearing a dress and a cardigan."]
+            "acceptedAnswers": [
+              "The woman is wearing a dress and a cardigan.",
+              "The woman’s wearing a dress and a cardigan."
+            ]
           },
           {
             "id": "2",
             "input": "text",
             "prompt": "Составь отрицание.",
-            "wordBank": ["he", "not sleep"],
+            "wordBank": [
+              "he",
+              "not sleep"
+            ],
             "placeholder": "Напиши полное предложение",
-            "acceptedAnswers": ["He isn’t sleeping.", "He is not sleeping."]
+            "acceptedAnswers": [
+              "He isn’t sleeping.",
+              "He is not sleeping."
+            ]
           },
           {
             "id": "3",
             "input": "text",
             "prompt": "Составь вопрос.",
-            "wordBank": ["what", "she", "do"],
+            "wordBank": [
+              "what",
+              "she",
+              "do"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "What is she doing?"
           },
@@ -574,13 +1275,16 @@ window.GRAMMAR_DATA = [
             "id": "4",
             "input": "text",
             "prompt": "Составь вопрос.",
-            "wordBank": ["they", "play football"],
+            "wordBank": [
+              "they",
+              "play football"
+            ],
             "placeholder": "Напиши полный вопрос",
             "answer": "Are they playing football?"
           }
         ]
       }
     ],
-    "linkedLessonId": "lesson-3"
+    "linkedLessonId": "lesson-4"
   }
 ];

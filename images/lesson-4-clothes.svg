@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Clothes and accessories</title>
+  <desc id="desc">Twelve numbered drawings: a ring, leggings, trousers, a shirt, a cap, a tracksuit, trainers, a belt, a coat, a dress, a tie, and shorts.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f4f7fb"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dy="10" stdDeviation="12" flood-color="#203047" flood-opacity=".12"/></filter>
+    <style>
+      .card{fill:#fff;stroke:#d8e0eb;stroke-width:3}
+      .outline{fill:#dce5f0;stroke:#4d617a;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .detail{fill:none;stroke:#6d8097;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .dark{fill:#6f8298;stroke:#44586f;stroke-width:7;stroke-linejoin:round}
+      .num{font:700 30px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#33455d}
+    </style>
+  </defs>
+  <rect x="28" y="24" width="844" height="1032" rx="28" fill="url(#paper)" filter="url(#shadow)"/>
+
+  <g transform="translate(58 54)">
+    <g transform="translate(0 0)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">1</text><ellipse class="outline" cx="120" cy="132" rx="47" ry="38"/><path class="dark" d="M99 92l21-25 21 25-21 25z"/><path class="detail" d="M83 116c20-16 54-16 74 0"/></g>
+    <g transform="translate(262 0)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">2</text><path class="outline" d="M84 58h72l9 65-17 79h-35l7-75-8 75H77l-2-79z"/><path class="detail" d="M84 82h72M120 58v69"/></g>
+    <g transform="translate(524 0)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">3</text><path class="dark" d="M75 58h90l10 70-17 74h-38v-73l-8 73H75l-10-74z"/><path class="detail" d="M75 82h90M120 58v71"/></g>
+
+    <g transform="translate(0 242)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">4</text><path class="outline" d="M79 70l28-16h26l28 16 31 24-22 34-18-13v87H88v-87l-18 13-22-34z"/><path class="detail" d="M107 54l13 22 13-22M120 76v126M104 102h32"/><circle cx="128" cy="96" r="3" fill="#4d617a"/><circle cx="128" cy="116" r="3" fill="#4d617a"/></g>
+    <g transform="translate(262 242)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">5</text><path class="dark" d="M63 128c2-54 35-78 80-67 29 7 43 28 44 55H88c-12 0-20 4-25 12z"/><path class="outline" d="M64 128h138c-18 26-44 31-74 23-24-7-43-11-64-23z"/><path class="detail" d="M93 85c26-12 55-7 75 11"/></g>
+    <g transform="translate(524 242)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">6</text><path class="dark" d="M80 67l28-15h24l28 15 28 28-22 29-14-13v91H88v-91l-14 13-22-29z"/><path class="detail" d="M108 52l12 25 12-25M120 77v125M94 92l26 18 26-18M92 178h56"/></g>
+
+    <g transform="translate(0 484)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">7</text><path class="outline" d="M44 150l39-42 30 13 17 32-15 22H54c-15 0-20-11-10-25z"/><path class="outline" d="M112 147l36-47 31 10 20 37-13 25h-62z"/><path class="detail" d="M61 145h53M132 142h55M78 127l26 17M151 121l28 18"/></g>
+    <g transform="translate(262 484)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">8</text><ellipse class="outline" cx="117" cy="128" rx="72" ry="45"/><ellipse fill="#fff" stroke="#4d617a" stroke-width="7" cx="117" cy="128" rx="43" ry="22"/><rect class="dark" x="151" y="108" width="43" height="39" rx="5"/><rect fill="#fff" stroke="#4d617a" stroke-width="5" x="163" y="117" width="19" height="20"/></g>
+    <g transform="translate(524 484)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">9</text><path class="dark" d="M94 51h52l16 28 34 26-25 35-18-13 12 75H75l12-75-18 13-25-35 34-26z"/><path class="detail" d="M94 51l26 35 26-35M120 86v116M88 126h64"/><circle cx="130" cy="111" r="4" fill="#dce5f0"/><circle cx="130" cy="136" r="4" fill="#dce5f0"/></g>
+
+    <g transform="translate(0 726)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">10</text><path class="outline" d="M103 52h34l14 32-12 30 40 88H61l40-88-12-30z"/><path class="detail" d="M103 52c4 20 30 20 34 0M101 114h38"/></g>
+    <g transform="translate(262 726)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">11</text><path class="dark" d="M105 54h30l11 25-16 22 25 87-35 18-35-18 25-87-16-22z"/><path class="detail" d="M110 101h20M101 143l42 19"/></g>
+    <g transform="translate(524 726)"><rect class="card" width="240" height="220" rx="20"/><text class="num" x="20" y="42">12</text><path class="outline" d="M75 67h90l6 62-22 73h-31l2-68-10 68H79l-20-73z"/><path class="detail" d="M75 92h90M120 67v67"/></g>
+  </g>
+</svg>

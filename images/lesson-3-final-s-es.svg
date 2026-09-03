@@ -1,109 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
   <title id="title">Final -s and -es pronunciation exercise</title>
-  <desc id="desc">Six numbered groups of verbs with snake, zebra, and iz pronunciation cues. Watches is circled in the completed example.</desc>
-  <defs>
-    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#f7f9fc"/>
-    </linearGradient>
-    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#233047" flood-opacity=".12"/>
-    </filter>
-    <style>
-      .heading{font:700 32px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#253248}
-      .number{font:700 23px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#52647d}
-      .cue{font:700 20px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#384963}
-      .word{font:600 23px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#26364d}
-      .phoneme{font:700 48px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#334155}
-      .cell{fill:#fff;stroke:#d6deea;stroke-width:2}
-      .divider{stroke:#dfe5ee;stroke-width:2}
-    </style>
-  </defs>
+  <desc id="desc">Six groups of verbs. Choose the verb with a different final sound in each group.</desc>
+  <rect width="960" height="720" rx="28" fill="#fffdf8"/>
+  <rect x="36" y="32" width="888" height="92" rx="20" fill="#dcebed"/>
+  <text x="72" y="72" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#243d43">PRONUNCIATION · final -s and -es</text>
+  <text x="72" y="105" font-family="Arial, sans-serif" font-size="18" fill="#45636a">Circle the verb with a different final sound.</text>
 
-  <rect x="34" y="30" width="892" height="660" rx="28" fill="url(#paper)" filter="url(#shadow)"/>
-  <text x="72" y="85" class="heading">final -s and -es</text>
-  <line x1="72" y1="109" x2="888" y2="109" stroke="#53657d" stroke-width="3"/>
-
-  <g transform="translate(72 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">1</text>
-    <g transform="translate(25 53)" fill="none" stroke="#52677f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 50c16-34 55-33 61-7 5 21-27 22-42 10-15-12-17-35 3-44 19-9 40 4 40 23"/>
-      <circle cx="70" cy="28" r="2.5" fill="#52677f" stroke="none"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(52 154)">
+      <rect width="132" height="510" rx="18" fill="#f2f7f7" stroke="#bfd1d5" stroke-width="2"/>
+      <path d="M42 72c18-35 58-34 60-7 2 27-46 23-46 51 0 20 29 24 39 5" fill="none" stroke="#507980" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="96" cy="120" r="4" fill="#507980"/>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#2f535a">1 · snake</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">works</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">laughs</text>
+      <ellipse cx="66" cy="369" rx="54" ry="28" fill="none" stroke="#dc6f55" stroke-width="4"/>
+      <text x="66" y="378" font-size="24" font-weight="700" fill="#243d43">watches</text>
     </g>
-    <text x="64" y="136" text-anchor="middle" class="cue">snake</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">works</text>
-    <text x="64" y="284" text-anchor="middle" class="word">laughs</text>
-    <ellipse cx="64" cy="352" rx="52" ry="25" fill="none" stroke="#596f8b" stroke-width="4"/>
-    <text x="64" y="360" text-anchor="middle" class="word">watches</text>
-  </g>
-
-  <g transform="translate(210 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">2</text>
-    <g transform="translate(25 53)" fill="none" stroke="#52677f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M10 50c16-34 55-33 61-7 5 21-27 22-42 10-15-12-17-35 3-44 19-9 40 4 40 23"/>
-      <circle cx="70" cy="28" r="2.5" fill="#52677f" stroke="none"/>
+    <g transform="translate(197 154)">
+      <rect width="132" height="510" rx="18" fill="#f7f4ec" stroke="#d8cdb8" stroke-width="2"/>
+      <path d="M42 72c18-35 58-34 60-7 2 27-46 23-46 51 0 20 29 24 39 5" fill="none" stroke="#967e56" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="96" cy="120" r="4" fill="#967e56"/>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#715d3c">2 · snake</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">lives</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">thinks</text>
+      <text x="66" y="372" font-size="24" fill="#243d43">drinks</text>
     </g>
-    <text x="64" y="136" text-anchor="middle" class="cue">snake</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">lives</text>
-    <text x="64" y="284" text-anchor="middle" class="word">thinks</text>
-    <text x="64" y="353" text-anchor="middle" class="word">drinks</text>
-  </g>
-
-  <g transform="translate(348 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">3</text>
-    <g transform="translate(26 48) scale(.82)">
-      <path d="M11 22h54l17 20-13 43H22L8 57z" fill="#f4f6f8" stroke="#52677f" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M25 26l18 55M42 24l18 59M60 28l14 40" stroke="#52677f" stroke-width="5"/>
-      <path d="M23 84v15M65 84v15M65 23l6-17 10 5-1 27" fill="none" stroke="#52677f" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="78" cy="16" r="2" fill="#52677f"/>
+    <g transform="translate(342 154)">
+      <rect width="132" height="510" rx="18" fill="#f2f7f7" stroke="#bfd1d5" stroke-width="2"/>
+      <path d="M32 66h70l-8 22 12 24-22 9-14-20-16 22-24-11 12-23z" fill="#507980"/>
+      <path d="M40 75l56 35M34 96l58-24M53 66l-10 51M77 67l8 48" stroke="#fffdf8" stroke-width="5"/>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#2f535a">3 · zebra</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">knows</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">rains</text>
+      <text x="66" y="372" font-size="24" fill="#243d43">likes</text>
     </g>
-    <text x="64" y="136" text-anchor="middle" class="cue">zebra</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">knows</text>
-    <text x="64" y="284" text-anchor="middle" class="word">rains</text>
-    <text x="64" y="353" text-anchor="middle" class="word">likes</text>
-  </g>
-
-  <g transform="translate(486 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">4</text>
-    <g transform="translate(26 48) scale(.82)">
-      <path d="M11 22h54l17 20-13 43H22L8 57z" fill="#f4f6f8" stroke="#52677f" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M25 26l18 55M42 24l18 59M60 28l14 40" stroke="#52677f" stroke-width="5"/>
-      <path d="M23 84v15M65 84v15M65 23l6-17 10 5-1 27" fill="none" stroke="#52677f" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="78" cy="16" r="2" fill="#52677f"/>
+    <g transform="translate(487 154)">
+      <rect width="132" height="510" rx="18" fill="#f7f4ec" stroke="#d8cdb8" stroke-width="2"/>
+      <path d="M32 66h70l-8 22 12 24-22 9-14-20-16 22-24-11 12-23z" fill="#967e56"/>
+      <path d="M40 75l56 35M34 96l58-24M53 66l-10 51M77 67l8 48" stroke="#fffdf8" stroke-width="5"/>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#715d3c">4 · zebra</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">runs</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">starts</text>
+      <text x="66" y="372" font-size="24" fill="#243d43">goes</text>
     </g>
-    <text x="64" y="136" text-anchor="middle" class="cue">zebra</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">runs</text>
-    <text x="64" y="284" text-anchor="middle" class="word">starts</text>
-    <text x="64" y="353" text-anchor="middle" class="word">goes</text>
-  </g>
-
-  <g transform="translate(624 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">5</text>
-    <rect x="17" y="59" width="94" height="66" rx="12" fill="#eef2f7"/>
-    <text x="64" y="108" text-anchor="middle" class="phoneme">/ɪz/</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">leaves</text>
-    <text x="64" y="284" text-anchor="middle" class="word">dresses</text>
-    <text x="64" y="353" text-anchor="middle" class="word">washes</text>
-  </g>
-
-  <g transform="translate(762 135)">
-    <rect class="cell" width="128" height="500" rx="14"/>
-    <text x="64" y="38" text-anchor="middle" class="number">6</text>
-    <rect x="17" y="59" width="94" height="66" rx="12" fill="#eef2f7"/>
-    <text x="64" y="108" text-anchor="middle" class="phoneme">/ɪz/</text>
-    <line x1="14" y1="160" x2="114" y2="160" class="divider"/>
-    <text x="64" y="215" text-anchor="middle" class="word">teaches</text>
-    <text x="64" y="284" text-anchor="middle" class="word">cooks</text>
-    <text x="64" y="353" text-anchor="middle" class="word">uses</text>
+    <g transform="translate(632 154)">
+      <rect width="132" height="510" rx="18" fill="#f2f7f7" stroke="#bfd1d5" stroke-width="2"/>
+      <circle cx="66" cy="90" r="47" fill="#507980"/>
+      <text x="66" y="102" font-size="29" font-weight="700" fill="#fff">/ɪz/</text>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#2f535a">5</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">leaves</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">dresses</text>
+      <text x="66" y="372" font-size="24" fill="#243d43">washes</text>
+    </g>
+    <g transform="translate(777 154)">
+      <rect width="132" height="510" rx="18" fill="#f7f4ec" stroke="#d8cdb8" stroke-width="2"/>
+      <circle cx="66" cy="90" r="47" fill="#967e56"/>
+      <text x="66" y="102" font-size="29" font-weight="700" fill="#fff">/ɪz/</text>
+      <text x="66" y="164" font-size="18" font-weight="700" fill="#715d3c">6</text>
+      <text x="66" y="232" font-size="24" fill="#243d43">teaches</text>
+      <text x="66" y="302" font-size="24" fill="#243d43">cooks</text>
+      <text x="66" y="372" font-size="24" fill="#243d43">uses</text>
+    </g>
   </g>
 </svg>
