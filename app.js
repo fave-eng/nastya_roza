@@ -1204,6 +1204,7 @@
       const blockId = safeText(target.dataset.responseFromBlock).trim();
       const itemId = safeText(target.dataset.responseFromItem).trim();
       const template = safeText(target.dataset.responseTemplate, '{answer}');
+      const waitingText = safeText(target.dataset.responseWaitingText);
       const sourceBlock = blockId ? root.querySelector(`[data-task="${CSS.escape(blockId)}"]`) : null;
       const sourceItem = sourceBlock && itemId
         ? sourceBlock.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`)
@@ -1218,7 +1219,7 @@
         answerValues.forEach((answer, index) => {
           completedPrompt = completedPrompt.replaceAll(`{answer${index + 1}}`, answer);
         });
-        target.textContent = isComplete ? completedPrompt : '';
+        target.textContent = isComplete ? completedPrompt : waitingText;
         dependentControls.forEach((control) => { control.disabled = !isComplete; });
       };
 
@@ -1300,7 +1301,7 @@
     const number = item.number === undefined ? index + 1 : item.number;
     const promptFrom = item.promptFrom && typeof item.promptFrom === 'object' ? item.promptFrom : null;
     const prompt = promptFrom
-      ? `<span data-dependent-prompt data-response-from-block="${escapeHtml(promptFrom.blockId || '')}" data-response-from-item="${escapeHtml(promptFrom.itemId || '')}" data-response-template="${escapeHtml(promptFrom.template || '{answer}')}"></span>`
+      ? `<span data-dependent-prompt data-response-from-block="${escapeHtml(promptFrom.blockId || '')}" data-response-from-item="${escapeHtml(promptFrom.itemId || '')}" data-response-template="${escapeHtml(promptFrom.template || '{answer}')}" data-response-waiting-text="${escapeHtml(promptFrom.waitingText || '')}"></span>`
       : escapeHtml(item.prompt || '');
     const inputId = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
     const numberMarkup = number === '' || number === null ? '' : `<span class="exercise-number">${escapeHtml(number)}</span>`;
@@ -1408,7 +1409,7 @@
         ? `<span>${escapeHtml(item.segments[item.segments.length - 1])}</span>`
         : '';
       return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}" data-input-type="gaps">
-        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content"><div class="sentence-gaps example-sentence-gaps">${exampleSentence}${tail}</div></div></div>
+        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${prompt ? `<div class="exercise-answer-question">${prompt}</div>` : ''}<div class="sentence-gaps example-sentence-gaps">${exampleSentence}${tail}</div></div></div>
       </div>`;
     }
 
@@ -1456,10 +1457,10 @@
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
 
-    if (inlineNumberedItems && numberMarkup && !prompt && (item.input === 'gaps' || item.input === 'circle-or-tick')) {
+    if (inlineNumberedItems && numberMarkup && (item.input === 'gaps' || (!prompt && item.input === 'circle-or-tick'))) {
       return `<div class="exercise-item${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
         ${itemMedia}
-        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${context}${control}${afterText}</div></div>
+        <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${prompt ? `<div class="exercise-answer-question">${prompt}</div>` : ''}${context}${control}${afterText}</div></div>
         <div class="feedback" aria-live="polite"></div>
       </div>`;
     }

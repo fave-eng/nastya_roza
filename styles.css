@@ -2167,6 +2167,19 @@ label.odd-option {
   padding-top: 1px;
 }
 
+.exercise-answer-question {
+  margin-bottom: 10px;
+  color: #334155;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.exercise-answer-question [data-dependent-prompt]:empty::after {
+  content: "Complete the matching question in exercise c first.";
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .exercise-item-inline-content .exercise-source-line {
   margin-top: 0;
 }

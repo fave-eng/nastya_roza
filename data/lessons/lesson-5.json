@@ -213,6 +213,9 @@
       "id": "grammar-present-continuous-d",
       "title": "d Answer questions 1–8 in c.",
       "hideAnswersOnError": true,
+      "image": "images/lesson-5-park-scan.png",
+      "imageAlt": "The original workbook illustration of people in a park: boys playing football, a woman riding a bike, a man reading on a bench, a woman carrying a bag, and a runner.",
+      "stickyImage": true,
       "inlineNumberedItems": true,
       "items": [
         {
@@ -220,6 +223,7 @@
           "number": 1,
           "example": true,
           "input": "gaps",
+          "prompt": "What is the man on the bench reading?",
           "segments": ["The man on the bench ", "."],
           "exampleAnswers": ["is reading a newspaper"]
         },
@@ -227,6 +231,7 @@
           "id": "d2",
           "number": 2,
           "input": "gaps",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c2", "template": "What {answer1} the boys under the tree {answer2}?", "waitingText": "Complete question 2 in c first."},
           "segments": ["The boys are ", "."],
           "answers": [["playing football"]]
         },
@@ -234,6 +239,7 @@
           "id": "d3",
           "number": 3,
           "input": "gaps",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c3", "template": "What {answer1} the woman on the left {answer2}?", "waitingText": "Complete question 3 in c first."},
           "segments": ["The woman on the left ", "."],
           "answers": [["is riding a bike"]]
         },
@@ -242,6 +248,7 @@
           "number": 4,
           "input": "gaps",
           "inputSize": "wide",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c4", "template": "What {answer1} she {answer2}?", "waitingText": "Complete question 4 in c first."},
           "segments": ["", ""],
           "answers": [["She’s wearing a tracksuit and trainers.", "She is wearing a tracksuit and trainers."]]
         },
@@ -250,6 +257,7 @@
           "number": 5,
           "input": "gaps",
           "inputSize": "wide",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c5", "template": "What {answer1} the woman on the right {answer2}?", "waitingText": "Complete question 5 in c first."},
           "segments": ["", ""],
           "answers": [["The woman on the right is wearing a dress and a cardigan."]]
         },
@@ -258,6 +266,7 @@
           "number": 6,
           "input": "gaps",
           "inputSize": "wide",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c6", "template": "What {answer1} she {answer2}?", "waitingText": "Complete question 6 in c first."},
           "segments": ["", ""],
           "answers": [["She’s carrying a bag.", "She is carrying a bag."]]
         },
@@ -266,6 +275,7 @@
           "number": 7,
           "input": "gaps",
           "inputSize": "wide",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c7", "template": "What {answer1} the runner {answer2}?", "waitingText": "Complete question 7 in c first."},
           "segments": ["", ""],
           "answers": [["He’s wearing shorts, a T-shirt and trainers.", "He is wearing shorts, a T-shirt and trainers."]]
         },
@@ -274,6 +284,7 @@
           "number": 8,
           "input": "gaps",
           "inputSize": "wide",
+          "promptFrom": {"blockId": "grammar-present-continuous-c", "itemId": "c8", "template": "What {answer1} the man under the tree {answer2}?", "waitingText": "Complete question 8 in c first."},
           "segments": ["", ""],
           "answers": [["He’s sleeping.", "He is sleeping."]]
         }
