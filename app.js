@@ -1189,17 +1189,15 @@
       updateCrosswordHiddenAnswer(workspace);
     });
 
-    const sourceAnswerText = (sourceItem) => {
-      if (!sourceItem) return '';
+    const sourceAnswerValues = (sourceItem) => {
+      if (!sourceItem) return [];
       const inputType = safeText(sourceItem.dataset.inputType);
       if (inputType === 'gaps') {
         return [...sourceItem.querySelectorAll('[data-gap-index]')]
-          .map((input) => safeText(input.value).trim())
-          .filter(Boolean)
-          .join(' ');
+          .map((input) => safeText(input.value).trim());
       }
-      if (inputType === 'single' || inputType === 'multiple' || inputType === 'select') return '';
-      return safeText(sourceItem.querySelector('input, textarea')?.value).trim();
+      if (inputType === 'single' || inputType === 'multiple' || inputType === 'select') return [];
+      return [safeText(sourceItem.querySelector('input, textarea')?.value).trim()];
     };
 
     root.querySelectorAll('[data-dependent-prompt]').forEach((target) => {
@@ -1214,9 +1212,14 @@
       const dependentControls = dependentItem ? [...dependentItem.querySelectorAll('input, textarea, select')] : [];
 
       const update = () => {
-        const answer = sourceAnswerText(sourceItem);
-        target.textContent = answer ? template.replaceAll('{answer}', answer) : '';
-        dependentControls.forEach((control) => { control.disabled = !answer; });
+        const answerValues = sourceAnswerValues(sourceItem);
+        const isComplete = answerValues.length > 0 && answerValues.every(Boolean);
+        let completedPrompt = template.replaceAll('{answer}', answerValues.join(' '));
+        answerValues.forEach((answer, index) => {
+          completedPrompt = completedPrompt.replaceAll(`{answer${index + 1}}`, answer);
+        });
+        target.textContent = isComplete ? completedPrompt : '';
+        dependentControls.forEach((control) => { control.disabled = !isComplete; });
       };
 
       sourceItem?.querySelectorAll('input, textarea, select').forEach((control) => {
@@ -1227,13 +1230,8 @@
     });
   }
 
-  function exerciseBlockIsComplete(blockNode) {
-    if (!blockNode) return false;
-    const items = [...blockNode.querySelectorAll('[data-exercise-item]')]
-      .filter((itemNode) => !itemNode.classList.contains('exercise-example'));
-    if (!items.length) return false;
-
-    return items.every((itemNode) => {
+  function exerciseItemIsComplete(itemNode) {
+      if (!itemNode || itemNode.classList.contains('exercise-example')) return true;
       const inputType = safeText(itemNode.dataset.inputType);
       if (inputType === 'gaps') {
         const gaps = [...itemNode.querySelectorAll('[data-gap-index]')];
@@ -1259,15 +1257,33 @@
       }
       const control = itemNode.querySelector('input, textarea, select');
       return Boolean(control && safeText(control.value).trim());
-    });
+  }
+
+  function exerciseBlockIsComplete(blockNode) {
+    if (!blockNode) return false;
+    const items = [...blockNode.querySelectorAll('[data-exercise-item]')]
+      .filter((itemNode) => !itemNode.classList.contains('exercise-example'));
+    return items.length > 0 && items.every(exerciseItemIsComplete);
   }
 
   function wireConditionalLessonBlocks(root) {
-    const gatedBlocks = [...root.querySelectorAll('[data-reveal-after-complete]')];
+    const gatedBlocks = [...root.querySelectorAll('[data-reveal-after-complete], [data-reveal-after-items]')];
     if (!gatedBlocks.length) return;
 
     const update = () => {
       gatedBlocks.forEach((blockNode) => {
+        const requiredItems = safeText(blockNode.dataset.revealAfterItems)
+          .split(',')
+          .map((itemId) => itemId.trim())
+          .filter(Boolean);
+        if (requiredItems.length) {
+          const sourceBlock = blockNode.closest('[data-task]');
+          blockNode.hidden = !requiredItems.every((itemId) => {
+            const itemNode = sourceBlock?.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+            return exerciseItemIsComplete(itemNode);
+          });
+          return;
+        }
         const sourceId = safeText(blockNode.dataset.revealAfterComplete).trim();
         const sourceBlock = sourceId ? root.querySelector(`[data-task="${CSS.escape(sourceId)}"]`) : null;
         blockNode.hidden = !exerciseBlockIsComplete(sourceBlock);
@@ -1495,6 +1511,22 @@
     }).join('')}</div>`;
   }
 
+  function renderExerciseItemGroups(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
+    const groups = Array.isArray(block.itemGroups) ? block.itemGroups : [];
+
+    return `<div class="exercise-item-groups">${groups.map((group) => {
+      const groupItems = (group.itemIds || []).map((itemId) => {
+        const entry = itemMap.get(safeText(itemId));
+        return entry ? renderExerciseItem(entry.item, blockId, entry.index, group.inlineNumberedItems === true) : '';
+      }).join('');
+      const revealItems = Array.isArray(group.revealAfterItems) ? group.revealAfterItems.join(',') : '';
+      const revealAttr = revealItems ? ` data-reveal-after-items="${escapeHtml(revealItems)}" hidden` : '';
+      return `<section class="exercise-item-group"${revealAttr}>${group.title ? `<div class="exercise-subheading"><h4>${escapeHtml(group.title)}</h4></div>` : ''}<div class="exercise-items">${groupItems}</div></section>`;
+    }).join('')}</div>`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1546,7 +1578,9 @@
           }).join('')}</div>`
         : '';
       const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
-      const exerciseContent = block.layout === 'dialogue'
+      const exerciseContent = block.layout === 'item-groups'
+        ? renderExerciseItemGroups(block, id)
+        : block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
         : block.layout === 'crossword'
           ? renderCrosswordExercise(block, id)

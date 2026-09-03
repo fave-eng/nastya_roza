@@ -1,0 +1,281 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "title": "1C The Remake Project",
+  "subtitle": "Present continuous and present simple",
+  "status": "available",
+  "publishedAt": "2026-09-04",
+  "totalPoints": 25,
+  "vocabularyId": "vocab-lesson-5",
+  "grammarIds": ["grammar-present-continuous"],
+  "notification": {"enabled": true, "version": 1},
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "1C",
+      "title": "GRAMMAR present continuous",
+      "titleLead": "GRAMMAR",
+      "titleTail": "present continuous"
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-present-continuous-a",
+      "title": "a Complete the conversation with the present continuous form of the verbs in brackets. Use contractions where possible.",
+      "layout": "dialogue",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": ["What ", " (you / do), Stefan?"],
+          "exampleAnswer": "are you doing"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": ["I ", " (look) at some paintings online. I want to buy a poster of one for the living room."],
+          "answers": [["'m looking", "am looking"]]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": ["My sister ", " (do) an art course at the moment. Perhaps she can paint something for us."],
+          "answers": [["'s doing", "is doing"]]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": ["Um…perhaps. But look at this one – it’s really beautiful. It’s by Vermeer, and there’s a girl who ", " (wear) a blue and yellow scarf on her head and a big pearl earring."],
+          "answers": [["'s wearing", "is wearing"]]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": ["I’m not sure. She ", ". (not / smile)"],
+          "answers": [["isn't smiling", "is not smiling"]]
+        }
+      ],
+      "dialogueLines": [
+        {"speaker": "A", "itemIds": ["1"]},
+        {"speaker": "B", "itemIds": ["2"]},
+        {"speaker": "A", "itemIds": ["3"]},
+        {"speaker": "B", "itemIds": ["4"]},
+        {"speaker": "A", "itemIds": ["5"]},
+        {"speaker": "B", "text": "I know, but that makes it more interesting."},
+        {"speaker": "A", "text": "OK. If you like it, order it. My sister can paint something for the dining room."}
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-present-simple-continuous-b",
+      "title": "b Complete the sentences with the present simple or present continuous form of a verb from the list. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "wordBank": ["drink", "drive", "like", "live", "rain", "sleep", "study", "wear"],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "We like this painting very much – it’s really interesting.",
+          "exampleTextOnly": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": ["Charles always ", " to work."],
+          "answers": [["drives"]]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": ["Shhh! The children ", "."],
+          "answers": [["are sleeping"]]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": ["We can’t play tennis today. It ", "."],
+          "answers": [["'s raining", "is raining"]]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": ["Fiona ", " four cups of coffee every day."],
+          "answers": [["drinks"]]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": ["Kathy always ", " jeans at home."],
+          "answers": [["wears"]]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": ["They can’t come to the theatre because they ", " for the exam tomorrow."],
+          "answers": [["'re studying", "are studying"]]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": ["My parents ", " in a big house in the country."],
+          "answers": [["live"]]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-present-continuous-cd",
+      "title": "c Look at the picture. Complete the questions with the present simple or present continuous form of the verb in brackets.",
+      "layout": "item-groups",
+      "hideAnswersOnError": true,
+      "image": "images/lesson-5-park-scan.png",
+      "imageAlt": "The original workbook illustration of people in a park: boys playing football, a woman riding a bike, a man reading on a bench, a woman carrying a bag, and a runner.",
+      "stickyImage": true,
+      "items": [
+        {
+          "id": "c1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "What is the man on the bench reading? (read)",
+          "exampleTextOnly": true
+        },
+        {
+          "id": "c2",
+          "number": 2,
+          "input": "gaps",
+          "segments": ["What ", " the boys under the tree ", "? (play)"],
+          "answers": [["are"], ["playing"]]
+        },
+        {
+          "id": "c3",
+          "number": 3,
+          "input": "gaps",
+          "segments": ["What ", " the woman on the left ", "? (do)"],
+          "answers": [["is"], ["doing"]]
+        },
+        {
+          "id": "c4",
+          "number": 4,
+          "input": "gaps",
+          "segments": ["What ", " she ", "? (wear)"],
+          "answers": [["is"], ["wearing"]]
+        },
+        {
+          "id": "c5",
+          "number": 5,
+          "input": "gaps",
+          "segments": ["What ", " the woman on the right ", "? (wear)"],
+          "answers": [["is"], ["wearing"]]
+        },
+        {
+          "id": "c6",
+          "number": 6,
+          "input": "gaps",
+          "segments": ["What ", " she ", "? (carry)"],
+          "answers": [["is"], ["carrying"]]
+        },
+        {
+          "id": "c7",
+          "number": 7,
+          "input": "gaps",
+          "segments": ["What ", " the runner ", "? (wear)"],
+          "answers": [["is"], ["wearing"]]
+        },
+        {
+          "id": "c8",
+          "number": 8,
+          "input": "gaps",
+          "segments": ["What ", " the man under the tree ", "? (do)"],
+          "answers": [["is"], ["doing"]]
+        },
+        {
+          "id": "d1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "What is the man on the bench reading?",
+          "exampleAnswer": "The man on the bench is reading a newspaper."
+        },
+        {
+          "id": "d2",
+          "number": 2,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c2", "template": "What {answer1} the boys under the tree {answer2}?"},
+          "answer": "The boys are playing football."
+        },
+        {
+          "id": "d3",
+          "number": 3,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c3", "template": "What {answer1} the woman on the left {answer2}?"},
+          "answer": "The woman on the left is riding a bike."
+        },
+        {
+          "id": "d4",
+          "number": 4,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c4", "template": "What {answer1} she {answer2}?"},
+          "answer": ["She’s wearing a tracksuit and trainers.", "She is wearing a tracksuit and trainers."]
+        },
+        {
+          "id": "d5",
+          "number": 5,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c5", "template": "What {answer1} the woman on the right {answer2}?"},
+          "answer": "The woman on the right is wearing a dress and a cardigan."
+        },
+        {
+          "id": "d6",
+          "number": 6,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c6", "template": "What {answer1} she {answer2}?"},
+          "answer": ["She’s carrying a bag.", "She is carrying a bag."]
+        },
+        {
+          "id": "d7",
+          "number": 7,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c7", "template": "What {answer1} the runner {answer2}?"},
+          "answer": ["He’s wearing shorts, a T-shirt and trainers.", "He is wearing shorts, a T-shirt and trainers."]
+        },
+        {
+          "id": "d8",
+          "number": 8,
+          "input": "text",
+          "promptFrom": {"blockId": "grammar-present-continuous-cd", "itemId": "c8", "template": "What {answer1} the man under the tree {answer2}?"},
+          "answer": ["He’s sleeping.", "He is sleeping."]
+        }
+      ],
+      "itemGroups": [
+        {
+          "id": "questions-c",
+          "inlineNumberedItems": true,
+          "itemIds": ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8"]
+        },
+        {
+          "id": "answers-d",
+          "title": "d Answer questions 1–8 in c.",
+          "revealAfterItems": ["c2", "c3", "c4", "c5", "c6", "c7", "c8"],
+          "itemIds": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8"]
+        }
+      ]
+    }
+  ]
+}
