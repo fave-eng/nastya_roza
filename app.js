@@ -1294,6 +1294,11 @@
       ? `<div class="word-bank exercise-item-word-bank" aria-label="Слова для задания"><strong class="word-bank-label">Слова</strong>${item.wordBank.map((word) => `<span>${escapeHtml(word)}</span>`).join('')}</div>`
       : '';
     const afterText = item.afterText ? `<div class="exercise-source-line exercise-source-after">${escapeHtml(item.afterText)}</div>` : '';
+    const itemImageSrc = safeText(item.image).trim();
+    const itemMedia = itemImageSrc
+      ? `<div class="exercise-item-media"><img src="${escapeHtml(itemImageSrc)}" alt="${escapeHtml(item.imageAlt || '')}" loading="lazy"></div>`
+      : '';
+    const itemMediaClass = itemMedia ? ' has-item-media' : '';
 
     if (item.displayOnly) {
       const className = item.displayStyle === 'heading' ? 'exercise-display-heading' : 'exercise-display-copy';
@@ -1360,7 +1365,8 @@
     }
 
     if (item.example && item.exampleLayout === 'inline') {
-      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}">
+      return `<div class="exercise-item exercise-example${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
+        ${itemMedia}
         <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content workbook-inline-example"><span>${prompt}</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div></div>
       </div>`;
     }
@@ -1375,7 +1381,8 @@
     }
 
     if (item.example) {
-      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}">
+      return `<div class="exercise-item exercise-example${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
+        ${itemMedia}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
         ${item.exampleTextOnly ? '' : `<div class="example-answer"><span>Example</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
       </div>`;
@@ -1418,7 +1425,8 @@
     }
 
     if (inlineNumberedItems && numberMarkup && !prompt && (item.input === 'gaps' || item.input === 'circle-or-tick')) {
-      return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+      return `<div class="exercise-item${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+        ${itemMedia}
         <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${context}${control}${afterText}</div></div>
         <div class="feedback" aria-live="polite"></div>
       </div>`;
@@ -1427,7 +1435,8 @@
     const itemHeader = numberMarkup || prompt
       ? `<div class="exercise-item-header">${numberMarkup}<label class="exercise-prompt" for="${escapeHtml(inputId)}">${prompt}</label></div>`
       : '';
-    return `<div class="exercise-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+    return `<div class="exercise-item${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
+      ${itemMedia}
       ${itemHeader}
       <div class="exercise-control">${itemWordBank}${context}${control}${afterText}</div>
       <div class="feedback" aria-live="polite"></div>
@@ -1541,7 +1550,7 @@
         ? renderDialogueExercise(block, id)
         : block.layout === 'crossword'
           ? renderCrosswordExercise(block, id)
-          : `<div class="exercise-items">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
+          : `<div class="exercise-items${block.visualGrid === true ? ' exercise-visual-grid' : ''}">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
       const hasStickyImage = block.stickyImage === true && imageEntries.length === 1;
       const exerciseBody = hasStickyImage
         ? `<div class="exercise-sticky-layout"><div class="exercise-sticky-media">${image}</div><div class="exercise-sticky-content">${intro}${exerciseContent}</div></div>`
@@ -1550,7 +1559,7 @@
       const revealAttrs = revealAfterComplete
         ? ` data-reveal-after-complete="${escapeHtml(revealAfterComplete)}" hidden`
         : '';
-      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}" data-task="${escapeHtml(id)}" data-type="exercise"${revealAttrs}>
+      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}${block.visualGrid === true ? ' visual-grid-card' : ''}" data-task="${escapeHtml(id)}" data-type="exercise"${revealAttrs}>
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${exerciseBody}
       </article>`;

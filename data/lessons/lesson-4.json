@@ -28,18 +28,19 @@
       "id": "vocabulary-clothes-a",
       "title": "a Complete the words.",
       "hideAnswersOnError": true,
-      "image": "images/lesson-4-clothes-scan.png",
-      "imageAlt": "Improved scan from the workbook with twelve numbered photos of clothes and accessories and the original words with missing letters.",
-      "stickyImage": true,
+      "visualGrid": true,
       "inlineNumberedItems": true,
       "items": [
         {
           "id": "1",
           "number": 1,
           "example": true,
+          "exampleLayout": "inline",
           "input": "text",
           "prompt": "r_ng",
-          "exampleAnswer": "ring"
+          "exampleAnswer": "ring",
+          "image": "images/lesson-4-clothes-01.png",
+          "imageAlt": "A ring from the original workbook scan."
         },
         {
           "id": "2",
@@ -47,7 +48,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["l", "gg", "ngs"],
-          "answers": [["e"], ["i"]]
+          "answers": [["e"], ["i"]],
+          "image": "images/lesson-4-clothes-02.png",
+          "imageAlt": "Leggings from the original workbook scan."
         },
         {
           "id": "3",
@@ -55,7 +58,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["tr", "s", "rs"],
-          "answers": [["ou"], ["e"]]
+          "answers": [["ou"], ["e"]],
+          "image": "images/lesson-4-clothes-03.png",
+          "imageAlt": "Trousers from the original workbook scan."
         },
         {
           "id": "4",
@@ -63,7 +68,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["sh", "rt"],
-          "answers": [["i"]]
+          "answers": [["i"]],
+          "image": "images/lesson-4-clothes-04.png",
+          "imageAlt": "A shirt from the original workbook scan."
         },
         {
           "id": "5",
@@ -71,7 +78,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["c", "p"],
-          "answers": [["a"]]
+          "answers": [["a"]],
+          "image": "images/lesson-4-clothes-05.png",
+          "imageAlt": "A cap from the original workbook scan."
         },
         {
           "id": "6",
@@ -79,7 +88,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["tr", "cks", "t"],
-          "answers": [["a"], ["ui"]]
+          "answers": [["a"], ["ui"]],
+          "image": "images/lesson-4-clothes-06.png",
+          "imageAlt": "A tracksuit from the original workbook scan."
         },
         {
           "id": "7",
@@ -87,7 +98,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["tr", "n", "rs"],
-          "answers": [["ai"], ["e"]]
+          "answers": [["ai"], ["e"]],
+          "image": "images/lesson-4-clothes-07.png",
+          "imageAlt": "Trainers from the original workbook scan."
         },
         {
           "id": "8",
@@ -95,7 +108,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["b", "lt"],
-          "answers": [["e"]]
+          "answers": [["e"]],
+          "image": "images/lesson-4-clothes-08.png",
+          "imageAlt": "A belt from the original workbook scan."
         },
         {
           "id": "9",
@@ -103,7 +118,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["c", "t"],
-          "answers": [["oa"]]
+          "answers": [["oa"]],
+          "image": "images/lesson-4-clothes-09.png",
+          "imageAlt": "A coat from the original workbook scan."
         },
         {
           "id": "10",
@@ -111,7 +128,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["dr", "ss"],
-          "answers": [["e"]]
+          "answers": [["e"]],
+          "image": "images/lesson-4-clothes-10.png",
+          "imageAlt": "A dress from the original workbook scan."
         },
         {
           "id": "11",
@@ -119,7 +138,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["t", ""],
-          "answers": [["ie"]]
+          "answers": [["ie"]],
+          "image": "images/lesson-4-clothes-11.png",
+          "imageAlt": "A tie from the original workbook scan."
         },
         {
           "id": "12",
@@ -127,7 +148,9 @@
           "input": "gaps",
           "inputSize": "letter",
           "segments": ["sh", "rts"],
-          "answers": [["o"]]
+          "answers": [["o"]],
+          "image": "images/lesson-4-clothes-12.png",
+          "imageAlt": "Shorts from the original workbook scan."
         }
       ]
     },
@@ -136,6 +159,7 @@
       "id": "vocabulary-clothes-b",
       "title": "b Match descriptions 1–10 to a–j.",
       "hideAnswersOnError": true,
+      "instructions": "Прочитай каждое описание и выбери подходящее название одежды или аксессуара из списка a–j. Каждую букву можно использовать только один раз.",
       "items": [
         {
           "id": "1",
