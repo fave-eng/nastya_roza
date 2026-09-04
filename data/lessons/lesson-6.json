@@ -20,10 +20,9 @@
     {
       "type": "exercise",
       "id": "calling-reception-a",
-      "title": "a Complete the sentences with a word from the list.",
+      "title": "Complete the sentences with a word from the list.",
       "hideAnswersOnError": true,
       "inlineNumberedItems": true,
-      "wordBank": ["bother", "have", "’s", "put", "send", "this"],
       "items": [
         {
           "id": "1",
@@ -36,44 +35,49 @@
         {
           "id": "2",
           "number": 2,
-          "input": "gaps",
+          "input": "select-gap",
           "segments": ["I’ll ", " you through to IT."],
-          "answers": [["put"]]
+          "options": ["bother", "have", "’s", "put", "send", "this"],
+          "answer": 3
         },
         {
           "id": "3",
           "number": 3,
-          "input": "gaps",
+          "input": "select-gap",
           "segments": ["I’ll ", " somebody up right now."],
-          "answers": [["send"]]
+          "options": ["bother", "have", "’s", "put", "send", "this"],
+          "answer": 4
         },
         {
           "id": "4",
           "number": 4,
-          "input": "gaps",
+          "input": "select-gap",
           "segments": ["I’m sorry to ", " you."],
-          "answers": [["bother"]]
+          "options": ["bother", "have", "’s", "put", "send", "this"],
+          "answer": 0
         },
         {
           "id": "5",
           "number": 5,
-          "input": "gaps",
+          "input": "select-gap",
           "segments": ["Hello. ", " is room 315."],
-          "answers": [["This"]]
+          "options": ["bother", "have", "’s", "put", "send", "This"],
+          "answer": 5
         },
         {
           "id": "6",
           "number": 6,
-          "input": "gaps",
+          "input": "select-gap",
           "segments": ["There", " a problem with the shower."],
-          "answers": [["’s", "'s", " is"]]
+          "options": ["bother", "have", "’s", "put", "send", "this"],
+          "answer": 2
         }
       ]
     },
     {
       "type": "exercise",
       "id": "calling-reception-b",
-      "title": "b Complete the conversations with sentences 1–6 from a.",
+      "title": "Complete the conversations with sentences from the first exercise.",
       "hideAnswersOnError": true,
       "inlineNumberedItems": true,
       "wordBank": [
@@ -164,7 +168,6 @@
           "options": [
             "a — I’ll see if we have a quieter one.",
             "b — I’ll send two bottles to your room right now.",
-            "c — I’ll put you through to IT.",
             "d — I’ll ask her to call you."
           ],
           "answer": 0
@@ -177,10 +180,9 @@
           "options": [
             "a — I’ll see if we have a quieter one.",
             "b — I’ll send two bottles to your room right now.",
-            "c — I’ll put you through to IT.",
             "d — I’ll ask her to call you."
           ],
-          "answer": 3
+          "answer": 2
         },
         {
           "id": "4",
@@ -190,7 +192,6 @@
           "options": [
             "a — I’ll see if we have a quieter one.",
             "b — I’ll send two bottles to your room right now.",
-            "c — I’ll put you through to IT.",
             "d — I’ll ask her to call you."
           ],
           "answer": 1
@@ -207,7 +208,7 @@
     {
       "type": "exercise",
       "id": "social-english-a",
-      "title": "a Circle the correct words.",
+      "title": "Circle the correct words.",
       "hideAnswersOnError": true,
       "inlineNumberedItems": true,
       "items": [
@@ -265,7 +266,7 @@
     {
       "type": "exercise",
       "id": "social-english-b",
-      "title": "b Complete the conversation with the missing words.",
+      "title": "Complete the conversation with the missing words.",
       "hideAnswersOnError": true,
       "inlineNumberedItems": true,
       "items": [

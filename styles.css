@@ -879,6 +879,25 @@ body[data-view="lesson"] #lesson-root {
   outline: none;
 }
 
+.sentence-gaps .inline-select-gap {
+  width: auto;
+  min-width: 112px;
+  min-height: 43px;
+  padding: 7px 34px 7px 10px;
+  border: 0;
+  border-bottom: 2px solid #94a3b8;
+  border-radius: 8px 8px 2px 2px;
+  background-color: #f8fafc;
+  color: var(--dark);
+  font-weight: 800;
+}
+
+.sentence-gaps .inline-select-gap:focus {
+  border-bottom-color: var(--indigo);
+  background-color: #eef2ff;
+  outline: none;
+}
+
 /* Short workbook blanks show exactly where one or two missing letters belong. */
 .letter-gaps {
   flex-wrap: nowrap;

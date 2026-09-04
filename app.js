@@ -1196,7 +1196,7 @@
         return [...sourceItem.querySelectorAll('[data-gap-index]')]
           .map((input) => safeText(input.value).trim());
       }
-      if (inputType === 'single' || inputType === 'multiple' || inputType === 'select') return [];
+      if (inputType === 'single' || inputType === 'multiple' || inputType === 'select' || inputType === 'select-gap') return [];
       return [safeText(sourceItem.querySelector('input, textarea')?.value).trim()];
     };
 
@@ -1244,7 +1244,7 @@
       if (inputType === 'single' || inputType === 'circle-or-tick') {
         return Boolean(itemNode.querySelector('input[type="radio"]:checked'));
       }
-      if (inputType === 'select') {
+      if (inputType === 'select' || inputType === 'select-gap') {
         return Boolean(safeText(itemNode.querySelector('select')?.value).trim());
       }
       if (inputType === 'odd-one-out') {
@@ -1435,6 +1435,9 @@
       const inputType = item.input === 'multiple' ? 'checkbox' : 'radio';
       const workbookClass = optionStyle ? ` workbook-option-list option-style-${escapeHtml(optionStyle)}` : '';
       control = `<div class="option-list compact-options${workbookClass}">${(item.options || []).map((option, optionIndex) => `<label class="option"><input type="${inputType}" name="${escapeHtml(inputId)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('')}</div>`;
+    } else if (item.input === 'select-gap') {
+      const segments = Array.isArray(item.segments) ? item.segments : [];
+      control = `<div class="sentence-gaps" aria-label="${prompt}"><span>${escapeHtml(segments[0] || '')}</span><select class="inline-select-gap" id="${escapeHtml(inputId)}" aria-label="Choose the missing word"><option value="">Choose</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select><span>${escapeHtml(segments[1] || '')}</span></div>`;
     } else if (item.input === 'select') {
       control = `<select id="${escapeHtml(inputId)}"><option value="">Choose an answer</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select>`;
     } else if (item.input === 'textarea') {
@@ -1457,7 +1460,7 @@
       control = `<input class="text-field" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}">`;
     }
 
-    if (inlineNumberedItems && numberMarkup && (item.input === 'gaps' || (!prompt && item.input === 'circle-or-tick'))) {
+    if (inlineNumberedItems && numberMarkup && (item.input === 'gaps' || item.input === 'select-gap' || (!prompt && item.input === 'circle-or-tick'))) {
       return `<div class="exercise-item${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">
         ${itemMedia}
         <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${prompt ? `<div class="exercise-answer-question">${prompt}</div>` : ''}${context}${control}${afterText}</div></div>
@@ -1699,7 +1702,7 @@
     } else if (inputType === 'single') {
       actual = itemNode.querySelector('input:checked')?.value ?? '';
       correct = Number(actual) === Number(item.answer);
-    } else if (inputType === 'select') {
+    } else if (inputType === 'select' || inputType === 'select-gap') {
       actual = itemNode.querySelector('select')?.value ?? '';
       correct = actual !== '' && Number(actual) === Number(item.answer);
     } else if (inputType === 'gaps') {
@@ -1823,7 +1826,7 @@
       } else if (inputType === 'single') {
         const input = itemNode.querySelector(`input[value="${CSS.escape(safeText(value))}"]`);
         if (input) input.checked = true;
-      } else if (inputType === 'select') {
+      } else if (inputType === 'select' || inputType === 'select-gap') {
         const select = itemNode.querySelector('select');
         if (select) select.value = safeText(value);
       } else if (inputType === 'gaps') {

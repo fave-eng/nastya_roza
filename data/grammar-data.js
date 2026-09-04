@@ -1349,36 +1349,36 @@ window.GRAMMAR_DATA = [
     "exercises": [
       {
         "id": "will-offers-step-1",
-        "title": "1. Выбери подходящее предложение помощи.",
+        "title": "1. Выбери грамматически правильную форму.",
         "difficulty": "Легко",
-        "instructions": "Прочитай проблему и выбери естественную реакцию с I’ll.",
+        "instructions": "После I’ll нужен глагол в начальной форме — без to, -s и -ing.",
         "items": [
           {
             "id": "1",
             "input": "single",
-            "prompt": "I have a problem with the wi-fi.",
-            "options": ["I’ll put you through to IT.", "I’ll send two bottles."],
+            "prompt": "I ___ somebody up right now.",
+            "options": ["’ll send", "’ll sends"],
             "answer": 0
           },
           {
             "id": "2",
             "input": "single",
-            "prompt": "This room is very noisy.",
-            "options": ["I’ll see if we have a quieter one.", "I’ll ask her to call you."],
+            "prompt": "I ___ you through to IT.",
+            "options": ["’ll put", "’ll to put"],
             "answer": 0
           },
           {
             "id": "3",
             "input": "single",
-            "prompt": "I want to talk to the manager.",
-            "options": ["I’ll send some water.", "I’ll ask her to call you."],
+            "prompt": "I ___ the manager now.",
+            "options": ["will calling", "’ll call"],
             "answer": 1
           },
           {
             "id": "4",
             "input": "single",
-            "prompt": "There’s no water in my mini-bar.",
-            "options": ["I’ll send two bottles right now.", "I’ll put you through to IT."],
+            "prompt": "I ___ if we have a quieter room.",
+            "options": ["’ll see", "’ll seeing"],
             "answer": 0
           }
         ]
@@ -1417,37 +1417,37 @@ window.GRAMMAR_DATA = [
       },
       {
         "id": "will-offers-step-3",
-        "title": "3. Выбери правильную форму.",
+        "title": "3. Выбери предложение с правильным порядком слов.",
         "difficulty": "Повышенная сложность",
-        "instructions": "Отличи решение сейчас от обычного действия.",
+        "instructions": "Проверь схему: I + ’ll + глагол + остальные слова.",
         "items": [
           {
             "id": "1",
-            "input": "circle-or-tick",
-            "segments": ["Don’t worry. I ", " the manager now."],
-            "options": ["call", "’ll call"],
-            "answer": "1"
+            "input": "single",
+            "prompt": "Выбери правильное предложение.",
+            "options": ["I’ll send somebody up.", "I send will somebody up."],
+            "answer": 0
           },
           {
             "id": "2",
-            "input": "circle-or-tick",
-            "segments": ["I usually ", " reception in the morning."],
-            "options": ["call", "’ll call"],
-            "answer": "0"
+            "input": "single",
+            "prompt": "Выбери правильное предложение.",
+            "options": ["I put’ll you through to IT.", "I’ll put you through to IT."],
+            "answer": 1
           },
           {
             "id": "3",
-            "input": "circle-or-tick",
-            "segments": ["There’s no hot water. I ", " somebody up right now."],
-            "options": ["send", "’ll send"],
-            "answer": "1"
+            "input": "single",
+            "prompt": "Выбери правильное предложение.",
+            "options": ["I’ll ask her to call you.", "I’ll ask to her call you."],
+            "answer": 0
           },
           {
             "id": "4",
-            "input": "circle-or-tick",
-            "segments": ["The receptionist often ", " guests with the wi-fi."],
-            "options": ["helps", "’ll help"],
-            "answer": "0"
+            "input": "single",
+            "prompt": "Выбери правильное предложение.",
+            "options": ["I’ll see if we has a quieter one.", "I’ll see if we have a quieter one."],
+            "answer": 1
           }
         ]
       },
