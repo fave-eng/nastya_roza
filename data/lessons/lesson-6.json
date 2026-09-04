@@ -80,14 +80,6 @@
       "title": "Complete the conversations with sentences from the first exercise.",
       "hideAnswersOnError": true,
       "inlineNumberedItems": true,
-      "wordBank": [
-        "I have a problem with the wi-fi.",
-        "I’ll put you through to IT.",
-        "I’ll send somebody up right now.",
-        "I’m sorry to bother you.",
-        "This is room 315.",
-        "There’s a problem with the shower."
-      ],
       "items": [
         {
           "id": "1",
@@ -100,42 +92,72 @@
         {
           "id": "2",
           "number": 2,
-          "input": "gaps",
-          "inputSize": "wide",
-          "segments": ["A: How can I help you? B: ", " There isn’t any hot water."],
-          "answers": [["There’s a problem with the shower.", "There is a problem with the shower."]]
+          "input": "select-gap",
+          "segments": ["A: How can I help you? B: ", ". There isn’t any hot water."],
+          "options": [
+            "I have a problem with the wi-fi",
+            "I’ll put you through to IT",
+            "I’ll send somebody up right now",
+            "I’m sorry to bother you",
+            "There’s a problem with the shower"
+          ],
+          "answer": 4
         },
         {
           "id": "3",
           "number": 3,
-          "input": "gaps",
-          "inputSize": "wide",
-          "segments": ["A: I’m sorry, madam. ", " B: Thank you."],
-          "answers": [["I’ll send somebody up right now.", "I will send somebody up right now."]]
+          "input": "select-gap",
+          "segments": ["A: I’m sorry, madam. ", ". B: Thank you."],
+          "options": [
+            "I have a problem with the wi-fi",
+            "I’ll put you through to IT",
+            "I’ll send somebody up right now",
+            "I’m sorry to bother you",
+            "There’s a problem with the shower"
+          ],
+          "answer": 2
         },
         {
           "id": "4",
           "number": 4,
-          "input": "gaps",
-          "inputSize": "wide",
+          "input": "select-gap",
           "segments": ["A: Hello, reception. B: Hello, this is room 315 again. ", ", but there’s one more thing."],
-          "answers": [["I’m sorry to bother you", "I am sorry to bother you"]]
+          "options": [
+            "I have a problem with the wi-fi",
+            "I’ll put you through to IT",
+            "I’ll send somebody up right now",
+            "I’m sorry to bother you",
+            "There’s a problem with the shower"
+          ],
+          "answer": 3
         },
         {
           "id": "5",
           "number": 5,
-          "input": "gaps",
-          "inputSize": "wide",
-          "segments": ["A: How can I help you? B: ", " I can’t get a signal."],
-          "answers": [["I have a problem with the wi-fi."]]
+          "input": "select-gap",
+          "segments": ["A: How can I help you? B: ", ". I can’t get a signal."],
+          "options": [
+            "I have a problem with the wi-fi",
+            "I’ll put you through to IT",
+            "I’ll send somebody up right now",
+            "I’m sorry to bother you",
+            "There’s a problem with the shower"
+          ],
+          "answer": 0
         },
         {
           "id": "6",
           "number": 6,
-          "input": "gaps",
-          "inputSize": "wide",
-          "segments": ["A: I’m sorry, madam. ", " B: Thanks."],
-          "answers": [["I’ll put you through to IT.", "I will put you through to IT."]]
+          "input": "select-gap",
+          "segments": ["A: I’m sorry, madam. ", ". B: Thanks."],
+          "options": [
+            "I have a problem with the wi-fi",
+            "I’ll put you through to IT",
+            "I’ll send somebody up right now",
+            "I’m sorry to bother you",
+            "There’s a problem with the shower"
+          ],
+          "answer": 1
         }
       ]
     },
