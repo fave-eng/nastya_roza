@@ -602,5 +602,40 @@ window.VOCABULARY_DATA = [
       {"id": "vocab-lesson-5-19", "en": "exam", "ru": "экзамен"},
       {"id": "vocab-lesson-5-20", "en": "in the country", "ru": "за городом; в сельской местности"}
     ]
+  },
+  {
+    "id": "vocab-lesson-6",
+    "title": "Hotel problems and useful phrases",
+    "label": "Lesson 6 · Practical English: Hotel problems",
+    "icon": "🏨",
+    "linkedLessonId": "lesson-6",
+    "page": "vocabulary.html?id=vocab-lesson-6",
+    "words": [
+      {"id": "vocab-lesson-6-1", "en": "calling reception", "ru": "звонок на ресепшен"},
+      {"id": "vocab-lesson-6-2", "en": "reception", "ru": "стойка регистрации; ресепшен"},
+      {"id": "vocab-lesson-6-3", "en": "room number", "ru": "номер комнаты"},
+      {"id": "vocab-lesson-6-4", "en": "have a problem with", "ru": "иметь проблему с"},
+      {"id": "vocab-lesson-6-5", "en": "wi-fi", "ru": "вай-фай; беспроводной интернет"},
+      {"id": "vocab-lesson-6-6", "en": "shower", "ru": "душ"},
+      {"id": "vocab-lesson-6-7", "en": "hot water", "ru": "горячая вода"},
+      {"id": "vocab-lesson-6-8", "en": "put someone through", "ru": "соединить кого-либо по телефону"},
+      {"id": "vocab-lesson-6-9", "en": "IT", "ru": "ИТ-отдел; техническая поддержка"},
+      {"id": "vocab-lesson-6-10", "en": "send somebody up", "ru": "прислать кого-либо наверх, в номер"},
+      {"id": "vocab-lesson-6-11", "en": "right now", "ru": "прямо сейчас"},
+      {"id": "vocab-lesson-6-12", "en": "sorry to bother you", "ru": "извините за беспокойство"},
+      {"id": "vocab-lesson-6-13", "en": "signal", "ru": "сигнал; связь"},
+      {"id": "vocab-lesson-6-14", "en": "noisy", "ru": "шумный"},
+      {"id": "vocab-lesson-6-15", "en": "quieter", "ru": "более тихий"},
+      {"id": "vocab-lesson-6-16", "en": "manager", "ru": "управляющий; менеджер"},
+      {"id": "vocab-lesson-6-17", "en": "mini-bar", "ru": "мини-бар"},
+      {"id": "vocab-lesson-6-18", "en": "bottle", "ru": "бутылка"},
+      {"id": "vocab-lesson-6-19", "en": "offer", "ru": "предложение помощи"},
+      {"id": "vocab-lesson-6-20", "en": "view", "ru": "вид из окна"},
+      {"id": "vocab-lesson-6-21", "en": "must be", "ru": "должно быть; вероятно"},
+      {"id": "vocab-lesson-6-22", "en": "I guess", "ru": "полагаю; думаю"},
+      {"id": "vocab-lesson-6-23", "en": "by the way", "ru": "кстати"},
+      {"id": "vocab-lesson-6-24", "en": "too", "ru": "тоже"},
+      {"id": "vocab-lesson-6-25", "en": "really tired", "ru": "очень уставший"}
+    ]
   }
 ];
