@@ -637,5 +637,39 @@ window.VOCABULARY_DATA = [
       {"id": "vocab-lesson-6-24", "en": "too", "ru": "тоже"},
       {"id": "vocab-lesson-6-25", "en": "really tired", "ru": "очень уставший"}
     ]
+  },
+  {
+    "id": "vocab-lesson-7",
+    "title": "The Invisible Man",
+    "label": "Lesson 7 · Can you remember…? 1",
+    "icon": "🪵",
+    "linkedLessonId": "lesson-7",
+    "page": "vocabulary.html?id=vocab-lesson-7",
+    "words": [
+      {"id": "vocab-lesson-7-1", "en": "artist", "ru": "художник"},
+      {"id": "vocab-lesson-7-2", "en": "famous", "ru": "известный"},
+      {"id": "vocab-lesson-7-3", "en": "all over the world", "ru": "по всему миру"},
+      {"id": "vocab-lesson-7-4", "en": "hard to see", "ru": "трудно увидеть"},
+      {"id": "vocab-lesson-7-5", "en": "study at", "ru": "учиться в"},
+      {"id": "vocab-lesson-7-6", "en": "travel to", "ru": "путешествовать в"},
+      {"id": "vocab-lesson-7-7", "en": "middle", "ru": "середина"},
+      {"id": "vocab-lesson-7-8", "en": "carefully", "ru": "внимательно; осторожно"},
+      {"id": "vocab-lesson-7-9", "en": "jacket", "ru": "куртка; пиджак"},
+      {"id": "vocab-lesson-7-10", "en": "take ten hours", "ru": "занимать десять часов"},
+      {"id": "vocab-lesson-7-11", "en": "prepare", "ru": "готовить; подготавливать"},
+      {"id": "vocab-lesson-7-12", "en": "choose a place", "ru": "выбирать место"},
+      {"id": "vocab-lesson-7-13", "en": "assistant", "ru": "помощник"},
+      {"id": "vocab-lesson-7-14", "en": "paint his clothes", "ru": "раскрашивать его одежду"},
+      {"id": "vocab-lesson-7-15", "en": "face", "ru": "лицо"},
+      {"id": "vocab-lesson-7-16", "en": "ready", "ru": "готовый"},
+      {"id": "vocab-lesson-7-17", "en": "take a photo", "ru": "делать фотографию"},
+      {"id": "vocab-lesson-7-18", "en": "result", "ru": "результат"},
+      {"id": "vocab-lesson-7-19", "en": "amazing", "ru": "удивительный"},
+      {"id": "vocab-lesson-7-20", "en": "walk past", "ru": "проходить мимо"},
+      {"id": "vocab-lesson-7-21", "en": "popular", "ru": "популярный"},
+      {"id": "vocab-lesson-7-22", "en": "different", "ru": "другой; отличающийся"},
+      {"id": "vocab-lesson-7-23", "en": "serious message", "ru": "серьёзная мысль; послание"},
+      {"id": "vocab-lesson-7-24", "en": "world around them", "ru": "окружающий их мир"}
+    ]
   }
 ];

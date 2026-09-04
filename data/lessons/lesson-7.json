@@ -1,0 +1,163 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "title": "Can you remember…? 1",
+  "subtitle": "Grammar, vocabulary, pronunciation, and reading review",
+  "status": "available",
+  "publishedAt": "2026-09-04",
+  "totalPoints": 28,
+  "vocabularyId": "vocab-lesson-7",
+  "grammarIds": [
+    "grammar-word-order-questions",
+    "grammar-present-simple",
+    "grammar-present-continuous"
+  ],
+  "notification": {"enabled": true, "version": 1},
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "Can you remember…? 1",
+      "title": "GRAMMAR",
+      "titleLead": "GRAMMAR"
+    },
+    {
+      "type": "exercise",
+      "id": "review-grammar-circle",
+      "title": "Circle the correct form.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "circle-or-tick",
+          "segments": ["It’s great to see you! But what ", " here in London?"],
+          "options": ["you are doing", "are you doing"],
+          "answer": "1"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "circle-or-tick",
+          "segments": ["Dan really likes that restaurant, but I ", " the food’s very good."],
+          "options": ["think not", "don’t think"],
+          "answer": "1"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "circle-or-tick",
+          "segments": ["Excuse me, ", " sit here?"],
+          "options": ["can I", "I can"],
+          "answer": "0"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "circle-or-tick",
+          "segments": ["Don’t worry about Anna. ", " late."],
+          "options": ["She’s always", "She always is"],
+          "answer": "0"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "circle-or-tick",
+          "segments": ["My dad’s a teacher. What ", " your parents do?"],
+          "options": ["does", "do"],
+          "answer": "1"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "circle-or-tick",
+          "segments": ["Ask Jamie to help you. He ", " in IT, so he’s really good with computers."],
+          "options": ["works", "work"],
+          "answer": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "Can you remember…? 1",
+      "title": "VOCABULARY",
+      "titleLead": "VOCABULARY"
+    },
+    {
+      "type": "exercise",
+      "id": "review-vocabulary-odd-word",
+      "title": "Circle the word that is different.",
+      "hideAnswersOnError": true,
+      "items": [
+        {"id": "1", "number": 1, "input": "single", "optionStyle": "circle", "options": ["long", "curly", "straight", "slim"], "answer": 3},
+        {"id": "2", "number": 2, "input": "single", "optionStyle": "circle", "options": ["hair", "height", "beard", "moustache"], "answer": 1},
+        {"id": "3", "number": 3, "input": "single", "optionStyle": "circle", "options": ["stupid", "lazy", "unkind", "generous"], "answer": 3},
+        {"id": "4", "number": 4, "input": "single", "optionStyle": "circle", "options": ["kind", "behind", "above", "between"], "answer": 0},
+        {"id": "5", "number": 5, "input": "single", "optionStyle": "circle", "options": ["boots", "trainers", "jeans", "sandals"], "answer": 2},
+        {"id": "6", "number": 6, "input": "single", "optionStyle": "circle", "options": ["bracelet", "earrings", "tights", "necklace"], "answer": 2}
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "Can you remember…? 1",
+      "title": "PRONUNCIATION",
+      "titleLead": "PRONUNCIATION"
+    },
+    {
+      "type": "exercise",
+      "id": "review-pronunciation-odd-sound",
+      "title": "Circle the word or letter with a different sound.",
+      "hideAnswersOnError": true,
+      "items": [
+        {"id": "1", "number": 1, "input": "single", "optionStyle": "circle", "prompt": "computer · /ə/", "options": ["shirt", "trousers", "sweater", "cardigan"], "answer": 0},
+        {"id": "2", "number": 2, "input": "single", "optionStyle": "circle", "prompt": "bird · /ɜː/", "options": ["university", "work", "curly", "painter"], "answer": 3},
+        {"id": "3", "number": 3, "input": "single", "optionStyle": "circle", "prompt": "tree · /iː/", "options": ["A", "B", "C", "D"], "answer": 0},
+        {"id": "4", "number": 4, "input": "single", "optionStyle": "circle", "prompt": "zebra · /z/", "options": ["meals", "clothes", "balls", "dates"], "answer": 3},
+        {"id": "5", "number": 5, "input": "single", "optionStyle": "circle", "prompt": "/ɪz/", "options": ["likes", "washes", "uses", "watches"], "answer": 0},
+        {"id": "6", "number": 6, "input": "single", "optionStyle": "circle", "prompt": "snake · /s/", "options": ["concerts", "hats", "glasses", "coats"], "answer": 2}
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 4,
+      "eyebrow": "Can you remember…? 1",
+      "title": "GRAMMAR & VOCABULARY",
+      "titleLead": "GRAMMAR & VOCABULARY"
+    },
+    {
+      "type": "exercise",
+      "id": "review-invisible-man-article",
+      "title": "Read the article. Circle a, b, or c.",
+      "layout": "cloze-reading",
+      "hideAnswersOnError": true,
+      "image": "images/lesson-7-invisible-man.png",
+      "imageAlt": "Liu Bolin camouflaged in front of a pile of cut logs, exactly as shown in the workbook photograph.",
+      "stickyImage": true,
+      "readingTitle": "THE INVISIBLE MAN",
+      "items": [
+        {"id": "1", "number": 1, "input": "select", "options": ["a — under", "b — in", "c — on"], "answer": 1},
+        {"id": "2", "number": 2, "input": "select", "options": ["a — was born", "b — was from", "c — is born"], "answer": 0},
+        {"id": "3", "number": 3, "input": "select", "options": ["a — live", "b — living", "c — lives"], "answer": 2},
+        {"id": "4", "number": 4, "input": "select", "options": ["a — hardly ever", "b — often", "c — never"], "answer": 1},
+        {"id": "5", "number": 5, "input": "select", "options": ["a — standing", "b — stands", "c — is standing"], "answer": 2},
+        {"id": "6", "number": 6, "input": "select", "options": ["a — middle", "b — left", "c — front"], "answer": 0},
+        {"id": "7", "number": 7, "input": "select", "options": ["a — shorts", "b — trousers", "c — sweater"], "answer": 1},
+        {"id": "8", "number": 8, "input": "select", "options": ["a — is helping", "b — helps", "c — helping"], "answer": 1},
+        {"id": "9", "number": 9, "input": "select", "options": ["a — walking", "b — walk", "c — walks"], "answer": 0},
+        {"id": "10", "number": 10, "input": "select", "options": ["a — serious", "b — generous", "c — funny"], "answer": 0}
+      ],
+      "readingParagraphs": [
+        ["Liu Bolin is an artist from China who is now famous ", {"itemId": "1"}, " countries all over the world. He’s called the ‘Invisible Man’ because in his pictures it’s very hard to see him."],
+        ["Liu ", {"itemId": "2"}, " in Shandong, China, in 1973. He studied at the Shandong College of Art, and then he went to the Central Academy of Fine Arts in Beijing."],
+        ["He ", {"itemId": "3"}, " and works in Beijing, but he ", {"itemId": "4"}, " travels to other countries and he’s shown his work in Asia, Europe and America."],
+        ["In this photo, Liu ", {"itemId": "5"}, " in front of some logs. He’s in the ", {"itemId": "6"}, " of the photo, and if you look carefully, you can see his ", {"itemId": "7"}, " and jacket."],
+        ["Liu’s photos can take ten hours to prepare. He chooses a place to stand, and then his assistant ", {"itemId": "8"}, " him paint his clothes and his face. When everything is ready, his assistant takes the photo."],
+        ["The results are amazing – sometimes people who are ", {"itemId": "9"}, " past him in the street don’t know that he’s there."],
+        ["Liu’s work is popular because it’s different and fun, but his work also has a ", {"itemId": "10"}, " message: he wants people to think about the world around them."]
+      ]
+    }
+  ]
+}

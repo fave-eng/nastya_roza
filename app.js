@@ -1547,6 +1547,28 @@
     }).join('')}</div>`;
   }
 
+  function renderClozeReading(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
+    const paragraphs = Array.isArray(block.readingParagraphs) ? block.readingParagraphs : [];
+
+    const renderPart = (part) => {
+      if (typeof part === 'string') return escapeHtml(part);
+      const itemId = safeText(part?.itemId).trim();
+      const entry = itemMap.get(itemId);
+      if (!entry) return '';
+      const { item, index } = entry;
+      const inputId = `cloze-${blockId}-${itemId || index + 1}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+      const number = item.number === undefined ? index + 1 : item.number;
+      return `<span class="cloze-reading-gap" data-exercise-item="${escapeHtml(itemId)}" data-input-type="select"><sup>${escapeHtml(number)}</sup><select id="${escapeHtml(inputId)}" aria-label="Choose answer ${escapeHtml(number)}"><option value="">Choose</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select><span class="feedback" aria-live="polite"></span></span>`;
+    };
+
+    return `<article class="cloze-reading-article" aria-label="${escapeHtml(block.readingTitle || 'Article')}">
+      ${block.readingTitle ? `<h4>${escapeHtml(block.readingTitle)}</h4>` : ''}
+      ${paragraphs.map((paragraph) => `<p>${(Array.isArray(paragraph) ? paragraph : [paragraph]).map(renderPart).join('')}</p>`).join('')}
+    </article>`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1598,7 +1620,9 @@
           }).join('')}</div>`
         : '';
       const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
-      const exerciseContent = block.layout === 'item-groups'
+      const exerciseContent = block.layout === 'cloze-reading'
+        ? renderClozeReading(block, id)
+        : block.layout === 'item-groups'
         ? renderExerciseItemGroups(block, id)
         : block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
