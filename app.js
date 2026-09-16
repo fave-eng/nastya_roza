@@ -448,11 +448,18 @@
         (vocabularyResponse.data || []).forEach((row) => {
           const local = vocabulary.words[row.word_key];
           if (!local || dateMs(row.updated_at) >= dateMs(local.updatedAt)) {
+            const isIrregularVerb = safeText(row.source_topic_id) === 'irregular-verbs' || safeText(row.word_key).startsWith('irregular:');
             vocabulary.words[row.word_key] = {
               status: row.status,
               topicId: row.source_topic_id || '',
               learnedAt: row.learned_at || null,
-              updatedAt: row.updated_at
+              updatedAt: row.updated_at,
+              ...(isIrregularVerb ? {
+                kind: 'irregular-verb',
+                wordId: row.word_id || safeText(row.word_key).replace(/^irregular:/, ''),
+                en: row.en || safeText(row.word_key).replace(/^irregular:/, ''),
+                ru: row.ru || ''
+              } : {})
             };
           }
         });
@@ -546,19 +553,31 @@
 
       if (sections.includes('vocabulary')) {
         const progress = this.loadVocabularyProgress();
-        const wordRows = Object.entries(progress.words).filter(([wordKey]) => VOCABULARY_CATALOG.byKey.has(wordKey)).map(([wordKey, state]) => {
-          const record = VOCABULARY_CATALOG.byKey.get(wordKey);
-          return {
-            student_id: studentId,
-            word_key: wordKey,
-            word_id: safeText(record?.word?.id, wordKey),
-            en: safeText(record?.word?.en, wordKey),
-            ru: safeText(record?.word?.ru),
-            source_topic_id: state.topicId || record?.topicId || null,
-            status: state.status,
-            learned_at: state.status === 'known' ? (state.learnedAt || new Date().toISOString()) : null
-          };
-        });
+        const wordRows = Object.entries(progress.words)
+          .filter(([wordKey, state]) => {
+            if (VOCABULARY_CATALOG.byKey.has(wordKey)) return true;
+            return state?.kind === 'irregular-verb' || state?.topicId === 'irregular-verbs' || safeText(wordKey).startsWith('irregular:');
+          })
+          .map(([wordKey, state]) => {
+            const record = VOCABULARY_CATALOG.byKey.get(wordKey);
+            const isIrregularVerb = state?.kind === 'irregular-verb' || state?.topicId === 'irregular-verbs' || safeText(wordKey).startsWith('irregular:');
+            return {
+              student_id: studentId,
+              word_key: wordKey,
+              word_id: isIrregularVerb
+                ? safeText(state?.wordId || wordKey.replace(/^irregular:/, ''), wordKey)
+                : safeText(record?.word?.id, wordKey),
+              en: isIrregularVerb
+                ? safeText(state?.en || wordKey.replace(/^irregular:/, ''), wordKey)
+                : safeText(record?.word?.en, wordKey),
+              ru: isIrregularVerb
+                ? safeText(state?.ru)
+                : safeText(record?.word?.ru),
+              source_topic_id: state.topicId || record?.topicId || null,
+              status: state.status,
+              learned_at: state.status === 'known' ? (state.learnedAt || new Date().toISOString()) : null
+            };
+          });
         if (wordRows.length) {
           const { error } = await client.from(tables.vocabulary).upsert(wordRows, { onConflict: 'student_id,word_key' });
           if (error) throw error;
@@ -2425,7 +2444,8 @@
       'vocabulary-hub': renderVocabularyHub,
       lesson: renderLesson,
       'grammar-topic': renderGrammarTopic,
-      vocabulary: renderVocabulary
+      vocabulary: renderVocabulary,
+      'irregular-verbs': () => window.renderIrregularVerbsPage?.()
     };
     try {
       await renderers[view]?.();
