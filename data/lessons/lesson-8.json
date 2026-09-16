@@ -1,0 +1,587 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "title": "2A OMG! Where’s my passport?",
+  "subtitle": "Past simple: regular and irregular verbs · -ed endings",
+  "status": "available",
+  "publishedAt": "2026-09-16",
+  "totalPoints": 35,
+  "vocabularyId": "vocab-lesson-8",
+  "grammarIds": [
+    "grammar-past-simple-regular-irregular"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "eyebrow": "2A",
+      "title": "GRAMMAR",
+      "text": "past simple: regular and irregular verbs"
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-past-simple-a",
+      "title": "a Write the past simple of these verbs in the correct column.",
+      "hideAnswersOnError": true,
+      "layout": "past-columns",
+      "wordBank": [
+        "argue",
+        "begin",
+        "arrive",
+        "ask",
+        "buy",
+        "can",
+        "choose",
+        "eat",
+        "feel",
+        "invite",
+        "rent",
+        "say",
+        "stay",
+        "study"
+      ],
+      "columns": [
+        {
+          "label": "Regular",
+          "example": "argued",
+          "itemIds": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        {
+          "label": "Irregular",
+          "example": "began",
+          "itemIds": [
+            "i1",
+            "i2",
+            "i3",
+            "i4",
+            "i5",
+            "i6"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "r1",
+          "number": "",
+          "input": "text",
+          "answer": "arrived",
+          "placeholder": ""
+        },
+        {
+          "id": "r2",
+          "number": "",
+          "input": "text",
+          "answer": "asked",
+          "placeholder": ""
+        },
+        {
+          "id": "r3",
+          "number": "",
+          "input": "text",
+          "answer": "invited",
+          "placeholder": ""
+        },
+        {
+          "id": "r4",
+          "number": "",
+          "input": "text",
+          "answer": "rented",
+          "placeholder": ""
+        },
+        {
+          "id": "r5",
+          "number": "",
+          "input": "text",
+          "answer": "stayed",
+          "placeholder": ""
+        },
+        {
+          "id": "r6",
+          "number": "",
+          "input": "text",
+          "answer": "studied",
+          "placeholder": ""
+        },
+        {
+          "id": "i1",
+          "number": "",
+          "input": "text",
+          "answer": "bought",
+          "placeholder": ""
+        },
+        {
+          "id": "i2",
+          "number": "",
+          "input": "text",
+          "answer": "could",
+          "placeholder": ""
+        },
+        {
+          "id": "i3",
+          "number": "",
+          "input": "text",
+          "answer": "chose",
+          "placeholder": ""
+        },
+        {
+          "id": "i4",
+          "number": "",
+          "input": "text",
+          "answer": "ate",
+          "placeholder": ""
+        },
+        {
+          "id": "i5",
+          "number": "",
+          "input": "text",
+          "answer": "felt",
+          "placeholder": ""
+        },
+        {
+          "id": "i6",
+          "number": "",
+          "input": "text",
+          "answer": "said",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-negative-b",
+      "title": "b Rewrite the sentences with a negative verb.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "prompt": "We stayed in a hostel.",
+          "exampleAnswer": "We didn’t stay in a hotel."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "They bought some postcards.",
+          "segments": [
+            "They ",
+            " any souvenirs."
+          ],
+          "answers": [
+            [
+              "didn't buy",
+              "didn’t buy"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "The people were unfriendly.",
+          "segments": [
+            "The people ",
+            " very helpful."
+          ],
+          "answers": [
+            [
+              "weren't",
+              "weren’t"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "I swam in the sea.",
+          "segments": [
+            "I ",
+            " in the swimming pool."
+          ],
+          "answers": [
+            [
+              "didn't swim",
+              "didn’t swim"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "We rented a flat.",
+          "segments": [
+            "We ",
+            " a car."
+          ],
+          "answers": [
+            [
+              "didn't rent",
+              "didn’t rent"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "He spent a month in Bangkok.",
+          "segments": [
+            "He ",
+            " a week there."
+          ],
+          "answers": [
+            [
+              "didn't spend",
+              "didn’t spend"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-holiday-text-c",
+      "title": "c Complete the text with the past simple form of verbs from the list.",
+      "hideAnswersOnError": true,
+      "wordBank": [
+        "arrive",
+        "ask",
+        "book",
+        "cannot",
+        "decide",
+        "go (x2)",
+        "look",
+        "take",
+        "want"
+      ],
+      "introTitle": "THE HOLIDAY THAT WASN’T",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "Four years ago, we ___ to go away for the weekend.",
+          "exampleAnswer": "decided"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "We ",
+            " to go to Portugal, so we"
+          ],
+          "answers": [
+            [
+              "wanted"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "",
+            " a beautiful apartment online. A week later, we"
+          ],
+          "answers": [
+            [
+              "booked"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "",
+            " a taxi to the airport. We"
+          ],
+          "answers": [
+            [
+              "took"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " at the airport at two o’clock, and we"
+          ],
+          "answers": [
+            [
+              "arrived"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "",
+            " to check-in. The woman at the desk"
+          ],
+          "answers": [
+            [
+              "went"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "",
+            " us for our passports. We"
+          ],
+          "answers": [
+            [
+              "asked"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "",
+            " in our bags and in our coat pockets, but we"
+          ],
+          "answers": [
+            [
+              "looked"
+            ]
+          ]
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "",
+            " find them. So we"
+          ],
+          "answers": [
+            [
+              "couldn't",
+              "couldn’t"
+            ]
+          ]
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "gaps",
+          "segments": [
+            "",
+            " home again! It was a miserable weekend. ☹"
+          ],
+          "answers": [
+            [
+              "went"
+            ]
+          ]
+        }
+      ],
+      "inlineNumberedItems": true
+    },
+    {
+      "type": "exercise",
+      "id": "grammar-questions-d",
+      "title": "d Read the text in c again. Complete the questions.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "prompt": "When ___ to go away for the weekend? Four years ago.",
+          "exampleAnswer": "did they decide",
+          "afterText": "Four years ago."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Where ",
+            " to go?"
+          ],
+          "answers": [
+            [
+              "did they want"
+            ]
+          ],
+          "afterText": "Portugal."
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "How ",
+            " the apartment?"
+          ],
+          "answers": [
+            [
+              "did they book"
+            ]
+          ],
+          "afterText": "They booked it online."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "What time ",
+            " at the airport?"
+          ],
+          "answers": [
+            [
+              "did they arrive"
+            ]
+          ],
+          "afterText": "At two o’clock."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "What ",
+            " at check-in ask for?"
+          ],
+          "answers": [
+            [
+              "did the woman"
+            ]
+          ],
+          "afterText": "The woman asked for their passports."
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Where ",
+            " in the end?"
+          ],
+          "answers": [
+            [
+              "did they go"
+            ]
+          ],
+          "afterText": "They went home."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "eyebrow": "2A",
+      "title": "PRONUNCIATION",
+      "text": "-ed endings"
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-ed-a",
+      "title": "a Circle the verb which has a different -ed sound.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "single",
+          "options": [
+            "walked",
+            "asked",
+            "rented"
+          ],
+          "answer": 2,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "options": [
+            "argued",
+            "wanted",
+            "stayed"
+          ],
+          "answer": 1,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "options": [
+            "booked",
+            "started",
+            "decided"
+          ],
+          "answer": 0,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "options": [
+            "arrived",
+            "invited",
+            "phoned"
+          ],
+          "answer": 1,
+          "optionStyle": "circle"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "options": [
+            "waited",
+            "cooked",
+            "watched"
+          ],
+          "answer": 0,
+          "optionStyle": "circle"
+        }
+      ],
+      "inlineNumberedItems": true
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-ed-b",
+      "title": "b 2.1 Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_2.1.mp3",
+      "response": false
+    }
+  ]
+}

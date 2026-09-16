@@ -1296,6 +1296,16 @@
     update();
   }
 
+  function renderPastColumnsExercise(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const byId = new Map(items.map((item) => [safeText(item.id), item]));
+    const columns = Array.isArray(block.columns) ? block.columns : [];
+    return `<div class="past-columns-workspace">${columns.map((column) => {
+      const columnItems = (column.itemIds || []).map((itemId) => byId.get(safeText(itemId))).filter(Boolean);
+      return `<section class="past-column"><h4>${escapeHtml(column.label || '')}</h4>${column.example ? `<div class="past-column-example"><span>Example</span><strong>${escapeHtml(column.example)}</strong></div>` : ''}<div class="past-column-fields">${columnItems.map((item, itemIndex) => renderExerciseItem(item, blockId, itemIndex, false)).join('')}</div></section>`;
+    }).join('')}</div>`;
+  }
+
   function renderExerciseItem(item, blockId, index, inlineNumberedItems = false) {
     const itemId = safeText(item.id, `${index + 1}`);
     const number = item.number === undefined ? index + 1 : item.number;
@@ -1628,7 +1638,9 @@
         ? renderDialogueExercise(block, id)
         : block.layout === 'crossword'
           ? renderCrosswordExercise(block, id)
-          : `<div class="exercise-items${block.visualGrid === true ? ' exercise-visual-grid' : ''}">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
+          : block.layout === 'past-columns'
+            ? renderPastColumnsExercise(block, id)
+            : `<div class="exercise-items${block.visualGrid === true ? ' exercise-visual-grid' : ''}">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
       const hasStickyImage = block.stickyImage === true && imageEntries.length === 1;
       const exerciseBody = hasStickyImage
         ? `<div class="exercise-sticky-layout"><div class="exercise-sticky-media">${image}</div><div class="exercise-sticky-content">${intro}${exerciseContent}</div></div>`

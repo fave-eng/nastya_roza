@@ -3137,3 +3137,37 @@ label.odd-option {
     grid-template-columns: 1fr;
   }
 }
+
+/* Workbook-style two-column classification used in Lesson 8, exercise 1a. */
+.past-columns-workspace {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 16px;
+  background: #f6f8fb;
+}
+.past-column {
+  padding: 16px;
+  border: 1px solid #dce4ee;
+  border-radius: 15px;
+  background: #fff;
+}
+.past-column h4 { margin: 0 0 10px; font-size: 1rem; }
+.past-column-example {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+.past-column-example span { color: var(--muted); font-size: .7rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.past-column-fields { display: grid; gap: 8px; }
+.past-column-fields .exercise-item { padding: 10px; border-radius: 11px; }
+.past-column-fields .exercise-control { padding-left: 0; }
+.past-column-fields .text-field { width: 100%; }
+@media (max-width: 700px) {
+  .past-columns-workspace { grid-template-columns: 1fr; }
+}

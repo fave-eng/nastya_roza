@@ -1,4 +1,3 @@
-/** A1 vocabulary for Anastasia and Rozalina. */
 window.VOCABULARY_DATA = [
   {
     "id": "vocab-lesson-1",
@@ -581,26 +580,106 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-5",
     "page": "vocabulary.html?id=vocab-lesson-5",
     "words": [
-      {"id": "vocab-lesson-5-1", "en": "painting", "ru": "картина"},
-      {"id": "vocab-lesson-5-2", "en": "online", "ru": "в интернете; онлайн"},
-      {"id": "vocab-lesson-5-3", "en": "poster", "ru": "плакат; постер"},
-      {"id": "vocab-lesson-5-4", "en": "living room", "ru": "гостиная"},
-      {"id": "vocab-lesson-5-5", "en": "dining room", "ru": "столовая"},
-      {"id": "vocab-lesson-5-6", "en": "art course", "ru": "курс рисования; художественный курс"},
-      {"id": "vocab-lesson-5-7", "en": "at the moment", "ru": "в данный момент; сейчас"},
-      {"id": "vocab-lesson-5-8", "en": "pearl earring", "ru": "жемчужная серьга"},
-      {"id": "vocab-lesson-5-9", "en": "order", "ru": "заказывать"},
-      {"id": "vocab-lesson-5-10", "en": "beautiful", "ru": "красивый"},
-      {"id": "vocab-lesson-5-11", "en": "interesting", "ru": "интересный"},
-      {"id": "vocab-lesson-5-12", "en": "look at", "ru": "смотреть на"},
-      {"id": "vocab-lesson-5-13", "en": "bench", "ru": "скамейка"},
-      {"id": "vocab-lesson-5-14", "en": "newspaper", "ru": "газета"},
-      {"id": "vocab-lesson-5-15", "en": "ride a bike", "ru": "ехать на велосипеде"},
-      {"id": "vocab-lesson-5-16", "en": "carry a bag", "ru": "нести сумку"},
-      {"id": "vocab-lesson-5-17", "en": "runner", "ru": "бегун"},
-      {"id": "vocab-lesson-5-18", "en": "theatre", "ru": "театр"},
-      {"id": "vocab-lesson-5-19", "en": "exam", "ru": "экзамен"},
-      {"id": "vocab-lesson-5-20", "en": "in the country", "ru": "за городом; в сельской местности"}
+      {
+        "id": "vocab-lesson-5-1",
+        "en": "painting",
+        "ru": "картина"
+      },
+      {
+        "id": "vocab-lesson-5-2",
+        "en": "online",
+        "ru": "в интернете; онлайн"
+      },
+      {
+        "id": "vocab-lesson-5-3",
+        "en": "poster",
+        "ru": "плакат; постер"
+      },
+      {
+        "id": "vocab-lesson-5-4",
+        "en": "living room",
+        "ru": "гостиная"
+      },
+      {
+        "id": "vocab-lesson-5-5",
+        "en": "dining room",
+        "ru": "столовая"
+      },
+      {
+        "id": "vocab-lesson-5-6",
+        "en": "art course",
+        "ru": "курс рисования; художественный курс"
+      },
+      {
+        "id": "vocab-lesson-5-7",
+        "en": "at the moment",
+        "ru": "в данный момент; сейчас"
+      },
+      {
+        "id": "vocab-lesson-5-8",
+        "en": "pearl earring",
+        "ru": "жемчужная серьга"
+      },
+      {
+        "id": "vocab-lesson-5-9",
+        "en": "order",
+        "ru": "заказывать"
+      },
+      {
+        "id": "vocab-lesson-5-10",
+        "en": "beautiful",
+        "ru": "красивый"
+      },
+      {
+        "id": "vocab-lesson-5-11",
+        "en": "interesting",
+        "ru": "интересный"
+      },
+      {
+        "id": "vocab-lesson-5-12",
+        "en": "look at",
+        "ru": "смотреть на"
+      },
+      {
+        "id": "vocab-lesson-5-13",
+        "en": "bench",
+        "ru": "скамейка"
+      },
+      {
+        "id": "vocab-lesson-5-14",
+        "en": "newspaper",
+        "ru": "газета"
+      },
+      {
+        "id": "vocab-lesson-5-15",
+        "en": "ride a bike",
+        "ru": "ехать на велосипеде"
+      },
+      {
+        "id": "vocab-lesson-5-16",
+        "en": "carry a bag",
+        "ru": "нести сумку"
+      },
+      {
+        "id": "vocab-lesson-5-17",
+        "en": "runner",
+        "ru": "бегун"
+      },
+      {
+        "id": "vocab-lesson-5-18",
+        "en": "theatre",
+        "ru": "театр"
+      },
+      {
+        "id": "vocab-lesson-5-19",
+        "en": "exam",
+        "ru": "экзамен"
+      },
+      {
+        "id": "vocab-lesson-5-20",
+        "en": "in the country",
+        "ru": "за городом; в сельской местности"
+      }
     ]
   },
   {
@@ -611,31 +690,131 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-6",
     "page": "vocabulary.html?id=vocab-lesson-6",
     "words": [
-      {"id": "vocab-lesson-6-1", "en": "calling reception", "ru": "звонок на ресепшен"},
-      {"id": "vocab-lesson-6-2", "en": "reception", "ru": "стойка регистрации; ресепшен"},
-      {"id": "vocab-lesson-6-3", "en": "room number", "ru": "номер комнаты"},
-      {"id": "vocab-lesson-6-4", "en": "have a problem with", "ru": "иметь проблему с"},
-      {"id": "vocab-lesson-6-5", "en": "wi-fi", "ru": "вай-фай; беспроводной интернет"},
-      {"id": "vocab-lesson-6-6", "en": "shower", "ru": "душ"},
-      {"id": "vocab-lesson-6-7", "en": "hot water", "ru": "горячая вода"},
-      {"id": "vocab-lesson-6-8", "en": "put someone through", "ru": "соединить кого-либо по телефону"},
-      {"id": "vocab-lesson-6-9", "en": "IT", "ru": "ИТ-отдел; техническая поддержка"},
-      {"id": "vocab-lesson-6-10", "en": "send somebody up", "ru": "прислать кого-либо наверх, в номер"},
-      {"id": "vocab-lesson-6-11", "en": "right now", "ru": "прямо сейчас"},
-      {"id": "vocab-lesson-6-12", "en": "sorry to bother you", "ru": "извините за беспокойство"},
-      {"id": "vocab-lesson-6-13", "en": "signal", "ru": "сигнал; связь"},
-      {"id": "vocab-lesson-6-14", "en": "noisy", "ru": "шумный"},
-      {"id": "vocab-lesson-6-15", "en": "quieter", "ru": "более тихий"},
-      {"id": "vocab-lesson-6-16", "en": "manager", "ru": "управляющий; менеджер"},
-      {"id": "vocab-lesson-6-17", "en": "mini-bar", "ru": "мини-бар"},
-      {"id": "vocab-lesson-6-18", "en": "bottle", "ru": "бутылка"},
-      {"id": "vocab-lesson-6-19", "en": "offer", "ru": "предложение помощи"},
-      {"id": "vocab-lesson-6-20", "en": "view", "ru": "вид из окна"},
-      {"id": "vocab-lesson-6-21", "en": "must be", "ru": "должно быть; вероятно"},
-      {"id": "vocab-lesson-6-22", "en": "I guess", "ru": "полагаю; думаю"},
-      {"id": "vocab-lesson-6-23", "en": "by the way", "ru": "кстати"},
-      {"id": "vocab-lesson-6-24", "en": "too", "ru": "тоже"},
-      {"id": "vocab-lesson-6-25", "en": "really tired", "ru": "очень уставший"}
+      {
+        "id": "vocab-lesson-6-1",
+        "en": "calling reception",
+        "ru": "звонок на ресепшен"
+      },
+      {
+        "id": "vocab-lesson-6-2",
+        "en": "reception",
+        "ru": "стойка регистрации; ресепшен"
+      },
+      {
+        "id": "vocab-lesson-6-3",
+        "en": "room number",
+        "ru": "номер комнаты"
+      },
+      {
+        "id": "vocab-lesson-6-4",
+        "en": "have a problem with",
+        "ru": "иметь проблему с"
+      },
+      {
+        "id": "vocab-lesson-6-5",
+        "en": "wi-fi",
+        "ru": "вай-фай; беспроводной интернет"
+      },
+      {
+        "id": "vocab-lesson-6-6",
+        "en": "shower",
+        "ru": "душ"
+      },
+      {
+        "id": "vocab-lesson-6-7",
+        "en": "hot water",
+        "ru": "горячая вода"
+      },
+      {
+        "id": "vocab-lesson-6-8",
+        "en": "put someone through",
+        "ru": "соединить кого-либо по телефону"
+      },
+      {
+        "id": "vocab-lesson-6-9",
+        "en": "IT",
+        "ru": "ИТ-отдел; техническая поддержка"
+      },
+      {
+        "id": "vocab-lesson-6-10",
+        "en": "send somebody up",
+        "ru": "прислать кого-либо наверх, в номер"
+      },
+      {
+        "id": "vocab-lesson-6-11",
+        "en": "right now",
+        "ru": "прямо сейчас"
+      },
+      {
+        "id": "vocab-lesson-6-12",
+        "en": "sorry to bother you",
+        "ru": "извините за беспокойство"
+      },
+      {
+        "id": "vocab-lesson-6-13",
+        "en": "signal",
+        "ru": "сигнал; связь"
+      },
+      {
+        "id": "vocab-lesson-6-14",
+        "en": "noisy",
+        "ru": "шумный"
+      },
+      {
+        "id": "vocab-lesson-6-15",
+        "en": "quieter",
+        "ru": "более тихий"
+      },
+      {
+        "id": "vocab-lesson-6-16",
+        "en": "manager",
+        "ru": "управляющий; менеджер"
+      },
+      {
+        "id": "vocab-lesson-6-17",
+        "en": "mini-bar",
+        "ru": "мини-бар"
+      },
+      {
+        "id": "vocab-lesson-6-18",
+        "en": "bottle",
+        "ru": "бутылка"
+      },
+      {
+        "id": "vocab-lesson-6-19",
+        "en": "offer",
+        "ru": "предложение помощи"
+      },
+      {
+        "id": "vocab-lesson-6-20",
+        "en": "view",
+        "ru": "вид из окна"
+      },
+      {
+        "id": "vocab-lesson-6-21",
+        "en": "must be",
+        "ru": "должно быть; вероятно"
+      },
+      {
+        "id": "vocab-lesson-6-22",
+        "en": "I guess",
+        "ru": "полагаю; думаю"
+      },
+      {
+        "id": "vocab-lesson-6-23",
+        "en": "by the way",
+        "ru": "кстати"
+      },
+      {
+        "id": "vocab-lesson-6-24",
+        "en": "too",
+        "ru": "тоже"
+      },
+      {
+        "id": "vocab-lesson-6-25",
+        "en": "really tired",
+        "ru": "очень уставший"
+      }
     ]
   },
   {
@@ -646,30 +825,242 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-7",
     "page": "vocabulary.html?id=vocab-lesson-7",
     "words": [
-      {"id": "vocab-lesson-7-1", "en": "artist", "ru": "художник"},
-      {"id": "vocab-lesson-7-2", "en": "famous", "ru": "известный"},
-      {"id": "vocab-lesson-7-3", "en": "all over the world", "ru": "по всему миру"},
-      {"id": "vocab-lesson-7-4", "en": "hard to see", "ru": "трудно увидеть"},
-      {"id": "vocab-lesson-7-5", "en": "study at", "ru": "учиться в"},
-      {"id": "vocab-lesson-7-6", "en": "travel to", "ru": "путешествовать в"},
-      {"id": "vocab-lesson-7-7", "en": "middle", "ru": "середина"},
-      {"id": "vocab-lesson-7-8", "en": "carefully", "ru": "внимательно; осторожно"},
-      {"id": "vocab-lesson-7-9", "en": "jacket", "ru": "куртка; пиджак"},
-      {"id": "vocab-lesson-7-10", "en": "take ten hours", "ru": "занимать десять часов"},
-      {"id": "vocab-lesson-7-11", "en": "prepare", "ru": "готовить; подготавливать"},
-      {"id": "vocab-lesson-7-12", "en": "choose a place", "ru": "выбирать место"},
-      {"id": "vocab-lesson-7-13", "en": "assistant", "ru": "помощник"},
-      {"id": "vocab-lesson-7-14", "en": "paint his clothes", "ru": "раскрашивать его одежду"},
-      {"id": "vocab-lesson-7-15", "en": "face", "ru": "лицо"},
-      {"id": "vocab-lesson-7-16", "en": "ready", "ru": "готовый"},
-      {"id": "vocab-lesson-7-17", "en": "take a photo", "ru": "делать фотографию"},
-      {"id": "vocab-lesson-7-18", "en": "result", "ru": "результат"},
-      {"id": "vocab-lesson-7-19", "en": "amazing", "ru": "удивительный"},
-      {"id": "vocab-lesson-7-20", "en": "walk past", "ru": "проходить мимо"},
-      {"id": "vocab-lesson-7-21", "en": "popular", "ru": "популярный"},
-      {"id": "vocab-lesson-7-22", "en": "different", "ru": "другой; отличающийся"},
-      {"id": "vocab-lesson-7-23", "en": "serious message", "ru": "серьёзная мысль; послание"},
-      {"id": "vocab-lesson-7-24", "en": "world around them", "ru": "окружающий их мир"}
+      {
+        "id": "vocab-lesson-7-1",
+        "en": "artist",
+        "ru": "художник"
+      },
+      {
+        "id": "vocab-lesson-7-2",
+        "en": "famous",
+        "ru": "известный"
+      },
+      {
+        "id": "vocab-lesson-7-3",
+        "en": "all over the world",
+        "ru": "по всему миру"
+      },
+      {
+        "id": "vocab-lesson-7-4",
+        "en": "hard to see",
+        "ru": "трудно увидеть"
+      },
+      {
+        "id": "vocab-lesson-7-5",
+        "en": "study at",
+        "ru": "учиться в"
+      },
+      {
+        "id": "vocab-lesson-7-6",
+        "en": "travel to",
+        "ru": "путешествовать в"
+      },
+      {
+        "id": "vocab-lesson-7-7",
+        "en": "middle",
+        "ru": "середина"
+      },
+      {
+        "id": "vocab-lesson-7-8",
+        "en": "carefully",
+        "ru": "внимательно; осторожно"
+      },
+      {
+        "id": "vocab-lesson-7-9",
+        "en": "jacket",
+        "ru": "куртка; пиджак"
+      },
+      {
+        "id": "vocab-lesson-7-10",
+        "en": "take ten hours",
+        "ru": "занимать десять часов"
+      },
+      {
+        "id": "vocab-lesson-7-11",
+        "en": "prepare",
+        "ru": "готовить; подготавливать"
+      },
+      {
+        "id": "vocab-lesson-7-12",
+        "en": "choose a place",
+        "ru": "выбирать место"
+      },
+      {
+        "id": "vocab-lesson-7-13",
+        "en": "assistant",
+        "ru": "помощник"
+      },
+      {
+        "id": "vocab-lesson-7-14",
+        "en": "paint his clothes",
+        "ru": "раскрашивать его одежду"
+      },
+      {
+        "id": "vocab-lesson-7-15",
+        "en": "face",
+        "ru": "лицо"
+      },
+      {
+        "id": "vocab-lesson-7-16",
+        "en": "ready",
+        "ru": "готовый"
+      },
+      {
+        "id": "vocab-lesson-7-17",
+        "en": "take a photo",
+        "ru": "делать фотографию"
+      },
+      {
+        "id": "vocab-lesson-7-18",
+        "en": "result",
+        "ru": "результат"
+      },
+      {
+        "id": "vocab-lesson-7-19",
+        "en": "amazing",
+        "ru": "удивительный"
+      },
+      {
+        "id": "vocab-lesson-7-20",
+        "en": "walk past",
+        "ru": "проходить мимо"
+      },
+      {
+        "id": "vocab-lesson-7-21",
+        "en": "popular",
+        "ru": "популярный"
+      },
+      {
+        "id": "vocab-lesson-7-22",
+        "en": "different",
+        "ru": "другой; отличающийся"
+      },
+      {
+        "id": "vocab-lesson-7-23",
+        "en": "serious message",
+        "ru": "серьёзная мысль; послание"
+      },
+      {
+        "id": "vocab-lesson-7-24",
+        "en": "world around them",
+        "ru": "окружающий их мир"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-8",
+    "title": "Holidays and travel",
+    "label": "Lesson 8 · 2A OMG! Where’s my passport?",
+    "icon": "✈️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-8",
+    "page": "vocabulary.html?id=vocab-lesson-8",
+    "words": [
+      {
+        "id": "vocab-lesson-8-1",
+        "en": "arrive",
+        "ru": "прибывать; приезжать"
+      },
+      {
+        "id": "vocab-lesson-8-2",
+        "en": "book",
+        "ru": "бронировать"
+      },
+      {
+        "id": "vocab-lesson-8-3",
+        "en": "rent",
+        "ru": "арендовать; брать напрокат"
+      },
+      {
+        "id": "vocab-lesson-8-4",
+        "en": "stay",
+        "ru": "останавливаться; проживать"
+      },
+      {
+        "id": "vocab-lesson-8-5",
+        "en": "go away",
+        "ru": "уехать; отправиться куда-либо"
+      },
+      {
+        "id": "vocab-lesson-8-6",
+        "en": "hostel",
+        "ru": "хостел"
+      },
+      {
+        "id": "vocab-lesson-8-7",
+        "en": "postcard",
+        "ru": "открытка"
+      },
+      {
+        "id": "vocab-lesson-8-8",
+        "en": "souvenir",
+        "ru": "сувенир"
+      },
+      {
+        "id": "vocab-lesson-8-9",
+        "en": "unfriendly",
+        "ru": "недружелюбный"
+      },
+      {
+        "id": "vocab-lesson-8-10",
+        "en": "swimming pool",
+        "ru": "бассейн"
+      },
+      {
+        "id": "vocab-lesson-8-11",
+        "en": "flat",
+        "ru": "квартира"
+      },
+      {
+        "id": "vocab-lesson-8-12",
+        "en": "spend a month",
+        "ru": "провести месяц"
+      },
+      {
+        "id": "vocab-lesson-8-13",
+        "en": "apartment",
+        "ru": "квартира; апартаменты"
+      },
+      {
+        "id": "vocab-lesson-8-14",
+        "en": "taxi",
+        "ru": "такси"
+      },
+      {
+        "id": "vocab-lesson-8-15",
+        "en": "airport",
+        "ru": "аэропорт"
+      },
+      {
+        "id": "vocab-lesson-8-16",
+        "en": "check-in",
+        "ru": "регистрация (в аэропорту / отеле)"
+      },
+      {
+        "id": "vocab-lesson-8-17",
+        "en": "passport",
+        "ru": "паспорт"
+      },
+      {
+        "id": "vocab-lesson-8-18",
+        "en": "ask for",
+        "ru": "просить; запрашивать"
+      },
+      {
+        "id": "vocab-lesson-8-19",
+        "en": "coat pocket",
+        "ru": "карман пальто"
+      },
+      {
+        "id": "vocab-lesson-8-20",
+        "en": "miserable",
+        "ru": "ужасный; несчастный; очень неприятный"
+      },
+      {
+        "id": "vocab-lesson-8-21",
+        "en": "in the end",
+        "ru": "в конце концов"
+      }
     ]
   }
 ];

@@ -1,4 +1,3 @@
-/** A1 grammar for Anastasia and Rozalina. */
 window.GRAMMAR_DATA = [
   {
     "id": "grammar-word-order-questions",
@@ -1323,11 +1322,27 @@ window.GRAMMAR_DATA = [
     "tables": [
       {
         "title": "Короткая памятка",
-        "headers": ["Значение", "Форма", "Пример"],
+        "headers": [
+          "Значение",
+          "Форма",
+          "Пример"
+        ],
         "rows": [
-          ["Предложение помощи", "I’ll + verb", "I’ll send two bottles."],
-          ["Решение сейчас", "I’ll + verb", "I’ll call the manager."],
-          ["Отказ / обещание не делать", "I won’t + verb", "I won’t be late."]
+          [
+            "Предложение помощи",
+            "I’ll + verb",
+            "I’ll send two bottles."
+          ],
+          [
+            "Решение сейчас",
+            "I’ll + verb",
+            "I’ll call the manager."
+          ],
+          [
+            "Отказ / обещание не делать",
+            "I won’t + verb",
+            "I won’t be late."
+          ]
         ]
       }
     ],
@@ -1357,28 +1372,40 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "single",
             "prompt": "I ___ somebody up right now.",
-            "options": ["’ll send", "’ll sends"],
+            "options": [
+              "’ll send",
+              "’ll sends"
+            ],
             "answer": 0
           },
           {
             "id": "2",
             "input": "single",
             "prompt": "I ___ you through to IT.",
-            "options": ["’ll put", "’ll to put"],
+            "options": [
+              "’ll put",
+              "’ll to put"
+            ],
             "answer": 0
           },
           {
             "id": "3",
             "input": "single",
             "prompt": "I ___ the manager now.",
-            "options": ["will calling", "’ll call"],
+            "options": [
+              "will calling",
+              "’ll call"
+            ],
             "answer": 1
           },
           {
             "id": "4",
             "input": "single",
             "prompt": "I ___ if we have a quieter room.",
-            "options": ["’ll see", "’ll seeing"],
+            "options": [
+              "’ll see",
+              "’ll seeing"
+            ],
             "answer": 0
           }
         ]
@@ -1392,26 +1419,58 @@ window.GRAMMAR_DATA = [
           {
             "id": "1",
             "input": "gaps",
-            "segments": ["I’m sorry about the shower. ", " somebody up. (send)"],
-            "answers": [["I’ll send", "I will send"]]
+            "segments": [
+              "I’m sorry about the shower. ",
+              " somebody up. (send)"
+            ],
+            "answers": [
+              [
+                "I’ll send",
+                "I will send"
+              ]
+            ]
           },
           {
             "id": "2",
             "input": "gaps",
-            "segments": ["The wi-fi isn’t working. ", " you through to IT. (put)"],
-            "answers": [["I’ll put", "I will put"]]
+            "segments": [
+              "The wi-fi isn’t working. ",
+              " you through to IT. (put)"
+            ],
+            "answers": [
+              [
+                "I’ll put",
+                "I will put"
+              ]
+            ]
           },
           {
             "id": "3",
             "input": "gaps",
-            "segments": ["You want the manager? ", " her to call you. (ask)"],
-            "answers": [["I’ll ask", "I will ask"]]
+            "segments": [
+              "You want the manager? ",
+              " her to call you. (ask)"
+            ],
+            "answers": [
+              [
+                "I’ll ask",
+                "I will ask"
+              ]
+            ]
           },
           {
             "id": "4",
             "input": "gaps",
-            "segments": ["The room is noisy. ", " if we have a quieter one. (see)"],
-            "answers": [["I’ll see", "I will see"]]
+            "segments": [
+              "The room is noisy. ",
+              " if we have a quieter one. (see)"
+            ],
+            "answers": [
+              [
+                "I’ll see",
+                "I will see"
+              ]
+            ]
           }
         ]
       },
@@ -1425,28 +1484,40 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "single",
             "prompt": "Выбери правильное предложение.",
-            "options": ["I’ll send somebody up.", "I send will somebody up."],
+            "options": [
+              "I’ll send somebody up.",
+              "I send will somebody up."
+            ],
             "answer": 0
           },
           {
             "id": "2",
             "input": "single",
             "prompt": "Выбери правильное предложение.",
-            "options": ["I put’ll you through to IT.", "I’ll put you through to IT."],
+            "options": [
+              "I put’ll you through to IT.",
+              "I’ll put you through to IT."
+            ],
             "answer": 1
           },
           {
             "id": "3",
             "input": "single",
             "prompt": "Выбери правильное предложение.",
-            "options": ["I’ll ask her to call you.", "I’ll ask to her call you."],
+            "options": [
+              "I’ll ask her to call you.",
+              "I’ll ask to her call you."
+            ],
             "answer": 0
           },
           {
             "id": "4",
             "input": "single",
             "prompt": "Выбери правильное предложение.",
-            "options": ["I’ll see if we has a quieter one.", "I’ll see if we have a quieter one."],
+            "options": [
+              "I’ll see if we has a quieter one.",
+              "I’ll see if we have a quieter one."
+            ],
             "answer": 1
           }
         ]
@@ -1461,33 +1532,363 @@ window.GRAMMAR_DATA = [
             "id": "1",
             "input": "text",
             "prompt": "Проблема с wi-fi.",
-            "wordBank": ["I’ll", "put", "you", "through", "to IT"],
-            "acceptedAnswers": ["I’ll put you through to IT.", "I will put you through to IT."]
+            "wordBank": [
+              "I’ll",
+              "put",
+              "you",
+              "through",
+              "to IT"
+            ],
+            "acceptedAnswers": [
+              "I’ll put you through to IT.",
+              "I will put you through to IT."
+            ]
           },
           {
             "id": "2",
             "input": "text",
             "prompt": "В номере нет воды.",
-            "wordBank": ["I’ll", "send", "two bottles", "right now"],
-            "acceptedAnswers": ["I’ll send two bottles right now.", "I will send two bottles right now."]
+            "wordBank": [
+              "I’ll",
+              "send",
+              "two bottles",
+              "right now"
+            ],
+            "acceptedAnswers": [
+              "I’ll send two bottles right now.",
+              "I will send two bottles right now."
+            ]
           },
           {
             "id": "3",
             "input": "text",
             "prompt": "Гость хочет поговорить с менеджером.",
-            "wordBank": ["I’ll", "ask", "her", "to call you"],
-            "acceptedAnswers": ["I’ll ask her to call you.", "I will ask her to call you."]
+            "wordBank": [
+              "I’ll",
+              "ask",
+              "her",
+              "to call you"
+            ],
+            "acceptedAnswers": [
+              "I’ll ask her to call you.",
+              "I will ask her to call you."
+            ]
           },
           {
             "id": "4",
             "input": "text",
             "prompt": "Номер слишком шумный.",
-            "wordBank": ["I’ll", "see", "if", "we have", "a quieter one"],
-            "acceptedAnswers": ["I’ll see if we have a quieter one.", "I will see if we have a quieter one."]
+            "wordBank": [
+              "I’ll",
+              "see",
+              "if",
+              "we have",
+              "a quieter one"
+            ],
+            "acceptedAnswers": [
+              "I’ll see if we have a quieter one.",
+              "I will see if we have a quieter one."
+            ]
           }
         ]
       }
     ],
     "linkedLessonId": "lesson-6"
+  },
+  {
+    "id": "grammar-past-simple-regular-irregular",
+    "order": 5,
+    "title": "Past simple: regular and irregular verbs",
+    "level": "A1",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-past-simple-regular-irregular",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "glanceCards": [
+      {
+        "icon": "1",
+        "label": "When we use it",
+        "hint": "Use the past simple for finished actions and situations in the past, often with a finished time such as yesterday, last week, or four years ago.",
+        "pattern": "finished past action",
+        "example": "We arrived at two o’clock. — Мы приехали в два часа."
+      },
+      {
+        "icon": "2",
+        "label": "Positive",
+        "hint": "Regular verbs usually add -ed. Irregular verbs have a special past form that you need to learn.",
+        "pattern": "subject + past form",
+        "example": "They booked a flat. / They went home."
+      },
+      {
+        "icon": "3",
+        "label": "Negative",
+        "hint": "Use didn’t + base verb. After didn’t, do not use the past form.",
+        "pattern": "subject + didn’t + verb",
+        "example": "They didn’t rent a car."
+      },
+      {
+        "icon": "4",
+        "label": "Questions",
+        "hint": "Use did + subject + base verb. The main verb goes back to its base form.",
+        "pattern": "Did + subject + verb ...?",
+        "example": "Where did they go?"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Regular verbs: + -ed",
+        "text": "Most regular verbs form the past simple with -ed.",
+        "example": "ask → asked · rent → rented · stay → stayed"
+      },
+      {
+        "title": "2. Spelling changes",
+        "text": "If a verb ends in -e, add -d. If it ends in consonant + y, change y to i and add -ed. Some short verbs double the final consonant before -ed.",
+        "example": "invite → invited · study → studied · stop → stopped"
+      },
+      {
+        "title": "3. Irregular verbs",
+        "text": "Irregular verbs do not follow the -ed rule. Learn their past forms individually.",
+        "example": "buy → bought · choose → chose · eat → ate · go → went"
+      },
+      {
+        "title": "4. Negative",
+        "text": "Use didn’t + the base form for almost all verbs. With be, use wasn’t / weren’t.",
+        "example": "I didn’t swim. · They weren’t friendly."
+      },
+      {
+        "title": "5. Questions and short answers",
+        "text": "Use did before the subject and the base form after the subject. Short answers use did / didn’t.",
+        "example": "Did they book online? — Yes, they did. / No, they didn’t."
+      },
+      {
+        "title": "6. The verb be is different",
+        "text": "Past forms of be are was / were. Questions invert was / were and the subject; negatives are wasn’t / weren’t.",
+        "example": "They were tired. · Were they tired? · They weren’t tired."
+      },
+      {
+        "title": "7. -ed pronunciation",
+        "text": "The ending -ed can sound /t/, /d/, or /ɪd/. The spelling stays -ed; only the pronunciation changes.",
+        "example": "booked /t/ · arrived /d/ · wanted /ɪd/"
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Positive, negative, question",
+        "items": [
+          "They booked an apartment. → They didn’t book a hotel. → Did they book online?",
+          "She went to Portugal. → She didn’t go to Spain. → Where did she go?",
+          "They were at the airport. → They weren’t at home. → Were they at the airport?"
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "They didn’t went home. ✗ → They didn’t go home. ✓ — after didn’t, use the base verb.",
+      "Did they booked online? ✗ → Did they book online? ✓ — after did, use the base verb.",
+      "I studyed English. ✗ → I studied English. ✓ — consonant + y changes to -ied.",
+      "They was at the airport. ✗ → They were at the airport. ✓ — use were with they / we / you."
+    ],
+    "exercises": [
+      {
+        "id": "past-simple-step-1",
+        "title": "1. Choose the correct past form.",
+        "difficulty": "Easy",
+        "instructions": "Choose the correct past simple form.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "arrive",
+            "options": [
+              "arrived",
+              "arriveed"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "buy",
+            "options": [
+              "buyed",
+              "bought"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "study",
+            "options": [
+              "studied",
+              "studyed"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "go",
+            "options": [
+              "went",
+              "goed"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "past-simple-step-2",
+        "title": "2. Complete the negative sentences.",
+        "difficulty": "Medium",
+        "instructions": "Write the correct negative form.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "They ",
+              " a car. (rent)"
+            ],
+            "answers": [
+              [
+                "didn't rent",
+                "didn’t rent"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "I ",
+              " in the sea. (swim)"
+            ],
+            "answers": [
+              [
+                "didn't swim",
+                "didn’t swim"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "We ",
+              " at home. (be)"
+            ],
+            "answers": [
+              [
+                "weren't",
+                "weren’t"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "She ",
+              " the passport. (find)"
+            ],
+            "answers": [
+              [
+                "didn't find",
+                "didn’t find"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "past-simple-step-3",
+        "title": "3. Choose the correct form in context.",
+        "difficulty": "Harder",
+        "instructions": "Choose the form that makes the sentence grammatically correct.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "We ___ an apartment online.",
+            "options": [
+              "booked",
+              "did book"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "Where ___ they go?",
+            "options": [
+              "did",
+              "were"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "They ___ find their passports.",
+            "options": [
+              "couldn’t",
+              "didn’t could"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "The people ___ very helpful.",
+            "options": [
+              "weren’t",
+              "didn’t were"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "past-simple-step-4",
+        "title": "4. Build the sentence or question.",
+        "difficulty": "Most difficult",
+        "instructions": "Write the complete sentence or question using the words in brackets.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "(they / arrive / at two o’clock)",
+            "answer": [
+              "They arrived at two o'clock.",
+              "They arrived at two o’clock."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "(we / not / take / a taxi)",
+            "answer": [
+              "We didn't take a taxi.",
+              "We didn’t take a taxi."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "(where / they / go / in the end?)",
+            "answer": "Where did they go in the end?"
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "(the woman / ask / for their passports?)",
+            "answer": "Did the woman ask for their passports?"
+          }
+        ]
+      }
+    ],
+    "linkedLessonId": "lesson-8"
   }
 ];
