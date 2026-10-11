@@ -2271,111 +2271,42 @@ window.GRAMMAR_DATA = [
       "alt": "Инфографика по предлогам at, in, on: место и время",
       "note": "Смотри на картинку как на карту-подсказку: IN = внутри / в границах, ON = на поверхности / на транспорте / в дни и даты, AT = в точке / в конкретном месте / в точное время."
     },
-    "glanceCards": [
-      {
-        "icon": "1",
-        "label": "IN",
-        "hint": "Используем, когда что-то находится внутри пространства или внутри периода времени.",
-        "pattern": "in + city / room / month / season",
-        "example": "in Moscow · in the living room · in February · in summer"
-      },
-      {
-        "icon": "2",
-        "label": "ON",
-        "hint": "Используем для поверхностей, транспорта, дней недели и дат.",
-        "pattern": "on + surface / bus / day / date",
-        "example": "on the table · on the bus · on Monday · on 9th May"
-      },
-      {
-        "icon": "3",
-        "label": "AT",
-        "hint": "Используем для точек, конкретных мест и точного времени.",
-        "pattern": "at + place / time",
-        "example": "at the station · at school · at 7.15 · at night"
-      },
-      {
-        "icon": "4",
-        "label": "Быстрая проверка",
-        "hint": "Спроси себя: это внутри, на поверхности или в конкретной точке / во времени?",
-        "pattern": "inside → in · surface/day → on · point/time → at",
-        "example": "in a car · on the wall · at the bus stop"
-      }
-    ],
-    "miniRules": [
-      {
-        "title": "1. IN = внутри / в границах",
-        "text": "Ставим in с городами, странами, комнатами, закрытыми пространствами, месяцами и временами года.",
-        "example": "in Amsterdam · in England · in the museum · in a car · in July · in winter"
-      },
-      {
-        "title": "2. ON = на поверхности",
-        "text": "Ставим on, когда предмет лежит или находится на поверхности.",
-        "example": "on the table · on the wall · on the floor · on the shelves"
-      },
-      {
-        "title": "3. ON = транспорт, дни и даты",
-        "text": "Также on используем с автобусом, самолётом, велосипедом, днями недели и датами.",
-        "example": "on the bus · on a plane · on a bike · on Monday · on 9th May"
-      },
-      {
-        "title": "4. AT = точка / конкретное место",
-        "text": "Ставим at для конкретного места как точки: остановка, станция, школа, работа, чей-то дом, вечеринка.",
-        "example": "at the bus stop · at the station · at school · at work · at a party"
-      },
-      {
-        "title": "5. AT = точное время",
-        "text": "Ставим at с точным временем и некоторыми устойчивыми выражениями времени.",
-        "example": "at 7.15 · at night · at the weekend"
-      },
-      {
-        "title": "6. Не переводи дословно",
-        "text": "В английском предлог часто не совпадает с русским. Нужно запоминать тип ситуации и полезные примеры.",
-        "example": "on the bus = в автобусе · at school = в школе · in the park = в парке"
-      }
-    ],
+    "glanceCards": [],
+    "miniRules": [],
     "tables": [
       {
-        "title": "Короткая памятка: где какой предлог?",
+        "title": "Самые важные сочетания",
         "headers": [
-          "Предлог",
-          "Когда используем",
-          "Примеры"
+          "IN",
+          "ON",
+          "AT"
         ],
         "rows": [
           [
-            "in",
-            "внутри пространства; города, страны; месяцы, времена года",
-            "in New York · in a room · in August · in winter"
+            "in a city / country",
+            "on a surface",
+            "at a place / point"
           ],
           [
-            "on",
-            "на поверхности; на транспорте; дни и даты",
-            "on the wall · on the bus · on Friday · on 9th May"
+            "in a room / in a car",
+            "on the bus / on a plane / on a bike",
+            "at school / at work / at the station"
           ],
           [
-            "at",
-            "в точке; в конкретном месте; в точное время",
-            "at the station · at school · at 8.30 · at night"
+            "in July / in summer / in the evening",
+            "on Monday / on 9th May",
+            "at 7.15 / at night / at the weekend"
           ]
         ]
       }
     ],
     "exampleGroups": [
       {
-        "title": "Место",
+        "title": "Посмотри на контраст",
         "items": [
-          "We live in New York, on the 11th floor of a tall building. — С городом используем in, а с этажом — on.",
-          "I’ll meet you at the station. — С конкретной точкой встречи используем at.",
-          "The children sat on the floor. — С поверхностью используем on.",
-          "We spent the morning in the museum and then went for a walk in the park. — С большими пространствами и местами внутри границ используем in."
-        ]
-      },
-      {
-        "title": "Время",
-        "items": [
-          "Our flight is leaving on Wednesday at 9.30 in the evening. — День: on, точное время: at, часть дня: in.",
-          "I hate driving at night and working at weekends. — Устойчивые выражения: at night, at weekends.",
-          "We’re going again in the summer, probably the last two weeks in July. — С временами года и месяцами используем in."
+          "in New York, on the 11th floor, at 7.30",
+          "in the museum, on the wall, at the bus stop",
+          "in summer, on Monday, at night"
         ]
       }
     ],
