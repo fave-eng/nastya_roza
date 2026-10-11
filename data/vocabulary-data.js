@@ -1064,110 +1064,119 @@ window.VOCABULARY_DATA = [
     ]
   },
   {
-    "id": "vocab-lesson-9",
-    "title": "Holidays",
-    "label": "Lesson 9 · Holidays",
-    "icon": "🧳",
+    "id": "vocab-lesson-9-irregular",
+    "title": "Irregular verbs",
+    "label": "Homework 9 · Irregular verbs",
+    "icon": "↻",
     "linkedLessonId": "lesson-9",
-    "page": "vocabulary.html?id=vocab-lesson-9",
+    "page": "irregular-verbs.html",
+    "words": []
+  },
+  {
+    "id": "vocab-lesson-10",
+    "title": "Holidays",
+    "label": "Lesson 10 · Holidays",
+    "icon": "🧳",
+    "linkedLessonId": "lesson-10",
+    "page": "vocabulary.html?id=vocab-lesson-10",
     "words": [
       {
-        "id": "vocab-lesson-9-1",
+        "id": "vocab-lesson-10-1",
         "en": "go camping",
         "ru": "ехать отдыхать с палаткой"
       },
       {
-        "id": "vocab-lesson-9-2",
+        "id": "vocab-lesson-10-2",
         "en": "go for a walk",
         "ru": "пойти на прогулку"
       },
       {
-        "id": "vocab-lesson-9-3",
+        "id": "vocab-lesson-10-3",
         "en": "book a flight online",
         "ru": "забронировать авиабилет онлайн"
       },
       {
-        "id": "vocab-lesson-9-4",
+        "id": "vocab-lesson-10-4",
         "en": "go abroad",
         "ru": "ехать за границу"
       },
       {
-        "id": "vocab-lesson-9-5",
+        "id": "vocab-lesson-10-5",
         "en": "go swimming",
         "ru": "пойти плавать"
       },
       {
-        "id": "vocab-lesson-9-6",
+        "id": "vocab-lesson-10-6",
         "en": "go out at night",
         "ru": "выходить куда-либо вечером"
       },
       {
-        "id": "vocab-lesson-9-7",
+        "id": "vocab-lesson-10-7",
         "en": "stay in a hotel",
         "ru": "остановиться в отеле"
       },
       {
-        "id": "vocab-lesson-9-8",
+        "id": "vocab-lesson-10-8",
         "en": "go sightseeing",
         "ru": "осматривать достопримечательности"
       },
       {
-        "id": "vocab-lesson-9-9",
+        "id": "vocab-lesson-10-9",
         "en": "sunbathe on the beach",
         "ru": "загорать на пляже"
       },
       {
-        "id": "vocab-lesson-9-10",
+        "id": "vocab-lesson-10-10",
         "en": "go away for the weekend",
         "ru": "уехать куда-либо на выходные"
       },
       {
-        "id": "vocab-lesson-9-11",
+        "id": "vocab-lesson-10-11",
         "en": "comfortable",
         "ru": "удобный; комфортный"
       },
       {
-        "id": "vocab-lesson-9-12",
+        "id": "vocab-lesson-10-12",
         "en": "sunny",
         "ru": "солнечный"
       },
       {
-        "id": "vocab-lesson-9-13",
+        "id": "vocab-lesson-10-13",
         "en": "crowded",
         "ru": "многолюдный; переполненный"
       },
       {
-        "id": "vocab-lesson-9-14",
+        "id": "vocab-lesson-10-14",
         "en": "unhelpful",
         "ru": "неотзывчивый; неготовый помочь"
       },
       {
-        "id": "vocab-lesson-9-15",
+        "id": "vocab-lesson-10-15",
         "en": "basic",
         "ru": "простой; с минимальными удобствами"
       },
       {
-        "id": "vocab-lesson-9-16",
+        "id": "vocab-lesson-10-16",
         "en": "lovely",
         "ru": "прекрасный; очаровательный"
       },
       {
-        "id": "vocab-lesson-9-17",
+        "id": "vocab-lesson-10-17",
         "en": "cloudy",
         "ru": "облачный"
       },
       {
-        "id": "vocab-lesson-9-18",
+        "id": "vocab-lesson-10-18",
         "en": "luxurious",
         "ru": "роскошный"
       },
       {
-        "id": "vocab-lesson-9-19",
+        "id": "vocab-lesson-10-19",
         "en": "get there",
         "ru": "добраться туда"
       },
       {
-        "id": "vocab-lesson-9-20",
+        "id": "vocab-lesson-10-20",
         "en": "by plane",
         "ru": "на самолёте"
       }
