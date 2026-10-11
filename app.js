@@ -440,6 +440,9 @@
             };
             homework.completedIds.push(row.lesson_id);
           }
+          else if (Number(row.score_total) > 0 && Number(row.score_correct) === Number(row.score_total)) {
+            homework.completedIds.push(row.lesson_id);
+          }
         });
         homework.completedIds = unique(homework.completedIds);
         storage.write(key('homework'), homework);
@@ -530,7 +533,7 @@
             lesson_title: safeText(lesson.title, lessonId),
             status: hasSubmission
               ? (isFinalCloudSubmission ? 'submitted' : 'submitted_pending_report')
-              : (total > 0 ? 'checked' : 'draft'),
+              : 'draft',
             answers: result.answers && typeof result.answers === 'object' ? result.answers : {},
             score_correct: total > 0 ? correct : null,
             score_total: total > 0 ? total : null,
