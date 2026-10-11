@@ -1,4 +1,4 @@
-/** Grammar topics for Anastasia and Rozalina. */
+/** A1 grammar for Anastasia and Rozalina. */
 window.GRAMMAR_DATA = [
   {
     "id": "grammar-word-order-questions",
@@ -2246,6 +2246,359 @@ window.GRAMMAR_DATA = [
             "prompt": "the children / play computer games / when / the visitors / arrive",
             "acceptedAnswers": [
               "The children were playing computer games when the visitors arrived."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grammar-at-in-on",
+    "order": 7,
+    "title": "At, in, on",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-at-in-on",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-11",
+    "visualGuide": {
+      "eyebrow": "Схема",
+      "title": "Как запомнить at, in, on",
+      "src": "images/grammar-at-in-on-guide.png",
+      "alt": "Инфографика по предлогам at, in, on: место и время",
+      "note": "Смотри на картинку как на карту-подсказку: IN = внутри / в границах, ON = на поверхности / на транспорте / в дни и даты, AT = в точке / в конкретном месте / в точное время."
+    },
+    "glanceCards": [
+      {
+        "icon": "1",
+        "label": "IN",
+        "hint": "Используем, когда что-то находится внутри пространства или внутри периода времени.",
+        "pattern": "in + city / room / month / season",
+        "example": "in Moscow · in the living room · in February · in summer"
+      },
+      {
+        "icon": "2",
+        "label": "ON",
+        "hint": "Используем для поверхностей, транспорта, дней недели и дат.",
+        "pattern": "on + surface / bus / day / date",
+        "example": "on the table · on the bus · on Monday · on 9th May"
+      },
+      {
+        "icon": "3",
+        "label": "AT",
+        "hint": "Используем для точек, конкретных мест и точного времени.",
+        "pattern": "at + place / time",
+        "example": "at the station · at school · at 7.15 · at night"
+      },
+      {
+        "icon": "4",
+        "label": "Быстрая проверка",
+        "hint": "Спроси себя: это внутри, на поверхности или в конкретной точке / во времени?",
+        "pattern": "inside → in · surface/day → on · point/time → at",
+        "example": "in a car · on the wall · at the bus stop"
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. IN = внутри / в границах",
+        "text": "Ставим in с городами, странами, комнатами, закрытыми пространствами, месяцами и временами года.",
+        "example": "in Amsterdam · in England · in the museum · in a car · in July · in winter"
+      },
+      {
+        "title": "2. ON = на поверхности",
+        "text": "Ставим on, когда предмет лежит или находится на поверхности.",
+        "example": "on the table · on the wall · on the floor · on the shelves"
+      },
+      {
+        "title": "3. ON = транспорт, дни и даты",
+        "text": "Также on используем с автобусом, самолётом, велосипедом, днями недели и датами.",
+        "example": "on the bus · on a plane · on a bike · on Monday · on 9th May"
+      },
+      {
+        "title": "4. AT = точка / конкретное место",
+        "text": "Ставим at для конкретного места как точки: остановка, станция, школа, работа, чей-то дом, вечеринка.",
+        "example": "at the bus stop · at the station · at school · at work · at a party"
+      },
+      {
+        "title": "5. AT = точное время",
+        "text": "Ставим at с точным временем и некоторыми устойчивыми выражениями времени.",
+        "example": "at 7.15 · at night · at the weekend"
+      },
+      {
+        "title": "6. Не переводи дословно",
+        "text": "В английском предлог часто не совпадает с русским. Нужно запоминать тип ситуации и полезные примеры.",
+        "example": "on the bus = в автобусе · at school = в школе · in the park = в парке"
+      }
+    ],
+    "tables": [
+      {
+        "title": "Короткая памятка: где какой предлог?",
+        "headers": [
+          "Предлог",
+          "Когда используем",
+          "Примеры"
+        ],
+        "rows": [
+          [
+            "in",
+            "внутри пространства; города, страны; месяцы, времена года",
+            "in New York · in a room · in August · in winter"
+          ],
+          [
+            "on",
+            "на поверхности; на транспорте; дни и даты",
+            "on the wall · on the bus · on Friday · on 9th May"
+          ],
+          [
+            "at",
+            "в точке; в конкретном месте; в точное время",
+            "at the station · at school · at 8.30 · at night"
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Место",
+        "items": [
+          "We live in New York, on the 11th floor of a tall building. — С городом используем in, а с этажом — on.",
+          "I’ll meet you at the station. — С конкретной точкой встречи используем at.",
+          "The children sat on the floor. — С поверхностью используем on.",
+          "We spent the morning in the museum and then went for a walk in the park. — С большими пространствами и местами внутри границ используем in."
+        ]
+      },
+      {
+        "title": "Время",
+        "items": [
+          "Our flight is leaving on Wednesday at 9.30 in the evening. — День: on, точное время: at, часть дня: in.",
+          "I hate driving at night and working at weekends. — Устойчивые выражения: at night, at weekends.",
+          "We’re going again in the summer, probably the last two weeks in July. — С временами года и месяцами используем in."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "in Monday ✗ → on Monday ✓ — с днями недели используем on.",
+      "in 7.15 ✗ → at 7.15 ✓ — с точным временем используем at.",
+      "at the wall ✗ → on the wall ✓ — на поверхности используем on.",
+      "on New York ✗ → in New York ✓ — с городами используем in.",
+      "in the station как “место встречи” может быть неверно ✗ → at the station ✓ — если это точка, чаще нужен at."
+    ],
+    "exercises": [
+      {
+        "id": "at-in-on-step-1",
+        "title": "1. Выбери правильный предлог.",
+        "difficulty": "Легко",
+        "instructions": "Выбери in, on или at.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "___ Monday",
+            "options": [
+              "in",
+              "on",
+              "at"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "___ a car",
+            "options": [
+              "in",
+              "on",
+              "at"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "___ the table",
+            "options": [
+              "in",
+              "on",
+              "at"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "___ 7.15",
+            "options": [
+              "in",
+              "on",
+              "at"
+            ],
+            "answer": 2
+          }
+        ]
+      },
+      {
+        "id": "at-in-on-step-2",
+        "title": "2. Вставь нужный предлог.",
+        "difficulty": "Средне",
+        "instructions": "Впиши один предлог: at, in или on.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "We live ",
+              " Moscow."
+            ],
+            "answers": [
+              [
+                "in"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "I left my bag ",
+              " the bus."
+            ],
+            "answers": [
+              [
+                "on"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "Let’s meet ",
+              " the station."
+            ],
+            "answers": [
+              [
+                "at"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "My birthday is ",
+              " 9th May."
+            ],
+            "answers": [
+              [
+                "on"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "at-in-on-step-3",
+        "title": "3. Выбери вариант по контексту.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Выбери предлог, который подходит по смыслу.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "I usually study ",
+              " the evening."
+            ],
+            "options": [
+              "at",
+              "in",
+              "on"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "The photo is ",
+              " the wall."
+            ],
+            "options": [
+              "at",
+              "in",
+              "on"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "My dad is usually ",
+              " work between 9.00 and 5.00."
+            ],
+            "options": [
+              "at",
+              "in",
+              "on"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "We’re going to Greece ",
+              " the summer."
+            ],
+            "options": [
+              "at",
+              "in",
+              "on"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "at-in-on-step-4",
+        "title": "4. Построй предложение самостоятельно.",
+        "difficulty": "Самое сложное",
+        "instructions": "Используй данные слова. Напиши полное предложение с правильным предлогом или предлогами.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "we / meet / the station / 8.30",
+            "acceptedAnswers": [
+              "We met at the station at 8.30."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "my parents / live / Dublin",
+            "acceptedAnswers": [
+              "My parents live in Dublin."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "the keys / be / the table",
+            "acceptedAnswers": [
+              "The keys are on the table."
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "I / usually / study / the evening",
+            "acceptedAnswers": [
+              "I usually study in the evening."
             ]
           }
         ]

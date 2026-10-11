@@ -2340,9 +2340,12 @@
     const exampleGroups = Array.isArray(topic.exampleGroups) ? topic.exampleGroups : [];
     const examples = Array.isArray(topic.examples) ? topic.examples : [];
     const mistakes = Array.isArray(topic.commonMistakes) ? topic.commonMistakes : [];
+    const visualGuide = topic.visualGuide && typeof topic.visualGuide === "object" ? topic.visualGuide : null;
 
     root.innerHTML = `
       ${grammarQuestionSchemeMarkup(topic.questionScheme)}
+
+      ${visualGuide ? `<section class="section" id="grammar-visual-guide" aria-labelledby="grammar-visual-guide-title"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(visualGuide.eyebrow || "Схема")}</span><h2 id="grammar-visual-guide-title">${escapeHtml(visualGuide.title || "Визуальная подсказка")}</h2></div></div><article class="card lesson-block"><img src="${escapeHtml(visualGuide.src || "")}" alt="${escapeHtml(visualGuide.alt || topic.title || "Grammar guide")}" style="width:100%;height:auto;display:block;border-radius:18px;" />${visualGuide.note ? `<p class="muted" style="margin-top:12px;">${escapeHtml(visualGuide.note)}</p>` : ""}</article></section>` : ""}
 
       ${glanceCards.length ? `<section class="section" id="grammar-at-a-glance" aria-labelledby="grammar-at-a-glance-title"><div class="section-heading"><div><span class="eyebrow">Разбираем схему</span><h2 id="grammar-at-a-glance-title">Что означает каждый цветной блок</h2></div></div><div class="grammar-glance-grid">${glanceCards.map((card) => `<article class="card grammar-glance-card"><div class="grammar-glance-head"><span class="grammar-glance-icon">${escapeHtml(card.icon || '✦')}</span><div><h3>${escapeHtml(card.label || '')}</h3><p class="muted">${escapeHtml(card.hint || '')}</p></div></div><div class="grammar-pattern">${escapeHtml(card.pattern || '')}</div><p class="grammar-example-sentence">${escapeHtml(card.example || '')}</p></article>`).join('')}</div></section>` : ''}
 
