@@ -129,6 +129,7 @@
               image.loading = 'lazy';
               image.decoding = 'async';
               figure.appendChild(image);
+              node.querySelector('.exercise-item-media')?.remove();
               node.insertBefore(figure, node.firstChild);
               node.classList.add('has-item-media');
               node.dataset.mediaEnhanced = 'true';

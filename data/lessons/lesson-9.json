@@ -1,0 +1,523 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "title": "Holidays",
+  "subtitle": "Vocabulary · holiday phrases, adjectives, and last year’s holiday",
+  "status": "available",
+  "publishedAt": "2026-10-11",
+  "totalPoints": 23,
+  "vocabularyId": "vocab-lesson-9",
+  "grammarIds": [
+    "grammar-word-order-questions"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "",
+      "title": "VOCABULARY holidays",
+      "titleLead": "VOCABULARY",
+      "titleTail": "holidays"
+    },
+    {
+      "type": "exercise",
+      "id": "holidays-phrases-a",
+      "title": "a Complete the phrases.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "visualGrid": true,
+      "visualGridColumns": 5,
+      "items": [
+        {
+          "id": "a1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "go camping",
+          "exampleTextOnly": true,
+          "image": "images/lesson-9/holiday-01-camping.png",
+          "imageAlt": "A child sitting in front of a tent."
+        },
+        {
+          "id": "a2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "go ",
+            " a ",
+            ""
+          ],
+          "answers": [
+            [
+              "for"
+            ],
+            [
+              "walk"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-02-walk.png",
+          "imageAlt": "People walking in the mountains."
+        },
+        {
+          "id": "a3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "",
+            " a flight online"
+          ],
+          "answers": [
+            [
+              "book"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-03-flight.png",
+          "imageAlt": "A person booking a flight on a laptop."
+        },
+        {
+          "id": "a4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "go ",
+            ""
+          ],
+          "answers": [
+            [
+              "abroad"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-04-abroad.png",
+          "imageAlt": "A passport and a plane ticket."
+        },
+        {
+          "id": "a5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "",
+            " swimming"
+          ],
+          "answers": [
+            [
+              "go"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-05-swimming.png",
+          "imageAlt": "Two people swimming."
+        },
+        {
+          "id": "a6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "go ",
+            " at night"
+          ],
+          "answers": [
+            [
+              "out"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-06-night.png",
+          "imageAlt": "A group of friends out at night."
+        },
+        {
+          "id": "a7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "",
+            " in a hotel"
+          ],
+          "answers": [
+            [
+              "stay"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-07-hotel.png",
+          "imageAlt": "Guests checking in at a hotel."
+        },
+        {
+          "id": "a8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "go ",
+            ""
+          ],
+          "answers": [
+            [
+              "sightseeing"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-08-sightseeing.png",
+          "imageAlt": "Tourists sightseeing in a city."
+        },
+        {
+          "id": "a9",
+          "number": 9,
+          "input": "gaps",
+          "segments": [
+            "",
+            " on the beach"
+          ],
+          "answers": [
+            [
+              "sunbathe"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-09-beach.png",
+          "imageAlt": "A person sunbathing on the beach."
+        },
+        {
+          "id": "a10",
+          "number": 10,
+          "input": "gaps",
+          "segments": [
+            "go ",
+            " for the weekend"
+          ],
+          "answers": [
+            [
+              "away"
+            ]
+          ],
+          "image": "images/lesson-9/holiday-10-weekend.png",
+          "imageAlt": "A calendar with a weekend in Brighton marked."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "holidays-adjectives-b",
+      "title": "b Complete the sentences with an adjective.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "b1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "We loved our room. It was very ",
+            "."
+          ],
+          "exampleAnswers": [
+            "comfortable"
+          ]
+        },
+        {
+          "id": "b2",
+          "number": 2,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The weather was warm and s",
+            " every day."
+          ],
+          "answers": [
+            [
+              "unny"
+            ]
+          ]
+        },
+        {
+          "id": "b3",
+          "number": 3,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "There were a lot of people on the beach. It was very cr",
+            "."
+          ],
+          "answers": [
+            [
+              "owded"
+            ]
+          ]
+        },
+        {
+          "id": "b4",
+          "number": 4,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The hotel was on a busy road, so it was really n",
+            "."
+          ],
+          "answers": [
+            [
+              "oisy"
+            ]
+          ]
+        },
+        {
+          "id": "b5",
+          "number": 5,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The staff in the hotel were very unh",
+            " and sometimes quite unfriendly."
+          ],
+          "answers": [
+            [
+              "elpful"
+            ]
+          ]
+        },
+        {
+          "id": "b6",
+          "number": 6,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "There wasn’t much in the apartment. It was very b",
+            ". It didn’t even have a fridge."
+          ],
+          "answers": [
+            [
+              "asic"
+            ]
+          ]
+        },
+        {
+          "id": "b7",
+          "number": 7,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The other people on the trip were very fr",
+            ". We made some good friends."
+          ],
+          "answers": [
+            [
+              "iendly"
+            ]
+          ]
+        },
+        {
+          "id": "b8",
+          "number": 8,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The town was l",
+            ". All the houses had flowers on the balcony and were painted different colours."
+          ],
+          "answers": [
+            [
+              "ovely"
+            ]
+          ]
+        },
+        {
+          "id": "b9",
+          "number": 9,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "It was cl",
+            " all day, so we couldn’t sunbathe."
+          ],
+          "answers": [
+            [
+              "oudy"
+            ]
+          ]
+        },
+        {
+          "id": "b10",
+          "number": 10,
+          "input": "gaps",
+          "inputSize": "letter",
+          "segments": [
+            "The apartment was very l",
+            " – it was full of expensive furniture and very comfortable!"
+          ],
+          "answers": [
+            [
+              "uxurious"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "holidays-chart-cd",
+      "title": "c Look at the chart. Write the questions and Lucy’s answers.",
+      "layout": "holiday-table",
+      "hideAnswersOnError": true,
+      "tableHeaders": [
+        "Last year’s holiday",
+        "Lucy",
+        "You"
+      ],
+      "followUpInstruction": "Write sentences about your last holiday in the You column in c.",
+      "items": [
+        {
+          "id": "c1",
+          "number": 1,
+          "example": true,
+          "input": "gaps"
+        },
+        {
+          "id": "c2",
+          "number": 2,
+          "input": "gaps",
+          "answers": [
+            [
+              "How did you get there?"
+            ],
+            [
+              "I went by plane."
+            ]
+          ]
+        },
+        {
+          "id": "c3",
+          "number": 3,
+          "input": "gaps",
+          "answers": [
+            [
+              "Where did you stay?"
+            ],
+            [
+              "I stayed in a hotel."
+            ]
+          ]
+        },
+        {
+          "id": "c4",
+          "number": 4,
+          "input": "gaps",
+          "answers": [
+            [
+              "How long did you stay?"
+            ],
+            [
+              "I stayed for ten days."
+            ]
+          ]
+        },
+        {
+          "id": "c5",
+          "number": 5,
+          "input": "gaps",
+          "answers": [
+            [
+              "What did you do?"
+            ],
+            [
+              "I went swimming."
+            ]
+          ]
+        },
+        {
+          "id": "c6",
+          "number": 6,
+          "input": "gaps",
+          "answers": [
+            [
+              "What was the weather like?"
+            ],
+            [
+              "It was sunny."
+            ]
+          ]
+        },
+        {
+          "id": "d1",
+          "input": "textarea",
+          "scored": false
+        },
+        {
+          "id": "d2",
+          "input": "textarea",
+          "scored": false
+        },
+        {
+          "id": "d3",
+          "input": "textarea",
+          "scored": false
+        },
+        {
+          "id": "d4",
+          "input": "textarea",
+          "scored": false
+        },
+        {
+          "id": "d5",
+          "input": "textarea",
+          "scored": false
+        },
+        {
+          "id": "d6",
+          "input": "textarea",
+          "scored": false
+        }
+      ],
+      "tableRows": [
+        {
+          "number": 1,
+          "example": true,
+          "cue": "Where / you go",
+          "lucyCue": "Greece",
+          "questionItemId": "c1",
+          "youItemId": "d1",
+          "exampleQuestion": "Where did you go?",
+          "exampleAnswer": "I went to Greece.",
+          "youPlaceholder": "On my last holiday, I went to…",
+          "youLabel": "Write where you went on your last holiday"
+        },
+        {
+          "number": 2,
+          "cue": "How / you / get there",
+          "lucyCue": "plane",
+          "questionItemId": "c2",
+          "youItemId": "d2",
+          "youLabel": "Write how you got there"
+        },
+        {
+          "number": 3,
+          "cue": "Where / you / stay",
+          "lucyCue": "hotel",
+          "questionItemId": "c3",
+          "youItemId": "d3",
+          "youLabel": "Write where you stayed"
+        },
+        {
+          "number": 4,
+          "cue": "How long / you / stay",
+          "lucyCue": "ten days",
+          "questionItemId": "c4",
+          "youItemId": "d4",
+          "youLabel": "Write how long you stayed"
+        },
+        {
+          "number": 5,
+          "cue": "What / you / do",
+          "lucyCue": "went swimming",
+          "questionItemId": "c5",
+          "youItemId": "d5",
+          "youLabel": "Write what you did"
+        },
+        {
+          "number": 6,
+          "cue": "What / be / weather like",
+          "lucyCue": "sunny",
+          "questionItemId": "c6",
+          "youItemId": "d6",
+          "youLabel": "Write what the weather was like"
+        }
+      ]
+    }
+  ]
+}

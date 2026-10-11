@@ -1062,5 +1062,115 @@ window.VOCABULARY_DATA = [
         "ru": "в конце концов"
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-9",
+    "title": "Holidays",
+    "label": "Lesson 9 · Holidays",
+    "icon": "🧳",
+    "linkedLessonId": "lesson-9",
+    "page": "vocabulary.html?id=vocab-lesson-9",
+    "words": [
+      {
+        "id": "vocab-lesson-9-1",
+        "en": "go camping",
+        "ru": "ехать отдыхать с палаткой"
+      },
+      {
+        "id": "vocab-lesson-9-2",
+        "en": "go for a walk",
+        "ru": "пойти на прогулку"
+      },
+      {
+        "id": "vocab-lesson-9-3",
+        "en": "book a flight online",
+        "ru": "забронировать авиабилет онлайн"
+      },
+      {
+        "id": "vocab-lesson-9-4",
+        "en": "go abroad",
+        "ru": "ехать за границу"
+      },
+      {
+        "id": "vocab-lesson-9-5",
+        "en": "go swimming",
+        "ru": "пойти плавать"
+      },
+      {
+        "id": "vocab-lesson-9-6",
+        "en": "go out at night",
+        "ru": "выходить куда-либо вечером"
+      },
+      {
+        "id": "vocab-lesson-9-7",
+        "en": "stay in a hotel",
+        "ru": "остановиться в отеле"
+      },
+      {
+        "id": "vocab-lesson-9-8",
+        "en": "go sightseeing",
+        "ru": "осматривать достопримечательности"
+      },
+      {
+        "id": "vocab-lesson-9-9",
+        "en": "sunbathe on the beach",
+        "ru": "загорать на пляже"
+      },
+      {
+        "id": "vocab-lesson-9-10",
+        "en": "go away for the weekend",
+        "ru": "уехать куда-либо на выходные"
+      },
+      {
+        "id": "vocab-lesson-9-11",
+        "en": "comfortable",
+        "ru": "удобный; комфортный"
+      },
+      {
+        "id": "vocab-lesson-9-12",
+        "en": "sunny",
+        "ru": "солнечный"
+      },
+      {
+        "id": "vocab-lesson-9-13",
+        "en": "crowded",
+        "ru": "многолюдный; переполненный"
+      },
+      {
+        "id": "vocab-lesson-9-14",
+        "en": "unhelpful",
+        "ru": "неотзывчивый; неготовый помочь"
+      },
+      {
+        "id": "vocab-lesson-9-15",
+        "en": "basic",
+        "ru": "простой; с минимальными удобствами"
+      },
+      {
+        "id": "vocab-lesson-9-16",
+        "en": "lovely",
+        "ru": "прекрасный; очаровательный"
+      },
+      {
+        "id": "vocab-lesson-9-17",
+        "en": "cloudy",
+        "ru": "облачный"
+      },
+      {
+        "id": "vocab-lesson-9-18",
+        "en": "luxurious",
+        "ru": "роскошный"
+      },
+      {
+        "id": "vocab-lesson-9-19",
+        "en": "get there",
+        "ru": "добраться туда"
+      },
+      {
+        "id": "vocab-lesson-9-20",
+        "en": "by plane",
+        "ru": "на самолёте"
+      }
+    ]
   }
 ];

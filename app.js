@@ -1482,7 +1482,7 @@
         const gapChars = Math.max(1, ...accepted.map((value) => safeText(value).trim().length));
         const letterAttributes = item.inputSize === 'letter'
           ? ` style="--gap-chars:${Math.min(gapChars, 8)}" maxlength="${Math.min(gapChars, 24)}"`
-          : '';
+          : ` style="--gap-chars:${Math.min(gapChars, 18)}"`;
         return `${gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : ''}<input class="${gapClass}"${letterAttributes} data-gap-index="${gapIndex}" aria-label="Gap ${gapIndex + 1}" autocomplete="off">`;
       }).join('')}${segments.length > answers.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : ''}</div>`;
     } else {
@@ -1598,6 +1598,51 @@
     </article>`;
   }
 
+  function renderHolidayTable(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
+    const rows = Array.isArray(block.tableRows) ? block.tableRows : [];
+
+    const renderYouResponse = (itemId, row) => {
+      const entry = itemMap.get(safeText(itemId));
+      if (!entry) return '';
+      const { item, index } = entry;
+      const resolvedId = safeText(item.id, `${index + 1}`);
+      const inputId = `holiday-${blockId}-${resolvedId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+      return `<div class="holiday-table-you" data-exercise-item="${escapeHtml(resolvedId)}" data-input-type="textarea">
+        <textarea id="${escapeHtml(inputId)}" aria-label="${escapeHtml(row.youLabel || `Your answer ${row.number || ''}`)}" placeholder="${escapeHtml(row.youPlaceholder || '')}"></textarea>
+        <div class="feedback" aria-live="polite"></div>
+      </div>`;
+    };
+
+    const rowMarkup = rows.map((row, rowIndex) => {
+      const questionId = safeText(row.questionItemId, `c${rowIndex + 1}`);
+      const entry = itemMap.get(questionId);
+      const item = entry?.item || {};
+      const inputId = `holiday-${blockId}-${questionId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+      const number = row.number === undefined ? rowIndex + 1 : row.number;
+      const youResponse = renderYouResponse(row.youItemId, row);
+      if (item.example === true || row.example === true) {
+        return `<tr class="holiday-table-example exercise-example" data-exercise-item="${escapeHtml(questionId)}" data-input-type="gaps">
+          <td><div class="holiday-table-cue"><span>${escapeHtml(number)}</span><strong>${escapeHtml(row.cue || '')}</strong></div><div class="holiday-table-example-answer">${escapeHtml(row.exampleQuestion || '')}</div></td>
+          <td><div class="holiday-table-clue">${escapeHtml(row.lucyCue || '')}</div><div class="holiday-table-example-answer">${escapeHtml(row.exampleAnswer || '')}</div></td>
+          <td>${youResponse}</td>
+        </tr>`;
+      }
+      return `<tr data-exercise-item="${escapeHtml(questionId)}" data-input-type="gaps">
+        <td><div class="holiday-table-cue"><span>${escapeHtml(number)}</span><strong>${escapeHtml(row.cue || '')}</strong></div><input class="holiday-table-input" id="${escapeHtml(inputId)}-question" data-gap-index="0" autocomplete="off" aria-label="Write question ${escapeHtml(number)}"></td>
+        <td><div class="holiday-table-clue">${escapeHtml(row.lucyCue || '')}</div><input class="holiday-table-input" id="${escapeHtml(inputId)}-answer" data-gap-index="1" autocomplete="off" aria-label="Write Lucy's answer ${escapeHtml(number)}"><div class="feedback" aria-live="polite"></div></td>
+        <td>${youResponse}</td>
+      </tr>`;
+    }).join('');
+
+    const headers = Array.isArray(block.tableHeaders) && block.tableHeaders.length === 3
+      ? block.tableHeaders
+      : ["Last year’s holiday", 'Lucy', 'You'];
+    return `<div class="holiday-table-wrap"><table class="holiday-table"><thead><tr>${headers.map((header) => `<th>${escapeHtml(header)}</th>`).join('')}</tr></thead><tbody>${rowMarkup}</tbody></table></div>
+      ${block.followUpInstruction ? `<p class="holiday-table-followup"><strong>d</strong> ${escapeHtml(block.followUpInstruction)}</p>` : ''}`;
+  }
+
   function renderLessonBlock(block, index) {
     const id = safeText(block.id, `task-${index}`);
     const title = escapeHtml(block.title || block.prompt || `Task ${index + 1}`);
@@ -1651,6 +1696,8 @@
       const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
       const exerciseContent = block.layout === 'cloze-reading'
         ? renderClozeReading(block, id)
+        : block.layout === 'holiday-table'
+        ? renderHolidayTable(block, id)
         : block.layout === 'item-groups'
         ? renderExerciseItemGroups(block, id)
         : block.layout === 'dialogue'
@@ -1659,7 +1706,7 @@
           ? renderCrosswordExercise(block, id)
           : block.layout === 'past-columns'
             ? renderPastColumnsExercise(block, id)
-            : `<div class="exercise-items${block.visualGrid === true ? ' exercise-visual-grid' : ''}">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
+            : `<div class="exercise-items${block.visualGrid === true ? ' exercise-visual-grid' : ''}${Number(block.visualGridColumns) === 5 ? ' exercise-visual-grid-five' : ''}">${items.map((item, itemIndex) => renderExerciseItem(item, id, itemIndex, block.inlineNumberedItems === true)).join('')}</div>`;
       const hasStickyImage = block.stickyImage === true && imageEntries.length === 1;
       const exerciseBody = hasStickyImage
         ? `<div class="exercise-sticky-layout"><div class="exercise-sticky-media">${image}</div><div class="exercise-sticky-content">${intro}${exerciseContent}</div></div>`

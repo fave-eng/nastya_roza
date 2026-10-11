@@ -1014,13 +1014,20 @@ body[data-view="lesson"] #lesson-root {
   display: grid;
   place-items: center;
   min-height: 180px;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
   overflow: hidden;
   border-radius: 12px;
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.exercise-visual-grid .exercise-item-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .exercise-visual-grid .exercise-item-inline-row {
@@ -1044,8 +1051,56 @@ body[data-view="lesson"] #lesson-root {
   justify-content: center;
 }
 
+/* The holidays workbook keeps its ten picture prompts in a compact five-column strip. */
+.exercise-visual-grid.exercise-visual-grid-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.exercise-visual-grid-five .exercise-item {
+  padding: 9px;
+}
+
+.exercise-visual-grid-five .exercise-item-media {
+  min-height: 105px;
+  margin: 0 0 9px;
+  background-size: contain;
+}
+
+.exercise-visual-grid-five .exercise-number {
+  width: 27px;
+  height: 27px;
+  border-radius: 9px;
+}
+
+.exercise-visual-grid-five .exercise-item-inline-row {
+  grid-template-columns: 27px minmax(0, 1fr);
+  gap: 7px;
+}
+
+.exercise-visual-grid-five .sentence-gaps {
+  font-size: .88rem;
+}
+
+.exercise-visual-grid-five .gap-input {
+  width: min(100%, calc(var(--gap-chars, 8) * .62em + 22px));
+  min-width: 38px;
+  min-height: 38px;
+  padding-inline: 5px;
+}
+
+@media (max-width: 980px) {
+  .exercise-visual-grid.exercise-visual-grid-five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 860px) {
   .exercise-visual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exercise-visual-grid.exercise-visual-grid-five {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1054,6 +1109,160 @@ body[data-view="lesson"] #lesson-root {
   .exercise-visual-grid {
     grid-template-columns: 1fr;
   }
+
+  .exercise-visual-grid.exercise-visual-grid-five {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Exercise 3c/d is one chart in the workbook, so questions, Lucy's answers,
+   and the student's own answers stay in the same interactive table. */
+.holiday-table-wrap {
+  overflow-x: auto;
+  background: #f6f8fb;
+  -webkit-overflow-scrolling: touch;
+}
+
+.holiday-table {
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background: #fff;
+}
+
+.holiday-table th,
+.holiday-table td {
+  width: 33.333%;
+  padding: 13px 14px;
+  border-right: 1px solid #b9c7d8;
+  border-bottom: 1px solid #b9c7d8;
+  vertical-align: top;
+}
+
+.holiday-table th:last-child,
+.holiday-table td:last-child {
+  border-right: 0;
+}
+
+.holiday-table th {
+  background: #e8edf2;
+  color: #344256;
+  font-size: .92rem;
+  font-weight: 900;
+}
+
+.holiday-table-cue {
+  display: flex;
+  gap: 9px;
+  align-items: baseline;
+  color: #334155;
+}
+
+.holiday-table-cue span {
+  flex: 0 0 auto;
+  font-weight: 800;
+}
+
+.holiday-table-cue strong,
+.holiday-table-clue {
+  font-weight: 600;
+}
+
+.holiday-table-clue {
+  min-height: 24px;
+  color: #334155;
+}
+
+.holiday-table-example-answer {
+  margin: 9px 0 0 27px;
+  color: #64748b;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.holiday-table td:nth-child(2) .holiday-table-example-answer {
+  margin-left: 0;
+}
+
+.holiday-table-input {
+  width: 100%;
+  min-height: 39px;
+  margin-top: 9px;
+  padding: 7px 4px 4px;
+  border: 0;
+  border-bottom: 2px solid #94a3b8;
+  border-radius: 6px 6px 0 0;
+  background: #f8fafc;
+  color: var(--dark);
+  font: inherit;
+}
+
+.holiday-table-input:focus,
+.holiday-table-you textarea:focus {
+  border-bottom-color: var(--indigo);
+  background: #eef2ff;
+  outline: none;
+}
+
+.holiday-table-you textarea {
+  width: 100%;
+  min-height: 78px;
+  padding: 8px 9px;
+  border: 0;
+  border-bottom: 2px solid #94a3b8;
+  border-radius: 6px 6px 0 0;
+  background: #f8fafc;
+  color: var(--dark);
+  font: inherit;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+.holiday-table tr.is-correct > td:nth-child(-n+2) {
+  background: #f0fdf4;
+}
+
+.holiday-table tr.is-wrong > td:nth-child(-n+2) {
+  background: #fff7f7;
+}
+
+.holiday-table tr.is-correct .holiday-table-input {
+  border-bottom-color: #22c55e;
+}
+
+.holiday-table tr.is-wrong .holiday-table-input {
+  border-bottom-color: #fb7185;
+}
+
+.holiday-table .feedback {
+  padding: 7px 9px;
+  font-size: .78rem;
+}
+
+.holiday-table-you .feedback,
+.holiday-table-you .feedback.show {
+  display: none;
+}
+
+.holiday-table-followup {
+  margin: 0;
+  padding: 17px 20px 20px;
+  border-top: 1px solid var(--border);
+  background: #f6f8fb;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.holiday-table-followup strong {
+  display: inline-grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  margin-right: 7px;
+  border-radius: 9px;
+  background: #eef2ff;
+  color: var(--indigo);
 }
 
 .audio-card {
@@ -3137,7 +3346,6 @@ label.odd-option {
     grid-template-columns: 1fr;
   }
 }
-
 /* Workbook-style two-column classification used in Lesson 8, exercise 1a. */
 .past-columns-workspace {
   display: grid;
