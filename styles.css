@@ -976,6 +976,18 @@ body[data-view="lesson"] #lesson-root {
   outline: none;
 }
 
+.sentence-gaps .inline-select-gap.is-correct-control,
+.sentence-gaps .gap-input.is-correct-control {
+  border-bottom-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+.sentence-gaps .inline-select-gap.is-wrong-control,
+.sentence-gaps .gap-input.is-wrong-control {
+  border-bottom-color: #fb7185;
+  background-color: #fff1f2;
+}
+
 /* Short workbook blanks show exactly where one or two missing letters belong. */
 .letter-gaps {
   flex-wrap: nowrap;

@@ -1,0 +1,590 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "title": "2B That’s me in the picture!",
+  "subtitle": "Vocabulary · at, in, on · Grammar · past continuous",
+  "status": "available",
+  "publishedAt": "2026-10-11",
+  "totalPoints": 54,
+  "vocabularyId": "vocab-lesson-11",
+  "grammarIds": [
+    "grammar-past-continuous"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "",
+      "title": "VOCABULARY at, in, on",
+      "titleLead": "VOCABULARY",
+      "titleTail": "at, in, on"
+    },
+    {
+      "type": "exercise",
+      "id": "prepositions-time-a",
+      "title": "a Complete the sentences with prepositions of time: at, in, or on.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "This photo shows me in Berlin ",
+            " February – it was really cold."
+          ],
+          "exampleAnswers": [
+            "in"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "Henri Cartier-Bresson was born ",
+            " 1908, and he died ",
+            " August 2004."
+          ],
+          "answers": [1, 1],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "We have an exam ",
+            " Monday morning."
+          ],
+          "answers": [2],
+          "scorePerGap": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "We never get any snow ",
+            " the winter."
+          ],
+          "answers": [1],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "Our flight is leaving ",
+            " Wednesday ",
+            " 9.30 ",
+            " the evening and arriving ",
+            " 12.00 ",
+            " Thursday."
+          ],
+          "answers": [2, 0, 1, 0, 2],
+          "scorePerGap": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "In the UK, offices are closed ",
+            " Christmas and ",
+            " New Year’s Day."
+          ],
+          "answers": [0, 2],
+          "scorePerGap": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "I hate driving ",
+            " night, getting up early ",
+            " the morning, and working ",
+            " weekends."
+          ],
+          "answers": [0, 1, 0],
+          "scorePerGap": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "",
+            " Easter, we went to Greece, and we’re going again ",
+            " the summer, probably the last two weeks ",
+            " July."
+          ],
+          "answers": [0, 1, 1],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "prepositions-place-b",
+      "title": "b Complete the sentences with prepositions of place: at, in, or on.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "We took some great photos ",
+            " the party."
+          ],
+          "exampleAnswers": [
+            "at"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "I can’t read books ",
+            " the bus or ",
+            " a car."
+          ],
+          "answers": [2, 1],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "We want to put some shelves ",
+            " the wall ",
+            " the living room. We’re going to put all our old books ",
+            " the shelves."
+          ],
+          "answers": [2, 1, 2],
+          "scorePerGap": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "My family are from Ireland, but we live ",
+            " New York, ",
+            " the 11th floor of a tall building."
+          ],
+          "answers": [1, 2],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "I’ll meet you ",
+            " the station."
+          ],
+          "answers": [0],
+          "scorePerGap": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "The children all sat ",
+            " the floor."
+          ],
+          "answers": [2],
+          "scorePerGap": true
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "They spent the morning ",
+            " the museum and then went for a walk ",
+            " the park."
+          ],
+          "answers": [1, 0],
+          "scorePerGap": true
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gaps",
+          "options": ["at", "in", "on"],
+          "segments": [
+            "I met my boyfriend ",
+            " school."
+          ],
+          "answers": [0],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "prepositions-phrases-c",
+      "title": "c Complete the phrases with at, in, or on.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "a",
+          "number": "a",
+          "example": true,
+          "input": "gaps",
+          "segments": ["", " work"],
+          "exampleAnswers": ["at"]
+        },
+        {
+          "id": "b",
+          "number": "b",
+          "input": "select-gap",
+          "segments": ["", " 1948"],
+          "options": ["at", "in", "on"],
+          "answer": 1
+        },
+        {
+          "id": "c",
+          "number": "c",
+          "input": "select-gap",
+          "segments": ["", " Amsterdam"],
+          "options": ["at", "in", "on"],
+          "answer": 1
+        },
+        {
+          "id": "d",
+          "number": "d",
+          "input": "select-gap",
+          "segments": ["", " 9th May"],
+          "options": ["at", "in", "on"],
+          "answer": 2
+        },
+        {
+          "id": "e",
+          "number": "e",
+          "input": "select-gap",
+          "segments": ["", " Saturday and Sunday"],
+          "options": ["at", "in", "on"],
+          "answer": 2
+        },
+        {
+          "id": "f",
+          "number": "f",
+          "input": "select-gap",
+          "segments": ["", " the bus stop"],
+          "options": ["at", "in", "on"],
+          "answer": 0
+        },
+        {
+          "id": "g",
+          "number": "g",
+          "input": "select-gap",
+          "segments": ["", " the table"],
+          "options": ["at", "in", "on"],
+          "answer": 2
+        },
+        {
+          "id": "h",
+          "number": "h",
+          "input": "select-gap",
+          "segments": ["", " 7.15"],
+          "options": ["at", "in", "on"],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "prepositions-match-d",
+      "title": "d Match the beginnings of the sentences 1–8 to the endings in c.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "revealAfterComplete": "prepositions-phrases-c",
+      "items": [
+        {
+          "id": "ending-a",
+          "displayOnly": true,
+          "prompt": "a at work"
+        },
+        {
+          "id": "ending-b",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "b",
+            "template": "b {answer} 1948",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-c",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "c",
+            "template": "c {answer} Amsterdam",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-d",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "d",
+            "template": "d {answer} 9th May",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-e",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "e",
+            "template": "e {answer} Saturday and Sunday",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-f",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "f",
+            "template": "f {answer} the bus stop",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-g",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "g",
+            "template": "g {answer} the table",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "ending-h",
+          "displayOnly": true,
+          "promptFrom": {
+            "blockId": "prepositions-phrases-c",
+            "itemId": "h",
+            "template": "h {answer} 7.15",
+            "waitingText": ""
+          }
+        },
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": ["I think Jen’s birthday is ", "."],
+          "exampleAnswers": ["d"]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": ["Between 9.00 and 5.00, my dad’s usually ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": ["I usually get up ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 7
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": ["The office is closed ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 4
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": ["I come from Brussels, but I live ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": ["My grandfather was born ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": ["I saw you yesterday. You were waiting ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 5
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "segments": ["There’s a letter for you. I put it ", "."],
+          "options": ["a", "b", "c", "d", "e", "f", "g", "h"],
+          "answer": 6
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "",
+      "title": "GRAMMAR past continuous",
+      "titleLead": "GRAMMAR",
+      "titleTail": "past continuous"
+    },
+    {
+      "type": "exercise",
+      "id": "past-continuous-a",
+      "title": "a Complete the sentences with a verb from the list in the correct past continuous form.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "wordBank": ["do", "get", "not live", "not rain", "walk", "work"],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": ["Amy ", " in the park at 10.30 yesterday."],
+          "exampleAnswers": ["was walking"]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": ["", " you and Jack ", " in the same office when you first met?"],
+          "answers": [["Were"], ["working"]],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": ["Why didn’t you answer the phone last night? What ", " you ", "?"],
+          "answers": [["were"], ["doing"]],
+          "scorePerGap": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": ["It ", " when I left home this morning."],
+          "answers": [["wasn’t raining", "wasn't raining", "was not raining"]],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": ["I ", " in Prague in 2017."],
+          "answers": [["wasn’t living", "wasn't living", "was not living"]],
+          "scorePerGap": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": ["I dropped my passport when I ", " into the taxi."],
+          "answers": [["was getting"]],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "past-simple-continuous-b",
+      "title": "b Write sentences with when. Use the past simple and past continuous.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "text",
+          "prompt": "Tommy / fall off his bike / cycle home",
+          "exampleAnswer": "Tommy fell off his bike when he was cycling home."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "Mark / talk on the phone / get a text",
+          "answer": "Mark was talking on the phone when he got a text."
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "The children / play computer games / the visitors arrive",
+          "answer": "The children were playing computer games when the visitors arrived."
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "We / have a barbecue / it start to rain",
+          "answer": "We were having a barbecue when it started to rain."
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "I / write a report / my computer crash",
+          "answer": "I was writing a report when my computer crashed."
+        }
+      ]
+    }
+  ]
+}

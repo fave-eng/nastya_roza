@@ -1181,5 +1181,126 @@ window.VOCABULARY_DATA = [
         "ru": "на самолёте"
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-11",
+    "title": "Time, place, and past events",
+    "label": "Lesson 11 · 2B That’s me in the picture!",
+    "icon": "🕒",
+    "type": "lesson",
+    "linkedLessonId": "lesson-11",
+    "page": "vocabulary.html?id=vocab-lesson-11",
+    "words": [
+      {
+        "id": "vocab-lesson-11-1",
+        "en": "at work",
+        "ru": "на работе"
+      },
+      {
+        "id": "vocab-lesson-11-2",
+        "en": "on the bus",
+        "ru": "в автобусе"
+      },
+      {
+        "id": "vocab-lesson-11-3",
+        "en": "in a car",
+        "ru": "в машине"
+      },
+      {
+        "id": "vocab-lesson-11-4",
+        "en": "on the wall",
+        "ru": "на стене"
+      },
+      {
+        "id": "vocab-lesson-11-5",
+        "en": "in the living room",
+        "ru": "в гостиной"
+      },
+      {
+        "id": "vocab-lesson-11-6",
+        "en": "on the shelves",
+        "ru": "на полках"
+      },
+      {
+        "id": "vocab-lesson-11-7",
+        "en": "on the 11th floor",
+        "ru": "на 11-м этаже"
+      },
+      {
+        "id": "vocab-lesson-11-8",
+        "en": "at the station",
+        "ru": "на станции / вокзале"
+      },
+      {
+        "id": "vocab-lesson-11-9",
+        "en": "on the floor",
+        "ru": "на полу"
+      },
+      {
+        "id": "vocab-lesson-11-10",
+        "en": "in the museum",
+        "ru": "в музее"
+      },
+      {
+        "id": "vocab-lesson-11-11",
+        "en": "at school",
+        "ru": "в школе"
+      },
+      {
+        "id": "vocab-lesson-11-12",
+        "en": "at the bus stop",
+        "ru": "на автобусной остановке"
+      },
+      {
+        "id": "vocab-lesson-11-13",
+        "en": "on the table",
+        "ru": "на столе"
+      },
+      {
+        "id": "vocab-lesson-11-14",
+        "en": "fall off a bike",
+        "ru": "упасть с велосипеда"
+      },
+      {
+        "id": "vocab-lesson-11-15",
+        "en": "get a text",
+        "ru": "получить сообщение"
+      },
+      {
+        "id": "vocab-lesson-11-16",
+        "en": "have a barbecue",
+        "ru": "устроить барбекю"
+      },
+      {
+        "id": "vocab-lesson-11-17",
+        "en": "visitor",
+        "ru": "посетитель; гость"
+      },
+      {
+        "id": "vocab-lesson-11-18",
+        "en": "write a report",
+        "ru": "писать отчёт"
+      },
+      {
+        "id": "vocab-lesson-11-19",
+        "en": "answer the phone",
+        "ru": "ответить на телефонный звонок"
+      },
+      {
+        "id": "vocab-lesson-11-20",
+        "en": "get into a taxi",
+        "ru": "сесть в такси"
+      },
+      {
+        "id": "vocab-lesson-11-21",
+        "en": "drop a passport",
+        "ru": "уронить паспорт"
+      },
+      {
+        "id": "vocab-lesson-11-22",
+        "en": "crash (computer)",
+        "ru": "дать сбой; выйти из строя (о компьютере)"
+      }
+    ]
   }
 ];

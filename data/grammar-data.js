@@ -1,3 +1,4 @@
+/** Grammar topics for Anastasia and Rozalina. */
 window.GRAMMAR_DATA = [
   {
     "id": "grammar-word-order-questions",
@@ -1890,5 +1891,365 @@ window.GRAMMAR_DATA = [
       }
     ],
     "linkedLessonId": "lesson-8"
+  },
+  {
+    "id": "grammar-past-continuous",
+    "order": 6,
+    "title": "Past continuous",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-past-continuous",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-11",
+    "glanceCards": [
+      {
+        "icon": "1",
+        "label": "Когда используем",
+        "hint": "Past continuous показывает действие, которое было в процессе в конкретный момент в прошлом.",
+        "pattern": "was / were + verb-ing",
+        "example": "At 10.30 yesterday, Amy was walking in the park. — Вчера в 10:30 Эми гуляла в парке."
+      },
+      {
+        "icon": "2",
+        "label": "Утверждение",
+        "hint": "После I / he / she / it используем was, после you / we / they — were. Затем ставим глагол с -ing.",
+        "pattern": "subject + was/were + verb-ing",
+        "example": "I was writing a report. / They were playing computer games."
+      },
+      {
+        "icon": "3",
+        "label": "Отрицание",
+        "hint": "Добавь not после was / were. В разговорной речи обычно используем wasn’t / weren’t.",
+        "pattern": "subject + wasn’t/weren’t + verb-ing",
+        "example": "It wasn’t raining. / We weren’t sleeping."
+      },
+      {
+        "icon": "4",
+        "label": "Вопрос",
+        "hint": "В вопросе was / were ставим перед подлежащим.",
+        "pattern": "Was/Were + subject + verb-ing?",
+        "example": "Were you working? — Yes, I was. / No, I wasn’t."
+      }
+    ],
+    "miniRules": [
+      {
+        "title": "1. Действие было в процессе",
+        "text": "Используй past continuous, когда важно показать процесс в определённый момент в прошлом, а не просто завершённый факт.",
+        "example": "At 9.00 last night, I was studying."
+      },
+      {
+        "title": "2. Формула: was / were + -ing",
+        "text": "I / he / she / it → was. You / we / they → were. Основной глагол получает окончание -ing.",
+        "example": "She was working. · They were waiting."
+      },
+      {
+        "title": "3. Отрицание",
+        "text": "Поставь not после was / were: was not / were not. Короткие формы: wasn’t / weren’t.",
+        "example": "I wasn’t living in Prague. · It wasn’t raining."
+      },
+      {
+        "title": "4. Вопросы и короткие ответы",
+        "text": "Вынеси was / were перед подлежащим. В коротком ответе повтори только was / were.",
+        "example": "Were you working? — Yes, I was. / No, I wasn’t."
+      },
+      {
+        "title": "5. Past continuous + past simple",
+        "text": "Часто длительное действие описываем в past continuous, а короткое событие, которое произошло во время него, — в past simple. Их можно соединить when.",
+        "example": "Mark was talking on the phone when he got a text."
+      },
+      {
+        "title": "6. Правописание -ing",
+        "text": "Обычно добавляем -ing. Конечную -e убираем; у некоторых коротких глаголов удваиваем последнюю согласную.",
+        "example": "write → writing · make → making · get → getting"
+      }
+    ],
+    "tables": [
+      {
+        "title": "Past continuous: формы",
+        "headers": [
+          "Тип",
+          "Формула",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "Утверждение",
+            "I/he/she/it + was + -ing",
+            "She was working."
+          ],
+          [
+            "Утверждение",
+            "you/we/they + were + -ing",
+            "They were waiting."
+          ],
+          [
+            "Отрицание",
+            "wasn’t / weren’t + -ing",
+            "It wasn’t raining."
+          ],
+          [
+            "Вопрос",
+            "Was/Were + subject + -ing?",
+            "Were you working?"
+          ],
+          [
+            "Короткий ответ",
+            "Yes, ... was/were. / No, ... wasn’t/weren’t.",
+            "Yes, I was. / No, they weren’t."
+          ]
+        ]
+      }
+    ],
+    "exampleGroups": [
+      {
+        "title": "Past continuous и past simple вместе",
+        "items": [
+          "Tommy fell off his bike when he was cycling home. — Короткое событие fell off произошло во время процесса was cycling.",
+          "The children were playing computer games when the visitors arrived. — Игра была в процессе; гости приехали в этот момент.",
+          "I was writing a report when my computer crashed. — Написание отчёта было в процессе; компьютер внезапно сломался."
+        ]
+      },
+      {
+        "title": "Как образовать -ing форму",
+        "items": [
+          "work → working · rain → raining · do → doing",
+          "write → writing · live → living — конечную -e убираем.",
+          "get → getting · sit → sitting — в некоторых коротких глаголах удваиваем последнюю согласную."
+        ]
+      }
+    ],
+    "commonMistakes": [
+      "I was work at 9.00. ✗ → I was working at 9.00. ✓ — после was / were нужен глагол с -ing.",
+      "They was playing. ✗ → They were playing. ✓ — с they / we / you используем were.",
+      "Were you worked? ✗ → Were you working? ✓ — после was / were используем -ing форму.",
+      "I was writing a report when my computer was crashing. ✗ → I was writing a report when my computer crashed. ✓ — короткое завершённое событие обычно ставим в past simple.",
+      "I was living in Prague in 2017 может звучать как временная ситуация. Если это просто завершённый факт без акцента на процессе, чаще нужен past simple: I lived in Prague in 2017."
+    ],
+    "exercises": [
+      {
+        "id": "past-continuous-step-1",
+        "title": "1. Выбери правильную форму.",
+        "difficulty": "Легко",
+        "instructions": "Выбери вариант, который правильно образует past continuous.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "At 8.00 last night, I ___ dinner.",
+            "options": [
+              "was making",
+              "made"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "They ___ TV when I called.",
+            "options": [
+              "were watching",
+              "watched"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "It ___ when we left home.",
+            "options": [
+              "was raining",
+              "rained"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "What ___ at 10.00 yesterday?",
+            "options": [
+              "were you doing",
+              "did you do"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "past-continuous-step-2",
+        "title": "2. Поставь глагол в past continuous.",
+        "difficulty": "Средне",
+        "instructions": "Впиши was / were и нужную -ing форму.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "prompt": "work",
+            "segments": [
+              "She ",
+              " at 6.00 yesterday."
+            ],
+            "answers": [
+              [
+                "was working"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "prompt": "not sleep",
+            "segments": [
+              "We ",
+              " when the phone rang."
+            ],
+            "answers": [
+              [
+                "weren't sleeping",
+                "weren’t sleeping",
+                "were not sleeping"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "prompt": "wait",
+            "segments": [
+              "",
+              " they ",
+              " for the bus?"
+            ],
+            "answers": [
+              [
+                "Were"
+              ],
+              [
+                "waiting"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "prompt": "write",
+            "segments": [
+              "I ",
+              " a report when my computer crashed."
+            ],
+            "answers": [
+              [
+                "was writing"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "past-continuous-step-3",
+        "title": "3. Выбери past simple или past continuous по контексту.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Выбери форму, которая подходит по смыслу предложения.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "I ",
+              " home when it started to rain."
+            ],
+            "options": [
+              "walked",
+              "was walking"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "The visitors arrived while the children ",
+              " computer games."
+            ],
+            "options": [
+              "played",
+              "were playing"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "I dropped my passport when I ",
+              " into the taxi."
+            ],
+            "options": [
+              "got",
+              "was getting"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "At 10.30 yesterday, Amy ",
+              " in the park."
+            ],
+            "options": [
+              "walked",
+              "was walking"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "past-continuous-step-4",
+        "title": "4. Построй предложение самостоятельно.",
+        "difficulty": "Самое сложное",
+        "instructions": "Используй данные слова и контекст. Напиши полное предложение или вопрос.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "at 9.00 last night / I / study",
+            "acceptedAnswers": [
+              "I was studying at 9.00 last night.",
+              "At 9.00 last night, I was studying."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "what / you / do / when / I / call ?",
+            "acceptedAnswers": [
+              "What were you doing when I called?"
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "we / not sleep / at midnight",
+            "acceptedAnswers": [
+              "We weren't sleeping at midnight.",
+              "We weren’t sleeping at midnight.",
+              "We were not sleeping at midnight."
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "the children / play computer games / when / the visitors / arrive",
+            "acceptedAnswers": [
+              "The children were playing computer games when the visitors arrived."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
