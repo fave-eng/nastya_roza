@@ -530,7 +530,7 @@
             lesson_title: safeText(lesson.title, lessonId),
             status: hasSubmission
               ? (isFinalCloudSubmission ? 'submitted' : 'submitted_pending_report')
-              : 'draft',
+              : (total > 0 ? 'checked' : 'draft'),
             answers: result.answers && typeof result.answers === 'object' ? result.answers : {},
             score_correct: total > 0 ? correct : null,
             score_total: total > 0 ? total : null,
@@ -1837,36 +1837,40 @@
       const feedback = itemNode.querySelector('.feedback');
 
       if (item.scored === false) {
-        itemNode.classList.remove('is-correct', 'is-wrong');
-        itemNode.classList.add('is-saved');
-        if (feedback) {
-          feedback.className = 'feedback show neutral';
-          feedback.textContent = 'Your answer has been saved for the teacher.';
+        if (!options.silent) {
+          itemNode.classList.remove('is-correct', 'is-wrong');
+          itemNode.classList.add('is-saved');
+          if (feedback) {
+            feedback.className = 'feedback show neutral';
+            feedback.textContent = 'Your answer has been saved for the teacher.';
+          }
         }
         return;
       }
 
       total += 1;
       if (result.correct) correctCount += 1;
-      itemNode.classList.toggle('is-correct', result.correct);
-      itemNode.classList.toggle('is-wrong', !result.correct);
-      itemNode.classList.remove('is-saved');
-      if (feedback) {
-        feedback.className = `feedback show ${result.correct ? 'good' : 'bad'}`;
-        const hideAnswerOnError = options.hideAnswersOnError === true || block.hideAnswersOnError === true || item.hideAnswersOnError === true;
-        feedback.textContent = result.correct
-          ? 'Correct!'
-          : hideAnswerOnError
-            ? 'Incorrect. Check your answer and try again.'
-            : safeText(item.explanation, 'Check the answer and try again.');
+      if (!options.silent) {
+        itemNode.classList.toggle('is-correct', result.correct);
+        itemNode.classList.toggle('is-wrong', !result.correct);
+        itemNode.classList.remove('is-saved');
+        if (feedback) {
+          feedback.className = `feedback show ${result.correct ? 'good' : 'bad'}`;
+          const hideAnswerOnError = options.hideAnswersOnError === true || block.hideAnswersOnError === true || item.hideAnswersOnError === true;
+          feedback.textContent = result.correct
+            ? 'Correct!'
+            : hideAnswerOnError
+              ? 'Incorrect. Check your answer and try again.'
+              : safeText(item.explanation, 'Check the answer and try again.');
+        }
       }
     });
 
     return { actual, correctCount, total };
   }
 
-  function checkLessonTask(block, node) {
-    if (block.type === 'exercise') return checkExerciseBlock(block, node);
+  function checkLessonTask(block, node, options = {}) {
+    if (block.type === 'exercise') return checkExerciseBlock(block, node, options);
     let actual;
     let correct = false;
     if (block.type === 'single') {
@@ -2006,7 +2010,7 @@
       .map((block, blockIndex) => block.type === 'section' ? { block, blockIndex } : null)
       .filter(Boolean);
     const roadmap = lessonSections.length
-      ? `<nav class="card lesson-roadmap" aria-label="Homework plan"><div class="lesson-roadmap-heading"><span class="eyebrow">Assignment plan</span><p>Complete the sections in order — your answers will be saved after checking.</p></div><ol>${lessonSections.map(({ block, blockIndex }, sectionIndex) => `<li><a href="#lesson-section-${blockIndex}"><span>${sectionIndex + 1}</span><strong>${escapeHtml(block.title || `Part ${sectionIndex + 1}`)}</strong></a></li>`).join('')}</ol></nav>`
+      ? `<nav class="card lesson-roadmap" aria-label="Homework plan"><div class="lesson-roadmap-heading"><span class="eyebrow">Assignment plan</span><p>Complete the sections in order — your answers are saved automatically.</p></div><ol>${lessonSections.map(({ block, blockIndex }, sectionIndex) => `<li><a href="#lesson-section-${blockIndex}"><span>${sectionIndex + 1}</span><strong>${escapeHtml(block.title || `Part ${sectionIndex + 1}`)}</strong></a></li>`).join('')}</ol></nav>`
       : '';
     let sectionNumber = 0;
     const renderedBlocks = blocks.map((block, blockIndex) => {
@@ -2018,7 +2022,7 @@
       ${linkedMaterials}
       ${roadmap}
       <div id="lesson-blocks">${renderedBlocks}</div>
-      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Check answers</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${savedResult ? '' : 'disabled'}>Submit to teacher</button></div><p class="muted save-note">After checking, your answers are saved on this device and synced with Supabase.</p></div>`;
+      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Check answers</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${savedResult && Number(savedResult.total || 0) > 0 ? '' : 'disabled'}>Submit to teacher</button></div><p class="muted save-note">Your answers are saved automatically on this device and synced with Supabase. Use Check answers when you are ready.</p></div>`;
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
     wireLessonInteractiveInputs(root);
@@ -2036,7 +2040,7 @@
       });
     });
 
-    const evaluateLesson = () => {
+    const evaluateLesson = (options = {}) => {
       const checkableTypes = ['text','textarea','single','multiple','select','match','reorder','translate','audio','exercise'];
       const checkable = blocks
         .map((block, blockIndex) => ({ block, blockIndex }))
@@ -2049,12 +2053,12 @@
         const taskId = safeText(block.id, `task-${blockIndex}`);
         const node = root.querySelector(`[data-task="${CSS.escape(taskId)}"]`);
         if (!node) return;
-        const result = checkLessonTask(block, node);
+        const result = checkLessonTask(block, node, options);
         answers[taskId] = result.actual;
         correct += Number(result.correctCount || 0);
         total += Number(result.total || 0);
 
-        if (block.type !== 'exercise') {
+        if (!options.silent && block.type !== 'exercise') {
           const feedback = node.querySelector('.feedback');
           const isCorrect = Number(result.correctCount || 0) === Number(result.total || 0);
           if (feedback) {
@@ -2066,6 +2070,38 @@
 
       return { correct, total, percent: safePercent(correct, total), answers };
     };
+
+    let draftSaveTimer = 0;
+    const saveDraftAnswers = () => {
+      const snapshot = evaluateLesson({ silent: true });
+      const latestProgress = window.ProgressService.loadHomeworkProgress();
+      const previous = latestProgress.results[lesson.id] || {};
+      const previousAnswers = previous.answers && typeof previous.answers === 'object' ? previous.answers : {};
+      const answersChanged = JSON.stringify(previousAnswers) !== JSON.stringify(snapshot.answers);
+
+      latestProgress.results[lesson.id] = {
+        correct: answersChanged ? 0 : Number(previous.correct || 0),
+        total: answersChanged ? 0 : Number(previous.total || 0),
+        percent: answersChanged ? 0 : Number(previous.percent || 0),
+        answers: snapshot.answers,
+        checkedAt: answersChanged ? null : (previous.checkedAt || null),
+        draftUpdatedAt: new Date().toISOString()
+      };
+      window.ProgressService.saveHomeworkProgress(latestProgress);
+
+      if (answersChanged) {
+        byId('submit-lesson').disabled = true;
+        byId('lesson-result').innerHTML = '<p class="muted">Draft saved automatically. Check answers when you are ready.</p>';
+      }
+    };
+
+    const scheduleDraftSave = () => {
+      window.clearTimeout(draftSaveTimer);
+      draftSaveTimer = window.setTimeout(saveDraftAnswers, 250);
+    };
+
+    root.addEventListener('input', scheduleDraftSave);
+    root.addEventListener('change', scheduleDraftSave);
 
     // Restore not only the values, but also the green/red review state after reload.
     if (savedResult && Number(savedResult.total) > 0) {
