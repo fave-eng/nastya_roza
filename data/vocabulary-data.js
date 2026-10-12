@@ -69,7 +69,8 @@ window.VOCABULARY_DATA = [
         "en": "cash register",
         "ru": "касса"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-1",
@@ -320,7 +321,8 @@ window.VOCABULARY_DATA = [
         "en": "by plane",
         "ru": "на самолёте"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-11",
@@ -687,7 +689,8 @@ window.VOCABULARY_DATA = [
         "en": "wife",
         "ru": "жена"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-4",
@@ -958,7 +961,8 @@ window.VOCABULARY_DATA = [
         "en": "in the country",
         "ru": "за городом; в сельской местности"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-6",
@@ -1093,7 +1097,8 @@ window.VOCABULARY_DATA = [
         "en": "really tired",
         "ru": "очень уставший"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-7",
@@ -1223,7 +1228,8 @@ window.VOCABULARY_DATA = [
         "en": "world around them",
         "ru": "окружающий их мир"
       }
-    ]
+    ],
+    "type": "lesson"
   },
   {
     "id": "vocab-lesson-8",
