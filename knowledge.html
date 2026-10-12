@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Quick grammar reference materials">
+  <title>Knowledge base</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="config.js" defer></script>
+  <script src="data/vocabulary-data.js" defer></script>
+  <script src="data/grammar-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="has-bottom-nav" data-page="home" data-view="knowledge">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero hero-compact">
+    <span class="star one">✦</span><span class="star two">✦</span>
+    <div class="container hero-content reveal">
+      <span class="hero-badge">🧠 Revision · <span data-config="level"></span> Level</span>
+      <h1>Knowledge base</h1>
+      <p>Quick reference sheets for topics you have already studied</p>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path fill="#f8fafc" d="M0,66 C220,102 410,10 696,52 C963,91 1115,99 1440,35 L1440,100 L0,100 Z"></path></svg>
+  </header>
+
+  <main id="main" class="main-content container">
+
+    <section class="section reveal" aria-labelledby="kb-nav-title">
+      <div class="section-heading"><div><span class="eyebrow">Quick navigation</span><h2 id="kb-nav-title">Revision sheets</h2></div></div>
+      <div class="quick-grid">
+        <a class="card interactive quick-card" href="#questions"><div><div class="icon-box icon-sky">❓</div><h3>Questions</h3><p>Word order</p></div><span class="arrow">↓</span></a>
+        <a class="card interactive quick-card" href="#present-tenses"><div><div class="icon-box icon-indigo">⏱️</div><h3>Present tenses</h3><p>Simple vs Continuous</p></div><span class="arrow">↓</span></a>
+        <a class="card interactive quick-card" href="#offers"><div><div class="icon-box icon-rose">🤝</div><h3>I’ll for offers</h3><p>Quick formula</p></div><span class="arrow">↓</span></a>
+        <a class="card interactive quick-card" href="#past-simple"><div><div class="icon-box icon-indigo">↩️</div><h3>Past Simple</h3><p>Regular + irregular</p></div><span class="arrow">↓</span></a>
+        <a class="card interactive quick-card" href="#prepositions"><div><div class="icon-box icon-sky">📍</div><h3>At / in / on</h3><p>Place + time</p></div><span class="arrow">↓</span></a>
+        <a class="card interactive quick-card" href="#past-continuous"><div><div class="icon-box icon-rose">🎞️</div><h3>Past Continuous</h3><p>was / were + -ing</p></div><span class="arrow">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section reveal" id="questions" aria-labelledby="questions-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 1</span><h2 id="questions-title">Question word order</h2><p>Главная схема для вопросов.</p></div></div>
+      <article class="card lesson-block">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Question word</strong><br>Where / What / When / How</td><td><strong>Helper / be</strong><br>do / does / did / can / is / are / was / were</td><td><strong>Subject</strong><br>you / she / your parents</td><td><strong>Main verb + rest</strong><br>live? / work? / go?</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="grammar-example-item">Where <strong>do</strong> you live?</p>
+        <p class="grammar-example-item">Where <strong>were</strong> you born?</p>
+        <p class="grammar-example-item">Can your friend drive?</p>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-word-order-questions">Open full grammar topic</a></div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="present-tenses" aria-labelledby="present-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 2</span><h2 id="present-title">Present Simple vs Present Continuous</h2><p>Привычка и факт vs действие сейчас.</p></div></div>
+      <article class="card lesson-block">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th></th><th>Present Simple</th><th>Present Continuous</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Когда?</strong></td><td>привычки, факты, регулярные действия</td><td>действие сейчас / временная ситуация</td></tr>
+              <tr><td><strong>Утверждение</strong></td><td>I work. / She works.</td><td>I am working. / She is working.</td></tr>
+              <tr><td><strong>Отрицание</strong></td><td>I don’t work. / She doesn’t work.</td><td>I’m not working. / She isn’t working.</td></tr>
+              <tr><td><strong>Вопрос</strong></td><td>Do you work? / Does she work?</td><td>Are you working? / Is she working?</td></tr>
+              <tr><td><strong>Подсказки</strong></td><td>usually, often, every day</td><td>now, at the moment, this week</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="grammar-example-item"><strong>I work</strong> Monday to Friday. → обычная ситуация.</p>
+        <p class="grammar-example-item"><strong>I’m working</strong> now. → действие происходит сейчас.</p>
+        <p class="muted">3rd person: work → works, watch → watches, study → studies. -ing: live → living, run → running.</p>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-present-simple">Present Simple</a><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-present-continuous">Present Continuous</a></div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="offers" aria-labelledby="offers-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 3</span><h2 id="offers-title">I’ll for offers</h2><p>Короткая формула для предложения помощи.</p></div></div>
+      <article class="card lesson-block">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Meaning</th><th>Form</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td>предлагаем помощь / решаем что-то сделать сейчас</td><td><strong>I’ll + base verb</strong></td><td>I’ll help you. / I’ll send somebody up.</td></tr>
+              <tr><td>отрицание</td><td><strong>I won’t + base verb</strong></td><td>I won’t forget.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">После <strong>will</strong> глагол остаётся в начальной форме: I’ll ask ✓, I’ll asks ✗.</p>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-will-offers">Open full grammar topic</a></div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="past-simple" aria-labelledby="past-simple-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 4</span><h2 id="past-simple-title">Past Simple</h2><p>Завершённые действия в прошлом.</p></div></div>
+      <article class="card lesson-block">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Form</th><th>Regular verb</th><th>Irregular verb</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Positive</strong></td><td>We arrived.</td><td>They went home.</td></tr>
+              <tr><td><strong>Negative</strong></td><td colspan="2">They didn’t rent a car. → didn’t + base verb</td></tr>
+              <tr><td><strong>Question</strong></td><td colspan="2">Where did they go? → did + subject + base verb</td></tr>
+              <tr><td><strong>be</strong></td><td colspan="2">I was / You were · Was she...? · They weren’t...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="grammar-example-item">Regular: ask → asked · invite → invited · study → studied · stop → stopped</p>
+        <p class="grammar-example-item">Irregular: buy → bought · choose → chose · eat → ate · go → went</p>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-past-simple-regular-irregular">Past Simple topic</a><a class="btn btn-primary" href="irregular-verbs.html">Irregular verbs table + test</a></div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="prepositions" aria-labelledby="prepositions-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 5</span><h2 id="prepositions-title">At / in / on</h2><p>Место и время — визуальная памятка.</p></div></div>
+      <article class="card lesson-block">
+        <img src="images/grammar-at-in-on-guide.png" alt="Visual guide for at, in and on with examples for place and time" style="display:block;width:100%;height:auto;border-radius:18px;">
+        <div class="table-wrap" style="margin-top:16px;">
+          <table>
+            <thead><tr><th>IN</th><th>ON</th><th>AT</th></tr></thead>
+            <tbody><tr><td>внутри / в границах</td><td>на поверхности / транспорт / дни</td><td>точка / конкретное место / точное время</td></tr></tbody>
+          </table>
+        </div>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-at-in-on">Open full grammar topic</a></div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="past-continuous" aria-labelledby="past-continuous-title">
+      <div class="section-heading"><div><span class="eyebrow">Grammar note 6</span><h2 id="past-continuous-title">Past Continuous</h2><p>Действие было в процессе в определённый момент в прошлом.</p></div></div>
+      <article class="card lesson-block">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Form</th><th>Pattern</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Positive</strong></td><td>subject + was / were + verb-ing</td><td>They were playing.</td></tr>
+              <tr><td><strong>Negative</strong></td><td>wasn’t / weren’t + verb-ing</td><td>It wasn’t raining.</td></tr>
+              <tr><td><strong>Question</strong></td><td>Was / Were + subject + verb-ing?</td><td>Were you working?</td></tr>
+              <tr><td><strong>Short answer</strong></td><td>Yes, ... was/were. / No, ... wasn’t/weren’t.</td><td>Yes, I was.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <article class="card info-card lesson-block">
+          <h3>Past Continuous + Past Simple</h3>
+          <p><strong>Long action in progress</strong> → Past Continuous</p>
+          <p><strong>Short event</strong> → Past Simple</p>
+          <p class="grammar-example-item">Mark <strong>was talking</strong> on the phone when he <strong>got</strong> a text.</p>
+          <p class="grammar-example-item">I <strong>was writing</strong> a report when my computer <strong>crashed</strong>.</p>
+        </article>
+        <p class="muted">-ing: work → working · write → writing · get → getting.</p>
+        <div class="button-row"><a class="btn btn-secondary" href="grammar-topic.html?id=grammar-past-continuous">Open full grammar topic</a></div>
+      </article>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a class="nav-link" data-nav="home" href="index.html"><span class="nav-icon">🏠</span><span>Home</span></a>
+    <a class="nav-link" data-nav="homework" href="homework.html"><span class="nav-icon">📝</span><span>HW</span></a>
+    <a class="nav-link" data-nav="grammar" href="grammar.html"><span class="nav-icon">📐</span><span>Grammar</span></a>
+    <a class="nav-link" data-nav="vocabulary" href="vocabulary-hub.html"><span class="nav-icon">💥</span><span>Vocab</span></a>
+  </nav>
+  <div class="toast" id="app-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
