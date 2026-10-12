@@ -18,7 +18,6 @@
     {
       "type": "section",
       "sectionNumber": 2,
-      "eyebrow": "",
       "title": "GRAMMAR past continuous",
       "titleLead": "GRAMMAR",
       "titleTail": "past continuous"
@@ -26,29 +25,24 @@
     {
       "type": "exercise",
       "id": "past-continuous-c",
+      "visualGrid": true,
       "title": "c The police are at an art gallery because someone stole a famous painting at 5.30 yesterday afternoon. What were the people in the pictures doing at the time? Write sentences.",
-      "image": "images/lesson-12/art-gallery-scenes.png",
-      "imageAlt": "Six art gallery scenes for a past continuous exercise.",
-      "stickyImage": true,
       "hideAnswersOnError": true,
       "items": [
         {
           "id": "1",
           "number": 1,
-          "example": true,
+          "image": "images/lesson-12/scene-1.png",
+          "imageAlt": "A man was cleaning Gallery 6.",
           "prompt": "clean Gallery 6",
-          "input": "gaps",
-          "segments": [
-            "I ",
-            "."
-          ],
-          "exampleAnswers": [
-            "was cleaning Gallery 6"
-          ]
+          "example": true,
+          "exampleAnswer": "I was cleaning Gallery 6."
         },
         {
           "id": "2",
           "number": 2,
+          "image": "images/lesson-12/scene-2.png",
+          "imageAlt": "Two people were trying to find the exit.",
           "prompt": "try to find the exit",
           "input": "gaps",
           "segments": [
@@ -64,6 +58,8 @@
         {
           "id": "3",
           "number": 3,
+          "image": "images/lesson-12/scene-3.png",
+          "imageAlt": "A person was closing the windows.",
           "prompt": "close the windows",
           "input": "gaps",
           "segments": [
@@ -79,6 +75,8 @@
         {
           "id": "4",
           "number": 4,
+          "image": "images/lesson-12/scene-4.png",
+          "imageAlt": "Two people were washing the coffee cups.",
           "prompt": "wash the coffee cups",
           "input": "gaps",
           "segments": [
@@ -94,6 +92,8 @@
         {
           "id": "5",
           "number": 5,
+          "image": "images/lesson-12/scene-5.png",
+          "imageAlt": "A woman was counting the money.",
           "prompt": "count the money",
           "input": "gaps",
           "segments": [
@@ -109,6 +109,8 @@
         {
           "id": "6",
           "number": 6,
+          "image": "images/lesson-12/scene-6.png",
+          "imageAlt": "Blank scene for the student’s own answer.",
           "prompt": "What were you doing at 5.30 yesterday?",
           "input": "textarea",
           "placeholder": "I ...",
@@ -119,7 +121,6 @@
     {
       "type": "section",
       "sectionNumber": 3,
-      "eyebrow": "",
       "title": "PRONUNCIATION weak forms: was, were",
       "titleLead": "PRONUNCIATION",
       "titleTail": "weak forms: was, were"

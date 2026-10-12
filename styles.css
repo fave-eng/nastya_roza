@@ -976,18 +976,6 @@ body[data-view="lesson"] #lesson-root {
   outline: none;
 }
 
-.sentence-gaps .inline-select-gap.is-correct-control,
-.sentence-gaps .gap-input.is-correct-control {
-  border-bottom-color: #22c55e;
-  background-color: #f0fdf4;
-}
-
-.sentence-gaps .inline-select-gap.is-wrong-control,
-.sentence-gaps .gap-input.is-wrong-control {
-  border-bottom-color: #fb7185;
-  background-color: #fff1f2;
-}
-
 /* Short workbook blanks show exactly where one or two missing letters belong. */
 .letter-gaps {
   flex-wrap: nowrap;
@@ -3390,4 +3378,38 @@ label.odd-option {
 .past-column-fields .text-field { width: 100%; }
 @media (max-width: 700px) {
   .past-columns-workspace { grid-template-columns: 1fr; }
+}
+
+
+/* Lesson 12 workbook scene writing: medium images with answer directly below each picture. */
+[data-task="past-continuous-c"] .exercise-visual-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+[data-task="past-continuous-c"] .exercise-item {
+  padding: 14px;
+}
+[data-task="past-continuous-c"] .exercise-item-media {
+  min-height: 240px;
+  background-size: cover;
+  border-radius: 14px;
+}
+[data-task="past-continuous-c"] .exercise-item-header {
+  margin-top: 2px;
+}
+[data-task="past-continuous-c"] textarea {
+  min-height: 94px;
+}
+@media (max-width: 980px) {
+  [data-task="past-continuous-c"] .exercise-visual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  [data-task="past-continuous-c"] .exercise-visual-grid {
+    grid-template-columns: 1fr;
+  }
+  [data-task="past-continuous-c"] .exercise-item-media {
+    min-height: 220px;
+  }
 }
