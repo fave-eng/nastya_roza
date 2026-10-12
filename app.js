@@ -2205,6 +2205,54 @@
     return `<div class="table-wrap"><table><thead><tr>${table.headers.map((header) => `<th>${escapeHtml(header)}</th>`).join('')}</tr></thead><tbody>${table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   }
 
+  function grammarTextbookSectionsMarkup(sections) {
+    if (!Array.isArray(sections) || !sections.length) return '';
+    const paragraphsMarkup = (items) => Array.isArray(items) ? items.map((item) => `<p>${escapeHtml(item)}</p>`).join('') : '';
+    const bulletsMarkup = (items) => Array.isArray(items) && items.length
+      ? `<ul class="grammar-textbook-list">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      : '';
+    const examplesMarkup = (items) => Array.isArray(items) && items.length
+      ? `<div class="grammar-textbook-examples">${items.map((item) => `<div class="grammar-textbook-example">${escapeHtml(item)}</div>`).join('')}</div>`
+      : '';
+
+    return sections.map((section, index) => {
+      const type = safeText(section?.type, 'text');
+      const title = escapeHtml(section?.title || 'Grammar');
+      const eyebrow = escapeHtml(section?.eyebrow || 'Grammar');
+      const id = `grammar-textbook-${index + 1}`;
+      const heading = `<div class="section-heading grammar-textbook-heading"><div><span class="eyebrow">${eyebrow}</span><h2 id="${id}-title">${title}</h2></div></div>`;
+
+      if (type === 'table') {
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-card">${section.intro ? `<p class="grammar-textbook-intro">${escapeHtml(section.intro)}</p>` : ''}${grammarTable(section)}</article></section>`;
+      }
+
+      if (type === 'formula') {
+        const rows = Array.isArray(section.rows) ? section.rows : [];
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-card">${section.intro ? `<p class="grammar-textbook-intro">${escapeHtml(section.intro)}</p>` : ''}<div class="grammar-form-grid">${rows.map((row) => `<div class="grammar-form-row"><div class="grammar-form-label">${escapeHtml(row.label || '')}</div><div class="grammar-form-rule">${escapeHtml(row.form || '')}</div><div class="grammar-form-example">${escapeHtml(row.example || '')}</div></div>`).join('')}</div></article></section>`;
+      }
+
+      if (type === 'compare') {
+        const panel = (part) => `<article class="card grammar-compare-panel"><h3>${escapeHtml(part?.title || '')}</h3>${bulletsMarkup(part?.points)}${examplesMarkup(part?.examples)}</article>`;
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}${section.intro ? `<p class="grammar-section-lead">${escapeHtml(section.intro)}</p>` : ''}<div class="grammar-compare-grid">${panel(section.left)}${panel(section.right)}</div>${section.note ? `<div class="grammar-textbook-note">${escapeHtml(section.note)}</div>` : ''}</section>`;
+      }
+
+      if (type === 'timeline') {
+        const items = Array.isArray(section.items) ? section.items : [];
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-card">${section.intro ? `<p class="grammar-textbook-intro">${escapeHtml(section.intro)}</p>` : ''}<div class="grammar-timeline-list">${items.map((item) => `<div class="grammar-timeline-item"><h3>${escapeHtml(item.title || '')}</h3><div class="grammar-timeline" aria-hidden="true"><span class="grammar-timeline-line"></span><span class="grammar-timeline-process">${escapeHtml(item.during || '')}</span><span class="grammar-timeline-marker"></span></div><div class="grammar-timeline-label">${escapeHtml(item.label || '')}</div><div class="grammar-timeline-example">${escapeHtml(item.example || '')}</div></div>`).join('')}</div></article></section>`;
+      }
+
+      if (type === 'note') {
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-note-card"><p>${escapeHtml(section.text || '')}</p></article></section>`;
+      }
+
+      if (type === 'examples') {
+        return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-card">${examplesMarkup(section.items)}</article></section>`;
+      }
+
+      return `<section class="section grammar-textbook-section" id="${id}" aria-labelledby="${id}-title">${heading}<article class="card grammar-textbook-card">${paragraphsMarkup(section.paragraphs)}${bulletsMarkup(section.bullets)}${examplesMarkup(section.examples)}</article></section>`;
+    }).join('');
+  }
+
 
   function grammarQuestionSchemeMarkup(scheme) {
     if (!scheme) return '';
@@ -2333,30 +2381,31 @@
     byId('grammar-hero-title').textContent = safeText(topic.title, 'Grammar');
     byId('grammar-hero-subtitle').textContent = `${safeText(topic.level, student.level)} · объяснение и практика`;
 
+    const textbookSections = Array.isArray(topic.textbookSections) ? topic.textbookSections : [];
     const glanceCards = Array.isArray(topic.glanceCards) ? topic.glanceCards : [];
-    const anchorLinks = Array.isArray(topic.anchorLinks) ? topic.anchorLinks : [];
     const miniRules = Array.isArray(topic.miniRules) ? topic.miniRules : [];
     const tables = Array.isArray(topic.tables) ? topic.tables : (topic.table ? [topic.table] : []);
     const exampleGroups = Array.isArray(topic.exampleGroups) ? topic.exampleGroups : [];
     const examples = Array.isArray(topic.examples) ? topic.examples : [];
     const mistakes = Array.isArray(topic.commonMistakes) ? topic.commonMistakes : [];
-    const visualGuide = topic.visualGuide && typeof topic.visualGuide === "object" ? topic.visualGuide : null;
+    const visualGuide = topic.visualGuide && typeof topic.visualGuide === 'object' ? topic.visualGuide : null;
+
+    const visualGuideMarkup = visualGuide
+      ? `<section class="section" id="grammar-visual-guide" aria-labelledby="grammar-visual-guide-title"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(visualGuide.eyebrow || 'Схема')}</span><h2 id="grammar-visual-guide-title">${escapeHtml(visualGuide.title || 'Визуальная подсказка')}</h2></div></div><article class="card lesson-block grammar-visual-guide-card"><img src="${escapeHtml(visualGuide.src || '')}" alt="${escapeHtml(visualGuide.alt || topic.title || 'Grammar guide')}" loading="lazy">${visualGuide.note ? `<p class="muted">${escapeHtml(visualGuide.note)}</p>` : ''}</article></section>`
+      : '';
+
+    const legacyMarkup = textbookSections.length ? '' : `
+      ${grammarQuestionSchemeMarkup(topic.questionScheme)}
+      ${glanceCards.length ? `<section class="section" id="grammar-at-a-glance" aria-labelledby="grammar-at-a-glance-title"><div class="section-heading"><div><span class="eyebrow">Разбираем схему</span><h2 id="grammar-at-a-glance-title">Что означает каждый цветной блок</h2></div></div><div class="grammar-glance-grid">${glanceCards.map((card) => `<article class="card grammar-glance-card"><div class="grammar-glance-head"><span class="grammar-glance-icon">${escapeHtml(card.icon || '✦')}</span><div><h3>${escapeHtml(card.label || '')}</h3><p class="muted">${escapeHtml(card.hint || '')}</p></div></div><div class="grammar-pattern">${escapeHtml(card.pattern || '')}</div><p class="grammar-example-sentence">${escapeHtml(card.example || '')}</p></article>`).join('')}</div></section>` : ''}
+      ${miniRules.length ? `<section class="section" id="grammar-rule-map" aria-labelledby="grammar-rule-map-title"><div class="section-heading"><div><span class="eyebrow">Правила</span><h2 id="grammar-rule-map-title">Как поставить слова в правильном порядке</h2></div></div><div class="grammar-mini-grid">${miniRules.map((rule) => `<article class="card grammar-mini-card"><h3>${escapeHtml(rule.title || '')}</h3><p>${escapeHtml(rule.text || '')}</p>${rule.example ? `<div class="grammar-mini-example">${escapeHtml(rule.example)}</div>` : ''}</article>`).join('')}</div></section>` : ''}
+      ${tables.length ? `<section class="section" id="grammar-tables" aria-labelledby="grammar-tables-title"><div class="section-heading"><div><span class="eyebrow">Таблицы</span><h2 id="grammar-tables-title">Короткая памятка</h2></div></div><div class="list">${tables.map((table) => `<article class="card lesson-block"><h3>${escapeHtml(table.title || 'Таблица')}</h3>${grammarTable(table)}</article>`).join('')}</div></section>` : ''}
+      ${exampleGroups.length || examples.length ? `<section class="section" id="grammar-examples" aria-labelledby="grammar-examples-title"><div class="section-heading"><div><span class="eyebrow">Примеры</span><h2 id="grammar-examples-title">Посмотри на порядок слов</h2></div></div><div class="list">${exampleGroups.map((group) => `<article class="card lesson-block grammar-example-group"><h3>${escapeHtml(group.title || 'Примеры')}</h3><div class="list">${(group.items || []).map((item) => `<p class="grammar-example-item">• ${escapeHtml(item)}</p>`).join('')}</div></article>`).join('')}${examples.length ? `<article class="card lesson-block grammar-example-group"><h3>Ещё примеры</h3><div class="list">${examples.map((example) => `<p class="grammar-example-item">• ${escapeHtml(example)}</p>`).join('')}</div></article>` : ''}</div></section>` : ''}
+      ${mistakes.length ? `<section class="section" id="grammar-mistakes" aria-labelledby="grammar-mistakes-title"><div class="section-heading"><div><span class="eyebrow">Обрати внимание</span><h2 id="grammar-mistakes-title">Частые ошибки</h2></div></div><article class="card info-card lesson-block"><div class="list">${mistakes.map((mistake) => `<p>• ${escapeHtml(mistake)}</p>`).join('')}</div></article></section>` : ''}
+    `;
 
     root.innerHTML = `
-      ${grammarQuestionSchemeMarkup(topic.questionScheme)}
-
-      ${visualGuide ? `<section class="section" id="grammar-visual-guide" aria-labelledby="grammar-visual-guide-title"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(visualGuide.eyebrow || "Схема")}</span><h2 id="grammar-visual-guide-title">${escapeHtml(visualGuide.title || "Визуальная подсказка")}</h2></div></div><article class="card lesson-block"><img src="${escapeHtml(visualGuide.src || "")}" alt="${escapeHtml(visualGuide.alt || topic.title || "Grammar guide")}" style="width:100%;height:auto;display:block;border-radius:18px;" />${visualGuide.note ? `<p class="muted" style="margin-top:12px;">${escapeHtml(visualGuide.note)}</p>` : ""}</article></section>` : ""}
-
-      ${glanceCards.length ? `<section class="section" id="grammar-at-a-glance" aria-labelledby="grammar-at-a-glance-title"><div class="section-heading"><div><span class="eyebrow">Разбираем схему</span><h2 id="grammar-at-a-glance-title">Что означает каждый цветной блок</h2></div></div><div class="grammar-glance-grid">${glanceCards.map((card) => `<article class="card grammar-glance-card"><div class="grammar-glance-head"><span class="grammar-glance-icon">${escapeHtml(card.icon || '✦')}</span><div><h3>${escapeHtml(card.label || '')}</h3><p class="muted">${escapeHtml(card.hint || '')}</p></div></div><div class="grammar-pattern">${escapeHtml(card.pattern || '')}</div><p class="grammar-example-sentence">${escapeHtml(card.example || '')}</p></article>`).join('')}</div></section>` : ''}
-
-      ${miniRules.length ? `<section class="section" id="grammar-rule-map" aria-labelledby="grammar-rule-map-title"><div class="section-heading"><div><span class="eyebrow">Правила</span><h2 id="grammar-rule-map-title">Как поставить слова в правильном порядке</h2></div></div><div class="grammar-mini-grid">${miniRules.map((rule) => `<article class="card grammar-mini-card"><h3>${escapeHtml(rule.title || '')}</h3><p>${escapeHtml(rule.text || '')}</p>${rule.example ? `<div class="grammar-mini-example">${escapeHtml(rule.example)}</div>` : ''}</article>`).join('')}</div></section>` : ''}
-
-      ${tables.length ? `<section class="section" id="grammar-tables" aria-labelledby="grammar-tables-title"><div class="section-heading"><div><span class="eyebrow">Таблицы</span><h2 id="grammar-tables-title">Короткая памятка</h2></div></div><div class="list">${tables.map((table) => `<article class="card lesson-block"><h3>${escapeHtml(table.title || 'Таблица')}</h3>${grammarTable(table)}</article>`).join('')}</div></section>` : ''}
-
-      ${exampleGroups.length || examples.length ? `<section class="section" id="grammar-examples" aria-labelledby="grammar-examples-title"><div class="section-heading"><div><span class="eyebrow">Примеры</span><h2 id="grammar-examples-title">Посмотри на порядок слов</h2></div></div><div class="list">${exampleGroups.map((group) => `<article class="card lesson-block grammar-example-group"><h3>${escapeHtml(group.title || 'Примеры')}</h3><div class="list">${(group.items || []).map((item) => `<p class="grammar-example-item">• ${escapeHtml(item)}</p>`).join('')}</div></article>`).join('')}${examples.length ? `<article class="card lesson-block grammar-example-group"><h3>Ещё примеры</h3><div class="list">${examples.map((example) => `<p class="grammar-example-item">• ${escapeHtml(example)}</p>`).join('')}</div></article>` : ''}</div></section>` : ''}
-
-      ${mistakes.length ? `<section class="section" id="grammar-mistakes" aria-labelledby="grammar-mistakes-title"><div class="section-heading"><div><span class="eyebrow">Обрати внимание</span><h2 id="grammar-mistakes-title">Частые ошибки</h2></div></div><article class="card info-card lesson-block"><div class="list">${mistakes.map((mistake) => `<p>• ${escapeHtml(mistake)}</p>`).join('')}</div></article></section>` : ''}
-
+      ${visualGuideMarkup}
+      ${textbookSections.length ? grammarTextbookSectionsMarkup(textbookSections) : legacyMarkup}
       <section class="section" id="grammar-practice-section" aria-labelledby="grammar-practice-title"><div class="section-heading"><div><span class="eyebrow">Практика</span><h2 id="grammar-practice-title">${Array.isArray(topic.exercises) ? topic.exercises.length : 0} упражнения: от простого к сложному</h2></div></div><div id="grammar-quiz"></div></section>
     `;
 

@@ -3413,3 +3413,49 @@ label.odd-option {
     min-height: 220px;
   }
 }
+
+/* Textbook-style grammar explanations for newly introduced topics. */
+.grammar-textbook-section { scroll-margin-top: 90px; }
+.grammar-textbook-heading h2 { max-width: 820px; }
+.grammar-textbook-card,
+.grammar-textbook-note-card { padding: 24px; }
+.grammar-textbook-card > p,
+.grammar-textbook-note-card > p,
+.grammar-section-lead { font-size: 1rem; line-height: 1.72; }
+.grammar-textbook-card > p + p { margin-top: 12px; }
+.grammar-textbook-intro,
+.grammar-section-lead { margin: 0 0 18px; color: var(--muted); }
+.grammar-textbook-list { margin: 16px 0 0; padding-left: 22px; display: grid; gap: 9px; line-height: 1.6; }
+.grammar-textbook-examples { display: grid; gap: 10px; margin-top: 18px; }
+.grammar-textbook-example { padding: 12px 14px; border-radius: 12px; background: #f5f7ff; border: 1px solid #e2e7ff; font-weight: 650; line-height: 1.55; }
+.grammar-form-grid { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.grammar-form-row { display: grid; grid-template-columns: .9fr 1.35fr 1.3fr; gap: 16px; padding: 14px 16px; align-items: center; background: #fff; }
+.grammar-form-row + .grammar-form-row { border-top: 1px solid var(--border); }
+.grammar-form-label { font-weight: 800; }
+.grammar-form-rule { padding: 8px 10px; border-radius: 9px; background: #eef2ff; font-weight: 800; color: #2937a6; }
+.grammar-form-example { color: var(--muted); font-weight: 650; }
+.grammar-compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.grammar-compare-panel { padding: 22px; }
+.grammar-compare-panel h3 { margin-bottom: 12px; }
+.grammar-textbook-note,
+.grammar-textbook-note-card { margin-top: 16px; border: 1px solid #d9def8; background: #f7f7ff; border-radius: 14px; }
+.grammar-textbook-note { padding: 14px 16px; font-weight: 700; line-height: 1.6; }
+.grammar-timeline-list { display: grid; gap: 24px; }
+.grammar-timeline-item h3 { margin-bottom: 12px; }
+.grammar-timeline { position: relative; min-height: 74px; display: flex; align-items: center; justify-content: center; margin: 4px 16px 0; }
+.grammar-timeline-line { position: absolute; left: 0; right: 0; height: 2px; background: #aeb7d8; }
+.grammar-timeline-process { position: relative; z-index: 1; width: min(68%, 520px); padding: 12px 18px; border-radius: 999px; text-align: center; background: #e9edff; border: 2px solid #8e9cff; font-weight: 800; }
+.grammar-timeline-marker { position: absolute; z-index: 2; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #111827; box-shadow: 0 0 0 5px #fff; }
+.grammar-timeline-label { text-align: center; margin-top: -8px; font-size: .9rem; color: var(--muted); font-weight: 750; }
+.grammar-timeline-example { text-align: center; margin-top: 9px; font-weight: 750; }
+.grammar-visual-guide-card img { width: 100%; height: auto; display: block; border-radius: 18px; }
+.grammar-visual-guide-card p { margin-top: 12px; }
+@media (max-width: 760px) {
+  .grammar-form-row { grid-template-columns: 1fr; gap: 8px; }
+  .grammar-compare-grid { grid-template-columns: 1fr; }
+  .grammar-textbook-card,
+  .grammar-textbook-note-card,
+  .grammar-compare-panel { padding: 18px; }
+  .grammar-timeline { margin-inline: 4px; }
+  .grammar-timeline-process { width: 78%; font-size: .92rem; }
+}

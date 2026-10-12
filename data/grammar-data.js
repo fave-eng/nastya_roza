@@ -1904,130 +1904,11 @@ window.GRAMMAR_DATA = [
     "lockOnPass": true,
     "revealAnswersOnError": false,
     "linkedLessonId": "lesson-11",
-    "glanceCards": [
-      {
-        "icon": "1",
-        "label": "Когда используем",
-        "hint": "Past continuous показывает действие, которое было в процессе в конкретный момент в прошлом.",
-        "pattern": "was / were + verb-ing",
-        "example": "At 10.30 yesterday, Amy was walking in the park. — Вчера в 10:30 Эми гуляла в парке."
-      },
-      {
-        "icon": "2",
-        "label": "Утверждение",
-        "hint": "После I / he / she / it используем was, после you / we / they — were. Затем ставим глагол с -ing.",
-        "pattern": "subject + was/were + verb-ing",
-        "example": "I was writing a report. / They were playing computer games."
-      },
-      {
-        "icon": "3",
-        "label": "Отрицание",
-        "hint": "Добавь not после was / were. В разговорной речи обычно используем wasn’t / weren’t.",
-        "pattern": "subject + wasn’t/weren’t + verb-ing",
-        "example": "It wasn’t raining. / We weren’t sleeping."
-      },
-      {
-        "icon": "4",
-        "label": "Вопрос",
-        "hint": "В вопросе was / were ставим перед подлежащим.",
-        "pattern": "Was/Were + subject + verb-ing?",
-        "example": "Were you working? — Yes, I was. / No, I wasn’t."
-      }
-    ],
-    "miniRules": [
-      {
-        "title": "1. Действие было в процессе",
-        "text": "Используй past continuous, когда важно показать процесс в определённый момент в прошлом, а не просто завершённый факт.",
-        "example": "At 9.00 last night, I was studying."
-      },
-      {
-        "title": "2. Формула: was / were + -ing",
-        "text": "I / he / she / it → was. You / we / they → were. Основной глагол получает окончание -ing.",
-        "example": "She was working. · They were waiting."
-      },
-      {
-        "title": "3. Отрицание",
-        "text": "Поставь not после was / were: was not / were not. Короткие формы: wasn’t / weren’t.",
-        "example": "I wasn’t living in Prague. · It wasn’t raining."
-      },
-      {
-        "title": "4. Вопросы и короткие ответы",
-        "text": "Вынеси was / were перед подлежащим. В коротком ответе повтори только was / were.",
-        "example": "Were you working? — Yes, I was. / No, I wasn’t."
-      },
-      {
-        "title": "5. Past continuous + past simple",
-        "text": "Часто длительное действие описываем в past continuous, а короткое событие, которое произошло во время него, — в past simple. Их можно соединить when.",
-        "example": "Mark was talking on the phone when he got a text."
-      },
-      {
-        "title": "6. Правописание -ing",
-        "text": "Обычно добавляем -ing. Конечную -e убираем; у некоторых коротких глаголов удваиваем последнюю согласную.",
-        "example": "write → writing · make → making · get → getting"
-      }
-    ],
-    "tables": [
-      {
-        "title": "Past continuous: формы",
-        "headers": [
-          "Тип",
-          "Формула",
-          "Пример"
-        ],
-        "rows": [
-          [
-            "Утверждение",
-            "I/he/she/it + was + -ing",
-            "She was working."
-          ],
-          [
-            "Утверждение",
-            "you/we/they + were + -ing",
-            "They were waiting."
-          ],
-          [
-            "Отрицание",
-            "wasn’t / weren’t + -ing",
-            "It wasn’t raining."
-          ],
-          [
-            "Вопрос",
-            "Was/Were + subject + -ing?",
-            "Were you working?"
-          ],
-          [
-            "Короткий ответ",
-            "Yes, ... was/were. / No, ... wasn’t/weren’t.",
-            "Yes, I was. / No, they weren’t."
-          ]
-        ]
-      }
-    ],
-    "exampleGroups": [
-      {
-        "title": "Past continuous и past simple вместе",
-        "items": [
-          "Tommy fell off his bike when he was cycling home. — Короткое событие fell off произошло во время процесса was cycling.",
-          "The children were playing computer games when the visitors arrived. — Игра была в процессе; гости приехали в этот момент.",
-          "I was writing a report when my computer crashed. — Написание отчёта было в процессе; компьютер внезапно сломался."
-        ]
-      },
-      {
-        "title": "Как образовать -ing форму",
-        "items": [
-          "work → working · rain → raining · do → doing",
-          "write → writing · live → living — конечную -e убираем.",
-          "get → getting · sit → sitting — в некоторых коротких глаголах удваиваем последнюю согласную."
-        ]
-      }
-    ],
-    "commonMistakes": [
-      "I was work at 9.00. ✗ → I was working at 9.00. ✓ — после was / were нужен глагол с -ing.",
-      "They was playing. ✗ → They were playing. ✓ — с they / we / you используем were.",
-      "Were you worked? ✗ → Were you working? ✓ — после was / were используем -ing форму.",
-      "I was writing a report when my computer was crashing. ✗ → I was writing a report when my computer crashed. ✓ — короткое завершённое событие обычно ставим в past simple.",
-      "I was living in Prague in 2017 может звучать как временная ситуация. Если это просто завершённый факт без акцента на процессе, чаще нужен past simple: I lived in Prague in 2017."
-    ],
+    "glanceCards": [],
+    "miniRules": [],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
     "exercises": [
       {
         "id": "past-continuous-step-1",
@@ -2250,7 +2131,172 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
-    ]
+    ],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Значение",
+        "title": "Что показывает Past Continuous",
+        "paragraphs": [
+          "Past Continuous показывает действие, которое уже шло в определённый момент в прошлом. Нас интересует не факт завершения действия, а процесс вокруг этого момента.",
+          "Сравни: At 5.30 yesterday I was driving home. — В 5:30 вчера я ехал домой. Мы как будто смотрим внутрь процесса: в 5:30 поездка уже шла."
+        ],
+        "bullets": [
+          "момент может быть назван: at 5.30, at midnight, this time yesterday;",
+          "момент может быть понятен из ситуации: What were you doing when I called?;",
+          "Past Continuous сам по себе не говорит, закончилось действие или нет."
+        ]
+      },
+      {
+        "type": "timeline",
+        "eyebrow": "Схема времени",
+        "title": "Процесс и событие на линии времени",
+        "intro": "Длинная полоса показывает действие в процессе. Точка показывает короткое событие или конкретный момент.",
+        "items": [
+          {
+            "title": "Действие было в процессе в конкретный момент",
+            "label": "5.30 yesterday",
+            "during": "I was driving home",
+            "example": "At 5.30 yesterday I was driving home."
+          },
+          {
+            "title": "Короткое событие произошло во время процесса",
+            "label": "the phone rang",
+            "during": "I was having dinner",
+            "example": "I was having dinner when the phone rang."
+          }
+        ]
+      },
+      {
+        "type": "formula",
+        "eyebrow": "Форма",
+        "title": "Как образовать Past Continuous",
+        "intro": "Основа одна: was / were + глагол с -ing. Меняется только форма be.",
+        "rows": [
+          {
+            "label": "I / he / she / it",
+            "form": "was + verb-ing",
+            "example": "She was working."
+          },
+          {
+            "label": "you / we / they",
+            "form": "were + verb-ing",
+            "example": "They were waiting."
+          },
+          {
+            "label": "Отрицание",
+            "form": "was not / were not + verb-ing",
+            "example": "It wasn’t raining. We weren’t sleeping."
+          },
+          {
+            "label": "Вопрос",
+            "form": "Was / Were + subject + verb-ing?",
+            "example": "Were you working?"
+          },
+          {
+            "label": "Короткий ответ",
+            "form": "Yes, … was/were. / No, … wasn’t/weren’t.",
+            "example": "Yes, I was. / No, they weren’t."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Окончание -ing",
+        "title": "Как писать -ing форму",
+        "intro": "Сначала правильно образуй -ing форму, затем добавляй was или were.",
+        "headers": [
+          "Случай",
+          "Правило",
+          "Примеры"
+        ],
+        "rows": [
+          [
+            "Обычный глагол",
+            "+ ing",
+            "work → working; rain → raining"
+          ],
+          [
+            "Конечная -e",
+            "-e + ing",
+            "write → writing; make → making; live → living"
+          ],
+          [
+            "Короткая ударная гласная + согласная",
+            "последнюю согласную обычно удваиваем",
+            "sit → sitting; get → getting; run → running"
+          ],
+          [
+            "-ie",
+            "ie → y + ing",
+            "lie → lying; die → dying"
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Главное сравнение",
+        "title": "Past Continuous или Past Simple?",
+        "intro": "Выбирай форму по смыслу, а не только по словам when или while.",
+        "left": {
+          "title": "Past Continuous: процесс / фон",
+          "points": [
+            "действие уже происходило в выбранный момент;",
+            "мы видим ситуацию в процессе;",
+            "часто это фон для другого события."
+          ],
+          "examples": [
+            "I was walking home at 8.00.",
+            "The children were playing when the visitors arrived."
+          ]
+        },
+        "right": {
+          "title": "Past Simple: факт / завершённое событие",
+          "points": [
+            "действие рассматривается как целый завершённый факт;",
+            "часто двигает рассказ вперёд;",
+            "может быть коротким событием, которое происходит во время процесса."
+          ],
+          "examples": [
+            "I walked home after work.",
+            "The visitors arrived at 8.00."
+          ]
+        },
+        "note": "I was writing a report when my computer crashed. — was writing = процесс; crashed = короткое завершённое событие."
+      },
+      {
+        "type": "text",
+        "eyebrow": "When и while",
+        "title": "Как соединять два действия",
+        "paragraphs": [
+          "Когда короткое событие происходит во время более длинного процесса, длинный процесс обычно ставим в Past Continuous, а короткое событие — в Past Simple.",
+          "While чаще вводит именно процесс. When может вводить и момент, и событие — поэтому смотри на смысл каждого действия."
+        ],
+        "bullets": [
+          "I was walking home when it started to rain.",
+          "While I was walking home, it started to rain.",
+          "While I was cooking, Jack was washing the dishes. — два процесса шли одновременно."
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Важно",
+        "title": "Глаголы состояния обычно не ставим в Continuous",
+        "text": "Глаголы know, understand, want, need, like, love, believe обычно описывают состояние, а не действие в процессе. Поэтому обычно: I knew the answer, а не I was knowing the answer."
+      },
+      {
+        "type": "examples",
+        "eyebrow": "Типичные ошибки",
+        "title": "Проверь себя перед практикой",
+        "items": [
+          "They was playing. ✗  →  They were playing. ✓",
+          "I was work at 9.00. ✗  →  I was working at 9.00. ✓",
+          "Were you worked? ✗  →  Were you working? ✓",
+          "I was writing a report when my computer was crashing. ✗  →  I was writing a report when my computer crashed. ✓"
+        ]
+      }
+    ],
+    "examples": []
   },
   {
     "id": "grammar-at-in-on",
@@ -2273,50 +2319,9 @@ window.GRAMMAR_DATA = [
     },
     "glanceCards": [],
     "miniRules": [],
-    "tables": [
-      {
-        "title": "Самые важные сочетания",
-        "headers": [
-          "IN",
-          "ON",
-          "AT"
-        ],
-        "rows": [
-          [
-            "in a city / country",
-            "on a surface",
-            "at a place / point"
-          ],
-          [
-            "in a room / in a car",
-            "on the bus / on a plane / on a bike",
-            "at school / at work / at the station"
-          ],
-          [
-            "in July / in summer / in the evening",
-            "on Monday / on 9th May",
-            "at 7.15 / at night / at the weekend"
-          ]
-        ]
-      }
-    ],
-    "exampleGroups": [
-      {
-        "title": "Посмотри на контраст",
-        "items": [
-          "in New York, on the 11th floor, at 7.30",
-          "in the museum, on the wall, at the bus stop",
-          "in summer, on Monday, at night"
-        ]
-      }
-    ],
-    "commonMistakes": [
-      "in Monday ✗ → on Monday ✓ — с днями недели используем on.",
-      "in 7.15 ✗ → at 7.15 ✓ — с точным временем используем at.",
-      "at the wall ✗ → on the wall ✓ — на поверхности используем on.",
-      "on New York ✗ → in New York ✓ — с городами используем in.",
-      "in the station как “место встречи” может быть неверно ✗ → at the station ✓ — если это точка, чаще нужен at."
-    ],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
     "exercises": [
       {
         "id": "at-in-on-step-1",
@@ -2534,6 +2539,239 @@ window.GRAMMAR_DATA = [
           }
         ]
       }
-    ]
+    ],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Сначала раздели две темы",
+        "title": "At, in, on: место и время — это не одно правило",
+        "paragraphs": [
+          "Одни и те же предлоги используются и для места, и для времени, но логика разная. Поэтому сначала реши: ты говоришь о месте или о времени.",
+          "Для места удобно думать так: IN = внутри / в пределах пространства; ON = на поверхности или на транспорте; AT = точка или конкретное место. Для времени: IN = большой период; ON = день / дата; AT = точное время или точка во времени."
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Место",
+        "title": "IN: внутри пространства или в пределах территории",
+        "intro": "IN используем, когда представляем место как пространство, внутри которого находится человек или предмет.",
+        "headers": [
+          "Ситуация",
+          "Примеры",
+          "Почему"
+        ],
+        "rows": [
+          [
+            "страна / город / район",
+            "in England; in Moscow; in the city centre",
+            "мы находимся внутри территории"
+          ],
+          [
+            "комната / здание / закрытое пространство",
+            "in the living room; in the museum; in a shop",
+            "внутри помещения"
+          ],
+          [
+            "машина / такси",
+            "in a car; in a taxi",
+            "маленькое закрытое транспортное средство"
+          ],
+          [
+            "парк / сад / вода",
+            "in the park; in the garden; in the sea",
+            "в пределах пространства"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Место",
+        "title": "ON: поверхность и транспорт",
+        "intro": "ON используем, когда важна поверхность, линия или транспорт, в котором мы воспринимаем себя как пассажира.",
+        "headers": [
+          "Ситуация",
+          "Примеры",
+          "Обрати внимание"
+        ],
+        "rows": [
+          [
+            "поверхность",
+            "on the table; on the wall; on the floor; on the shelf",
+            "предмет находится на поверхности"
+          ],
+          [
+            "этаж",
+            "on the 11th floor",
+            "этаж — уровень здания"
+          ],
+          [
+            "общественный транспорт",
+            "on the bus; on the train; on a plane",
+            "обычно можно встать / двигаться внутри"
+          ],
+          [
+            "велосипед / мотоцикл",
+            "on a bike; on a motorbike",
+            "человек находится сверху на транспортном средстве"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Место",
+        "title": "AT: место как точка",
+        "intro": "AT нужен, когда важна не внутренняя часть пространства, а само место как точка, адрес, место встречи или функция.",
+        "headers": [
+          "Ситуация",
+          "Примеры",
+          "Смысл"
+        ],
+        "rows": [
+          [
+            "точка встречи / остановка",
+            "at the station; at the bus stop; at the door",
+            "мы указываем конкретную точку"
+          ],
+          [
+            "учёба / работа / дом",
+            "at school; at work; at home",
+            "место рассматривается по его функции"
+          ],
+          [
+            "мероприятие",
+            "at a party; at a concert",
+            "мы на мероприятии"
+          ],
+          [
+            "адрес",
+            "at 23 State Street",
+            "конкретная точка по адресу"
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Смысл меняется",
+        "title": "AT и IN с одним и тем же местом",
+        "intro": "Иногда оба предлога возможны, но они показывают место по-разному.",
+        "left": {
+          "title": "AT = место как точка / функция",
+          "points": [
+            "I’m at school. — я в школе как ученик / нахожусь там;",
+            "Meet me at the station. — встретимся у/на станции как в точке."
+          ],
+          "examples": [
+            "She’s at the hospital visiting her dad.",
+            "We met at the airport."
+          ]
+        },
+        "right": {
+          "title": "IN = физически внутри",
+          "points": [
+            "I’m in the school. — я физически внутри здания школы;",
+            "He’s in the station. — он внутри здания станции."
+          ],
+          "examples": [
+            "There are 500 students in the school.",
+            "It was warm inside the station."
+          ]
+        },
+        "note": "В обычных фразах at school / at work / at home предлог часто связан с функцией места, а не с его стенами."
+      },
+      {
+        "type": "table",
+        "eyebrow": "Время",
+        "title": "IN, ON, AT со временем",
+        "intro": "Здесь удобно двигаться от большого периода к самой точной точке времени.",
+        "headers": [
+          "Предлог",
+          "Когда",
+          "Примеры"
+        ],
+        "rows": [
+          [
+            "IN",
+            "годы, месяцы, времена года, части дня",
+            "in 2004; in July; in winter; in the morning; in the evening"
+          ],
+          [
+            "ON",
+            "дни недели, даты, конкретный день + часть дня",
+            "on Monday; on 9th May; on Monday morning"
+          ],
+          [
+            "AT",
+            "точное время и отдельные точки времени",
+            "at 7.15; at noon; at midnight; at night; at the weekend"
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Сравнение по масштабу",
+        "title": "От периода к точке",
+        "intro": "Представь календарь и часы: чем точнее точка, тем ближе мы к AT.",
+        "left": {
+          "title": "Большой период",
+          "points": [
+            "in 2026",
+            "in October",
+            "in winter",
+            "in the afternoon"
+          ],
+          "examples": [
+            "We moved here in 2024.",
+            "I usually work in the evening."
+          ]
+        },
+        "right": {
+          "title": "День и точное время",
+          "points": [
+            "on Friday",
+            "on 12 October",
+            "on Friday evening",
+            "at 6.30"
+          ],
+          "examples": [
+            "The lesson is on Friday at 6.30.",
+            "We arrived on Monday morning."
+          ]
+        },
+        "note": "Одна фраза может содержать несколько уровней: on Wednesday at 9.30 in the evening."
+      },
+      {
+        "type": "text",
+        "eyebrow": "Особые случаи",
+        "title": "Фразы, которые нужно запомнить отдельно",
+        "paragraphs": [
+          "Некоторые сочетания не следуют самой простой схеме «большой период → маленькая точка», поэтому их лучше выучить как готовые блоки."
+        ],
+        "bullets": [
+          "at night, но in the morning / in the afternoon / in the evening;",
+          "at the weekend — стандартный британский вариант, который используется в English File;",
+          "at Christmas / at Easter = в период праздника; on Christmas Day = именно в день Рождества;",
+          "on Monday morning / on Friday evening — если назван конкретный день, используем on."
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Без предлога",
+        "title": "После last, next, this и every предлог обычно не нужен",
+        "text": "Говорим last Monday, next week, this morning, every summer — не in last Monday и не on next week."
+      },
+      {
+        "type": "examples",
+        "eyebrow": "Типичные ошибки",
+        "title": "Проверь себя перед практикой",
+        "items": [
+          "in Monday ✗  →  on Monday ✓",
+          "in 7.15 ✗  →  at 7.15 ✓",
+          "at the wall ✗  →  on the wall ✓",
+          "on New York ✗  →  in New York ✓",
+          "in the bus ✗  →  on the bus ✓, но in a car ✓"
+        ]
+      }
+    ],
+    "examples": []
   }
 ];
