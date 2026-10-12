@@ -1,0 +1,248 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "title": "2B That’s me in the picture!",
+  "subtitle": "Grammar practice · past continuous · Pronunciation · weak forms: was, were",
+  "status": "available",
+  "publishedAt": "2026-10-12",
+  "totalPoints": 12,
+  "vocabularyId": "vocab-lesson-12",
+  "grammarIds": [
+    "grammar-past-continuous"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "",
+      "title": "GRAMMAR past continuous",
+      "titleLead": "GRAMMAR",
+      "titleTail": "past continuous"
+    },
+    {
+      "type": "exercise",
+      "id": "past-continuous-c",
+      "title": "c The police are at an art gallery because someone stole a famous painting at 5.30 yesterday afternoon. What were the people in the pictures doing at the time? Write sentences.",
+      "image": "images/lesson-12/art-gallery-scenes.png",
+      "imageAlt": "Six art gallery scenes for a past continuous exercise.",
+      "stickyImage": true,
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "prompt": "clean Gallery 6",
+          "input": "gaps",
+          "segments": [
+            "I ",
+            "."
+          ],
+          "exampleAnswers": [
+            "was cleaning Gallery 6"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "prompt": "try to find the exit",
+          "input": "gaps",
+          "segments": [
+            "We ",
+            "."
+          ],
+          "answers": [
+            [
+              "were trying to find the exit"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "prompt": "close the windows",
+          "input": "gaps",
+          "segments": [
+            "I ",
+            "."
+          ],
+          "answers": [
+            [
+              "was closing the windows"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "prompt": "wash the coffee cups",
+          "input": "gaps",
+          "segments": [
+            "We ",
+            "."
+          ],
+          "answers": [
+            [
+              "were washing the coffee cups"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "prompt": "count the money",
+          "input": "gaps",
+          "segments": [
+            "I ",
+            "."
+          ],
+          "answers": [
+            [
+              "was counting the money"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "prompt": "What were you doing at 5.30 yesterday?",
+          "input": "textarea",
+          "placeholder": "I ...",
+          "scored": false
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "",
+      "title": "PRONUNCIATION weak forms: was, were",
+      "titleLead": "PRONUNCIATION",
+      "titleTail": "weak forms: was, were"
+    },
+    {
+      "type": "exercise",
+      "id": "pronunciation-was-were-a",
+      "title": "a Read the sentences. Are was and were stressed or unstressed? Write S for stressed and U for unstressed.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "My mum took this photo when we were travelling in Malaysia. ",
+            ""
+          ],
+          "exampleAnswers": [
+            "U"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gaps",
+          "options": [
+            "S",
+            "U"
+          ],
+          "segments": [
+            "We met our new neighbours yesterday – they weren’t very friendly. ",
+            ""
+          ],
+          "answers": [
+            1
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gaps",
+          "options": [
+            "S",
+            "U"
+          ],
+          "segments": [
+            "What were you doing when I phoned you? ",
+            ""
+          ],
+          "answers": [
+            1
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gaps",
+          "options": [
+            "S",
+            "U"
+          ],
+          "segments": [
+            "A  Was Matt at home last night? ",
+            "  B  No, he wasn’t. ",
+            ""
+          ],
+          "answers": [
+            0,
+            0
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gaps",
+          "options": [
+            "S",
+            "U"
+          ],
+          "segments": [
+            "A  It was a great party. ",
+            "  B  Was it at Kim’s house? ",
+            "  A  Yes, it was. ",
+            ""
+          ],
+          "answers": [
+            1,
+            0,
+            0
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gaps",
+          "options": [
+            "S",
+            "U"
+          ],
+          "segments": [
+            "There were lots of people at the supermarket. ",
+            ""
+          ],
+          "answers": [
+            1
+          ],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "pronunciation-was-were-b",
+      "title": "b 2.2 Listen and check. Then listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_2.2.mp3",
+      "response": false
+    }
+  ]
+}

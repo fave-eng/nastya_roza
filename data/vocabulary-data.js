@@ -1,6 +1,77 @@
 /** A1 vocabulary for Anastasia and Rozalina. */
 window.VOCABULARY_DATA = [
   {
+    "id": "vocab-lesson-12",
+    "order": 12,
+    "title": "Useful words from 2B",
+    "label": "Lesson 12 · 2B That’s me in the picture!",
+    "icon": "🖼️",
+    "linkedLessonId": "lesson-12",
+    "page": "vocabulary.html?id=vocab-lesson-12",
+    "words": [
+      {
+        "id": "vocab-lesson-12-1",
+        "en": "art gallery",
+        "ru": "художественная галерея"
+      },
+      {
+        "id": "vocab-lesson-12-2",
+        "en": "steal",
+        "ru": "красть"
+      },
+      {
+        "id": "vocab-lesson-12-3",
+        "en": "famous painting",
+        "ru": "известная картина"
+      },
+      {
+        "id": "vocab-lesson-12-4",
+        "en": "find the exit",
+        "ru": "найти выход"
+      },
+      {
+        "id": "vocab-lesson-12-5",
+        "en": "close the windows",
+        "ru": "закрывать окна"
+      },
+      {
+        "id": "vocab-lesson-12-6",
+        "en": "wash the coffee cups",
+        "ru": "мыть кофейные чашки"
+      },
+      {
+        "id": "vocab-lesson-12-7",
+        "en": "count the money",
+        "ru": "считать деньги"
+      },
+      {
+        "id": "vocab-lesson-12-8",
+        "en": "vacuum-clean",
+        "ru": "пылесосить"
+      },
+      {
+        "id": "vocab-lesson-12-9",
+        "en": "yesterday afternoon",
+        "ru": "вчера днём"
+      },
+      {
+        "id": "vocab-lesson-12-10",
+        "en": "police officer",
+        "ru": "полицейский"
+      },
+      {
+        "id": "vocab-lesson-12-11",
+        "en": "at the time",
+        "ru": "в тот момент"
+      },
+      {
+        "id": "vocab-lesson-12-12",
+        "en": "cash register",
+        "ru": "касса"
+      }
+    ]
+  },
+  {
     "id": "vocab-lesson-1",
     "title": "Common verb phrases",
     "label": "Lesson 1 · 1A Are you? Can you? Do you? Did you?",
@@ -138,6 +209,212 @@ window.VOCABULARY_DATA = [
         "id": "vocab-lesson-1-26",
         "en": "last year",
         "ru": "в прошлом году"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-10",
+    "title": "Holidays",
+    "label": "Lesson 10 · Holidays",
+    "icon": "🧳",
+    "linkedLessonId": "lesson-10",
+    "page": "vocabulary.html?id=vocab-lesson-10",
+    "words": [
+      {
+        "id": "vocab-lesson-10-1",
+        "en": "go camping",
+        "ru": "ехать отдыхать с палаткой"
+      },
+      {
+        "id": "vocab-lesson-10-2",
+        "en": "go for a walk",
+        "ru": "пойти на прогулку"
+      },
+      {
+        "id": "vocab-lesson-10-3",
+        "en": "book a flight online",
+        "ru": "забронировать авиабилет онлайн"
+      },
+      {
+        "id": "vocab-lesson-10-4",
+        "en": "go abroad",
+        "ru": "ехать за границу"
+      },
+      {
+        "id": "vocab-lesson-10-5",
+        "en": "go swimming",
+        "ru": "пойти плавать"
+      },
+      {
+        "id": "vocab-lesson-10-6",
+        "en": "go out at night",
+        "ru": "выходить куда-либо вечером"
+      },
+      {
+        "id": "vocab-lesson-10-7",
+        "en": "stay in a hotel",
+        "ru": "остановиться в отеле"
+      },
+      {
+        "id": "vocab-lesson-10-8",
+        "en": "go sightseeing",
+        "ru": "осматривать достопримечательности"
+      },
+      {
+        "id": "vocab-lesson-10-9",
+        "en": "sunbathe on the beach",
+        "ru": "загорать на пляже"
+      },
+      {
+        "id": "vocab-lesson-10-10",
+        "en": "go away for the weekend",
+        "ru": "уехать куда-либо на выходные"
+      },
+      {
+        "id": "vocab-lesson-10-11",
+        "en": "comfortable",
+        "ru": "удобный; комфортный"
+      },
+      {
+        "id": "vocab-lesson-10-12",
+        "en": "sunny",
+        "ru": "солнечный"
+      },
+      {
+        "id": "vocab-lesson-10-13",
+        "en": "crowded",
+        "ru": "многолюдный; переполненный"
+      },
+      {
+        "id": "vocab-lesson-10-14",
+        "en": "unhelpful",
+        "ru": "неотзывчивый; неготовый помочь"
+      },
+      {
+        "id": "vocab-lesson-10-15",
+        "en": "basic",
+        "ru": "простой; с минимальными удобствами"
+      },
+      {
+        "id": "vocab-lesson-10-16",
+        "en": "lovely",
+        "ru": "прекрасный; очаровательный"
+      },
+      {
+        "id": "vocab-lesson-10-17",
+        "en": "cloudy",
+        "ru": "облачный"
+      },
+      {
+        "id": "vocab-lesson-10-18",
+        "en": "luxurious",
+        "ru": "роскошный"
+      },
+      {
+        "id": "vocab-lesson-10-19",
+        "en": "get there",
+        "ru": "добраться туда"
+      },
+      {
+        "id": "vocab-lesson-10-20",
+        "en": "by plane",
+        "ru": "на самолёте"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-11",
+    "title": "Useful words from 2B",
+    "label": "Lesson 11 · 2B That’s me in the picture!",
+    "icon": "🖼️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-11",
+    "page": "vocabulary.html?id=vocab-lesson-11",
+    "words": [
+      {
+        "id": "vocab-lesson-11-1",
+        "en": "photo",
+        "ru": "фотография"
+      },
+      {
+        "id": "vocab-lesson-11-2",
+        "en": "photographer",
+        "ru": "фотограф"
+      },
+      {
+        "id": "vocab-lesson-11-3",
+        "en": "flight",
+        "ru": "рейс; полёт"
+      },
+      {
+        "id": "vocab-lesson-11-4",
+        "en": "office",
+        "ru": "офис"
+      },
+      {
+        "id": "vocab-lesson-11-5",
+        "en": "shelf",
+        "ru": "полка"
+      },
+      {
+        "id": "vocab-lesson-11-6",
+        "en": "museum",
+        "ru": "музей"
+      },
+      {
+        "id": "vocab-lesson-11-7",
+        "en": "park",
+        "ru": "парк"
+      },
+      {
+        "id": "vocab-lesson-11-8",
+        "en": "bike",
+        "ru": "велосипед"
+      },
+      {
+        "id": "vocab-lesson-11-9",
+        "en": "cycle home",
+        "ru": "ехать домой на велосипеде"
+      },
+      {
+        "id": "vocab-lesson-11-10",
+        "en": "computer games",
+        "ru": "компьютерные игры"
+      },
+      {
+        "id": "vocab-lesson-11-11",
+        "en": "get a text",
+        "ru": "получить сообщение"
+      },
+      {
+        "id": "vocab-lesson-11-12",
+        "en": "visitor",
+        "ru": "посетитель; гость"
+      },
+      {
+        "id": "vocab-lesson-11-13",
+        "en": "have a barbecue",
+        "ru": "устроить барбекю"
+      },
+      {
+        "id": "vocab-lesson-11-14",
+        "en": "write a report",
+        "ru": "писать отчёт"
+      },
+      {
+        "id": "vocab-lesson-11-15",
+        "en": "answer the phone",
+        "ru": "ответить на телефонный звонок"
+      },
+      {
+        "id": "vocab-lesson-11-16",
+        "en": "get into a taxi",
+        "ru": "сесть в такси"
+      },
+      {
+        "id": "vocab-lesson-11-17",
+        "en": "crash (computer)",
+        "ru": "дать сбой; выйти из строя (о компьютере)"
       }
     ]
   },
@@ -1072,211 +1349,5 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-9",
     "page": "irregular-verbs.html",
     "words": []
-  },
-  {
-    "id": "vocab-lesson-10",
-    "title": "Holidays",
-    "label": "Lesson 10 · Holidays",
-    "icon": "🧳",
-    "linkedLessonId": "lesson-10",
-    "page": "vocabulary.html?id=vocab-lesson-10",
-    "words": [
-      {
-        "id": "vocab-lesson-10-1",
-        "en": "go camping",
-        "ru": "ехать отдыхать с палаткой"
-      },
-      {
-        "id": "vocab-lesson-10-2",
-        "en": "go for a walk",
-        "ru": "пойти на прогулку"
-      },
-      {
-        "id": "vocab-lesson-10-3",
-        "en": "book a flight online",
-        "ru": "забронировать авиабилет онлайн"
-      },
-      {
-        "id": "vocab-lesson-10-4",
-        "en": "go abroad",
-        "ru": "ехать за границу"
-      },
-      {
-        "id": "vocab-lesson-10-5",
-        "en": "go swimming",
-        "ru": "пойти плавать"
-      },
-      {
-        "id": "vocab-lesson-10-6",
-        "en": "go out at night",
-        "ru": "выходить куда-либо вечером"
-      },
-      {
-        "id": "vocab-lesson-10-7",
-        "en": "stay in a hotel",
-        "ru": "остановиться в отеле"
-      },
-      {
-        "id": "vocab-lesson-10-8",
-        "en": "go sightseeing",
-        "ru": "осматривать достопримечательности"
-      },
-      {
-        "id": "vocab-lesson-10-9",
-        "en": "sunbathe on the beach",
-        "ru": "загорать на пляже"
-      },
-      {
-        "id": "vocab-lesson-10-10",
-        "en": "go away for the weekend",
-        "ru": "уехать куда-либо на выходные"
-      },
-      {
-        "id": "vocab-lesson-10-11",
-        "en": "comfortable",
-        "ru": "удобный; комфортный"
-      },
-      {
-        "id": "vocab-lesson-10-12",
-        "en": "sunny",
-        "ru": "солнечный"
-      },
-      {
-        "id": "vocab-lesson-10-13",
-        "en": "crowded",
-        "ru": "многолюдный; переполненный"
-      },
-      {
-        "id": "vocab-lesson-10-14",
-        "en": "unhelpful",
-        "ru": "неотзывчивый; неготовый помочь"
-      },
-      {
-        "id": "vocab-lesson-10-15",
-        "en": "basic",
-        "ru": "простой; с минимальными удобствами"
-      },
-      {
-        "id": "vocab-lesson-10-16",
-        "en": "lovely",
-        "ru": "прекрасный; очаровательный"
-      },
-      {
-        "id": "vocab-lesson-10-17",
-        "en": "cloudy",
-        "ru": "облачный"
-      },
-      {
-        "id": "vocab-lesson-10-18",
-        "en": "luxurious",
-        "ru": "роскошный"
-      },
-      {
-        "id": "vocab-lesson-10-19",
-        "en": "get there",
-        "ru": "добраться туда"
-      },
-      {
-        "id": "vocab-lesson-10-20",
-        "en": "by plane",
-        "ru": "на самолёте"
-      }
-    ]
-  },
-  {
-    "id": "vocab-lesson-11",
-    "title": "Useful words from 2B",
-    "label": "Lesson 11 · 2B That’s me in the picture!",
-    "icon": "🖼️",
-    "type": "lesson",
-    "linkedLessonId": "lesson-11",
-    "page": "vocabulary.html?id=vocab-lesson-11",
-    "words": [
-      {
-        "id": "vocab-lesson-11-1",
-        "en": "photo",
-        "ru": "фотография"
-      },
-      {
-        "id": "vocab-lesson-11-2",
-        "en": "photographer",
-        "ru": "фотограф"
-      },
-      {
-        "id": "vocab-lesson-11-3",
-        "en": "flight",
-        "ru": "рейс; полёт"
-      },
-      {
-        "id": "vocab-lesson-11-4",
-        "en": "office",
-        "ru": "офис"
-      },
-      {
-        "id": "vocab-lesson-11-5",
-        "en": "shelf",
-        "ru": "полка"
-      },
-      {
-        "id": "vocab-lesson-11-6",
-        "en": "museum",
-        "ru": "музей"
-      },
-      {
-        "id": "vocab-lesson-11-7",
-        "en": "park",
-        "ru": "парк"
-      },
-      {
-        "id": "vocab-lesson-11-8",
-        "en": "bike",
-        "ru": "велосипед"
-      },
-      {
-        "id": "vocab-lesson-11-9",
-        "en": "cycle home",
-        "ru": "ехать домой на велосипеде"
-      },
-      {
-        "id": "vocab-lesson-11-10",
-        "en": "computer games",
-        "ru": "компьютерные игры"
-      },
-      {
-        "id": "vocab-lesson-11-11",
-        "en": "get a text",
-        "ru": "получить сообщение"
-      },
-      {
-        "id": "vocab-lesson-11-12",
-        "en": "visitor",
-        "ru": "посетитель; гость"
-      },
-      {
-        "id": "vocab-lesson-11-13",
-        "en": "have a barbecue",
-        "ru": "устроить барбекю"
-      },
-      {
-        "id": "vocab-lesson-11-14",
-        "en": "write a report",
-        "ru": "писать отчёт"
-      },
-      {
-        "id": "vocab-lesson-11-15",
-        "en": "answer the phone",
-        "ru": "ответить на телефонный звонок"
-      },
-      {
-        "id": "vocab-lesson-11-16",
-        "en": "get into a taxi",
-        "ru": "сесть в такси"
-      },
-      {
-        "id": "vocab-lesson-11-17",
-        "en": "crash (computer)",
-        "ru": "дать сбой; выйти из строя (о компьютере)"
-      }
-    ]
   }
 ];
