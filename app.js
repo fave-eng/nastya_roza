@@ -1652,9 +1652,8 @@
         : options.map((option, optionIndex) => `<label class="pronunciation-g-choice circle-choice"><input type="radio" name="${escapeHtml(inputName)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('');
 
       return `<tr class="${item.example ? 'exercise-example' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="single">
-        <td class="pronunciation-g-number">${escapeHtml(number)}</td>
         <td class="pronunciation-g-sound"><strong>${escapeHtml(sound)}</strong><span>${escapeHtml(soundWord)}</span></td>
-        <td><div class="pronunciation-g-options">${optionsMarkup}</div>${item.example ? '' : '<div class="feedback" aria-live="polite"></div>'}</td>
+        <td class="pronunciation-g-answer-cell"><div class="pronunciation-g-row"><span class="pronunciation-g-number">${escapeHtml(number)}</span><div class="pronunciation-g-options">${optionsMarkup}</div></div>${item.example ? '' : '<div class="feedback" aria-live="polite"></div>'}</td>
       </tr>`;
     }).join('');
 
