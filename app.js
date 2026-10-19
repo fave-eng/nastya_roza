@@ -1450,7 +1450,8 @@
       const tail = item.segments.length > exampleAnswers.length
         ? `<span>${escapeHtml(item.segments[item.segments.length - 1])}</span>`
         : '';
-      return `<div class="exercise-item exercise-example" data-exercise-item="${escapeHtml(itemId)}" data-input-type="gaps">
+      return `<div class="exercise-item exercise-example${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="gaps">
+        ${itemMedia}
         <div class="exercise-item-inline-row">${numberMarkup}<div class="exercise-item-inline-content">${prompt ? `<div class="exercise-answer-question">${prompt}</div>` : ''}<div class="sentence-gaps example-sentence-gaps">${exampleSentence}${tail}</div></div></div>
       </div>`;
     }
@@ -1610,6 +1611,23 @@
       const { item, index } = entry;
       const inputId = `cloze-${blockId}-${itemId || index + 1}`.replace(/[^a-zA-Z0-9_-]/g, '-');
       const number = item.number === undefined ? index + 1 : item.number;
+
+      if (item.input === 'gaps') {
+        const segments = Array.isArray(item.segments) ? item.segments : [];
+        const answers = Array.isArray(item.answers) ? item.answers : [];
+        const exampleAnswers = Array.isArray(item.exampleAnswers) ? item.exampleAnswers : [];
+        const expected = item.example ? exampleAnswers : answers;
+        const content = expected.map((answer, gapIndex) => {
+          const accepted = Array.isArray(answer) ? answer : [answer];
+          const before = gapIndex < segments.length ? `<span>${escapeHtml(segments[gapIndex])}</span>` : '';
+          if (item.example) return `${before}<span class="inline-example-answer">${escapeHtml(accepted[0] || '')}</span>`;
+          const gapChars = Math.max(1, ...accepted.map((value) => safeText(value).trim().length));
+          return `${before}<input class="gap-input cloze-writing-input" style="--gap-chars:${Math.min(gapChars, 18)}" data-gap-index="${gapIndex}" aria-label="Gap ${escapeHtml(number)}.${gapIndex + 1}" autocomplete="off">`;
+        }).join('');
+        const tail = segments.length > expected.length ? `<span>${escapeHtml(segments[segments.length - 1])}</span>` : '';
+        return `<span class="cloze-reading-gap${item.example ? ' exercise-example' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="gaps"><sup>${escapeHtml(number)}</sup>${content}${tail}<span class="feedback" aria-live="polite"></span></span>`;
+      }
+
       return `<span class="cloze-reading-gap" data-exercise-item="${escapeHtml(itemId)}" data-input-type="select"><sup>${escapeHtml(number)}</sup><select id="${escapeHtml(inputId)}" aria-label="Choose answer ${escapeHtml(number)}"><option value="">Choose</option>${(item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('')}</select><span class="feedback" aria-live="polite"></span></span>`;
     };
 

@@ -3459,3 +3459,21 @@ label.odd-option {
   .grammar-timeline { margin-inline: 4px; }
   .grammar-timeline-process { width: 78%; font-size: .92rem; }
 }
+
+
+/* Inline written cloze: keeps workbook articles connected while allowing typed answers. */
+.cloze-reading-gap .cloze-writing-input {
+  width: auto;
+  min-width: calc((var(--gap-chars, 6) + 1) * 0.62em);
+  max-width: 170px;
+  min-height: 36px;
+  padding: 4px 7px;
+  border: 0;
+  border-bottom: 2px solid #94a3b8;
+  border-radius: 7px 7px 2px 2px;
+  background: #f8fafc;
+  color: var(--dark);
+  font-weight: 800;
+}
+.cloze-reading-gap.is-correct .cloze-writing-input { border-bottom-color:#22c55e; background:#ecfdf5; }
+.cloze-reading-gap.is-wrong .cloze-writing-input { border-bottom-color:#f43f5e; background:#fff1f2; }

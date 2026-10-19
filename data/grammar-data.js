@@ -3189,5 +3189,414 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-be-going-to-plans-predictions",
+    "order": 9,
+    "title": "be going to (plans and predictions)",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-be-going-to-plans-predictions",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-16",
+    "glanceCards": [],
+    "miniRules": [],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
+    "examples": [],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Смысл",
+        "title": "Что выражает be going to",
+        "paragraphs": [
+          "Конструкция be going to показывает связь будущего с настоящим. Обычно она нужна в двух ситуациях: когда решение или намерение уже существует сейчас и когда по текущей ситуации видно, что событие, скорее всего, произойдёт.",
+          "Форма going to сама по себе не меняется. Меняется глагол be: am / is / are. После going to основной глагол всегда стоит в начальной форме."
+        ],
+        "examples": [
+          "I’m going to travel to Spain in August. → план уже есть.",
+          "Look at those clouds. It’s going to rain. → прогноз основан на том, что видно сейчас."
+        ]
+      },
+      {
+        "type": "formula",
+        "eyebrow": "Форма",
+        "title": "Структура предложения",
+        "intro": "Сначала выбери правильную форму be, затем going to, затем глагол без to и без окончаний.",
+        "rows": [
+          {
+            "label": "Affirmative",
+            "form": "I am / he-she-it is / you-we-they are + going to + verb",
+            "example": "She is going to book a flight."
+          },
+          {
+            "label": "Negative",
+            "form": "subject + am not / isn’t / aren’t + going to + verb",
+            "example": "We aren’t going to drive."
+          },
+          {
+            "label": "Question",
+            "form": "Am / Is / Are + subject + going to + verb?",
+            "example": "Are you going to stay in a hotel?"
+          },
+          {
+            "label": "Wh-question",
+            "form": "Question word + am/is/are + subject + going to + verb?",
+            "example": "Where are they going to stay?"
+          },
+          {
+            "label": "Short answer",
+            "form": "Yes, subject + am/is/are. / No, subject + am not/isn’t/aren’t.",
+            "example": "Is she going to come? — Yes, she is."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Два значения",
+        "title": "Plans and intentions vs predictions",
+        "intro": "Форма одна и та же, но смысл определяется контекстом.",
+        "headers": [
+          "Use",
+          "Как понять",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Plan / intention",
+            "решение принято до момента речи; человек намерен это сделать",
+            "I’m going to buy a new suitcase."
+          ],
+          [
+            "Prediction from present evidence",
+            "сейчас есть признак или ситуация, из которой логично следует прогноз",
+            "That bag is falling! It’s going to hit the floor."
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Сравнение",
+        "title": "be going to и will: когда решение было принято",
+        "intro": "Ученицы уже знают I’ll для предложения помощи и решения в момент речи. Здесь разница особенно важна.",
+        "left": {
+          "title": "BE GOING TO — план был раньше",
+          "points": [
+            "Намерение существовало до разговора.",
+            "Часто можно назвать будущий план: tonight, next week, this summer."
+          ],
+          "examples": [
+            "I’m going to call Anna tonight. I decided this morning.",
+            "We’re going to visit Rome next month."
+          ]
+        },
+        "right": {
+          "title": "WILL — решение сейчас",
+          "points": [
+            "Решение появляется в момент речи.",
+            "Также уже знакомо в предложениях помощи."
+          ],
+          "examples": [
+            "The phone is ringing. I’ll answer it.",
+            "Your bag is heavy. I’ll carry it."
+          ]
+        },
+        "note": "Если план существовал заранее, be going to обычно естественнее. Если решение появляется прямо сейчас, will естественнее."
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Планы",
+        "title": "be going to и Present Continuous для будущего",
+        "intro": "Обе конструкции могут говорить о будущем, но акцент отличается.",
+        "left": {
+          "title": "BE GOING TO",
+          "points": [
+            "Намерение / общий план.",
+            "Необязательно, чтобы уже были договорённости с другими людьми."
+          ],
+          "examples": [
+            "I’m going to visit Mia this weekend.",
+            "We’re going to move next year."
+          ]
+        },
+        "right": {
+          "title": "PRESENT CONTINUOUS",
+          "points": [
+            "Часто используется для уже организованной договорённости.",
+            "Обычно есть конкретное время, место или другой участник."
+          ],
+          "examples": [
+            "I’m meeting Mia at 6 on Saturday.",
+            "We’re flying to Paris on Friday morning."
+          ]
+        },
+        "note": "Иногда возможны оба варианта. Present Continuous чаще подчёркивает arrangement, а going to — intention."
+      },
+      {
+        "type": "text",
+        "eyebrow": "Вопросы",
+        "title": "Порядок слов в вопросе",
+        "paragraphs": [
+          "Вопрос строится с помощью формы be. Не добавляй do / does.",
+          "В вопросе am / is / are ставится перед подлежащим. После going to используется начальная форма глагола."
+        ],
+        "examples": [
+          "Are you going to fly or take the train?",
+          "What are you going to do at the airport?",
+          "Is he going to check in online?"
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Особые случаи",
+        "title": "Going to go / going to come",
+        "text": "Формы going to go и going to come грамматически возможны, но в разговорной речи часто звучит естественнее Present Continuous: We’re going to Paris next week. / She’s coming tomorrow. Не превращай это в абсолютное правило: going to go также встречается."
+      },
+      {
+        "type": "note",
+        "eyebrow": "Типичные ошибки",
+        "title": "Что проверять перед ответом",
+        "text": "I going to travel ✗ → I’m going to travel ✓. She is going to travels ✗ → She is going to travel ✓. Do you going to fly? ✗ → Are you going to fly? ✓. We are going to driving ✗ → We are going to drive ✓. После going to всегда нужна начальная форма глагола."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "going-to-step-1",
+        "title": "1. Выбери правильное объяснение или форму.",
+        "difficulty": "Легко",
+        "instructions": "Выбери один правильный вариант.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "I’m going to buy a new suitcase next week. What does the sentence express?",
+            "options": [
+              "a plan already decided",
+              "a past habit",
+              "an action happening now"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "Look at the sky. It’s going to rain. Why do we use going to?",
+            "options": [
+              "There is present evidence.",
+              "The decision was made just now.",
+              "It is a regular action."
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "Choose the correct form.",
+            "options": [
+              "She going to fly.",
+              "She is going to fly.",
+              "She is going to flies."
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "Choose the correct question.",
+            "options": [
+              "Do you going to travel?",
+              "Are you going to travel?",
+              "Are going you to travel?"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "going-to-step-2",
+        "title": "2. Поставь be going to в правильную форму.",
+        "difficulty": "Средне",
+        "instructions": "Впиши полную форму be going to + глагол.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "prompt": "book",
+            "segments": [
+              "I ",
+              " a flight tonight."
+            ],
+            "answers": [
+              [
+                "'m going to book",
+                "am going to book",
+                "’m going to book"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "prompt": "not drive",
+            "segments": [
+              "They ",
+              " to the airport."
+            ],
+            "answers": [
+              [
+                "aren't going to drive",
+                "aren’t going to drive",
+                "are not going to drive"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "prompt": "stay",
+            "segments": [
+              "",
+              " she ",
+              " in a hotel?"
+            ],
+            "answers": [
+              [
+                "Is"
+              ],
+              [
+                "going to stay"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "prompt": "take",
+            "segments": [
+              "What ",
+              " you ",
+              " with you?"
+            ],
+            "answers": [
+              [
+                "are"
+              ],
+              [
+                "going to take"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "going-to-step-3",
+        "title": "3. Выбери форму по контексту.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Выбери be going to или will в зависимости от того, был ли план заранее или решение появилось сейчас.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "I decided yesterday. I ",
+              " a taxi to the airport tomorrow."
+            ],
+            "options": [
+              "am going to take",
+              "will take"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "The phone is ringing. I ",
+              " it."
+            ],
+            "options": [
+              "am going to answer",
+              "will answer"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "Be careful! That suitcase ",
+              " off the trolley."
+            ],
+            "options": [
+              "is going to fall",
+              "will fall"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "Your boarding pass is on the printer. I ",
+              " it for you."
+            ],
+            "options": [
+              "am going to get",
+              "will get"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "going-to-step-4",
+        "title": "4. Построй предложение или вопрос.",
+        "difficulty": "Самое сложное",
+        "instructions": "Используй все данные слова и be going to.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "we / fly / to Madrid / next month",
+            "acceptedAnswers": [
+              "We are going to fly to Madrid next month.",
+              "We're going to fly to Madrid next month.",
+              "We’re going to fly to Madrid next month."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "she / not stay / at the airport hotel",
+            "acceptedAnswers": [
+              "She isn't going to stay at the airport hotel.",
+              "She isn’t going to stay at the airport hotel.",
+              "She is not going to stay at the airport hotel."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "what / you / do / after passport control ?",
+            "acceptedAnswers": [
+              "What are you going to do after passport control?"
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "look at those clouds / it / rain",
+            "acceptedAnswers": [
+              "Look at those clouds. It's going to rain.",
+              "Look at those clouds. It’s going to rain."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

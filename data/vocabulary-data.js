@@ -1514,5 +1514,102 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-9",
     "page": "irregular-verbs.html",
     "words": []
+  },
+  {
+    "id": "vocab-lesson-16",
+    "order": 16,
+    "title": "Airports",
+    "label": "Lesson 16 · 3A TripAside",
+    "icon": "✈️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-16",
+    "page": "vocabulary.html?id=vocab-lesson-16",
+    "words": [
+      {
+        "id": "vocab-lesson-16-1",
+        "en": "lift",
+        "ru": "лифт"
+      },
+      {
+        "id": "vocab-lesson-16-2",
+        "en": "gate",
+        "ru": "выход на посадку"
+      },
+      {
+        "id": "vocab-lesson-16-3",
+        "en": "trolley",
+        "ru": "багажная тележка"
+      },
+      {
+        "id": "vocab-lesson-16-4",
+        "en": "customs",
+        "ru": "таможня"
+      },
+      {
+        "id": "vocab-lesson-16-5",
+        "en": "arrivals",
+        "ru": "зона прилёта"
+      },
+      {
+        "id": "vocab-lesson-16-6",
+        "en": "terminal",
+        "ru": "терминал"
+      },
+      {
+        "id": "vocab-lesson-16-7",
+        "en": "departures",
+        "ru": "зона вылета"
+      },
+      {
+        "id": "vocab-lesson-16-8",
+        "en": "security check",
+        "ru": "досмотр службы безопасности"
+      },
+      {
+        "id": "vocab-lesson-16-9",
+        "en": "passport control",
+        "ru": "паспортный контроль"
+      },
+      {
+        "id": "vocab-lesson-16-10",
+        "en": "gate number",
+        "ru": "номер выхода на посадку"
+      },
+      {
+        "id": "vocab-lesson-16-11",
+        "en": "bag drop",
+        "ru": "стойка сдачи багажа"
+      },
+      {
+        "id": "vocab-lesson-16-12",
+        "en": "baggage reclaim",
+        "ru": "выдача багажа"
+      },
+      {
+        "id": "vocab-lesson-16-13",
+        "en": "hand luggage",
+        "ru": "ручная кладь"
+      },
+      {
+        "id": "vocab-lesson-16-14",
+        "en": "boarding pass",
+        "ru": "посадочный талон"
+      },
+      {
+        "id": "vocab-lesson-16-15",
+        "en": "board a plane",
+        "ru": "сесть на самолёт; пройти на борт"
+      },
+      {
+        "id": "vocab-lesson-16-16",
+        "en": "queue",
+        "ru": "очередь"
+      },
+      {
+        "id": "vocab-lesson-16-17",
+        "en": "suitcase",
+        "ru": "чемодан"
+      }
+    ]
   }
 ];
