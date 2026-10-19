@@ -1637,6 +1637,30 @@
     </article>`;
   }
 
+  function renderPronunciationGTable(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const rows = items.map((item, index) => {
+      const itemId = safeText(item.id, `${index + 1}`);
+      const number = item.number === undefined ? index + 1 : item.number;
+      const sound = safeText(item.sound || '');
+      const soundWord = safeText(item.soundWord || '');
+      const inputName = `exercise-${blockId}-${itemId}`.replace(/[^a-zA-Z0-9_-]/g, '-');
+      const options = Array.isArray(item.options) ? item.options : [];
+
+      const optionsMarkup = item.example
+        ? options.map((option, optionIndex) => `<span class="pronunciation-g-choice workbook-example-option${Number(item.answer) === optionIndex ? ' is-example-selected' : ''}">${escapeHtml(option)}</span>`).join('')
+        : options.map((option, optionIndex) => `<label class="pronunciation-g-choice circle-choice"><input type="radio" name="${escapeHtml(inputName)}" value="${optionIndex}"><span>${escapeHtml(option)}</span></label>`).join('');
+
+      return `<tr class="${item.example ? 'exercise-example' : ''}" data-exercise-item="${escapeHtml(itemId)}" data-input-type="single">
+        <td class="pronunciation-g-number">${escapeHtml(number)}</td>
+        <td class="pronunciation-g-sound"><strong>${escapeHtml(sound)}</strong><span>${escapeHtml(soundWord)}</span></td>
+        <td><div class="pronunciation-g-options">${optionsMarkup}</div>${item.example ? '' : '<div class="feedback" aria-live="polite"></div>'}</td>
+      </tr>`;
+    }).join('');
+
+    return `<div class="pronunciation-g-table-wrap"><table class="pronunciation-g-table" aria-label="The letter g: different sounds"><tbody>${rows}</tbody></table></div>`;
+  }
+
   function renderHolidayTable(block, blockId) {
     const items = Array.isArray(block.items) ? block.items : [];
     const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
@@ -1735,6 +1759,8 @@
       const intro = block.introTitle || block.introText ? `<div class="exercise-source"><h4>${escapeHtml(block.introTitle || '')}</h4>${block.introText ? `<p>${escapeHtml(block.introText)}</p>` : ''}</div>` : '';
       const exerciseContent = block.layout === 'cloze-reading'
         ? renderClozeReading(block, id)
+        : block.layout === 'pronunciation-g-table'
+        ? renderPronunciationGTable(block, id)
         : block.layout === 'holiday-table'
         ? renderHolidayTable(block, id)
         : block.layout === 'item-groups'

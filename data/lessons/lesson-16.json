@@ -588,7 +588,9 @@
             "baggage",
             "jogging"
           ],
-          "answer": 2
+          "answer": 2,
+          "sound": "/dʒ/",
+          "soundWord": "jazz"
         },
         {
           "id": "2",
@@ -600,7 +602,9 @@
             "guess",
             "forget"
           ],
-          "answer": 0
+          "answer": 0,
+          "sound": "/g/",
+          "soundWord": "girl"
         },
         {
           "id": "3",
@@ -612,7 +616,9 @@
             "age",
             "bigger"
           ],
-          "answer": 2
+          "answer": 2,
+          "sound": "/dʒ/",
+          "soundWord": "jazz"
         },
         {
           "id": "4",
@@ -624,7 +630,9 @@
             "foggy",
             "large"
           ],
-          "answer": 1
+          "answer": 1,
+          "sound": "/dʒ/",
+          "soundWord": "jazz"
         },
         {
           "id": "5",
@@ -636,7 +644,9 @@
             "guest",
             "region"
           ],
-          "answer": 2
+          "answer": 2,
+          "sound": "/g/",
+          "soundWord": "girl"
         },
         {
           "id": "6",
@@ -648,9 +658,12 @@
             "village",
             "agent"
           ],
-          "answer": 0
+          "answer": 0,
+          "sound": "/dʒ/",
+          "soundWord": "jazz"
         }
-      ]
+      ],
+      "layout": "pronunciation-g-table"
     },
     {
       "type": "audio",
