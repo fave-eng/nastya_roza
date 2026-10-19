@@ -3690,3 +3690,21 @@ label.odd-option {
   .pronunciation-g-choice { justify-content: flex-start; min-height: 32px; padding: 4px 7px; }
   .pronunciation-g-table .feedback { margin-left: 32px; }
 }
+
+
+/* Lesson 17 · 3A: keep the original reminder/note images medium-sized above each answer. */
+[data-task="going-to-plans-c"] .exercise-item-media {
+  width: min(100%, 430px);
+  min-height: 150px;
+  margin: 0 auto 12px;
+  background-size: contain;
+}
+[data-task="going-to-plans-c"] .exercise-item {
+  padding: 16px;
+}
+@media (max-width: 640px) {
+  [data-task="going-to-plans-c"] .exercise-item-media {
+    width: 100%;
+    min-height: 135px;
+  }
+}

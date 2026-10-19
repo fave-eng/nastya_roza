@@ -1,0 +1,349 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "title": "3A TripAside",
+  "subtitle": "Grammar · be going to (plans and predictions)",
+  "status": "available",
+  "publishedAt": "2026-10-19",
+  "totalPoints": 17,
+  "vocabularyId": "vocab-lesson-17",
+  "grammarIds": [
+    "grammar-be-going-to-plans-predictions"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "3A",
+      "title": "GRAMMAR be going to (plans and predictions)",
+      "titleLead": "GRAMMAR",
+      "titleTail": "be going to (plans and predictions)"
+    },
+    {
+      "type": "exercise",
+      "id": "going-to-match-a",
+      "title": "a Match 1–7 to a–g.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "prompt": "Wait here with the bags.",
+          "exampleAnswer": "I’m going to get a trolley."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "prompt": "Take some warm clothes.",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "prompt": "Do you want anything from the bookshop?",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "prompt": "Your passport’s nearly out of date.",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "prompt": "The traffic’s really bad.",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 5
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "prompt": "Do you want me to take you to the airport?",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 3
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "prompt": "We don’t need to book a taxi.",
+          "input": "select",
+          "options": [
+            "I’m going to buy something to read on the plane.",
+            "When are you going to get a new one?",
+            "It’s going to be cold in New York.",
+            "It’s OK. I’m going to get the bus.",
+            "My brother’s going to pick us up at the airport.",
+            "We’re going to miss our flight."
+          ],
+          "answer": 4
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "going-to-complete-b",
+      "title": "b Complete the sentences with be going to and a verb from the list. Use contractions where possible.",
+      "hideAnswersOnError": true,
+      "wordBank": [
+        "book",
+        "get",
+        "not fly",
+        "miss",
+        "not sleep",
+        "stay"
+      ],
+      "visualGrid": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "image": "images/lesson-17/going-to-b-1.png",
+          "imageAlt": "People in a car with luggage.",
+          "exampleLayout": "inline",
+          "prompt": "",
+          "exampleAnswer": "They’re going to miss their flight."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "image": "images/lesson-17/going-to-b-2.png",
+          "imageAlt": "A couple booking flights to Milan on a computer.",
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " our flights to Milan with easyJet."
+          ],
+          "answers": [
+            [
+              "’m going to book",
+              "'m going to book",
+              "am going to book"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "image": "images/lesson-17/going-to-b-3.png",
+          "imageAlt": "A baby crying during a flight.",
+          "input": "gaps",
+          "segments": [
+            "I’m sorry, but he ",
+            " during the flight."
+          ],
+          "answers": [
+            [
+              "isn’t going to sleep",
+              "isn't going to sleep",
+              "is not going to sleep"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "image": "images/lesson-17/going-to-b-4.png",
+          "imageAlt": "Two people travelling by taxi.",
+          "input": "gaps",
+          "segments": [
+            "How long ",
+            " you ",
+            " in Barcelona for?"
+          ],
+          "answers": [
+            [
+              "are"
+            ],
+            [
+              "going to stay"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "image": "images/lesson-17/going-to-b-5.png",
+          "imageAlt": "A plane on the ground and passengers nearby.",
+          "input": "gaps",
+          "segments": [
+            "That plane ",
+            " anywhere today."
+          ],
+          "answers": [
+            [
+              "isn’t going to fly",
+              "isn't going to fly",
+              "is not going to fly"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "image": "images/lesson-17/going-to-b-6.png",
+          "imageAlt": "A traveller standing beside a car with a flat tyre.",
+          "input": "gaps",
+          "segments": [
+            "How ",
+            " she ",
+            " to the airport?"
+          ],
+          "answers": [
+            [
+              "is"
+            ],
+            [
+              "going to get"
+            ]
+          ],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "going-to-plans-c",
+      "title": "c Write sentences about what the people are going to do.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "image": "images/lesson-17/going-to-c-1.png",
+          "imageAlt": "Jason’s phone reminder: take Suzy to the airport tomorrow.",
+          "exampleLayout": "inline",
+          "prompt": "",
+          "exampleAnswer": "Jason’s going to take Suzy to the airport tomorrow."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "image": "images/lesson-17/going-to-c-2.png",
+          "imageAlt": "Sam’s note: buy a new suitcase today.",
+          "prompt": "Sam isn’t",
+          "input": "text",
+          "acceptedAnswers": [
+            "going to buy a new suitcase today",
+            "going to buy a new suitcase today."
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "image": "images/lesson-17/going-to-c-3.png",
+          "imageAlt": "Dave’s phone reminder: meet Claire at Terminal 2 at 12.30.",
+          "prompt": "Dave’s",
+          "input": "text",
+          "acceptedAnswers": [
+            "going to meet Claire at Terminal 2 at 12.30",
+            "going to meet Claire at Terminal 2 at 12.30."
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "image": "images/lesson-17/going-to-c-4.png",
+          "imageAlt": "Sally’s note: fly from London to New York on Wednesday.",
+          "prompt": "Sally’s",
+          "input": "text",
+          "acceptedAnswers": [
+            "going to fly from London to New York on Wednesday",
+            "going to fly from London to New York on Wednesday."
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "image": "images/lesson-17/going-to-c-5.png",
+          "imageAlt": "Esme’s phone reminder: book an airport taxi this evening.",
+          "prompt": "Esme’s",
+          "input": "text",
+          "acceptedAnswers": [
+            "going to book an airport taxi this evening",
+            "going to book an airport taxi this evening."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "going-to-own-plans-d",
+      "title": "d Write three sentences about what you are going to do today, tomorrow, and next week.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "prompt": "Later today, I’m going",
+          "input": "text",
+          "scored": false
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "prompt": "Tomorrow, I",
+          "input": "text",
+          "scored": false
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "prompt": "Next week,",
+          "input": "text",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}
