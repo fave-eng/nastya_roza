@@ -36,16 +36,6 @@
         "Two minutes later",
         "when"
       ],
-      "images": [
-        {
-          "src": "images/lesson-14/amazing-holiday-photo.png",
-          "alt": "Two travellers in Peru from the original workbook photo."
-        },
-        {
-          "src": "images/lesson-14/machu-picchu-photo.png",
-          "alt": "Machu Picchu from the original workbook photo."
-        }
-      ],
       "readingTitle": "An AMAZING holiday",
       "hideAnswersOnError": true,
       "items": [
