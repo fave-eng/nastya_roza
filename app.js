@@ -1856,6 +1856,45 @@
     let correctCount = 0;
     let total = 0;
 
+    // Some workbook charts ask the learner to write a set of words into a column.
+    // The order inside the column is not part of the task, so validate the set rather
+    // than forcing the answer-key order. This branch is opt-in and does not affect
+    // existing exercises.
+    if (block.unorderedColumns === true && block.layout === 'past-columns') {
+      const items = Array.isArray(block.items) ? block.items : [];
+      const itemsById = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), item]));
+      (Array.isArray(block.columns) ? block.columns : []).forEach((column) => {
+        const expected = (Array.isArray(column.answers) ? column.answers : []).map((answer) => normalizeAnswer(answer));
+        const usedExpected = new Set();
+        (Array.isArray(column.itemIds) ? column.itemIds : []).forEach((rawItemId) => {
+          const itemId = safeText(rawItemId).trim();
+          const item = itemsById.get(itemId);
+          if (!item || item.example || item.displayOnly) return;
+          const itemNode = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+          if (!itemNode) return;
+          const value = itemNode.querySelector('input, textarea')?.value || '';
+          actual[itemId] = value;
+          total += 1;
+          const normalized = normalizeAnswer(value);
+          const matchIndex = expected.findIndex((answer, answerIndex) => answer === normalized && !usedExpected.has(answerIndex));
+          const correct = matchIndex >= 0;
+          if (correct) {
+            usedExpected.add(matchIndex);
+            correctCount += 1;
+          }
+          itemNode.classList.toggle('is-correct', correct);
+          itemNode.classList.toggle('is-wrong', !correct);
+          itemNode.classList.remove('is-saved');
+          const feedback = itemNode.querySelector('.feedback');
+          if (feedback) {
+            feedback.className = `feedback show ${correct ? 'good' : 'bad'}`;
+            feedback.textContent = correct ? 'Correct!' : 'Incorrect. Check the word and try again.';
+          }
+        });
+      });
+      return { actual, correctCount, total };
+    }
+
     (Array.isArray(block.items) ? block.items : []).forEach((item, index) => {
       if (item.example || item.displayOnly) return;
       const itemId = safeText(item.id, `${index + 1}`);

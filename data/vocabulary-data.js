@@ -73,6 +73,165 @@ window.VOCABULARY_DATA = [
     "type": "lesson"
   },
   {
+    "id": "vocab-lesson-14",
+    "order": 14,
+    "title": "Story and everyday phrases",
+    "label": "Lesson 14 · 2C One dark October evening",
+    "icon": "📖",
+    "type": "lesson",
+    "linkedLessonId": "lesson-14",
+    "page": "vocabulary.html?id=vocab-lesson-14",
+    "words": [
+      {
+        "id": "vocab-lesson-14-1",
+        "en": "spend the night",
+        "ru": "переночевать; провести ночь"
+      },
+      {
+        "id": "vocab-lesson-14-2",
+        "en": "climb a mountain",
+        "ru": "подниматься на гору"
+      },
+      {
+        "id": "vocab-lesson-14-3",
+        "en": "reach the top",
+        "ru": "добраться до вершины"
+      },
+      {
+        "id": "vocab-lesson-14-4",
+        "en": "come over",
+        "ru": "подойти; подойти к кому-то"
+      },
+      {
+        "id": "vocab-lesson-14-5",
+        "en": "carry on",
+        "ru": "продолжать"
+      },
+      {
+        "id": "vocab-lesson-14-6",
+        "en": "boss",
+        "ru": "начальник"
+      },
+      {
+        "id": "vocab-lesson-14-7",
+        "en": "alarm clock",
+        "ru": "будильник"
+      },
+      {
+        "id": "vocab-lesson-14-8",
+        "en": "ticket",
+        "ru": "билет"
+      },
+      {
+        "id": "vocab-lesson-14-9",
+        "en": "cancel",
+        "ru": "отменять"
+      },
+      {
+        "id": "vocab-lesson-14-10",
+        "en": "credit card",
+        "ru": "кредитная карта"
+      },
+      {
+        "id": "vocab-lesson-14-11",
+        "en": "purse",
+        "ru": "кошелёк; женский кошелёк"
+      },
+      {
+        "id": "vocab-lesson-14-12",
+        "en": "go for a meal",
+        "ru": "пойти поесть"
+      },
+      {
+        "id": "vocab-lesson-14-13",
+        "en": "restaurant",
+        "ru": "ресторан"
+      },
+      {
+        "id": "vocab-lesson-14-14",
+        "en": "monument",
+        "ru": "памятник; монумент"
+      },
+      {
+        "id": "vocab-lesson-14-15",
+        "en": "university",
+        "ru": "университет"
+      },
+      {
+        "id": "vocab-lesson-14-16",
+        "en": "surprised",
+        "ru": "удивлённый"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-15",
+    "order": 15,
+    "title": "Verb phrases",
+    "label": "Lesson 15 · 2C One dark October evening",
+    "icon": "🗣️",
+    "type": "lesson",
+    "linkedLessonId": "lesson-15",
+    "page": "vocabulary.html?id=vocab-lesson-15",
+    "words": [
+      {
+        "id": "vocab-lesson-15-1",
+        "en": "wait for somebody",
+        "ru": "ждать кого-то"
+      },
+      {
+        "id": "vocab-lesson-15-2",
+        "en": "invite somebody to dinner",
+        "ru": "пригласить кого-то на ужин"
+      },
+      {
+        "id": "vocab-lesson-15-3",
+        "en": "give somebody your phone number",
+        "ru": "дать кому-то свой номер телефона"
+      },
+      {
+        "id": "vocab-lesson-15-4",
+        "en": "take somebody to a restaurant",
+        "ru": "сводить / отвезти кого-то в ресторан"
+      },
+      {
+        "id": "vocab-lesson-15-5",
+        "en": "play a song for somebody",
+        "ru": "поставить / сыграть песню для кого-то"
+      },
+      {
+        "id": "vocab-lesson-15-6",
+        "en": "have a great time",
+        "ru": "отлично провести время"
+      },
+      {
+        "id": "vocab-lesson-15-7",
+        "en": "stay in touch",
+        "ru": "оставаться на связи"
+      },
+      {
+        "id": "vocab-lesson-15-8",
+        "en": "be in a hurry",
+        "ru": "спешить; торопиться"
+      },
+      {
+        "id": "vocab-lesson-15-9",
+        "en": "run across the road",
+        "ru": "перебежать дорогу"
+      },
+      {
+        "id": "vocab-lesson-15-10",
+        "en": "leave home late",
+        "ru": "поздно выйти из дома"
+      },
+      {
+        "id": "vocab-lesson-15-11",
+        "en": "be alone",
+        "ru": "быть одному / одной"
+      }
+    ]
+  },
+  {
     "id": "vocab-lesson-1",
     "title": "Common verb phrases",
     "label": "Lesson 1 · 1A Are you? Can you? Do you? Did you?",
@@ -1355,97 +1514,5 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-9",
     "page": "irregular-verbs.html",
     "words": []
-  },
-  {
-    "id": "vocab-lesson-14",
-    "order": 14,
-    "title": "Story and everyday phrases",
-    "label": "Lesson 14 · 2C One dark October evening",
-    "icon": "📖",
-    "type": "lesson",
-    "linkedLessonId": "lesson-14",
-    "page": "vocabulary.html?id=vocab-lesson-14",
-    "words": [
-      {
-        "id": "vocab-lesson-14-1",
-        "en": "spend the night",
-        "ru": "переночевать; провести ночь"
-      },
-      {
-        "id": "vocab-lesson-14-2",
-        "en": "climb a mountain",
-        "ru": "подниматься на гору"
-      },
-      {
-        "id": "vocab-lesson-14-3",
-        "en": "reach the top",
-        "ru": "добраться до вершины"
-      },
-      {
-        "id": "vocab-lesson-14-4",
-        "en": "come over",
-        "ru": "подойти; подойти к кому-то"
-      },
-      {
-        "id": "vocab-lesson-14-5",
-        "en": "carry on",
-        "ru": "продолжать"
-      },
-      {
-        "id": "vocab-lesson-14-6",
-        "en": "boss",
-        "ru": "начальник"
-      },
-      {
-        "id": "vocab-lesson-14-7",
-        "en": "alarm clock",
-        "ru": "будильник"
-      },
-      {
-        "id": "vocab-lesson-14-8",
-        "en": "ticket",
-        "ru": "билет"
-      },
-      {
-        "id": "vocab-lesson-14-9",
-        "en": "cancel",
-        "ru": "отменять"
-      },
-      {
-        "id": "vocab-lesson-14-10",
-        "en": "credit card",
-        "ru": "кредитная карта"
-      },
-      {
-        "id": "vocab-lesson-14-11",
-        "en": "purse",
-        "ru": "кошелёк; женский кошелёк"
-      },
-      {
-        "id": "vocab-lesson-14-12",
-        "en": "go for a meal",
-        "ru": "пойти поесть"
-      },
-      {
-        "id": "vocab-lesson-14-13",
-        "en": "restaurant",
-        "ru": "ресторан"
-      },
-      {
-        "id": "vocab-lesson-14-14",
-        "en": "monument",
-        "ru": "памятник; монумент"
-      },
-      {
-        "id": "vocab-lesson-14-15",
-        "en": "university",
-        "ru": "университет"
-      },
-      {
-        "id": "vocab-lesson-14-16",
-        "en": "surprised",
-        "ru": "удивлённый"
-      }
-    ]
   }
 ];

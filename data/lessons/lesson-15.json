@@ -1,0 +1,589 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "title": "2C One dark October evening",
+  "subtitle": "Pronunciation · word stress · Vocabulary · verb phrases",
+  "status": "available",
+  "publishedAt": "2026-10-19",
+  "totalPoints": 28,
+  "vocabularyId": "vocab-lesson-15",
+  "grammarIds": [
+    "grammar-time-sequencers-connectors"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "2C",
+      "title": "PRONUNCIATION word stress",
+      "titleLead": "PRONUNCIATION",
+      "titleTail": "word stress"
+    },
+    {
+      "type": "exercise",
+      "id": "word-stress-a",
+      "title": "a Write the words in the chart.",
+      "hideAnswersOnError": true,
+      "layout": "past-columns",
+      "unorderedColumns": true,
+      "wordBank": [
+        "across",
+        "after",
+        "again",
+        "along",
+        "although",
+        "awful",
+        "because",
+        "before",
+        "behind",
+        "birthday",
+        "evening",
+        "hurry",
+        "invite",
+        "perfect",
+        "quickly",
+        "summer"
+      ],
+      "columns": [
+        {
+          "label": "1 First syllable stressed",
+          "example": "after",
+          "itemIds": [
+            "first-1",
+            "first-2",
+            "first-3",
+            "first-4",
+            "first-5",
+            "first-6",
+            "first-7"
+          ],
+          "answers": [
+            "awful",
+            "birthday",
+            "evening",
+            "hurry",
+            "perfect",
+            "quickly",
+            "summer"
+          ]
+        },
+        {
+          "label": "2 Second syllable stressed",
+          "example": "across",
+          "itemIds": [
+            "second-1",
+            "second-2",
+            "second-3",
+            "second-4",
+            "second-5",
+            "second-6",
+            "second-7"
+          ],
+          "answers": [
+            "again",
+            "along",
+            "although",
+            "because",
+            "before",
+            "behind",
+            "invite"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "first-1",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-2",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-3",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-4",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-5",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-6",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "first-7",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-1",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-2",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-3",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-4",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-5",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-6",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        },
+        {
+          "id": "second-7",
+          "number": "",
+          "input": "text",
+          "placeholder": ""
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "word-stress-b",
+      "title": "b 2.3 Listen and check. Then listen again and repeat the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_2.3.mp3",
+      "response": false
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "2C",
+      "title": "VOCABULARY verb phrases",
+      "titleLead": "VOCABULARY",
+      "titleTail": "verb phrases"
+    },
+    {
+      "type": "exercise",
+      "id": "verb-phrases-a",
+      "title": "a Match the sentence halves.",
+      "hideAnswersOnError": true,
+      "wordBanks": [
+        {
+          "label": "Endings",
+          "words": [
+            "a  her to dinner.",
+            "b  for her at the door.",
+            "c  a great time.",
+            "d  in a club.",
+            "e  to a nice restaurant.",
+            "f  the club very late.",
+            "g  a song for her.",
+            "h  him her phone number."
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "Jamie and Hannah met ",
+            "."
+          ],
+          "exampleAnswers": [
+            "d"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "He played ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "She left ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "He waited ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "She gave ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 7
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "He invited ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "He took her ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "segments": [
+            "They had ",
+            "."
+          ],
+          "options": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "verb-phrases-b",
+      "title": "b Complete the sentences with a verb from the list.",
+      "hideAnswersOnError": true,
+      "wordBank": [
+        "’m",
+        "driving",
+        "gave",
+        "invited",
+        "left",
+        "played",
+        "ran",
+        "waiting"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "We had a great night at the club, and we only ",
+            " at about five in the morning."
+          ],
+          "exampleAnswers": [
+            "left"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "Sally was alone in the restaurant, but I think she was ",
+            " for somebody."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 7
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "Oliver liked Helena, so he ",
+            " her to dinner."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "I can’t talk now because I ",
+            " in a hurry."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "When I saw Harry, he was ",
+            " along the high street in his new car."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "Lara spoke to the DJ, and he ",
+            " her favourite song."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "The cat ",
+            " across the road, but I stopped the car in time."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "segments": [
+            "Jane wanted to stay in touch, so I ",
+            " her my phone number."
+          ],
+          "options": [
+            "’m",
+            "driving",
+            "gave",
+            "invited",
+            "left",
+            "played",
+            "ran",
+            "waiting"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "verb-phrases-c",
+      "title": "c Answer the questions about you. Write full sentences.",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "textarea",
+          "prompt": "When was the last time someone invited you to dinner?",
+          "scored": false
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "textarea",
+          "prompt": "How often do you leave home late for work / class?",
+          "scored": false
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "textarea",
+          "prompt": "When you go to parties, do you usually have a good time?",
+          "scored": false
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "textarea",
+          "prompt": "Where do you usually meet your friends?",
+          "scored": false
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "textarea",
+          "prompt": "Have you ever waited more than an hour for somebody who was late?",
+          "scored": false
+        }
+      ]
+    }
+  ]
+}
