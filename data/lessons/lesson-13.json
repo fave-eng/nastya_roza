@@ -1,0 +1,944 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "title": "Revision: 1A–2B",
+  "subtitle": "7 new review exercises · grammar, functional English and pronunciation · vocabulary check",
+  "status": "available",
+  "publishedAt": "2026-10-19",
+  "totalPoints": 78,
+  "grammarIds": [
+    "grammar-word-order-questions",
+    "grammar-present-simple",
+    "grammar-present-continuous",
+    "grammar-will-offers",
+    "grammar-past-simple-regular-irregular",
+    "grammar-at-in-on",
+    "grammar-past-continuous"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "FULL REVIEW",
+      "title": "GRAMMAR & FUNCTIONAL ENGLISH"
+    },
+    {
+      "type": "exercise",
+      "id": "review-questions-new",
+      "title": "1 Rewrite the questions correctly.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "Where you do usually have lunch?",
+          "acceptedAnswers": [
+            "Where do you usually have lunch?"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "What time does your sister gets up?",
+          "acceptedAnswers": [
+            "What time does your sister get up?"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "Did you went out last night?",
+          "acceptedAnswers": [
+            "Did you go out last night?"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "Where you were born?",
+          "acceptedAnswers": [
+            "Where were you born?"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "Can your friend speaks English?",
+          "acceptedAnswers": [
+            "Can your friend speak English?"
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "What time your lesson does start?",
+          "acceptedAnswers": [
+            "What time does your lesson start?"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "review-present-simple-new",
+      "title": "2 Complete the sentences with the present simple form. Put the adverb in the correct position.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "prompt": "usually / start",
+          "segments": [
+            "Maya ",
+            " work at 9.00."
+          ],
+          "answers": [
+            [
+              "usually starts"
+            ]
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "not / often / watch",
+          "segments": [
+            "My parents ",
+            " TV in the evening."
+          ],
+          "answers": [
+            [
+              "don't often watch",
+              "do not often watch"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "hardly ever / go",
+          "segments": [
+            "Leo ",
+            " to the cinema."
+          ],
+          "answers": [
+            [
+              "hardly ever goes"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "always / have",
+          "segments": [
+            "We ",
+            " coffee after class."
+          ],
+          "answers": [
+            [
+              "always have"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "not / usually / work",
+          "segments": [
+            "Anna ",
+            " on Saturdays."
+          ],
+          "answers": [
+            [
+              "doesn't usually work",
+              "doesn’t usually work",
+              "does not usually work"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "sometimes / be",
+          "segments": [
+            "She ",
+            " tired after work."
+          ],
+          "answers": [
+            [
+              "is sometimes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "review-present-tenses-new",
+      "title": "3 Choose the correct form: present simple or present continuous.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "select-gap",
+          "segments": [
+            "I usually ",
+            " jeans to work."
+          ],
+          "options": [
+            "wear",
+            "am wearing"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "Be quiet! I ",
+            " to the receptionist."
+          ],
+          "options": [
+            "talk",
+            "am talking"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "My parents ",
+            " in Ufa, but this week they’re staying in Kazan."
+          ],
+          "options": [
+            "live",
+            "are living"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "Why ",
+            " at me?"
+          ],
+          "options": [
+            "do you look",
+            "are you looking"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "We usually ",
+            " dinner at home on Fridays."
+          ],
+          "options": [
+            "have",
+            "are having"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "This week I ",
+            " the bus because my car is at the garage."
+          ],
+          "options": [
+            "take",
+            "am taking"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "review-hotel-will-new",
+      "title": "4 Choose the best reply.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "Guest: The shower isn’t working.",
+          "options": [
+            "I’ll send someone up right now.",
+            "I send someone up yesterday.",
+            "I’m send someone up."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "Guest: Sorry to bother you, but the room is very noisy.",
+          "options": [
+            "I’ll see if we have a quieter room.",
+            "You must be noisy.",
+            "I’m sorry, I don’t offer."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "Receptionist: Can I help you?",
+          "options": [
+            "I have a problem with the wi-fi.",
+            "I’ll have a problem yesterday.",
+            "I problem the wi-fi."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "Guest: There isn’t any hot water.",
+          "options": [
+            "I’ll send somebody up to check it.",
+            "I checked it tomorrow.",
+            "I sending somebody up."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "Guest: The wi-fi signal is very weak.",
+          "options": [
+            "I’ll put you through to IT.",
+            "I’ll put IT through you.",
+            "I’m through to IT yesterday."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "Choose the natural Social English phrase.",
+          "options": [
+            "By the way, what time is breakfast?",
+            "On the way, what breakfast time?",
+            "By a way, when breakfast is?"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "review-past-tenses-new",
+      "title": "5 Complete the sentences with the past simple or past continuous form of the verbs in brackets.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "gaps",
+          "prompt": "wait / see",
+          "segments": [
+            "While I ",
+            " for the bus, I ",
+            " Alex."
+          ],
+          "answers": [
+            [
+              "was waiting"
+            ],
+            [
+              "saw"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "prompt": "look / ring",
+          "segments": [
+            "Rosa ",
+            " for her passport when her phone ",
+            "."
+          ],
+          "answers": [
+            [
+              "was looking"
+            ],
+            [
+              "rang"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "prompt": "have / go",
+          "segments": [
+            "We ",
+            " dinner when the lights ",
+            " out."
+          ],
+          "answers": [
+            [
+              "were having"
+            ],
+            [
+              "went"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "prompt": "drop / get",
+          "segments": [
+            "He ",
+            " his keys while he ",
+            " into the taxi."
+          ],
+          "answers": [
+            [
+              "dropped"
+            ],
+            [
+              "was getting"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "prompt": "not sleep / call",
+          "segments": [
+            "They ",
+            " when I ",
+            " them."
+          ],
+          "answers": [
+            [
+              "weren't sleeping",
+              "weren’t sleeping",
+              "were not sleeping"
+            ],
+            [
+              "called"
+            ]
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "prompt": "do / arrive",
+          "segments": [
+            "What ",
+            " you ",
+            " when the manager ",
+            "?"
+          ],
+          "answers": [
+            [
+              "were"
+            ],
+            [
+              "doing"
+            ],
+            [
+              "arrived"
+            ]
+          ],
+          "scorePerGap": true
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "review-prepositions-new",
+      "title": "6 Complete the travel plan with at, in, or on.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "select-gaps",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "Our train leaves ",
+            " Friday ",
+            " 7.45 ",
+            " the morning."
+          ],
+          "answers": [
+            2,
+            0,
+            1
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gaps",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "We’re staying ",
+            " a small hotel ",
+            " the city centre."
+          ],
+          "answers": [
+            0,
+            1
+          ],
+          "scorePerGap": true
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "Meet me ",
+            " the airport."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "The tickets are ",
+            " the table."
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "We usually travel ",
+            " summer."
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "My birthday is ",
+            " 18th November."
+          ],
+          "answer": 2
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "I never drive ",
+            " night."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "segments": [
+            "There’s a café ",
+            " the second floor."
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "REVIEW",
+      "title": "PRONUNCIATION"
+    },
+    {
+      "type": "exercise",
+      "id": "review-pronunciation-new",
+      "title": "7 Choose the correct answer.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "prompt": "Which letter has a different vowel sound?",
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "prompt": "Which verb has a different final -s sound?",
+          "options": [
+            "works",
+            "likes",
+            "stops",
+            "lives"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "prompt": "Which verb has a different final sound?",
+          "options": [
+            "watches",
+            "finishes",
+            "washes",
+            "lives"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "prompt": "Which word has a different vowel sound?",
+          "options": [
+            "teacher",
+            "sister",
+            "doctor",
+            "bird"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "prompt": "Which -ed ending is different?",
+          "options": [
+            "wanted",
+            "needed",
+            "started",
+            "worked"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "prompt": "Which -ed ending is different?",
+          "options": [
+            "played",
+            "opened",
+            "called",
+            "watched"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "single",
+          "prompt": "In “We were waiting for the bus”, is were stressed or unstressed?",
+          "options": [
+            "S — stressed",
+            "U — unstressed"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "single",
+          "prompt": "In “Yes, it was”, is was stressed or unstressed?",
+          "options": [
+            "S — stressed",
+            "U — unstressed"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "EXTRA",
+      "title": "VOCABULARY CHECK"
+    },
+    {
+      "type": "exercise",
+      "id": "review-vocabulary-check",
+      "title": "Write the English word or phrase.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "говорить на иностранном языке",
+          "answer": "speak a foreign language"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "ездить в отпуск",
+          "answer": "go on holiday"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "prompt": "трудолюбивый",
+          "acceptedAnswers": [
+            "hard-working",
+            "hardworking"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "prompt": "щедрый",
+          "answer": "generous"
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "prompt": "почти никогда",
+          "answer": "hardly ever"
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "в течение недели / в будни",
+          "answer": "during the week"
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "text",
+          "prompt": "шарф",
+          "answer": "scarf"
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "text",
+          "prompt": "перед (чем-то)",
+          "answer": "in front of"
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "text",
+          "prompt": "курс по искусству",
+          "answer": "art course"
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "text",
+          "prompt": "нести сумку",
+          "answer": "carry a bag"
+        },
+        {
+          "id": "11",
+          "number": 11,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "соединить звонок с кем-то",
+          "answer": "put someone through"
+        },
+        {
+          "id": "12",
+          "number": 12,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "извините, что беспокою",
+          "answer": "sorry to bother you"
+        },
+        {
+          "id": "13",
+          "number": 13,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "по всему миру",
+          "answer": "all over the world"
+        },
+        {
+          "id": "14",
+          "number": 14,
+          "input": "text",
+          "prompt": "сделать фотографию",
+          "answer": "take a photo"
+        },
+        {
+          "id": "15",
+          "number": 15,
+          "input": "text",
+          "prompt": "арендовать",
+          "answer": "rent"
+        },
+        {
+          "id": "16",
+          "number": 16,
+          "input": "text",
+          "prompt": "регистрация на рейс",
+          "acceptedAnswers": [
+            "check-in",
+            "check in"
+          ]
+        },
+        {
+          "id": "17",
+          "number": 17,
+          "input": "text",
+          "inputSize": "wide",
+          "prompt": "осматривать достопримечательности",
+          "answer": "go sightseeing"
+        },
+        {
+          "id": "18",
+          "number": 18,
+          "input": "text",
+          "prompt": "многолюдный",
+          "answer": "crowded"
+        },
+        {
+          "id": "19",
+          "number": 19,
+          "input": "text",
+          "prompt": "получить сообщение",
+          "answer": "get a text"
+        },
+        {
+          "id": "20",
+          "number": 20,
+          "input": "text",
+          "prompt": "писать отчёт",
+          "answer": "write a report"
+        },
+        {
+          "id": "21",
+          "number": 21,
+          "input": "text",
+          "prompt": "художественная галерея",
+          "answer": "art gallery"
+        },
+        {
+          "id": "22",
+          "number": 22,
+          "input": "text",
+          "prompt": "касса",
+          "answer": "cash register"
+        }
+      ]
+    }
+  ]
+}
