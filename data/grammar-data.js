@@ -1,4 +1,4 @@
-/** A1 grammar for Anastasia and Rozalina. */
+/** Grammar data. */
 window.GRAMMAR_DATA = [
   {
     "id": "grammar-word-order-questions",
@@ -3593,6 +3593,412 @@ window.GRAMMAR_DATA = [
             "acceptedAnswers": [
               "Look at those clouds. It's going to rain.",
               "Look at those clouds. It’s going to rain."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grammar-present-continuous-future-arrangements",
+    "order": 10,
+    "title": "Present Continuous for future arrangements",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-present-continuous-future-arrangements",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-18",
+    "glanceCards": [],
+    "miniRules": [],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
+    "examples": [],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Смысл",
+        "title": "Когда Present Continuous говорит о будущем",
+        "paragraphs": [
+          "Present Continuous может описывать не только действие, которое происходит сейчас. Он также используется для будущей договорённости — arrangement: событие уже организовано, и обычно известны конкретные детали, например время, место или другой участник.",
+          "Форма остаётся той же: am / is / are + verb-ing. Будущее значение мы понимаем из контекста и указания времени."
+        ],
+        "examples": [
+          "I’m meeting Anna at 6 tomorrow. → встреча уже договорена.",
+          "We’re flying to Madrid on Friday morning. → поездка уже организована."
+        ]
+      },
+      {
+        "type": "formula",
+        "eyebrow": "Форма",
+        "title": "Структура предложения",
+        "intro": "Грамматическая форма такая же, как у обычного Present Continuous. Меняется не форма, а значение в контексте.",
+        "rows": [
+          {
+            "label": "Affirmative",
+            "form": "subject + am / is / are + verb-ing",
+            "example": "I’m seeing the dentist tomorrow."
+          },
+          {
+            "label": "Negative",
+            "form": "subject + am not / isn’t / aren’t + verb-ing",
+            "example": "We aren’t working next Monday."
+          },
+          {
+            "label": "Question",
+            "form": "Am / Is / Are + subject + verb-ing?",
+            "example": "Are you meeting Sam tonight?"
+          },
+          {
+            "label": "Wh-question",
+            "form": "Question word + am / is / are + subject + verb-ing?",
+            "example": "What are you doing this weekend?"
+          }
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Сравнение",
+        "title": "Present Continuous: сейчас или будущее?",
+        "intro": "Одинаковая форма может иметь два значения. Смотри на контекст.",
+        "left": {
+          "title": "ACTION NOW",
+          "points": [
+            "Действие происходит сейчас или около настоящего момента.",
+            "Часто встречаются now, at the moment, today."
+          ],
+          "examples": [
+            "I’m talking to Mia now.",
+            "She’s working from home this week."
+          ]
+        },
+        "right": {
+          "title": "FUTURE ARRANGEMENT",
+          "points": [
+            "Событие уже организовано на будущее.",
+            "Обычно есть будущий маркер времени или конкретная договорённость."
+          ],
+          "examples": [
+            "I’m talking to Mia at 7 tonight.",
+            "She’s meeting a client tomorrow morning."
+          ]
+        },
+        "note": "Само окончание -ing не означает будущее. Будущее значение создаётся контекстом: tomorrow, tonight, on Friday, next week и т. п."
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Планы",
+        "title": "Present Continuous vs be going to",
+        "intro": "Обе формы могут описывать будущие планы, поэтому важно понимать разницу в акценте.",
+        "left": {
+          "title": "PRESENT CONTINUOUS — arrangement",
+          "points": [
+            "План уже организован.",
+            "Часто есть конкретное время, место, билет, запись или договорённость с другим человеком."
+          ],
+          "examples": [
+            "I’m meeting Leo at the café at 6.",
+            "We’re flying to Rome on Tuesday."
+          ]
+        },
+        "right": {
+          "title": "BE GOING TO — intention / plan",
+          "points": [
+            "Намерение уже есть, но детали могут быть ещё не организованы.",
+            "Также используется для прогнозов по видимым признакам."
+          ],
+          "examples": [
+            "I’m going to visit Leo sometime next week.",
+            "Look at the sky. It’s going to rain."
+          ]
+        },
+        "note": "Иногда возможны обе формы. Present Continuous чаще подчёркивает договорённость, а be going to — намерение."
+      },
+      {
+        "type": "table",
+        "eyebrow": "Выбор формы",
+        "title": "Как понять, что это arrangement",
+        "intro": "Чем больше конкретных организационных деталей, тем естественнее Present Continuous.",
+        "headers": [
+          "Ситуация",
+          "Что важно",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "Встреча с человеком",
+            "есть договорённость / время",
+            "I’m meeting Kate at 5.30."
+          ],
+          [
+            "Поездка",
+            "есть билет / дата / рейс",
+            "We’re leaving on Saturday."
+          ],
+          [
+            "Запись / appointment",
+            "время уже назначено",
+            "He’s seeing the doctor tomorrow."
+          ],
+          [
+            "Просто намерение",
+            "детали ещё могут быть не решены",
+            "I’m going to travel more next year."
+          ]
+        ]
+      },
+      {
+        "type": "text",
+        "eyebrow": "Порядок слов",
+        "title": "Вопросы о будущих договорённостях",
+        "paragraphs": [
+          "В вопросе am / is / are ставится перед подлежащим. Do / does не используются. Глагол остаётся с -ing."
+        ],
+        "examples": [
+          "Are you doing anything tonight?",
+          "Who are you meeting after work?",
+          "What time are they leaving tomorrow?"
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Важно",
+        "title": "Present Simple для расписаний",
+        "text": "Для официального расписания или программы часто используется Present Simple: The train leaves at 8.20. Для личной организованной договорённости — Present Continuous: We’re leaving at 8.20 tomorrow."
+      },
+      {
+        "type": "note",
+        "eyebrow": "Типичные ошибки",
+        "title": "Что проверить",
+        "text": "I meeting her tomorrow ✗ → I’m meeting her tomorrow ✓. Do you meeting him tonight? ✗ → Are you meeting him tonight? ✓. I’m meet him tomorrow ✗ → I’m meeting him tomorrow ✓. Не забывай форму be и -ing."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "pc-future-step-1",
+        "title": "1. Определи значение Present Continuous.",
+        "difficulty": "Легко",
+        "instructions": "Выбери, действие происходит сейчас или это будущая договорённость.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "I’m waiting for Julia now.",
+            "options": [
+              "action now",
+              "future arrangement"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "I’m meeting Julia at 7 tonight.",
+            "options": [
+              "action now",
+              "future arrangement"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "We’re flying to Berlin next Friday.",
+            "options": [
+              "action now",
+              "future arrangement"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "They’re having lunch at the moment.",
+            "options": [
+              "action now",
+              "future arrangement"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "pc-future-step-2",
+        "title": "2. Поставь глагол в Present Continuous.",
+        "difficulty": "Средне",
+        "instructions": "Используй форму am / is / are + verb-ing.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "prompt": "meet",
+            "segments": [
+              "I ",
+              " Ben after work tomorrow."
+            ],
+            "answers": [
+              [
+                "'m meeting",
+                "am meeting",
+                "’m meeting"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "prompt": "not work",
+            "segments": [
+              "She ",
+              " on Friday."
+            ],
+            "answers": [
+              [
+                "isn't working",
+                "isn’t working",
+                "is not working"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "prompt": "fly",
+            "segments": [
+              "We ",
+              " to Paris on Monday morning."
+            ],
+            "answers": [
+              [
+                "'re flying",
+                "are flying",
+                "’re flying"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "prompt": "have",
+            "segments": [
+              "They ",
+              " dinner with us tonight."
+            ],
+            "answers": [
+              [
+                "'re having",
+                "are having",
+                "’re having"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pc-future-step-3",
+        "title": "3. Выбери форму по смыслу.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Выбери Present Continuous или be going to.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "The table is booked for 8. We ",
+              " dinner with Nina tonight."
+            ],
+            "options": [
+              "are having",
+              "are going to have"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "I want to travel more next year, but I haven’t made any bookings. I ",
+              " more next year."
+            ],
+            "options": [
+              "am travelling",
+              "am going to travel"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "My appointment is at 10 tomorrow. I ",
+              " the dentist at 10."
+            ],
+            "options": [
+              "am seeing",
+              "am going to see"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "We’ve decided to move house, but we don’t know when yet. We ",
+              " house."
+            ],
+            "options": [
+              "are moving",
+              "are going to move"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "pc-future-step-4",
+        "title": "4. Построй предложение или вопрос.",
+        "difficulty": "Самое сложное",
+        "instructions": "Используй Present Continuous для будущей договорённости.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "I / meet / Alex / at the station / tomorrow",
+            "acceptedAnswers": [
+              "I am meeting Alex at the station tomorrow.",
+              "I'm meeting Alex at the station tomorrow.",
+              "I’m meeting Alex at the station tomorrow."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "we / not work / next Monday",
+            "acceptedAnswers": [
+              "We aren't working next Monday.",
+              "We aren’t working next Monday.",
+              "We are not working next Monday."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "what time / you / leave / tomorrow ?",
+            "acceptedAnswers": [
+              "What time are you leaving tomorrow?"
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "who / she / have dinner with / tonight ?",
+            "acceptedAnswers": [
+              "Who is she having dinner with tonight?",
+              "Who’s she having dinner with tonight?",
+              "Who’s she having dinner with tonight?"
             ]
           }
         ]

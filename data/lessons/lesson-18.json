@@ -1,0 +1,656 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "title": "3B Put it in your calendar!",
+  "subtitle": "Vocabulary · verbs + prepositions · Pronunciation · linking",
+  "status": "available",
+  "publishedAt": "2026-10-19",
+  "totalPoints": 26,
+  "vocabularyId": "vocab-lesson-18",
+  "grammarIds": [
+    "grammar-present-continuous-future-arrangements"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "3B",
+      "title": "VOCABULARY verbs + prepositions",
+      "titleLead": "VOCABULARY",
+      "titleTail": "verbs + prepositions"
+    },
+    {
+      "type": "exercise",
+      "id": "verbs-prepositions-a",
+      "title": "a Complete the sentences with a word from the list.",
+      "wordBank": [
+        "about",
+        "at",
+        "for (x2)",
+        "in",
+        "of",
+        "on",
+        "to"
+      ],
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "What do you think ",
+            " Jenny’s new boyfriend?"
+          ],
+          "exampleAnswers": [
+            "of"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "What do you talk ",
+            " when you go out with your friends?"
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "We’d like to go away at the weekend, but it depends ",
+            " the weather."
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "When you and Megan went out for dinner, who paid ",
+            " the meal?"
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "Excuse me, I asked ",
+            " the fish, not the pasta."
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "We left home late, but we arrived ",
+            " the station in time to catch the train."
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "I don’t believe ",
+            " ghosts, but I wouldn’t like to sleep in that old house."
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "segments": [
+            "What’s the name of the song you were listening ",
+            "? I really liked it."
+          ],
+          "options": [
+            "about",
+            "at",
+            "for",
+            "in",
+            "of",
+            "on",
+            "to"
+          ],
+          "answer": 6
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "verbs-prepositions-b",
+      "title": "b Complete the sentences with the correct preposition.",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "We’re arriving ",
+            " Brazil at 6.00 a.m."
+          ],
+          "exampleAnswers": [
+            "in"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "I’m worried ",
+            " my flight because it’s snowing."
+          ],
+          "answers": [
+            [
+              "about"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "I completely agree ",
+            " you."
+          ],
+          "answers": [
+            [
+              "with"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "They’re waiting ",
+            " Anna. She’s late."
+          ],
+          "answers": [
+            [
+              "for"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "She spends a lot of money ",
+            " clothes."
+          ],
+          "answers": [
+            [
+              "on"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "I’m going to speak ",
+            " my boss after lunch."
+          ],
+          "answers": [
+            [
+              "to"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "Does this book belong ",
+            " you?"
+          ],
+          "answers": [
+            [
+              "to"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "verbs-prepositions-c",
+      "layout": "dialogue",
+      "title": "c Complete the conversations with a verb from the list and a preposition.",
+      "wordBank": [
+        "agree",
+        "arrived",
+        "asked",
+        "depends",
+        "think",
+        "waiting"
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "No, I ",
+            " the chicken."
+          ],
+          "exampleAnswer": "asked for"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Fine – he ",
+            " Paris yesterday."
+          ],
+          "answers": [
+            [
+              "arrived in"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "Maybe. It ",
+            " the day. I’m busy on Saturday."
+          ],
+          "answers": [
+            [
+              "depends on"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I’m ",
+            " Sebastian, but he’s late as usual."
+          ],
+          "answers": [
+            [
+              "waiting for"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "I ",
+            " you. They’re playing well at the moment."
+          ],
+          "answers": [
+            [
+              "agree with"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "Maybe. I asked him, and he’s going to ",
+            " it."
+          ],
+          "answers": [
+            [
+              "think about"
+            ]
+          ]
+        }
+      ],
+      "dialogueLines": [
+        {
+          "speaker": "1 A",
+          "text": "Did you order the steak?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "1"
+          ]
+        },
+        {
+          "speaker": "2 A",
+          "text": "How’s Ian’s cycling holiday going?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "2"
+          ]
+        },
+        {
+          "speaker": "3 A",
+          "text": "Are you going to come to Sam’s party?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "3"
+          ]
+        },
+        {
+          "speaker": "4 A",
+          "text": "Hi, Jane! What are you doing here?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "4"
+          ]
+        },
+        {
+          "speaker": "5 A",
+          "text": "I think Manchester United are going to win the cup."
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "5"
+          ]
+        },
+        {
+          "speaker": "6 A",
+          "text": "Is your boss going to give you more money?"
+        },
+        {
+          "speaker": "B",
+          "itemIds": [
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "3B",
+      "title": "PRONUNCIATION linking",
+      "titleLead": "PRONUNCIATION",
+      "titleTail": "linking"
+    },
+    {
+      "type": "exercise",
+      "id": "linking-a",
+      "title": "a Read the sentences. Do you think the bold words are linked or not linked? Write L or Not L.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "prompt": "",
+          "contextParts": [
+            {
+              "text": "Wait for",
+              "highlight": true
+            },
+            {
+              "text": " me outside the station."
+            }
+          ],
+          "exampleAnswer": "Not L"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "text",
+          "contextParts": [
+            "What did you ",
+            {
+              "text": "think of",
+              "highlight": true
+            },
+            " the meal?"
+          ],
+          "acceptedAnswers": [
+            "L",
+            "l"
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "text",
+          "contextParts": [
+            "How much do you ",
+            {
+              "text": "spend on",
+              "highlight": true
+            },
+            " clothes?"
+          ],
+          "acceptedAnswers": [
+            "L",
+            "l"
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "text",
+          "contextParts": [
+            "Let’s ",
+            {
+              "text": "listen to",
+              "highlight": true
+            },
+            " the songs we downloaded."
+          ],
+          "acceptedAnswers": [
+            "Not L",
+            "not l",
+            "NOT L",
+            "NotL",
+            "notl"
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "text",
+          "contextParts": [
+            "Can you ",
+            {
+              "text": "pay for",
+              "highlight": true
+            },
+            " this?"
+          ],
+          "acceptedAnswers": [
+            "Not L",
+            "not l",
+            "NOT L",
+            "NotL",
+            "notl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "linking-b",
+      "title": "b 3.3 Listen and check. Then listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.3.mp3",
+      "response": false
+    },
+    {
+      "type": "exercise",
+      "id": "linking-c",
+      "title": "c 3.4 Listen to the sentences and write the missing words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.4.mp3",
+      "hideAnswersOnError": true,
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "What do you ",
+            " my new scarf?"
+          ],
+          "exampleAnswers": [
+            "think of"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "Everything ",
+            " the weather tomorrow."
+          ],
+          "answers": [
+            [
+              "depends on"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "I completely ",
+            " the meeting."
+          ],
+          "answers": [
+            [
+              "forgot about"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "I’m ",
+            " Amy."
+          ],
+          "answers": [
+            [
+              "worried about"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "Can we ",
+            " your mother?"
+          ],
+          "answers": [
+            [
+              "talk about"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "id": "linking-d",
+      "title": "d 3.4 Listen again and repeat the sentences. Link the words.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.4.mp3",
+      "response": false
+    }
+  ]
+}

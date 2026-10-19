@@ -1,4 +1,4 @@
-/** A1 vocabulary for Anastasia and Rozalina. */
+/** Vocabulary data. */
 window.VOCABULARY_DATA = [
   {
     "id": "vocab-lesson-12",
@@ -377,6 +377,98 @@ window.VOCABULARY_DATA = [
         "id": "vocab-lesson-17-8",
         "en": "miss a flight",
         "ru": "опоздать на рейс"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-18",
+    "order": 18,
+    "title": "Verbs + prepositions",
+    "label": "Lesson 18 · 3B Put it in your calendar!",
+    "icon": "🔗",
+    "type": "lesson",
+    "linkedLessonId": "lesson-18",
+    "page": "vocabulary.html?id=vocab-lesson-18",
+    "words": [
+      {
+        "id": "vocab-lesson-18-1",
+        "en": "think of",
+        "ru": "думать о; иметь мнение о"
+      },
+      {
+        "id": "vocab-lesson-18-2",
+        "en": "talk about",
+        "ru": "говорить о; обсуждать"
+      },
+      {
+        "id": "vocab-lesson-18-3",
+        "en": "depend on",
+        "ru": "зависеть от"
+      },
+      {
+        "id": "vocab-lesson-18-4",
+        "en": "pay for",
+        "ru": "платить за"
+      },
+      {
+        "id": "vocab-lesson-18-5",
+        "en": "arrive at",
+        "ru": "прибывать в / на (конкретное место)"
+      },
+      {
+        "id": "vocab-lesson-18-6",
+        "en": "arrive in",
+        "ru": "прибывать в (город / страну)"
+      },
+      {
+        "id": "vocab-lesson-18-7",
+        "en": "believe in",
+        "ru": "верить в"
+      },
+      {
+        "id": "vocab-lesson-18-8",
+        "en": "listen to",
+        "ru": "слушать"
+      },
+      {
+        "id": "vocab-lesson-18-9",
+        "en": "be worried about",
+        "ru": "беспокоиться о"
+      },
+      {
+        "id": "vocab-lesson-18-10",
+        "en": "agree with",
+        "ru": "соглашаться с"
+      },
+      {
+        "id": "vocab-lesson-18-11",
+        "en": "wait for",
+        "ru": "ждать"
+      },
+      {
+        "id": "vocab-lesson-18-12",
+        "en": "spend money on",
+        "ru": "тратить деньги на"
+      },
+      {
+        "id": "vocab-lesson-18-13",
+        "en": "speak to",
+        "ru": "говорить с"
+      },
+      {
+        "id": "vocab-lesson-18-14",
+        "en": "belong to",
+        "ru": "принадлежать"
+      },
+      {
+        "id": "vocab-lesson-18-15",
+        "en": "think about",
+        "ru": "обдумывать; думать о"
+      },
+      {
+        "id": "vocab-lesson-18-16",
+        "en": "forget about",
+        "ru": "забыть о"
       }
     ]
   },
