@@ -3708,3 +3708,58 @@ label.odd-option {
     min-height: 135px;
   }
 }
+
+/* Complete workbook-style example rows when the example also has source text. */
+.exercise-example-with-context .exercise-item-header {
+  margin-bottom: 6px;
+}
+
+.exercise-example-context-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-left: 43px;
+  padding: 10px 0 2px;
+}
+
+.exercise-example-context-sentence .exercise-source-line {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.exercise-example-context-answer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.exercise-example-context-answer span {
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.exercise-example-context-answer strong {
+  min-width: 64px;
+  padding: 5px 9px;
+  border-bottom: 2px solid #cbd5e1;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .exercise-example-context-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-left: 0;
+  }
+  .exercise-example-context-answer {
+    justify-self: start;
+  }
+}

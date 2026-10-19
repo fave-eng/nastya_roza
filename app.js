@@ -1457,6 +1457,17 @@
     }
 
     if (item.example) {
+      const hasContext = Boolean(context);
+      if (hasContext) {
+        return `<div class="exercise-item exercise-example exercise-example-with-context${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
+          ${itemMedia}
+          <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
+          <div class="exercise-example-context-row">
+            <div class="exercise-example-context-sentence">${context}</div>
+            ${item.exampleTextOnly ? '' : `<div class="exercise-example-context-answer"><span>Example</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
+          </div>
+        </div>`;
+      }
       return `<div class="exercise-item exercise-example${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
         ${itemMedia}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
