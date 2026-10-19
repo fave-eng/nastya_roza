@@ -1457,17 +1457,6 @@
     }
 
     if (item.example) {
-      const hasContext = Boolean(context);
-      if (hasContext) {
-        return `<div class="exercise-item exercise-example exercise-example-with-context${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
-          ${itemMedia}
-          <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
-          <div class="exercise-example-context-row">
-            <div class="exercise-example-context-sentence">${context}</div>
-            ${item.exampleTextOnly ? '' : `<div class="exercise-example-context-answer"><span>Example</span><strong>${escapeHtml(item.exampleAnswer || '')}</strong></div>`}
-          </div>
-        </div>`;
-      }
       return `<div class="exercise-item exercise-example${itemMediaClass}" data-exercise-item="${escapeHtml(itemId)}">
         ${itemMedia}
         <div class="exercise-item-header">${numberMarkup}<div class="exercise-prompt">${prompt}</div></div>
@@ -1583,13 +1572,15 @@
     }
 
     return `<div class="dialogue-exercise" role="group" aria-label="Conversation exercise">${lines.map((line) => {
-      const speaker = escapeHtml(line.speaker || '');
+      const rawSpeaker = safeText(line.speaker || '');
+      const speaker = escapeHtml(rawSpeaker);
+      const speakerClass = rawSpeaker.toLowerCase() === 'b' ? ' speaker-b' : ' speaker-a';
       const text = line.text ? `<span class="dialogue-plain-text">${escapeHtml(line.text)}</span>` : '';
       const lineItems = (Array.isArray(line.itemIds) ? line.itemIds : []).map((itemId) => {
         const entry = itemMap.get(safeText(itemId));
         return entry ? renderDialogueItem(entry.item, blockId, entry.index) : '';
       }).filter(Boolean).join(' ');
-      return `<div class="dialogue-line"><span class="dialogue-speaker" aria-label="Speaker ${speaker}">${speaker}</span><div class="dialogue-utterance">${text}${text && lineItems ? ' ' : ''}${lineItems}</div></div>`;
+      return `<div class="dialogue-line${speakerClass}" data-speaker="${speaker}"><span class="dialogue-speaker" aria-label="Speaker ${speaker}">${speaker}</span><div class="dialogue-utterance">${text}${text && lineItems ? ' ' : ''}${lineItems}</div></div>`;
     }).join('')}</div>`;
   }
 

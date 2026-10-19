@@ -1326,27 +1326,29 @@ body[data-view="lesson"] #lesson-root {
 
 /* Continuous A/B conversation layout for dialogue exercises */
 .dialogue-exercise {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 16px;
   background: #f6f8fb;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
 }
 
 .dialogue-line {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 12px;
+  display: flex;
   align-items: flex-start;
-  padding: 13px 15px;
-  border: 1px solid #dce4ee;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, .025);
+  gap: 10px;
+}
+
+.dialogue-line.speaker-b {
+  flex-direction: row-reverse;
 }
 
 .dialogue-speaker {
   width: 34px;
   height: 34px;
+  flex: 0 0 34px;
   display: grid;
   place-items: center;
   border-radius: 11px;
@@ -1356,14 +1358,27 @@ body[data-view="lesson"] #lesson-root {
   font-weight: 900;
 }
 
+.dialogue-line.speaker-b .dialogue-speaker {
+  background: #e0e7ff;
+}
+
 .dialogue-utterance {
   min-width: 0;
-  padding-top: 1px;
+  max-width: min(100%, 760px);
+  padding: 12px 14px;
+  border: 1px solid #dce4ee;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, .025);
   color: var(--dark);
   font-size: .98rem;
   font-weight: 650;
-  line-height: 2.8;
+  line-height: 2.45;
   text-wrap: pretty;
+}
+
+.dialogue-line.speaker-b .dialogue-utterance {
+  background: #f5f3ff;
 }
 
 .dialogue-item,
@@ -1550,10 +1565,10 @@ body[data-view="lesson"] #lesson-root {
     padding: 11px;
   }
 
-  .dialogue-line {
-    grid-template-columns: 30px minmax(0, 1fr);
-    gap: 9px;
-    padding: 12px 11px;
+  .dialogue-line,
+  .dialogue-line.speaker-b {
+    flex-direction: column;
+    gap: 8px;
   }
 
   .dialogue-speaker {
@@ -1563,8 +1578,9 @@ body[data-view="lesson"] #lesson-root {
   }
 
   .dialogue-utterance {
+    max-width: 100%;
     font-size: .94rem;
-    line-height: 2.65;
+    line-height: 2.35;
   }
 
   .dialogue-gap-input {
@@ -3706,60 +3722,5 @@ label.odd-option {
   [data-task="going-to-plans-c"] .exercise-item-media {
     width: 100%;
     min-height: 135px;
-  }
-}
-
-/* Complete workbook-style example rows when the example also has source text. */
-.exercise-example-with-context .exercise-item-header {
-  margin-bottom: 6px;
-}
-
-.exercise-example-context-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 18px;
-  margin-left: 43px;
-  padding: 10px 0 2px;
-}
-
-.exercise-example-context-sentence .exercise-source-line {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.55;
-}
-
-.exercise-example-context-answer {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-}
-
-.exercise-example-context-answer span {
-  color: var(--muted);
-  font-size: .7rem;
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.exercise-example-context-answer strong {
-  min-width: 64px;
-  padding: 5px 9px;
-  border-bottom: 2px solid #cbd5e1;
-  color: var(--dark);
-  font-size: 1rem;
-}
-
-@media (max-width: 640px) {
-  .exercise-example-context-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    margin-left: 0;
-  }
-  .exercise-example-context-answer {
-    justify-self: start;
   }
 }
