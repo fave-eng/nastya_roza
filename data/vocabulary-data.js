@@ -1355,5 +1355,97 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-9",
     "page": "irregular-verbs.html",
     "words": []
+  },
+  {
+    "id": "vocab-lesson-14",
+    "order": 14,
+    "title": "Story and everyday phrases",
+    "label": "Lesson 14 · 2C One dark October evening",
+    "icon": "📖",
+    "type": "lesson",
+    "linkedLessonId": "lesson-14",
+    "page": "vocabulary.html?id=vocab-lesson-14",
+    "words": [
+      {
+        "id": "vocab-lesson-14-1",
+        "en": "spend the night",
+        "ru": "переночевать; провести ночь"
+      },
+      {
+        "id": "vocab-lesson-14-2",
+        "en": "climb a mountain",
+        "ru": "подниматься на гору"
+      },
+      {
+        "id": "vocab-lesson-14-3",
+        "en": "reach the top",
+        "ru": "добраться до вершины"
+      },
+      {
+        "id": "vocab-lesson-14-4",
+        "en": "come over",
+        "ru": "подойти; подойти к кому-то"
+      },
+      {
+        "id": "vocab-lesson-14-5",
+        "en": "carry on",
+        "ru": "продолжать"
+      },
+      {
+        "id": "vocab-lesson-14-6",
+        "en": "boss",
+        "ru": "начальник"
+      },
+      {
+        "id": "vocab-lesson-14-7",
+        "en": "alarm clock",
+        "ru": "будильник"
+      },
+      {
+        "id": "vocab-lesson-14-8",
+        "en": "ticket",
+        "ru": "билет"
+      },
+      {
+        "id": "vocab-lesson-14-9",
+        "en": "cancel",
+        "ru": "отменять"
+      },
+      {
+        "id": "vocab-lesson-14-10",
+        "en": "credit card",
+        "ru": "кредитная карта"
+      },
+      {
+        "id": "vocab-lesson-14-11",
+        "en": "purse",
+        "ru": "кошелёк; женский кошелёк"
+      },
+      {
+        "id": "vocab-lesson-14-12",
+        "en": "go for a meal",
+        "ru": "пойти поесть"
+      },
+      {
+        "id": "vocab-lesson-14-13",
+        "en": "restaurant",
+        "ru": "ресторан"
+      },
+      {
+        "id": "vocab-lesson-14-14",
+        "en": "monument",
+        "ru": "памятник; монумент"
+      },
+      {
+        "id": "vocab-lesson-14-15",
+        "en": "university",
+        "ru": "университет"
+      },
+      {
+        "id": "vocab-lesson-14-16",
+        "en": "surprised",
+        "ru": "удивлённый"
+      }
+    ]
   }
 ];

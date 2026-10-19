@@ -1,0 +1,342 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "title": "2C One dark October evening",
+  "subtitle": "Grammar · time sequencers and connectors",
+  "status": "available",
+  "publishedAt": "2026-10-19",
+  "totalPoints": 15,
+  "vocabularyId": "vocab-lesson-14",
+  "grammarIds": [
+    "grammar-time-sequencers-connectors"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "",
+      "title": "GRAMMAR time sequencers and connectors",
+      "titleLead": "GRAMMAR",
+      "titleTail": "time sequencers and connectors"
+    },
+    {
+      "type": "exercise",
+      "id": "time-sequencers-a",
+      "layout": "cloze-reading",
+      "title": "a Complete the text with phrases from the list.",
+      "wordBank": [
+        "After that",
+        "One summer",
+        "Suddenly",
+        "The next day",
+        "Two minutes later",
+        "when"
+      ],
+      "images": [
+        {
+          "src": "images/lesson-14/amazing-holiday-photo.png",
+          "alt": "Two travellers in Peru from the original workbook photo."
+        },
+        {
+          "src": "images/lesson-14/machu-picchu-photo.png",
+          "alt": "Machu Picchu from the original workbook photo."
+        }
+      ],
+      "readingTitle": "An AMAZING holiday",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "options": [
+            "After that",
+            "Suddenly",
+            "The next day",
+            "Two minutes later",
+            "when"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "options": [
+            "After that",
+            "Suddenly",
+            "The next day",
+            "Two minutes later",
+            "when"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "options": [
+            "After that",
+            "Suddenly",
+            "The next day",
+            "Two minutes later",
+            "when"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "options": [
+            "After that",
+            "Suddenly",
+            "The next day",
+            "Two minutes later",
+            "when"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "options": [
+            "After that",
+            "Suddenly",
+            "The next day",
+            "Two minutes later",
+            "when"
+          ],
+          "answer": 0
+        }
+      ],
+      "readingParagraphs": [
+        [
+          "¹ One summer, I decided to travel to Peru. I flew to Lima and then travelled to a town near Machu Picchu to spend the night. ",
+          {
+            "itemId": "2"
+          },
+          ", I climbed the mountain to visit the monument. I was quite tired ",
+          {
+            "itemId": "3"
+          },
+          " I reached the top!"
+        ],
+        [
+          {
+            "itemId": "4"
+          },
+          ", I saw a man who was at the same university as me. ",
+          {
+            "itemId": "5"
+          },
+          ", he came over to speak to me, and he was just as surprised as I was."
+        ],
+        [
+          {
+            "itemId": "6"
+          },
+          ", we decided to travel together. We had a great summer, and we carried on seeing each other when we got home. In fact, we got married two years later, and we now have a beautiful daughter called Beth."
+        ]
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "connectors-b",
+      "title": "b Circle the correct ending, a or b.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Although James was very late,",
+          "options": [
+            "a  his boss didn’t say anything.",
+            "b  his boss got very angry."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "I got up late, so",
+          "options": [
+            "a  I didn’t have time for breakfast.",
+            "b  I didn’t hear the alarm clock."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "The tickets were really expensive, but",
+          "options": [
+            "a  I decided not to buy one.",
+            "b  I decided to buy one."
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Laura ran to the station because",
+          "options": [
+            "a  she was late.",
+            "b  she missed the train."
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Although my flat is small,",
+          "options": [
+            "a  I need a bigger one.",
+            "b  it’s perfect for me."
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "connectors-c",
+      "title": "c Complete the sentences with a word from the list.",
+      "hideAnswersOnError": true,
+      "wordBank": [
+        "although (x2)",
+        "because",
+        "but (x2)",
+        "so (x2)"
+      ],
+      "inlineNumberedItems": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "I didn’t have time, ",
+            " I didn’t have any breakfast."
+          ],
+          "exampleAnswers": [
+            "so"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "It was really hot, ",
+            " I had a great holiday in Egypt."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "",
+            " I don’t really like Ryan, I went on a date with him."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "The door to my flat was open, ",
+            " I called the police."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "",
+            " Mark has a lot of money, he’s really mean."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "Mandy cancelled her credit cards ",
+            " she couldn’t find her purse."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "We wanted to go for a meal after the cinema ",
+            " all the restaurants were closed."
+          ],
+          "options": [
+            "although",
+            "because",
+            "but",
+            "so"
+          ],
+          "answer": 2
+        }
+      ]
+    }
+  ]
+}

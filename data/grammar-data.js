@@ -2773,5 +2773,421 @@ window.GRAMMAR_DATA = [
       }
     ],
     "examples": []
+  },
+  {
+    "id": "grammar-time-sequencers-connectors",
+    "order": 8,
+    "title": "Time sequencers and connectors",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-time-sequencers-connectors",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-14",
+    "glanceCards": [],
+    "miniRules": [],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
+    "examples": [],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Смысл",
+        "title": "Две разные задачи: порядок событий и связь между идеями",
+        "paragraphs": [
+          "Time sequencers помогают рассказчику показать, в каком порядке происходили события. Они отвечают на вопрос «что было сначала, что потом и когда?».",
+          "Connectors связывают две идеи логически. Они показывают причину, результат или контраст. Поэтому although, because, but и so нельзя выбирать только по переводу: сначала нужно понять отношение между двумя частями предложения."
+        ],
+        "examples": [
+          "The next day, I climbed the mountain. → следующее событие во времени.",
+          "I was tired, so I went to bed. → вторая часть является результатом первой."
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Рассказ",
+        "title": "Time sequencers: как двигать историю вперёд",
+        "intro": "Эти выражения задают временную рамку или показывают следующий шаг рассказа. После выражения в начале предложения обычно ставится запятая.",
+        "headers": [
+          "Выражение",
+          "Что показывает",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "One summer",
+            "широкий момент / начало истории",
+            "One summer, I decided to travel to Peru."
+          ],
+          [
+            "The next day",
+            "следующий день",
+            "The next day, I climbed the mountain."
+          ],
+          [
+            "Two minutes later",
+            "точный промежуток до следующего события",
+            "Two minutes later, he came over to speak to me."
+          ],
+          [
+            "After that",
+            "следующий этап после уже названного события",
+            "After that, we decided to travel together."
+          ],
+          [
+            "Suddenly",
+            "внезапное, неожиданное событие",
+            "Suddenly, I saw someone I knew."
+          ],
+          [
+            "when",
+            "связывает действие с моментом / другим событием",
+            "I was tired when I reached the top."
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Причина и результат",
+        "title": "Because и so: одна ситуация, но разное направление связи",
+        "intro": "Оба слова могут описывать одну и ту же ситуацию. Разница в том, какую часть мы называем причиной, а какую — результатом.",
+        "left": {
+          "title": "BECAUSE = потому что",
+          "points": [
+            "После because идёт причина.",
+            "Можно поставить because-clause после главной части или перед ней."
+          ],
+          "examples": [
+            "I went home because I was tired.",
+            "Because I was tired, I went home."
+          ]
+        },
+        "right": {
+          "title": "SO = поэтому",
+          "points": [
+            "После so идёт результат / последствие.",
+            "В типичной конструкции две законченные идеи соединяются запятой + so."
+          ],
+          "examples": [
+            "I was tired, so I went home.",
+            "The door was open, so I called the police."
+          ]
+        },
+        "note": "Не соединяй because и so в одной и той же связи: Because I was tired, so I went home ✗."
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Контраст",
+        "title": "But и although: похожий смысл, разная грамматическая роль",
+        "intro": "Оба выражают контраст: вторая идея неожиданна на фоне первой. Но структура предложения разная.",
+        "left": {
+          "title": "BUT = но",
+          "points": [
+            "Соединяет две самостоятельные идеи.",
+            "Обычно перед but ставим запятую."
+          ],
+          "examples": [
+            "The tickets were expensive, but I bought one.",
+            "My flat is small, but it is perfect for me."
+          ]
+        },
+        "right": {
+          "title": "ALTHOUGH = хотя",
+          "points": [
+            "Вводит зависимую часть: «хотя ...».",
+            "Если although-clause стоит первой, после неё ставим запятую."
+          ],
+          "examples": [
+            "Although the tickets were expensive, I bought one.",
+            "I bought one although the tickets were expensive."
+          ]
+        },
+        "note": "Не используй although + but для одной и той же связи: Although it was expensive, but I bought it ✗."
+      },
+      {
+        "type": "formula",
+        "eyebrow": "Структура",
+        "title": "Полезные модели предложения",
+        "intro": "Запоминай не отдельное слово, а всю конструкцию вокруг него.",
+        "rows": [
+          {
+            "label": "Reason",
+            "form": "result + because + reason",
+            "example": "I stayed at home because I was ill."
+          },
+          {
+            "label": "Result",
+            "form": "reason, so + result",
+            "example": "I was ill, so I stayed at home."
+          },
+          {
+            "label": "Contrast",
+            "form": "idea 1, but + idea 2",
+            "example": "It was hot, but we had a great holiday."
+          },
+          {
+            "label": "Concession",
+            "form": "Although + clause, main clause",
+            "example": "Although I was tired, I carried on walking."
+          },
+          {
+            "label": "Sequence",
+            "form": "The next day / After that / Suddenly, + sentence",
+            "example": "After that, we travelled together."
+          },
+          {
+            "label": "When-clause",
+            "form": "main clause + when + clause",
+            "example": "I was tired when I reached the top."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "eyebrow": "Пунктуация",
+        "title": "Где нужна запятая",
+        "paragraphs": [
+          "После начальных time sequencers обычно ставим запятую: The next day, ... / After that, ... / Suddenly, ...",
+          "Перед but и so между двумя самостоятельными идеями обычно ставим запятую.",
+          "Если although-clause или when-clause стоит в начале, после неё обычно ставим запятую. Если она стоит после главной части, запятая обычно не нужна."
+        ],
+        "examples": [
+          "When I reached the top, I was tired.",
+          "I was tired when I reached the top.",
+          "Although my flat is small, it’s perfect for me."
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Типичные ошибки",
+        "title": "Что особенно важно не путать",
+        "text": "Because = причина, so = результат. But и although оба показывают контраст, но не используются вместе для одной связи. When связывает два действия или действие с моментом; After that и The next day просто двигают рассказ к следующему событию. Suddenly обозначает неожиданность, а Two minutes later — конкретный промежуток времени."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "sequencers-connectors-step-1",
+        "title": "1. Определи связь между идеями.",
+        "difficulty": "Легко",
+        "instructions": "Выбери, что показывает выделенное слово или выражение.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "I was tired, so I went to bed. — What does “so” introduce?",
+            "options": [
+              "a reason",
+              "a result",
+              "a contrast",
+              "a time"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "I went home because I felt ill. — What does “because” introduce?",
+            "options": [
+              "a reason",
+              "a result",
+              "a contrast",
+              "a time"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "Although it was raining, we went out. — What relationship does “although” show?",
+            "options": [
+              "reason",
+              "result",
+              "contrast",
+              "sequence"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "Two minutes later, the bus arrived. — What does the phrase show?",
+            "options": [
+              "a reason",
+              "an exact later point",
+              "a contrast",
+              "a result"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "sequencers-connectors-step-2",
+        "title": "2. Впиши подходящее слово или выражение.",
+        "difficulty": "Средне",
+        "instructions": "Впиши connector или time sequencer, который подходит по смыслу.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "We were hungry, ",
+              " we made dinner."
+            ],
+            "answers": [
+              [
+                "so"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "I stayed at home ",
+              " I was tired."
+            ],
+            "answers": [
+              [
+                "because"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "",
+              " the hotel was basic, it was clean."
+            ],
+            "answers": [
+              [
+                "Although",
+                "although"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "We visited the museum. ",
+              " we walked back to the hotel."
+            ],
+            "answers": [
+              [
+                "After that",
+                "after that"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sequencers-connectors-step-3",
+        "title": "3. Выбери правильную конструкцию по контексту.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Выбери слово, которое правильно показывает отношение между двумя идеями.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "I missed the bus, ",
+              " I took a taxi."
+            ],
+            "options": [
+              "because",
+              "so"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "I took a taxi ",
+              " I missed the bus."
+            ],
+            "options": [
+              "because",
+              "so"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "",
+              " the tickets were expensive, we bought them."
+            ],
+            "options": [
+              "Although",
+              "But"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "The tickets were expensive, ",
+              " we bought them."
+            ],
+            "options": [
+              "although",
+              "but"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "sequencers-connectors-step-4",
+        "title": "4. Построй предложение самостоятельно.",
+        "difficulty": "Самое сложное",
+        "instructions": "Используй все данные слова и подходящую структуру. Напиши полное предложение.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "although / it / rain / we / go for a walk",
+            "acceptedAnswers": [
+              "Although it was raining, we went for a walk.",
+              "We went for a walk although it was raining."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "I / be tired / so / I / go to bed",
+            "acceptedAnswers": [
+              "I was tired, so I went to bed."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "I / arrive home. / After that / I / phone my friend",
+            "acceptedAnswers": [
+              "I arrived home. After that, I phoned my friend."
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "when / I / reach the top / I / see the view",
+            "acceptedAnswers": [
+              "When I reached the top, I saw the view.",
+              "I saw the view when I reached the top."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
