@@ -1,4 +1,4 @@
-/** Vocabulary data. */
+/** Vocabulary for Anastasia and Rozalina. */
 window.VOCABULARY_DATA = [
   {
     "id": "vocab-lesson-12",
@@ -469,6 +469,53 @@ window.VOCABULARY_DATA = [
         "id": "vocab-lesson-18-16",
         "en": "forget about",
         "ru": "забыть о"
+      }
+    ]
+  },
+  {
+    "id": "vocab-lesson-19",
+    "order": 19,
+    "title": "Plans and arrangements",
+    "label": "Lesson 19 · 3B Put it in your calendar!",
+    "icon": "📅",
+    "type": "lesson",
+    "linkedLessonId": "lesson-19",
+    "page": "vocabulary.html?id=vocab-lesson-19",
+    "words": [
+      {
+        "id": "vocab-lesson-19-1",
+        "en": "sales conference",
+        "ru": "конференция по продажам"
+      },
+      {
+        "id": "vocab-lesson-19-2",
+        "en": "hire a car",
+        "ru": "взять машину напрокат"
+      },
+      {
+        "id": "vocab-lesson-19-3",
+        "en": "get lost",
+        "ru": "заблудиться"
+      },
+      {
+        "id": "vocab-lesson-19-4",
+        "en": "job interview",
+        "ru": "собеседование"
+      },
+      {
+        "id": "vocab-lesson-19-5",
+        "en": "recording studio",
+        "ru": "студия звукозаписи"
+      },
+      {
+        "id": "vocab-lesson-19-6",
+        "en": "pianist",
+        "ru": "пианист / пианистка"
+      },
+      {
+        "id": "vocab-lesson-19-7",
+        "en": "arrangement",
+        "ru": "договорённость; запланированная встреча / план"
       }
     ]
   },
