@@ -1,0 +1,510 @@
+{
+  "id": "lesson-22",
+  "number": 22,
+  "title": "Can you remember…? 1–3",
+  "subtitle": "Revision · grammar, vocabulary, pronunciation and reading · English File 4e Pre-Intermediate WB p. 25",
+  "status": "available",
+  "publishedAt": "2026-10-23",
+  "totalPoints": 28,
+  "vocabularyId": "vocab-lesson-22",
+  "grammarIds": [
+    "grammar-defining-relative-clauses",
+    "grammar-present-simple",
+    "grammar-past-continuous",
+    "grammar-present-continuous",
+    "grammar-be-going-to-plans-predictions"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "Revision · Units 1–3",
+      "title": "GRAMMAR",
+      "titleLead": "GRAMMAR"
+    },
+    {
+      "type": "exercise",
+      "id": "revision-grammar-1",
+      "title": "1 Circle a, b, or c.",
+      "hideAnswersOnError": true,
+      "introTitle": "Example · not scored",
+      "introText": "I know a man ___ speaks three languages. → a) who",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "I met a woman ___ went to school with you.",
+          "options": [
+            "a) who",
+            "b) which",
+            "c) where"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "How often ___ it snow here in the winter?",
+          "options": [
+            "a) is",
+            "b) do",
+            "c) does"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "We aren’t going on holiday this year ___ it’s too expensive.",
+          "options": [
+            "a) but",
+            "b) because",
+            "c) although"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "I didn’t hear the phone because I ___ to music.",
+          "options": [
+            "a) listened",
+            "b) ’m listening",
+            "c) was listening"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "In the painting, the woman ___ a long black dress.",
+          "options": [
+            "a) is wearing",
+            "b) wears",
+            "c) wear"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Look at those black clouds. It ___ soon.",
+          "options": [
+            "a) rains",
+            "b) ’s raining",
+            "c) ’s going to rain"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "Revision · Units 1–3",
+      "title": "VOCABULARY",
+      "titleLead": "VOCABULARY"
+    },
+    {
+      "type": "exercise",
+      "id": "revision-vocabulary-2",
+      "title": "2 Circle the word that is different.",
+      "hideAnswersOnError": true,
+      "introTitle": "Example · not scored",
+      "introText": "apple · banana · carrot · pear → carrot (the others are fruit)",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) check-in",
+            "b) baggage reclaim",
+            "c) sightseeing",
+            "d) passport control"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) comfortable",
+            "b) cloudy",
+            "c) foggy",
+            "d) sunny"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) blouse",
+            "b) shirt",
+            "c) top",
+            "d) leggings"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) gate",
+            "b) lift",
+            "c) terminal",
+            "d) hire"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) campsite",
+            "b) apartment",
+            "c) station",
+            "d) hotel"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Which word is different?",
+          "options": [
+            "a) clever",
+            "b) kind",
+            "c) generous",
+            "d) unfriendly"
+          ],
+          "answer": 3
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "Revision · Units 1–3",
+      "title": "PRONUNCIATION",
+      "titleLead": "PRONUNCIATION"
+    },
+    {
+      "type": "exercise",
+      "id": "revision-pronunciation-3",
+      "title": "3 Circle the word or letter with a different sound.",
+      "hideAnswersOnError": true,
+      "introTitle": "Example · not scored",
+      "introText": "day · play · cat · say → cat (a different vowel sound)",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "train · /eɪ/ · Which letter sounds different?",
+          "options": [
+            "a) A",
+            "b) J",
+            "c) K",
+            "d) R"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "jazz · /dʒ/ · Which word has a different g sound?",
+          "options": [
+            "a) agent",
+            "b) forget",
+            "c) large",
+            "d) region"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "bird · /ɜː/ · Which word has a different vowel sound?",
+          "options": [
+            "a) skirt",
+            "b) curly",
+            "c) T-shirt",
+            "d) clever"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "snake · /s/ · Which word has a different final -s sound?",
+          "options": [
+            "a) drinks",
+            "b) likes",
+            "c) misses",
+            "d) works"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "computer · /ə/ · Which word has a different vowel sound?",
+          "options": [
+            "a) trousers",
+            "b) trainers",
+            "c) shirt",
+            "d) cardigan"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "/ɪd/ · Which word has a different -ed ending?",
+          "options": [
+            "a) arrived",
+            "b) invited",
+            "c) needed",
+            "d) wanted"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 4,
+      "eyebrow": "Revision · Units 1–3",
+      "title": "GRAMMAR & VOCABULARY",
+      "titleLead": "GRAMMAR & VOCABULARY"
+    },
+    {
+      "type": "exercise",
+      "id": "revision-article-4",
+      "layout": "cloze-reading",
+      "title": "4 Read the article. Circle a, b, or c.",
+      "instructions": "Choose a, b, or c directly in each numbered gap in the article.",
+      "introTitle": "Example · not scored",
+      "introText": "Yesterday I ___ to the shop. a) go · b) went · c) going → b) went",
+      "readingTitle": "A question of love",
+      "readingParagraphs": [
+        [
+          "One day last year, when I ",
+          {
+            "itemId": "1"
+          },
+          " a coffee with my friend Jack, I told him about an interesting study. A psychologist, Dr Arthur Aron, said that two people could fall in love by asking 36 questions."
+        ],
+        [
+          "Dr Aron tested this idea on a number of men and women who ",
+          {
+            "itemId": "2"
+          },
+          " know each other. They didn’t all fall in love, but two of them later got married."
+        ],
+        [
+          "Jack and I decided to have dinner and ask each other the 36 questions, and so a few days later, we arranged to meet in a pub. I arrived a few minutes late, but Jack was waiting ",
+          {
+            "itemId": "3"
+          },
+          " me. We sat at a quiet table ",
+          {
+            "itemId": "4"
+          },
+          " the garden, and we each got out our piece of paper with the 36 questions."
+        ],
+        [
+          "We started with the easy questions, like ‘When ",
+          {
+            "itemId": "5"
+          },
+          " you last sing to yourself?’ ",
+          {
+            "itemId": "6"
+          },
+          " we asked questions ",
+          {
+            "itemId": "7"
+          },
+          " were a bit more interesting: ‘In what three ways are you ",
+          {
+            "itemId": "8"
+          },
+          " each other?’ Other questions asked what we thought about important things like relationships – for ",
+          {
+            "itemId": "9"
+          },
+          ": ‘How well do you get on with your mother?’"
+        ],
+        [
+          "When we finished, we tried the last part of the experiment. We left the pub and ",
+          {
+            "itemId": "10"
+          },
+          " for a short walk along the river. Then we stood there, looking into each other’s eyes, and we said nothing for four minutes."
+        ],
+        [
+          "So did it work? Well, yes, it did. And we are still very happy together."
+        ]
+      ],
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "select",
+          "options": [
+            "a) had",
+            "b) was having",
+            "c) have"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "options": [
+            "a) don’t",
+            "b) doesn’t",
+            "c) didn’t"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "options": [
+            "a) to",
+            "b) with",
+            "c) for"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "options": [
+            "a) at",
+            "b) in",
+            "c) on"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "options": [
+            "a) did",
+            "b) have",
+            "c) was"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "options": [
+            "a) Suddenly",
+            "b) After that",
+            "c) When"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "options": [
+            "a) who",
+            "b) which",
+            "c) where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "options": [
+            "a) similar",
+            "b) opposite",
+            "c) like"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "options": [
+            "a) example",
+            "b) kind",
+            "c) sure"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "options": [
+            "a) go",
+            "b) went",
+            "c) were going"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ]
+}

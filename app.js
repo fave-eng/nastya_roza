@@ -1564,6 +1564,11 @@
       return `<span class="dialogue-item dialogue-example" data-exercise-item="${escapeHtml(itemId)}">${gapNumber}<span>${escapeHtml(item.prompt || '')}</span></span>`;
     }
 
+    if (item.input === 'select' || item.input === 'select-gap') {
+      const options = (item.options || []).map((option, optionIndex) => `<option value="${optionIndex}">${escapeHtml(option)}</option>`).join('');
+      return `<span class="dialogue-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="select">${gapNumber}<select class="inline-select-gap" id="${escapeHtml(inputId)}" aria-label="Conversation position" style="width: 5.5rem; max-width: 100%; margin: 0 5px; vertical-align: middle"><option value="">No.</option>${options}</select><span class="feedback" aria-live="polite"></span></span>`;
+    }
+
     if (item.input !== 'gaps') {
       return `<span class="dialogue-item" data-exercise-item="${escapeHtml(itemId)}" data-input-type="${escapeHtml(item.input || 'text')}">${gapNumber}<input class="text-field dialogue-text-input" id="${escapeHtml(inputId)}" autocomplete="off" placeholder="${escapeHtml(item.placeholder || '')}"><span class="feedback" aria-live="polite"></span></span>`;
     }
@@ -1597,7 +1602,9 @@
         const entry = itemMap.get(safeText(itemId));
         return entry ? renderDialogueItem(entry.item, blockId, entry.index) : '';
       }).filter(Boolean).join(' ');
-      return `<div class="dialogue-line${speakerClass}" data-speaker="${speaker}"><span class="dialogue-speaker" aria-label="Speaker ${speaker}">${speaker}</span><div class="dialogue-utterance">${text}${text && lineItems ? ' ' : ''}${lineItems}</div></div>`;
+      const groupLabel = safeText(line.groupLabel).trim();
+      const groupHeading = groupLabel ? `<div class="exercise-subheading" style="margin-top: 12px"><h4>${escapeHtml(groupLabel)}</h4></div>` : '';
+      return `${groupHeading}<div class="dialogue-line${speakerClass}" data-speaker="${speaker}"><span class="dialogue-speaker" aria-label="Speaker ${speaker}">${speaker}</span><div class="dialogue-utterance">${text}${text && lineItems ? ' ' : ''}${lineItems}</div></div>`;
     }).join('')}</div>`;
   }
 

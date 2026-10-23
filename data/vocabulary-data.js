@@ -1945,74 +1945,196 @@ window.VOCABULARY_DATA = [
     ]
   },
   {
+    "id": "vocab-lesson-22",
+    "order": 22,
+    "title": "A question of love · useful expressions",
+    "label": "Lesson 22 · Can you remember…? 1–3",
+    "icon": "📚",
+    "type": "lesson",
+    "linkedLessonId": "lesson-22",
+    "page": "vocabulary.html?id=vocab-lesson-22",
+    "words": [
+      {
+        "id": "vocab-lesson-22-1",
+        "en": "fall in love",
+        "ru": "влюбиться"
+      },
+      {
+        "id": "vocab-lesson-22-2",
+        "en": "psychologist",
+        "ru": "психолог"
+      },
+      {
+        "id": "vocab-lesson-22-3",
+        "en": "a study",
+        "ru": "исследование"
+      },
+      {
+        "id": "vocab-lesson-22-4",
+        "en": "an experiment",
+        "ru": "эксперимент, опыт"
+      },
+      {
+        "id": "vocab-lesson-22-5",
+        "en": "a number of",
+        "ru": "некоторое количество; ряд"
+      },
+      {
+        "id": "vocab-lesson-22-6",
+        "en": "each other",
+        "ru": "друг друга"
+      },
+      {
+        "id": "vocab-lesson-22-7",
+        "en": "arrange to meet",
+        "ru": "договориться встретиться"
+      },
+      {
+        "id": "vocab-lesson-22-8",
+        "en": "a piece of paper",
+        "ru": "лист бумаги"
+      },
+      {
+        "id": "vocab-lesson-22-9",
+        "en": "get on with somebody",
+        "ru": "ладить с кем-либо"
+      },
+      {
+        "id": "vocab-lesson-22-10",
+        "en": "look into somebody’s eyes",
+        "ru": "смотреть кому-либо в глаза"
+      },
+      {
+        "id": "vocab-lesson-22-11",
+        "en": "sightseeing",
+        "ru": "осмотр достопримечательностей"
+      },
+      {
+        "id": "vocab-lesson-22-12",
+        "en": "foggy",
+        "ru": "туманный"
+      }
+    ]
+  },
+  {
     "id": "vocab-lesson-21",
     "order": 21,
-    "title": "A question of love · useful expressions",
-    "label": "Lesson 21 · Can you remember…? 1–3",
-    "icon": "📚",
+    "title": "Restaurant problems · ordering and social English",
+    "label": "Lesson 21 · Practical English: Restaurant problems",
+    "icon": "🍽️",
     "type": "lesson",
     "linkedLessonId": "lesson-21",
     "page": "vocabulary.html?id=vocab-lesson-21",
     "words": [
       {
         "id": "vocab-lesson-21-1",
-        "en": "fall in love",
-        "ru": "влюбиться"
+        "en": "a table for two",
+        "ru": "столик на двоих"
       },
       {
         "id": "vocab-lesson-21-2",
-        "en": "psychologist",
-        "ru": "психолог"
+        "en": "main course",
+        "ru": "основное блюдо"
       },
       {
         "id": "vocab-lesson-21-3",
-        "en": "a study",
-        "ru": "исследование"
+        "en": "waitress",
+        "ru": "официантка"
       },
       {
         "id": "vocab-lesson-21-4",
-        "en": "an experiment",
-        "ru": "эксперимент, опыт"
+        "en": "the bill",
+        "ru": "счёт в ресторане"
       },
       {
         "id": "vocab-lesson-21-5",
-        "en": "a number of",
-        "ru": "некоторое количество; ряд"
+        "en": "leave a tip",
+        "ru": "оставить чаевые"
       },
       {
         "id": "vocab-lesson-21-6",
-        "en": "each other",
-        "ru": "друг друга"
+        "en": "rare",
+        "ru": "с кровью, слабой прожарки (о стейке)"
       },
       {
         "id": "vocab-lesson-21-7",
-        "en": "arrange to meet",
-        "ru": "договориться встретиться"
+        "en": "medium",
+        "ru": "средней прожарки (о стейке)"
       },
       {
         "id": "vocab-lesson-21-8",
-        "en": "a piece of paper",
-        "ru": "лист бумаги"
+        "en": "well done",
+        "ru": "полностью прожаренный (о стейке)"
       },
       {
         "id": "vocab-lesson-21-9",
-        "en": "get on with somebody",
-        "ru": "ладить с кем-либо"
+        "en": "still water",
+        "ru": "вода без газа"
       },
       {
         "id": "vocab-lesson-21-10",
-        "en": "look into somebody’s eyes",
-        "ru": "смотреть кому-либо в глаза"
+        "en": "sparkling water",
+        "ru": "газированная вода"
       },
       {
         "id": "vocab-lesson-21-11",
-        "en": "sightseeing",
-        "ru": "осмотр достопримечательностей"
+        "en": "fries",
+        "ru": "картофель фри"
       },
       {
         "id": "vocab-lesson-21-12",
-        "en": "foggy",
-        "ru": "туманный"
+        "en": "a baked potato",
+        "ru": "запечённый картофель"
+      },
+      {
+        "id": "vocab-lesson-21-13",
+        "en": "to start with",
+        "ru": "для начала; прежде всего"
+      },
+      {
+        "id": "vocab-lesson-21-14",
+        "en": "any suggestions?",
+        "ru": "есть предложения?"
+      },
+      {
+        "id": "vocab-lesson-21-15",
+        "en": "That would be great.",
+        "ru": "Это было бы здорово."
+      },
+      {
+        "id": "vocab-lesson-21-16",
+        "en": "Could we have the bill, please?",
+        "ru": "Можно нам счёт, пожалуйста?"
+      },
+      {
+        "id": "vocab-lesson-21-17",
+        "en": "There's a mistake.",
+        "ru": "Здесь ошибка."
+      },
+      {
+        "id": "vocab-lesson-21-18",
+        "en": "take it back to the kitchen",
+        "ru": "отнести обратно на кухню"
+      },
+      {
+        "id": "vocab-lesson-21-19",
+        "en": "Can I get you something to start with?",
+        "ru": "Принести вам что-нибудь на закуску?"
+      },
+      {
+        "id": "vocab-lesson-21-20",
+        "en": "Would you like ...?",
+        "ru": "Хотите ...?"
+      },
+      {
+        "id": "vocab-lesson-21-21",
+        "en": "anything else",
+        "ru": "что-нибудь ещё"
+      },
+      {
+        "id": "vocab-lesson-21-22",
+        "en": "to go",
+        "ru": "пора идти"
       }
     ]
   }
