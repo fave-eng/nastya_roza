@@ -646,7 +646,8 @@
           "input": "textarea",
           "prompt": "WELL",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's the opposite of badly."
         },
         {
           "id": "down-3",
@@ -654,7 +655,8 @@
           "input": "textarea",
           "prompt": "CAMERA",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's something you take photos with."
         },
         {
           "id": "down-4",
@@ -662,7 +664,8 @@
           "input": "textarea",
           "prompt": "MUSEUM",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's a place that has lots of interesting old things like statues or paintings."
         },
         {
           "id": "down-5",
@@ -670,7 +673,8 @@
           "input": "textarea",
           "prompt": "FUNNY",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's a word that describes someone or something that makes you laugh."
         },
         {
           "id": "down-7",
@@ -678,7 +682,8 @@
           "input": "textarea",
           "prompt": "TALL",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's the opposite of short."
         },
         {
           "id": "across-3",
@@ -686,7 +691,8 @@
           "input": "textarea",
           "prompt": "CAMPSITE",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's somewhere where you can sleep in tents."
         },
         {
           "id": "across-6",
@@ -694,7 +700,8 @@
           "input": "textarea",
           "prompt": "LIFT",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's something which can take you up or down to a different floor."
         },
         {
           "id": "across-8",
@@ -702,7 +709,8 @@
           "input": "textarea",
           "prompt": "SCHOOL",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's a place where young people learn."
         },
         {
           "id": "across-9",
@@ -710,7 +718,8 @@
           "input": "textarea",
           "prompt": "QUEUE",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's a long line of people who are waiting for something."
         },
         {
           "id": "across-10",
@@ -718,7 +727,8 @@
           "input": "textarea",
           "prompt": "LAZY",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's the opposite of hard-working."
         },
         {
           "id": "across-11",
@@ -726,7 +736,8 @@
           "input": "textarea",
           "prompt": "MENU",
           "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
-          "scored": false
+          "scored": false,
+          "teacherSuggestedAnswer": "It's something that tells you what you can eat in a restaurant."
         }
       ],
       "itemGroups": [
@@ -752,7 +763,8 @@
             "across-11"
           ]
         }
-      ]
+      ],
+      "teacherAnswerKeyNote": "The workbook supplies suggested answers, not the only possible correct clues. Teacher review is required; keep scored=false."
     },
     {
       "type": "section",

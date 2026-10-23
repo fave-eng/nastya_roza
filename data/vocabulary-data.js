@@ -1943,5 +1943,77 @@ window.VOCABULARY_DATA = [
         "ru": "играть в футбол / теннис"
       }
     ]
+  },
+  {
+    "id": "vocab-lesson-21",
+    "order": 21,
+    "title": "A question of love · useful expressions",
+    "label": "Lesson 21 · Can you remember…? 1–3",
+    "icon": "📚",
+    "type": "lesson",
+    "linkedLessonId": "lesson-21",
+    "page": "vocabulary.html?id=vocab-lesson-21",
+    "words": [
+      {
+        "id": "vocab-lesson-21-1",
+        "en": "fall in love",
+        "ru": "влюбиться"
+      },
+      {
+        "id": "vocab-lesson-21-2",
+        "en": "psychologist",
+        "ru": "психолог"
+      },
+      {
+        "id": "vocab-lesson-21-3",
+        "en": "a study",
+        "ru": "исследование"
+      },
+      {
+        "id": "vocab-lesson-21-4",
+        "en": "an experiment",
+        "ru": "эксперимент, опыт"
+      },
+      {
+        "id": "vocab-lesson-21-5",
+        "en": "a number of",
+        "ru": "некоторое количество; ряд"
+      },
+      {
+        "id": "vocab-lesson-21-6",
+        "en": "each other",
+        "ru": "друг друга"
+      },
+      {
+        "id": "vocab-lesson-21-7",
+        "en": "arrange to meet",
+        "ru": "договориться встретиться"
+      },
+      {
+        "id": "vocab-lesson-21-8",
+        "en": "a piece of paper",
+        "ru": "лист бумаги"
+      },
+      {
+        "id": "vocab-lesson-21-9",
+        "en": "get on with somebody",
+        "ru": "ладить с кем-либо"
+      },
+      {
+        "id": "vocab-lesson-21-10",
+        "en": "look into somebody’s eyes",
+        "ru": "смотреть кому-либо в глаза"
+      },
+      {
+        "id": "vocab-lesson-21-11",
+        "en": "sightseeing",
+        "ru": "осмотр достопримечательностей"
+      },
+      {
+        "id": "vocab-lesson-21-12",
+        "en": "foggy",
+        "ru": "туманный"
+      }
+    ]
   }
 ];
