@@ -1802,5 +1802,146 @@ window.VOCABULARY_DATA = [
     "linkedLessonId": "lesson-9",
     "page": "irregular-verbs.html",
     "words": []
+  },
+  {
+    "id": "vocab-lesson-20",
+    "order": 20,
+    "title": "Paraphrasing and word games",
+    "label": "Lesson 20 · 3C Word games",
+    "icon": "🧩",
+    "linkedLessonId": "lesson-20",
+    "page": "vocabulary.html?id=vocab-lesson-20",
+    "words": [
+      {
+        "id": "vocab-lesson-20-1",
+        "en": "cardigan",
+        "ru": "кардиган"
+      },
+      {
+        "id": "vocab-lesson-20-2",
+        "en": "handsome",
+        "ru": "красивый (о мужчине)"
+      },
+      {
+        "id": "vocab-lesson-20-3",
+        "en": "waiter",
+        "ru": "официант"
+      },
+      {
+        "id": "vocab-lesson-20-4",
+        "en": "kind of",
+        "ru": "разновидность; вид"
+      },
+      {
+        "id": "vocab-lesson-20-5",
+        "en": "the opposite of",
+        "ru": "противоположность чему-либо"
+      },
+      {
+        "id": "vocab-lesson-20-6",
+        "en": "similar to",
+        "ru": "похожий на"
+      },
+      {
+        "id": "vocab-lesson-20-7",
+        "en": "for example",
+        "ru": "например"
+      },
+      {
+        "id": "vocab-lesson-20-8",
+        "en": "someone",
+        "ru": "кто-то; человек, который..."
+      },
+      {
+        "id": "vocab-lesson-20-9",
+        "en": "something",
+        "ru": "что-то; предмет, который..."
+      },
+      {
+        "id": "vocab-lesson-20-10",
+        "en": "somewhere",
+        "ru": "где-то; место, где..."
+      },
+      {
+        "id": "vocab-lesson-20-11",
+        "en": "fast",
+        "ru": "быстрый"
+      },
+      {
+        "id": "vocab-lesson-20-12",
+        "en": "wallet",
+        "ru": "бумажник; кошелёк"
+      },
+      {
+        "id": "vocab-lesson-20-13",
+        "en": "camera",
+        "ru": "фотоаппарат; камера"
+      },
+      {
+        "id": "vocab-lesson-20-14",
+        "en": "campsite",
+        "ru": "место для палаток; кемпинг"
+      },
+      {
+        "id": "vocab-lesson-20-15",
+        "en": "tall",
+        "ru": "высокий (о человеке или предмете)"
+      },
+      {
+        "id": "vocab-lesson-20-16",
+        "en": "menu",
+        "ru": "меню"
+      },
+      {
+        "id": "vocab-lesson-20-17",
+        "en": "pilot",
+        "ru": "пилот"
+      },
+      {
+        "id": "vocab-lesson-20-18",
+        "en": "badly",
+        "ru": "плохо"
+      },
+      {
+        "id": "vocab-lesson-20-19",
+        "en": "cute",
+        "ru": "милый; симпатичный"
+      },
+      {
+        "id": "vocab-lesson-20-20",
+        "en": "hate",
+        "ru": "ненавидеть"
+      },
+      {
+        "id": "vocab-lesson-20-21",
+        "en": "bite",
+        "ru": "кусать"
+      },
+      {
+        "id": "vocab-lesson-20-22",
+        "en": "cut",
+        "ru": "резать"
+      },
+      {
+        "id": "vocab-lesson-20-23",
+        "en": "note",
+        "ru": "банкнота; записка"
+      },
+      {
+        "id": "vocab-lesson-20-24",
+        "en": "plan",
+        "ru": "план"
+      },
+      {
+        "id": "vocab-lesson-20-25",
+        "en": "a bit",
+        "ru": "немного; чуть-чуть"
+      },
+      {
+        "id": "vocab-lesson-20-26",
+        "en": "play football / tennis",
+        "ru": "играть в футбол / теннис"
+      }
+    ]
   }
 ];

@@ -1,0 +1,979 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "title": "3C Word games",
+  "subtitle": "Grammar · defining relative clauses · Vocabulary · paraphrasing · Pronunciation · silent e",
+  "status": "available",
+  "publishedAt": "2026-10-23",
+  "totalPoints": 44,
+  "vocabularyId": "vocab-lesson-20",
+  "grammarIds": [
+    "grammar-defining-relative-clauses"
+  ],
+  "notification": {
+    "enabled": true,
+    "version": 1
+  },
+  "blocks": [
+    {
+      "type": "section",
+      "sectionNumber": 1,
+      "eyebrow": "3C",
+      "title": "GRAMMAR defining relative clauses",
+      "titleLead": "GRAMMAR",
+      "titleTail": "defining relative clauses"
+    },
+    {
+      "type": "exercise",
+      "id": "relative-halves-a",
+      "title": "a Match the sentence halves.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "exampleLayout": "inline",
+          "prompt": "That's the church",
+          "exampleAnswer": "where we got married."
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "I need a phone ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "My mum is the only person ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "I love the picture ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "That bus is the one ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "Glastonbury is the place ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "Vermeer is the artist ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select-gap",
+          "segments": [
+            "That's the restaurant ",
+            "."
+          ],
+          "options": [
+            "which has a good camera",
+            "which goes to Trafalgar Square",
+            "which has the fresh fish",
+            "who remembers my birthday",
+            "who painted The Milkmaid",
+            "where they have a famous music festival",
+            "which is on your bedroom wall"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "relative-choice-b",
+      "title": "b Circle the correct words.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Do you know the man ___ lives next door?",
+          "options": [
+            "who",
+            "which"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "That's the gallery ___ they had the Leonardo da Vinci exhibition.",
+          "options": [
+            "which",
+            "where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Are your neighbours the people ___ won the lottery last year?",
+          "options": [
+            "which",
+            "that"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Do you know a good restaurant ___ is open on Sunday night?",
+          "options": [
+            "that",
+            "where"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Is that the bus ___ goes to the airport?",
+          "options": [
+            "which",
+            "who"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "What was the name of the shop ___ you bought your jacket?",
+          "options": [
+            "where",
+            "which"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "single",
+          "optionStyle": "circle",
+          "prompt": "Maria is the woman ___ bought my old car.",
+          "options": [
+            "that",
+            "which"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "relative-complete-cd",
+      "layout": "item-groups",
+      "title": "c Complete the sentences with who, which, or where.",
+      "hideAnswersOnError": true,
+      "items": [
+        {
+          "id": "c1",
+          "number": 1,
+          "example": true,
+          "exampleLayout": "inline",
+          "prompt": "I like going to restaurants",
+          "exampleAnswer": "where you can get interesting local food."
+        },
+        {
+          "id": "c2",
+          "number": 2,
+          "input": "select-gap",
+          "segments": [
+            "The school ",
+            " my brother goes to has a great football team."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "c3",
+          "number": 3,
+          "input": "select-gap",
+          "segments": [
+            "Yesterday I met a woman ",
+            " knew my grandfather when he was young."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 0
+        },
+        {
+          "id": "c4",
+          "number": 4,
+          "input": "select-gap",
+          "segments": [
+            "I'm reading the book ",
+            " won the Booker prize this year."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "c5",
+          "number": 5,
+          "input": "select-gap",
+          "segments": [
+            "My sister went to a party in New York ",
+            " there were a lot of famous people."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "c6",
+          "number": 6,
+          "input": "select-gap",
+          "segments": [
+            "There's a shop in this street ",
+            " sells bikes."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "c7",
+          "number": 7,
+          "input": "select-gap",
+          "segments": [
+            "I want to buy a car ",
+            " doesn't use too much petrol."
+          ],
+          "options": [
+            "who",
+            "which",
+            "where"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "d-heading",
+          "displayOnly": true,
+          "displayStyle": "heading",
+          "prompt": "d In which sentences in c could you also use that?"
+        },
+        {
+          "id": "d-answer",
+          "number": "",
+          "input": "text",
+          "prompt": "Write the sentence numbers.",
+          "placeholder": "Write the numbers",
+          "acceptedAnswers": [
+            "2, 3, 4, 6 and 7",
+            "2, 3, 4, 6, 7",
+            "2,3,4,6 and 7",
+            "2,3,4,6,7",
+            "2, 3, 4, 6 & 7",
+            "2 3 4 6 7"
+          ]
+        }
+      ],
+      "itemGroups": [
+        {
+          "title": "",
+          "itemIds": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "c5",
+            "c6",
+            "c7"
+          ],
+          "inlineNumberedItems": true
+        },
+        {
+          "title": "",
+          "itemIds": [
+            "d-heading",
+            "d-answer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 2,
+      "eyebrow": "3C",
+      "title": "VOCABULARY paraphrasing",
+      "titleLead": "VOCABULARY",
+      "titleTail": "paraphrasing"
+    },
+    {
+      "type": "exercise",
+      "id": "paraphrasing-puzzle-a",
+      "layout": "crossword",
+      "title": "a Complete the word puzzle and find the hidden word.",
+      "hideAnswersOnError": true,
+      "hiddenAnswerLabel": "Hidden word",
+      "hiddenAnswerGroups": [],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "input": "crossword-word",
+          "example": true,
+          "answer": "fast",
+          "clue": "It's the opposite of slow.",
+          "hiddenLetterIndex": 2
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "crossword-word",
+          "answer": "play",
+          "clue": "It's a verb you use with lots of sports, for example football and tennis.",
+          "hiddenLetterIndex": 2
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "crossword-word",
+          "answer": "cap",
+          "clue": "It's a kind of hat.",
+          "hiddenLetterIndex": 3
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "crossword-word",
+          "answer": "thin",
+          "clue": "It's similar to slim, but a bit less positive.",
+          "hiddenLetterIndex": 2
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "crossword-word",
+          "answer": "wallet",
+          "clue": "It's something which men use to keep money in.",
+          "hiddenLetterIndex": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "crossword-word",
+          "answer": "blouse",
+          "clue": "It's like a shirt, but only for women.",
+          "hiddenLetterIndex": 1
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "crossword-word",
+          "answer": "teacher",
+          "clue": "It's somebody who works in a school.",
+          "hiddenLetterIndex": 2
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "crossword-word",
+          "answer": "hotel",
+          "clue": "It's somewhere where you can stay in a room for one or more nights.",
+          "hiddenLetterIndex": 3
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "paraphrasing-sentences-b",
+      "title": "b Complete the sentences for explaining words.",
+      "wordBank": [
+        "cardigan",
+        "mean",
+        "hire",
+        "handsome",
+        "souvenir",
+        "sunbathe",
+        "waiter",
+        "cinema"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "gaps",
+          "segments": [
+            "It's a ",
+            " of jumper."
+          ],
+          "exampleAnswers": [
+            "kind"
+          ]
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "gaps",
+          "segments": [
+            "It's the o",
+            " of generous."
+          ],
+          "answers": [
+            [
+              "pposite"
+            ]
+          ]
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "gaps",
+          "segments": [
+            "It's s",
+            " to rent."
+          ],
+          "answers": [
+            [
+              "imilar"
+            ]
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "gaps",
+          "segments": [
+            "It's l",
+            " beautiful, but it's used for men."
+          ],
+          "answers": [
+            [
+              "ike"
+            ]
+          ]
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "gaps",
+          "segments": [
+            "It's s",
+            " which you buy to remind you of your holiday."
+          ],
+          "answers": [
+            [
+              "omething"
+            ]
+          ]
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "gaps",
+          "segments": [
+            "You do this in summer, for e",
+            " on the beach."
+          ],
+          "answers": [
+            [
+              "xample"
+            ]
+          ]
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "gaps",
+          "segments": [
+            "It's s",
+            " who works in a restaurant."
+          ],
+          "answers": [
+            [
+              "omeone"
+            ]
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "gaps",
+          "segments": [
+            "It's s",
+            " where you can see a film."
+          ],
+          "answers": [
+            [
+              "omewhere"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "id": "paraphrasing-crossword-clues-c",
+      "layout": "item-groups",
+      "title": "c Write the clues for the crossword using paraphrasing and/or which, who, or where.",
+      "items": [
+        {
+          "id": "down-1",
+          "number": 1,
+          "example": true,
+          "exampleLayout": "inline",
+          "prompt": "PILOT",
+          "exampleAnswer": "It's someone who flies a plane."
+        },
+        {
+          "id": "down-2",
+          "number": 2,
+          "input": "textarea",
+          "prompt": "WELL",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "down-3",
+          "number": 3,
+          "input": "textarea",
+          "prompt": "CAMERA",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "down-4",
+          "number": 4,
+          "input": "textarea",
+          "prompt": "MUSEUM",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "down-5",
+          "number": 5,
+          "input": "textarea",
+          "prompt": "FUNNY",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "down-7",
+          "number": 7,
+          "input": "textarea",
+          "prompt": "TALL",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-3",
+          "number": 3,
+          "input": "textarea",
+          "prompt": "CAMPSITE",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-6",
+          "number": 6,
+          "input": "textarea",
+          "prompt": "LIFT",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-8",
+          "number": 8,
+          "input": "textarea",
+          "prompt": "SCHOOL",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-9",
+          "number": 9,
+          "input": "textarea",
+          "prompt": "QUEUE",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-10",
+          "number": 10,
+          "input": "textarea",
+          "prompt": "LAZY",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        },
+        {
+          "id": "across-11",
+          "number": 11,
+          "input": "textarea",
+          "prompt": "MENU",
+          "placeholder": "Write a clue using paraphrasing and/or a relative clause.",
+          "scored": false
+        }
+      ],
+      "itemGroups": [
+        {
+          "title": "DOWN ↓",
+          "itemIds": [
+            "down-1",
+            "down-2",
+            "down-3",
+            "down-4",
+            "down-5",
+            "down-7"
+          ]
+        },
+        {
+          "title": "ACROSS →",
+          "itemIds": [
+            "across-3",
+            "across-6",
+            "across-8",
+            "across-9",
+            "across-10",
+            "across-11"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "sectionNumber": 3,
+      "eyebrow": "3C",
+      "title": "PRONUNCIATION silent e",
+      "titleLead": "PRONUNCIATION",
+      "titleTail": "silent e"
+    },
+    {
+      "type": "exercise",
+      "id": "silent-e-audio-a",
+      "title": "a Listen to the sentences. Write the word you hear from the list.",
+      "instructions": "b Listen again and repeat the sentences.",
+      "audio": "audio/English_File_4e_Pre-intermediate_WB_3.5.mp3",
+      "wordBank": [
+        "bit",
+        "bite",
+        "cut",
+        "cute",
+        "hat",
+        "hate",
+        "not",
+        "note",
+        "plan",
+        "plane"
+      ],
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "example": true,
+          "input": "select",
+          "prompt": "",
+          "exampleAnswer": "hat",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 4
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 3
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 5
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 9
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 2
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 7
+        },
+        {
+          "id": "7",
+          "number": 7,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 8
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 1
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 6
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "input": "select",
+          "prompt": "",
+          "options": [
+            "bit",
+            "bite",
+            "cut",
+            "cute",
+            "hat",
+            "hate",
+            "not",
+            "note",
+            "plan",
+            "plane"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ]
+}

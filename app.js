@@ -1130,8 +1130,12 @@
     const followUp = followUpItems.length
       ? `<div class="crossword-follow-up exercise-items">${followUpItems.map((item, itemIndex) => renderExerciseItem(item, blockId, crosswordItems.length + itemIndex, true)).join('')}</div>`
       : '';
-    return `<div class="crossword-workspace" data-crossword-workspace>
-      <div class="crossword-grid-panel"><div class="crossword-grid" role="group" aria-label="Interactive crossword">${rows}</div><div class="crossword-hidden-answer"><span class="eyebrow">Hidden kind of shop</span><strong data-crossword-hidden-preview aria-live="polite"></strong></div></div>
+    const hiddenAnswerLabel = escapeHtml(safeText(block.hiddenAnswerLabel, 'Hidden kind of shop'));
+    const hiddenAnswerGroups = Array.isArray(block.hiddenAnswerGroups)
+      ? block.hiddenAnswerGroups.map(Number).filter((length) => Number.isFinite(length) && length > 0).join(',')
+      : '6,4,5';
+    return `<div class="crossword-workspace" data-crossword-workspace data-crossword-group-lengths="${escapeHtml(hiddenAnswerGroups)}">
+      <div class="crossword-grid-panel"><div class="crossword-grid" role="group" aria-label="Interactive crossword">${rows}</div><div class="crossword-hidden-answer"><span class="eyebrow">${hiddenAnswerLabel}</span><strong data-crossword-hidden-preview aria-live="polite"></strong></div></div>
       <div class="crossword-clues" aria-label="Crossword clues">${clues}</div>
     </div>${followUp}`;
   }
@@ -1141,8 +1145,21 @@
     const preview = workspace.querySelector('[data-crossword-hidden-preview]');
     if (!preview) return;
     const letters = [...workspace.querySelectorAll('[data-crossword-hidden]')].map((input) => safeText(input.value).trim().toUpperCase() || '_');
-    const chunks = [letters.slice(0, 6), letters.slice(6, 10), letters.slice(10, 15)].filter((chunk) => chunk.length);
-    preview.textContent = chunks.map((chunk) => chunk.join('')).join(' ');
+    const groupLengths = safeText(workspace.dataset.crosswordGroupLengths)
+      .split(',').map(Number).filter((length) => Number.isFinite(length) && length > 0);
+    if (!groupLengths.length) {
+      preview.textContent = letters.join('');
+      return;
+    }
+    const chunks = [];
+    let offset = 0;
+    groupLengths.forEach((length) => {
+      if (offset >= letters.length) return;
+      chunks.push(letters.slice(offset, offset + length));
+      offset += length;
+    });
+    if (offset < letters.length) chunks.push(letters.slice(offset));
+    preview.textContent = chunks.filter((chunk) => chunk.length).map((chunk) => chunk.join('')).join(' ');
   }
 
   function wireLessonInteractiveInputs(root) {

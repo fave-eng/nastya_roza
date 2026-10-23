@@ -4004,5 +4004,423 @@ window.GRAMMAR_DATA = [
         ]
       }
     ]
+  },
+  {
+    "id": "grammar-defining-relative-clauses",
+    "order": 11,
+    "title": "Defining relative clauses",
+    "level": "A2",
+    "status": "available",
+    "page": "grammar-topic.html?id=grammar-defining-relative-clauses",
+    "passed": false,
+    "attempts": 0,
+    "lockOnPass": true,
+    "revealAnswersOnError": false,
+    "linkedLessonId": "lesson-20",
+    "glanceCards": [
+      {
+        "icon": "WHO",
+        "label": "Люди",
+        "hint": "Кто именно?",
+        "pattern": "a person who...",
+        "example": "The woman who called me is my neighbour."
+      },
+      {
+        "icon": "WHICH",
+        "label": "Вещи и животные",
+        "hint": "Что именно?",
+        "pattern": "a thing which...",
+        "example": "The phone which takes better photos is expensive."
+      },
+      {
+        "icon": "WHERE",
+        "label": "Место действия",
+        "hint": "Где происходит действие?",
+        "pattern": "a place where...",
+        "example": "This is the café where we met."
+      },
+      {
+        "icon": "THAT",
+        "label": "Who / which в defining clause",
+        "hint": "Может заменить who или which, но не where.",
+        "pattern": "a person / thing that...",
+        "example": "The book that won the prize is on the shelf."
+      }
+    ],
+    "miniRules": [],
+    "tables": [],
+    "exampleGroups": [],
+    "commonMistakes": [],
+    "examples": [
+      "The woman who lives upstairs is a musician.",
+      "The laptop which costs less is on sale.",
+      "This is the restaurant where we celebrated.",
+      "The film (that) we watched was funny."
+    ],
+    "textbookSections": [
+      {
+        "type": "text",
+        "eyebrow": "Смысл",
+        "title": "Defining relative clause уточняет существительное",
+        "paragraphs": [
+          "Defining relative clause — часть предложения, которая помогает понять, о каком именно человеке, предмете или месте мы говорим. Она не просто добавляет интересную подробность: без неё может быть непонятно, кто или что имеется в виду.",
+          "Сначала найди существительное, которое нужно уточнить. Затем выбери relative word по роли: who — человек, which — вещь или животное, where — место, в котором происходит действие."
+        ],
+        "examples": [
+          "The woman who called me is my neighbour. — Какая женщина? Та, которая мне позвонила.",
+          "The café where we met is near the station. — Какое кафе? То, где мы встретились."
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Выбор слова",
+        "title": "Who, which, where и that",
+        "intro": "Выбирай слово не только по существительному перед ним, но и по тому, какую роль играет следующая часть предложения.",
+        "headers": [
+          "Слово",
+          "Когда используем",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "who",
+            "люди",
+            "The neighbour who helped us was very kind."
+          ],
+          [
+            "which",
+            "вещи и животные",
+            "The laptop which costs less is on sale."
+          ],
+          [
+            "where",
+            "место, в котором что-то происходит",
+            "This is the café where we met."
+          ],
+          [
+            "that",
+            "может заменить who или which в defining clauses",
+            "The person that called me left a message."
+          ]
+        ]
+      },
+      {
+        "type": "compare",
+        "eyebrow": "Важное различие",
+        "title": "Where или which? Смотри на смысл части после пропуска",
+        "intro": "Название места само по себе не означает, что нужно поставить where. Важно, что именно говорится о месте.",
+        "left": {
+          "title": "WHERE = там, где",
+          "points": [
+            "После where уже есть действие, происходящее в этом месте.",
+            "Where примерно соответствует in / at which; дополнительный предлог в конце такой конструкции не нужен."
+          ],
+          "examples": [
+            "The café where we had breakfast is near the station.",
+            "The town where my grandparents live is quiet."
+          ]
+        },
+        "right": {
+          "title": "WHICH / THAT = который / которая / которое",
+          "points": [
+            "Используй which / that, если само место является предметом действия в придаточной части.",
+            "Если нужен предлог, он может остаться в конце: the café (which / that) we had breakfast at."
+          ],
+          "examples": [
+            "The café which serves breakfast opens at seven.",
+            "The shop that sells bikes is on this street."
+          ]
+        },
+        "note": "Не говори: the café where we had breakfast at ✗. Выбери: the café where we had breakfast ✓ или the café we had breakfast at ✓."
+      },
+      {
+        "type": "formula",
+        "eyebrow": "Структура",
+        "title": "Как построить defining relative clause",
+        "intro": "Relative word стоит сразу после существительного, которое мы уточняем.",
+        "rows": [
+          {
+            "label": "Человек",
+            "form": "person + who / that + clause",
+            "example": "The woman who works here knows my name."
+          },
+          {
+            "label": "Вещь",
+            "form": "thing + which / that + clause",
+            "example": "The phone that takes the best photos is expensive."
+          },
+          {
+            "label": "Место",
+            "form": "place + where + clause",
+            "example": "The hotel where we stayed was quiet."
+          },
+          {
+            "label": "Вопрос о человеке / вещи как объекте",
+            "form": "person / thing + (who / which / that) + subject + verb",
+            "example": "The book (that) I bought is on my desk."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "eyebrow": "Можно ли убрать местоимение?",
+        "title": "Subject или object в придаточной части",
+        "intro": "Who / which / that можно опустить, только если это дополнение (object). Если оно выполняет действие, то есть является подлежащим (subject), его нельзя убрать.",
+        "headers": [
+          "Роль",
+          "Как понять",
+          "Можно ли опустить?",
+          "Пример"
+        ],
+        "rows": [
+          [
+            "Subject",
+            "После местоимения сразу идёт глагол: who lives, which costs",
+            "Нет",
+            "The woman who lives upstairs is a musician."
+          ],
+          [
+            "Object",
+            "После местоимения есть другое подлежащее: I met, we watched",
+            "Да",
+            "The film (that / which) we watched was funny."
+          ]
+        ]
+      },
+      {
+        "type": "note",
+        "eyebrow": "Пунктуация и типичные ошибки",
+        "title": "Что важно запомнить",
+        "text": "В defining relative clauses запятые не ставятся. That может заменить who или which, но не where. Who / which / that нельзя опускать, если местоимение — подлежащее придаточной части. Не повторяй подлежащее: The woman who she lives upstairs ✗ → The woman who lives upstairs ✓. Не соединяй where с лишним предлогом в конце: the café where we met at ✗."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "relative-clauses-step-1",
+        "title": "1. Выбери relative word по смыслу.",
+        "difficulty": "Легко",
+        "instructions": "Выбери слово, которое подходит к человеку, вещи или месту.",
+        "items": [
+          {
+            "id": "1",
+            "input": "single",
+            "prompt": "The neighbour ___ helped us was very kind.",
+            "options": [
+              "who",
+              "where",
+              "which"
+            ],
+            "answer": 0
+          },
+          {
+            "id": "2",
+            "input": "single",
+            "prompt": "The website ___ sells these tickets is official.",
+            "options": [
+              "where",
+              "which",
+              "who"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "3",
+            "input": "single",
+            "prompt": "This is the town ___ my grandparents live.",
+            "options": [
+              "who",
+              "where",
+              "which"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "4",
+            "input": "single",
+            "prompt": "The person ___ I called didn’t answer.",
+            "options": [
+              "which",
+              "who",
+              "where"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "relative-clauses-step-2",
+        "title": "2. Выбери слово в предложении.",
+        "difficulty": "Средне",
+        "instructions": "Обрати внимание: если речь о месте, это не всегда означает where.",
+        "items": [
+          {
+            "id": "1",
+            "input": "select-gap",
+            "segments": [
+              "The library ",
+              " we study after class closes at six."
+            ],
+            "options": [
+              "who",
+              "where",
+              "which"
+            ],
+            "answer": 1
+          },
+          {
+            "id": "2",
+            "input": "select-gap",
+            "segments": [
+              "The bag ",
+              " is under the chair is mine."
+            ],
+            "options": [
+              "where",
+              "who",
+              "which"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "3",
+            "input": "select-gap",
+            "segments": [
+              "The teacher ",
+              " teaches us English is from Ireland."
+            ],
+            "options": [
+              "which",
+              "where",
+              "who"
+            ],
+            "answer": 2
+          },
+          {
+            "id": "4",
+            "input": "select-gap",
+            "segments": [
+              "The film ",
+              " we watched last night was funny."
+            ],
+            "options": [
+              "who",
+              "that",
+              "where"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "id": "relative-clauses-step-3",
+        "title": "3. Впиши подходящее относительное слово.",
+        "difficulty": "Повышенная сложность",
+        "instructions": "Используй who, which, where или that.",
+        "items": [
+          {
+            "id": "1",
+            "input": "gaps",
+            "segments": [
+              "The woman ",
+              " works at the pharmacy is my aunt."
+            ],
+            "answers": [
+              [
+                "who",
+                "that"
+              ]
+            ]
+          },
+          {
+            "id": "2",
+            "input": "gaps",
+            "segments": [
+              "The laptop ",
+              " costs less is on sale."
+            ],
+            "answers": [
+              [
+                "which",
+                "that"
+              ]
+            ]
+          },
+          {
+            "id": "3",
+            "input": "gaps",
+            "segments": [
+              "This is the restaurant ",
+              " we celebrated my birthday."
+            ],
+            "answers": [
+              [
+                "where"
+              ]
+            ]
+          },
+          {
+            "id": "4",
+            "input": "gaps",
+            "segments": [
+              "The jacket ",
+              " I bought yesterday was expensive."
+            ],
+            "answers": [
+              [
+                "which",
+                "that"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "relative-clauses-step-4",
+        "title": "4. Составь полные предложения.",
+        "difficulty": "Самое сложное",
+        "instructions": "Соедини информацию defining relative clause. В некоторых предложениях возможны варианты с who / which / that или без местоимения.",
+        "items": [
+          {
+            "id": "1",
+            "input": "text",
+            "prompt": "the man / live upstairs / be a musician",
+            "acceptedAnswers": [
+              "The man who lives upstairs is a musician.",
+              "The man that lives upstairs is a musician."
+            ]
+          },
+          {
+            "id": "2",
+            "input": "text",
+            "prompt": "the film / we saw on Friday / be too long",
+            "acceptedAnswers": [
+              "The film we saw on Friday was too long.",
+              "The film that we saw on Friday was too long.",
+              "The film which we saw on Friday was too long."
+            ]
+          },
+          {
+            "id": "3",
+            "input": "text",
+            "prompt": "the café / we had breakfast / be near the station",
+            "acceptedAnswers": [
+              "The café where we had breakfast is near the station.",
+              "The café which we had breakfast at is near the station.",
+              "The café that we had breakfast at is near the station.",
+              "The café we had breakfast at is near the station."
+            ]
+          },
+          {
+            "id": "4",
+            "input": "text",
+            "prompt": "the woman / work at reception / know my name",
+            "acceptedAnswers": [
+              "The woman who works at reception knows my name.",
+              "The woman that works at reception knows my name."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
