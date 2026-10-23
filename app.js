@@ -6,6 +6,9 @@
     ? config.students
     : [config.student || {}];
   const activeStudentStorageKey = 'english_space_active_student';
+  // Completion flag lives inside the existing answers JSONB, so no database migration is needed.
+  // A self-completed assignment remains status=draft in Supabase and never enters the Telegram report flow.
+  const SELF_STUDY_COMPLETED_KEY = '__selfStudyCompletedAt';
 
   function normalizeStudentId(value) {
     return String(value ?? '')
@@ -290,60 +293,6 @@
   };
 
 
-  const HomeworkReportService = {
-    isConfigured() {
-      return Boolean(
-        config.features?.telegramNotifications &&
-        CloudService.isConfigured()
-      );
-    },
-    async send(lessonId) {
-      if (!this.isConfigured()) {
-        return { ok: false, skipped: true, reason: 'not_configured' };
-      }
-
-      const baseUrl = safeText(config.supabase?.url).replace(/\/+$/, '');
-      const anonKey = safeText(config.supabase?.anonKey).trim();
-      const endpoint = `${baseUrl}/functions/v1/notify-anastasia-rozalina`;
-      const lesson = HOMEWORK_DATA.find((item) => item.id === lessonId) || {};
-      let homeworkUrl = '';
-      let resultUrl = '';
-      try {
-        const target = new URL(lesson.page || `lesson.html?id=${encodeURIComponent(lessonId)}`, document.baseURI);
-        target.searchParams.set('student', studentId);
-        target.hash = '';
-        homeworkUrl = target.toString();
-        target.hash = 'lesson-result';
-        resultUrl = target.toString();
-      } catch (error) {
-        console.warn('Could not build homework report links:', error);
-      }
-
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-          apikey: anonKey,
-          authorization: `Bearer ${anonKey}`
-        },
-        body: JSON.stringify({
-          kind: 'homework_submit_report',
-          studentId,
-          lessonId,
-          lessonTitle: safeText(lesson.title, lessonId),
-          homeworkUrl,
-          resultUrl
-        })
-      });
-
-      const result = await response.json().catch(() => null);
-      if (!response.ok || !result?.ok) {
-        throw new Error(result?.error || `Homework report error: HTTP ${response.status}`);
-      }
-      return result;
-    }
-  };
-
   function normalizeVocabularyProgress(value) {
     const words = value?.words && typeof value.words === 'object' ? { ...value.words } : {};
     const topics = {};
@@ -427,6 +376,23 @@
               answers: row.answers && typeof row.answers === 'object' ? row.answers : {},
               checkedAt: row.checked_at || row.updated_at
             };
+          }
+          // Preserve self-study completion on other devices without setting a submitted status.
+          // This marker is stored in the existing homework_progress.answers JSONB column.
+          const cloudSelfCompletedAt = row.answers && typeof row.answers === 'object'
+            ? row.answers[SELF_STUDY_COMPLETED_KEY] : null;
+          const localSelfCompletedAt = localResult?.answers?.[SELF_STUDY_COMPLETED_KEY];
+          const selfCompletedAt = dateMs(cloudSelfCompletedAt) > dateMs(localSelfCompletedAt)
+            ? cloudSelfCompletedAt : localSelfCompletedAt;
+          if (selfCompletedAt) {
+            homework.completedIds.push(row.lesson_id);
+            const mergedResult = homework.results[row.lesson_id];
+            if (mergedResult) {
+              mergedResult.answers = {
+                ...(mergedResult.answers && typeof mergedResult.answers === 'object' ? mergedResult.answers : {}),
+                [SELF_STUDY_COMPLETED_KEY]: selfCompletedAt
+              };
+            }
           }
           const cloudSubmitted = ['submitted_pending_report', 'submitted'].includes(String(row.status || ''));
           if (cloudSubmitted) {
@@ -1708,8 +1674,8 @@
         });
         const result = document.getElementById('lesson-result');
         if (result) result.innerHTML = '<p class="muted">Order changed. Check your answers again to save the new order.</p>';
-        const submit = document.getElementById('submit-lesson');
-        if (submit) submit.disabled = true;
+        const finish = document.getElementById('complete-lesson');
+        if (finish) finish.disabled = true;
       };
       const moveTo = (row, desiredIndex) => {
         const movable = sortableDialogueRows(list).filter((entry) => !entry.hasAttribute('data-dialogue-sort-given'));
@@ -2063,7 +2029,7 @@
       correct = JSON.stringify(actual) === JSON.stringify(expected);
     } else if (inputType === 'single') {
       actual = itemNode.querySelector('input:checked')?.value ?? '';
-      correct = Number(actual) === Number(item.answer);
+      correct = actual !== '' && Number(actual) === Number(item.answer);
     } else if (inputType === 'select' || inputType === 'select-gap') {
       actual = itemNode.querySelector('select')?.value ?? '';
       correct = actual !== '' && Number(actual) === Number(item.answer);
@@ -2176,7 +2142,7 @@
         itemNode.classList.add('is-saved');
         if (feedback) {
           feedback.className = 'feedback show neutral';
-          feedback.textContent = 'Your answer has been saved for the teacher.';
+          feedback.textContent = 'Answer saved. This response is not graded automatically.';
         }
         return;
       }
@@ -2226,7 +2192,7 @@
       correct = JSON.stringify(actual) === JSON.stringify(expected);
     } else if (block.type === 'select') {
       actual = node.querySelector('select')?.value;
-      correct = Number(actual) === Number(block.answer);
+      correct = actual !== '' && actual !== undefined && Number(actual) === Number(block.answer);
     } else if (block.type === 'match') {
       actual = [...node.querySelectorAll('[data-match-index]')].map((select) => Number(select.value));
       correct = actual.length > 0 && actual.every((value, index) => value === index);
@@ -2410,7 +2376,7 @@
       ${linkedMaterials}
       ${roadmap}
       <div id="lesson-blocks">${renderedBlocks}</div>
-      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Check answers</button><button class="btn btn-secondary" id="submit-lesson" type="button" ${savedResult ? '' : 'disabled'}>Submit to teacher</button></div><p class="muted save-note">After checking, your answers are saved on this device and synced with Supabase.</p></div>`;
+      <div class="card section lesson-actions"><div id="lesson-result" aria-live="polite"></div><div class="button-row"><button class="btn btn-primary" id="check-lesson" type="button">Check answers</button><button class="btn btn-secondary" id="complete-lesson" type="button" ${progress.completedIds.includes(lesson.id) || !savedResult?.checkedAt ? 'disabled' : ''}>${progress.completedIds.includes(lesson.id) ? 'Completed' : 'Finish homework'}</button></div><p class="muted save-note">Check answers to save your score. When you are ready, choose <strong>Finish homework</strong> to mark it completed. Your progress is saved on this device and synced online when available. No Telegram report is sent to the teacher.</p></div>`;
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
     wireLessonInteractiveInputs(root);
@@ -2463,7 +2429,8 @@
     // Restore not only the values, but also the green/red review state after reload.
     if (savedResult && Number(savedResult.total) > 0) {
       evaluateLesson();
-      byId('lesson-result').innerHTML = `<h3>Saved score: ${Number(savedResult.correct || 0)} of ${Number(savedResult.total || 0)}</h3><p class="muted">${Number(savedResult.percent || 0)}% correct</p>`;
+      const isCompleted = progress.completedIds.includes(lesson.id);
+      byId('lesson-result').innerHTML = `<h3>${isCompleted ? 'Completed' : 'Saved score'}: ${Number(savedResult.correct || 0)} of ${Number(savedResult.total || 0)}</h3><p class="muted">${Number(savedResult.percent || 0)}% correct${isCompleted ? ' · You can review and check your answers again.' : ''}</p>`;
     }
 
     byId('check-lesson').addEventListener('click', () => {
@@ -2471,6 +2438,9 @@
       const manualNote = hasManualResponses ? ' · the extended answer is saved separately and is not included in the score' : '';
       byId('lesson-result').innerHTML = `<h3>Score: ${result.correct} of ${result.total}</h3><p class="muted">${result.percent}% correct${manualNote}</p>`;
       const updatedProgress = window.ProgressService.loadHomeworkProgress();
+      // A second check must not erase an existing self-study completion marker.
+      const completedAt = updatedProgress.results[lesson.id]?.answers?.[SELF_STUDY_COMPLETED_KEY];
+      if (completedAt) result.answers[SELF_STUDY_COMPLETED_KEY] = completedAt;
       updatedProgress.results[lesson.id] = {
         correct: result.correct,
         total: result.total,
@@ -2479,71 +2449,34 @@
         checkedAt: new Date().toISOString()
       };
       window.ProgressService.saveHomeworkProgress(updatedProgress);
-      byId('submit-lesson').disabled = false;
+      byId('complete-lesson').disabled = updatedProgress.completedIds.includes(lesson.id);
     });
 
-    byId('submit-lesson').addEventListener('click', async () => {
-      const button = byId('submit-lesson');
+    byId('complete-lesson').addEventListener('click', () => {
+      const button = byId('complete-lesson');
       const updatedProgress = window.ProgressService.loadHomeworkProgress();
       const result = updatedProgress.results[lesson.id];
-      if (!result || Number(result.total || 0) <= 0) {
-        showToast('Check the answers before submitting the homework.');
+      if (!result?.checkedAt) {
+        showToast('Check your answers before finishing the homework.');
         return;
       }
+      if (updatedProgress.completedIds.includes(lesson.id)) return;
 
-      const submittedAt = new Date().toISOString();
-      updatedProgress.submissions[lesson.id] = {
-        savedAt: submittedAt,
-        status: CloudService.isConfigured() ? 'pending-cloud' : 'local',
-        cloudStatus: CloudService.isConfigured() ? 'submitted_pending_report' : null,
-        reportStatus: CloudService.isConfigured() ? 'pending' : null,
-        reportSentAt: null,
-        reportError: null
+      // Only this explicit action marks homework complete. Checking alone never
+      // moves unfinished assignments out of the New section.
+      const completedAt = new Date().toISOString();
+      result.answers = {
+        ...(result.answers && typeof result.answers === 'object' ? result.answers : {}),
+        [SELF_STUDY_COMPLETED_KEY]: completedAt
       };
-      // Submission, not a perfect score, marks the homework as completed.
-      if (!updatedProgress.completedIds.includes(lesson.id)) updatedProgress.completedIds.push(lesson.id);
+      updatedProgress.completedIds = unique([...updatedProgress.completedIds, lesson.id]);
+      // Deliberately do NOT add a submission, set a submitted status, or call a
+      // Telegram Edge Function. The ordinary draft sync saves the completion marker.
       window.ProgressService.saveHomeworkProgress(updatedProgress);
-
       button.disabled = true;
-      const originalText = button.textContent;
-      button.textContent = 'Sending…';
-
-      try {
-        if (CloudService.isConfigured()) {
-          // Wait until the submitted row is really written before the report function reads it.
-          await window.ProgressService.syncToCloud('homework');
-          const report = await HomeworkReportService.send(lesson.id);
-          const latest = window.ProgressService.loadHomeworkProgress();
-          latest.submissions[lesson.id] = {
-            savedAt: submittedAt,
-            status: 'report-sent',
-            cloudStatus: 'submitted',
-            reportStatus: 'sent',
-            reportSentAt: report?.reportSentAt || new Date().toISOString(),
-            reportError: null
-          };
-          window.ProgressService.saveHomeworkProgress(latest);
-          showToast(report?.skipped ? 'Homework saved in Supabase.' : 'Homework submitted. The teacher received the Telegram report.');
-        } else {
-          showToast('Homework saved on this device. Supabase is not configured.');
-        }
-      } catch (error) {
-        console.error('Homework submission/report error:', error);
-        const latest = window.ProgressService.loadHomeworkProgress();
-        latest.submissions[lesson.id] = {
-          savedAt: submittedAt,
-          status: 'report-failed',
-          cloudStatus: 'submitted_pending_report',
-          reportStatus: 'failed',
-          reportSentAt: null,
-          reportError: safeText(error?.message, 'unknown error')
-        };
-        window.ProgressService.saveHomeworkProgress(latest);
-        showToast(`Homework saved, but the Telegram report was not sent: ${safeText(error?.message, 'unknown error')}`);
-      } finally {
-        button.disabled = false;
-        button.textContent = originalText;
-      }
+      button.textContent = 'Completed';
+      byId('lesson-result').innerHTML = `<h3>Homework completed · ${Number(result.correct || 0)} of ${Number(result.total || 0)}</h3><p class="muted">${Number(result.percent || 0)}% correct. Your progress is saved. No Telegram report was sent.</p>`;
+      showToast('Homework completed. No report sent to the teacher.');
     });
   }
 
