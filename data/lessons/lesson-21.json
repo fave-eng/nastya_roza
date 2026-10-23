@@ -117,9 +117,9 @@
     {
       "type": "exercise",
       "id": "restaurant-dialogue-order-2",
-      "layout": "dialogue",
+      "layout": "dialogue-sort",
       "title": "2 Order the conversation.",
-      "instructions": "The lines are mixed up, as in the workbook. Choose their correct position in the conversation. Numbers 1, 6, and 15 are examples.",
+      "instructions": "Drag the complete lines into the correct order to make a natural conversation. Use the handle ⠿ or the ↑ ↓ buttons. Lines 1, 6, and 15 are given examples and stay in place.",
       "hideAnswersOnError": true,
       "items": [
         {

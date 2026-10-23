@@ -1608,6 +1608,174 @@
     }).join('')}</div>`;
   }
 
+  // Restaurant dialogue: the given lines 1, 6 and 15 stay in their correct slots.
+  // All other complete turns can be reordered by dragging or with arrow buttons.
+  function renderSortableDialogue(block, blockId) {
+    const items = Array.isArray(block.items) ? block.items : [];
+    const byId = new Map(items.map((item) => [safeText(item.id), item]));
+    const lines = Array.isArray(block.dialogueLines) ? block.dialogueLines : [];
+    const rows = lines.map((line) => {
+      const id = safeText(line.itemIds?.[0]);
+      const item = byId.get(id);
+      if (!item) return null;
+      const given = item.example === true;
+      const givenPosition = given ? Number(item.exampleAnswer) : 0;
+      const speaker = safeText(line.speaker);
+      return { id, item, line, given, givenPosition, speaker };
+    }).filter(Boolean);
+    const pinned = new Map(rows.filter((row) => row.given).map((row) => [row.givenPosition, row]));
+    const movable = rows.filter((row) => !row.given);
+    let cursor = 0;
+    const initial = Array.from({ length: rows.length }, (_, index) => pinned.get(index + 1) || movable[cursor++]);
+    const markup = initial.map((row, index) => {
+      const given = row.given;
+      const speakerClass = row.speaker.toLowerCase() === 'b' ? ' speaker-b' : ' speaker-a';
+      return `<div class="dialogue-sort-row${given ? ' dialogue-sort-given' : ''}" data-dialogue-sort-line="${escapeHtml(row.id)}" data-exercise-item="${escapeHtml(row.id)}"${given ? ` data-dialogue-sort-given="${row.givenPosition}"` : ''}>
+        <div class="dialogue-sort-grip-cell">${given
+          ? '<span class="dialogue-sort-lock" title="Given position" aria-label="Given position">●</span>'
+          : `<button class="dialogue-sort-grip" type="button" aria-label="Drag line ${escapeHtml(row.speaker)}: ${escapeHtml(row.line.text)}" title="Drag to move">⠿</button>`}</div>
+        <span class="dialogue-sort-slot" data-dialogue-sort-position aria-label="Current position">${index + 1}</span>
+        <span class="dialogue-speaker${speakerClass}" aria-label="Speaker ${escapeHtml(row.speaker)}">${escapeHtml(row.speaker)}</span>
+        <div class="dialogue-sort-utterance">${escapeHtml(row.line.text)}${given ? `<span class="dialogue-sort-given-label">Given: ${row.givenPosition}</span>` : ''}</div>
+        <div class="dialogue-sort-actions">${given ? '' : `<button type="button" data-dialogue-sort-move="up" aria-label="Move line up" title="Move up">↑</button><button type="button" data-dialogue-sort-move="down" aria-label="Move line down" title="Move down">↓</button>`}</div>
+        <div class="feedback dialogue-sort-feedback" aria-live="polite"></div>
+      </div>`;
+    }).join('');
+    return `<style>
+      .dialogue-sort-list {display:grid;gap:9px;margin-top:14px}
+      .dialogue-sort-row {display:grid;grid-template-columns:34px 27px 34px minmax(0,1fr) 74px;gap:8px;align-items:center;padding:11px 12px;border:1px solid var(--border,#d8e0e8);border-radius:12px;background:var(--surface,#fff);min-width:0;transition:background .12s,border-color .12s,box-shadow .12s}
+      .dialogue-sort-row.dialogue-sort-given {background:#f1f5f9;border-style:dashed}
+      .dialogue-sort-row.dialogue-sort-dragging {background:#eaf2ff;border-color:#7ba8f3;box-shadow:0 5px 18px rgba(20,55,100,.15)}
+      .dialogue-sort-row.is-correct {border-color:#65a98b}
+      .dialogue-sort-row.is-wrong {border-color:#d6a3a3}
+      .dialogue-sort-grip-cell {display:flex;justify-content:center;align-items:center}
+      .dialogue-sort-grip {display:grid;place-items:center;width:34px;height:38px;padding:0;border:1px solid #cad5e2;border-radius:9px;background:#f8fafc;color:#475569;cursor:grab;touch-action:none;user-select:none;font-size:25px;line-height:1}
+      .dialogue-sort-grip:active {cursor:grabbing}
+      .dialogue-sort-grip:focus-visible,.dialogue-sort-actions button:focus-visible {outline:3px solid #60a5fa;outline-offset:2px}
+      .dialogue-sort-lock {font-size:12px;color:#94a3b8}
+      .dialogue-sort-slot {text-align:center;font-size:13px;font-weight:700;color:#64748b;font-variant-numeric:tabular-nums}
+      .dialogue-sort-row .dialogue-speaker {display:grid;place-items:center;min-width:30px;min-height:30px;border-radius:50%;font-weight:700}
+      .dialogue-sort-utterance {min-width:0;overflow-wrap:anywhere;line-height:1.5}
+      .dialogue-sort-given-label {display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;background:#dce7f5;color:#3b5577;font-size:11px;font-weight:700;white-space:nowrap}
+      .dialogue-sort-actions {display:flex;gap:4px;justify-content:flex-end}
+      .dialogue-sort-actions button {width:33px;height:35px;padding:0;border:1px solid #cbd5e1;border-radius:8px;background:#fff;color:#334155;cursor:pointer;font-size:19px}
+      .dialogue-sort-actions button:disabled {opacity:.3;cursor:not-allowed}
+      .dialogue-sort-feedback {grid-column:4 / -1;min-height:0}
+      .dialogue-sort-feedback:not(.show) {display:none}
+      @media(max-width:580px){.dialogue-sort-row {grid-template-columns:30px 20px 29px minmax(0,1fr) 65px;gap:5px;padding:10px 7px}.dialogue-sort-grip{width:30px;height:36px}.dialogue-sort-actions button{width:29px;height:32px}.dialogue-sort-utterance{font-size:14px}.dialogue-sort-given-label{margin-left:4px}}
+    </style><div class="dialogue-sort-help">Drag the <strong>⠿</strong> handle to move a complete line. On a phone, drag the handle or use the ↑ ↓ buttons. Lines 1, 6 and 15 are given examples.</div>
+    <div class="dialogue-sort-list" data-dialogue-sort-list role="group" aria-label="Reorder the restaurant conversation">${markup}</div>`;
+  }
+
+  function sortableDialogueRows(list) {
+    return [...list.querySelectorAll('[data-dialogue-sort-line]')];
+  }
+
+  function updateSortableDialoguePositions(list) {
+    sortableDialogueRows(list).forEach((row, index) => {
+      const label = row.querySelector('[data-dialogue-sort-position]');
+      if (label) label.textContent = String(index + 1);
+    });
+    const movable = sortableDialogueRows(list).filter((row) => !row.hasAttribute('data-dialogue-sort-given'));
+    movable.forEach((row, index) => {
+      const up = row.querySelector('[data-dialogue-sort-move="up"]');
+      const down = row.querySelector('[data-dialogue-sort-move="down"]');
+      if (up) up.disabled = index === 0;
+      if (down) down.disabled = index === movable.length - 1;
+    });
+  }
+
+  function arrangeSortableDialogue(list, movableRows) {
+    const all = sortableDialogueRows(list);
+    const pinned = new Map(all.filter((row) => row.hasAttribute('data-dialogue-sort-given'))
+      .map((row) => [Number(row.dataset.dialogueSortGiven), row]));
+    const iterator = movableRows[Symbol.iterator]();
+    for (let position = 1; position <= all.length; position += 1) {
+      const row = pinned.get(position) || iterator.next().value;
+      if (row) list.appendChild(row);
+    }
+    updateSortableDialoguePositions(list);
+  }
+
+  function wireSortableDialogues(root) {
+    root.querySelectorAll('[data-dialogue-sort-list]').forEach((list) => {
+      updateSortableDialoguePositions(list);
+      const onChanged = () => {
+        sortableDialogueRows(list).forEach((row) => {
+          row.classList.remove('is-correct', 'is-wrong');
+          const feedback = row.querySelector('.feedback');
+          if (feedback) { feedback.className = 'feedback dialogue-sort-feedback'; feedback.textContent = ''; }
+        });
+        const result = document.getElementById('lesson-result');
+        if (result) result.innerHTML = '<p class="muted">Order changed. Check your answers again to save the new order.</p>';
+        const submit = document.getElementById('submit-lesson');
+        if (submit) submit.disabled = true;
+      };
+      const moveTo = (row, desiredIndex) => {
+        const movable = sortableDialogueRows(list).filter((entry) => !entry.hasAttribute('data-dialogue-sort-given'));
+        const oldIndex = movable.indexOf(row);
+        if (oldIndex < 0) return;
+        movable.splice(oldIndex, 1);
+        const insertAt = Math.max(0, Math.min(movable.length, desiredIndex));
+        if (oldIndex === insertAt) return;
+        movable.splice(insertAt, 0, row);
+        arrangeSortableDialogue(list, movable);
+        onChanged();
+      };
+      list.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-dialogue-sort-move]');
+        if (!button) return;
+        const row = button.closest('[data-dialogue-sort-line]');
+        const movable = sortableDialogueRows(list).filter((entry) => !entry.hasAttribute('data-dialogue-sort-given'));
+        moveTo(row, movable.indexOf(row) + (button.dataset.dialogueSortMove === 'up' ? -1 : 1));
+      });
+      list.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+        const handle = event.target.closest('.dialogue-sort-grip');
+        if (!handle) return;
+        event.preventDefault();
+        const row = handle.closest('[data-dialogue-sort-line]');
+        const movable = sortableDialogueRows(list).filter((entry) => !entry.hasAttribute('data-dialogue-sort-given'));
+        moveTo(row, movable.indexOf(row) + (event.key === 'ArrowUp' ? -1 : 1));
+        handle.focus();
+      });
+      let active = null;
+      list.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0 && event.pointerType === 'mouse') return;
+        const handle = event.target.closest('.dialogue-sort-grip');
+        if (!handle) return;
+        const row = handle.closest('[data-dialogue-sort-line]');
+        if (!row || row.hasAttribute('data-dialogue-sort-given')) return;
+        active = { pointerId: event.pointerId, row, y: event.clientY, moved: false };
+        list.setPointerCapture(event.pointerId);
+        event.preventDefault();
+      });
+      list.addEventListener('pointermove', (event) => {
+        if (!active || active.pointerId !== event.pointerId) return;
+        if (!active.moved && Math.abs(event.clientY - active.y) < 6) return;
+        active.moved = true;
+        active.row.classList.add('dialogue-sort-dragging');
+        const target = document.elementFromPoint(event.clientX, event.clientY)?.closest('[data-dialogue-sort-line]');
+        if (!target || target === active.row || !list.contains(target)) return;
+        const rect = target.getBoundingClientRect();
+        const after = event.clientY > rect.top + rect.height / 2;
+        const rows = sortableDialogueRows(list);
+        const targetIndex = rows.indexOf(target);
+        const beforeCount = rows.slice(0, targetIndex).filter((row) => row !== active.row && !row.hasAttribute('data-dialogue-sort-given')).length;
+        const desiredIndex = beforeCount + (after && !target.hasAttribute('data-dialogue-sort-given') ? 1 : 0);
+        moveTo(active.row, desiredIndex);
+      });
+      const stop = (event) => {
+        if (!active || active.pointerId !== event.pointerId) return;
+        active.row.classList.remove('dialogue-sort-dragging');
+        if (list.hasPointerCapture(event.pointerId)) list.releasePointerCapture(event.pointerId);
+        active = null;
+      };
+      list.addEventListener('pointerup', stop);
+      list.addEventListener('pointercancel', stop);
+    });
+  }
+
   function renderExerciseItemGroups(block, blockId) {
     const items = Array.isArray(block.items) ? block.items : [];
     const itemMap = new Map(items.map((item, index) => [safeText(item.id, `${index + 1}`), { item, index }]));
@@ -1792,6 +1960,8 @@
         ? renderExerciseItemGroups(block, id)
         : block.layout === 'dialogue'
         ? renderDialogueExercise(block, id)
+        : block.layout === 'dialogue-sort'
+        ? renderSortableDialogue(block, id)
         : block.layout === 'crossword'
           ? renderCrosswordExercise(block, id)
           : block.layout === 'past-columns'
@@ -1805,7 +1975,7 @@
       const revealAttrs = revealAfterComplete
         ? ` data-reveal-after-complete="${escapeHtml(revealAfterComplete)}" hidden`
         : '';
-      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}${block.visualGrid === true ? ' visual-grid-card' : ''}" data-task="${escapeHtml(id)}" data-type="exercise"${revealAttrs}>
+      return `<article class="card lesson-block exercise-card${block.layout === 'dialogue' || block.layout === 'dialogue-sort' ? ' dialogue-card' : ''}${hasStickyImage ? ' has-sticky-image' : ''}${block.visualGrid === true ? ' visual-grid-card' : ''}" data-task="${escapeHtml(id)}" data-type="exercise"${revealAttrs}>
         <div class="exercise-heading"><span class="eyebrow">Exercise</span><h3>${title}</h3>${block.instructions ? `<p class="muted exercise-instructions">${escapeHtml(block.instructions)}</p>` : ''}${player}${wordBank}${wordBanks}</div>
         ${exerciseBody}
       </article>`;
@@ -1925,6 +2095,34 @@
     let correctCount = 0;
     let total = 0;
 
+    if (block.layout === 'dialogue-sort') {
+      const order = [...node.querySelectorAll('[data-dialogue-sort-line]')]
+        .map((row) => safeText(row.dataset.dialogueSortLine));
+      const actual = { __order: order };
+      let correctCount = 0;
+      let total = 0;
+      (Array.isArray(block.items) ? block.items : []).forEach((item) => {
+        const itemId = safeText(item.id);
+        const position = order.indexOf(itemId) + 1;
+        actual[itemId] = position;
+        if (item.example || item.displayOnly) return;
+        const expected = Number(item.answerPosition || item.options?.[Number(item.answer)]);
+        const correct = position > 0 && position === expected;
+        total += 1;
+        if (correct) correctCount += 1;
+        const row = node.querySelector(`[data-exercise-item="${CSS.escape(itemId)}"]`);
+        if (!row) return;
+        row.classList.toggle('is-correct', correct);
+        row.classList.toggle('is-wrong', !correct);
+        const feedback = row.querySelector('.feedback');
+        if (feedback) {
+          feedback.className = `feedback dialogue-sort-feedback show ${correct ? 'good' : 'bad'}`;
+          feedback.textContent = correct ? 'Correct position!' : 'This line is not in the right place yet.';
+        }
+      });
+      return { actual, correctCount, total };
+    }
+
     // Some workbook charts ask the learner to write a set of words into a column.
     // The order inside the column is not part of the task, so validate the set rather
     // than forcing the answer-key order. This branch is opt-in and does not affect
@@ -2042,6 +2240,47 @@
 
   function restoreExerciseAnswers(block, node, saved) {
     if (!saved || typeof saved !== 'object') return;
+    if (block.layout === 'dialogue-sort') {
+      const list = node.querySelector('[data-dialogue-sort-list]');
+      if (!list) return;
+      const items = Array.isArray(block.items) ? block.items : [];
+      const allIds = items.map((item) => safeText(item.id));
+      const examples = new Set(items.filter((item) => item.example).map((item) => safeText(item.id)));
+      let movableIds = [];
+      if (Array.isArray(saved.__order)) {
+        movableIds = saved.__order.map(safeText).filter((id) => allIds.includes(id) && !examples.has(id));
+      } else {
+        // Migration: older versions saved a dropdown option index for each line.
+        const byPosition = new Map();
+        items.forEach((item) => {
+          if (item.example) return;
+          const oldIndex = saved[safeText(item.id)];
+          if (oldIndex === undefined || oldIndex === '') return;
+          const position = Number(item.options?.[Number(oldIndex)]);
+          if (position > 0 && !byPosition.has(position)) byPosition.set(position, safeText(item.id));
+        });
+        if (byPosition.size) {
+          const givenPositions = new Set(items.filter((item) => item.example).map((item) => Number(item.exampleAnswer)));
+          const movableSlots = Array.from({ length: items.length }, (_, index) => index + 1)
+            .filter((position) => !givenPositions.has(position));
+          const placed = Array(movableSlots.length).fill(null);
+          byPosition.forEach((id, position) => {
+            const index = movableSlots.indexOf(position);
+            if (index >= 0 && !placed[index]) placed[index] = id;
+          });
+          const used = new Set(placed.filter(Boolean));
+          const remaining = allIds.filter((id) => !examples.has(id) && !used.has(id));
+          movableIds = placed.map((id) => id || remaining.shift());
+        }
+      }
+      const movableRows = sortableDialogueRows(list).filter((row) => !row.hasAttribute('data-dialogue-sort-given'));
+      const byId = new Map(movableRows.map((row) => [safeText(row.dataset.dialogueSortLine), row]));
+      const seen = new Set();
+      const ordered = movableIds.concat(movableRows.map((row) => safeText(row.dataset.dialogueSortLine)))
+        .filter((id) => byId.has(id) && !seen.has(id) && seen.add(id)).map((id) => byId.get(id));
+      arrangeSortableDialogue(list, ordered);
+      return;
+    }
     (Array.isArray(block.items) ? block.items : []).forEach((item, index) => {
       if (item.example || item.displayOnly) return;
       const itemId = safeText(item.id, `${index + 1}`);
@@ -2175,6 +2414,7 @@
 
     restoreLessonAnswers(root, blocks, savedResult?.answers);
     wireLessonInteractiveInputs(root);
+    wireSortableDialogues(root);
     wireConditionalLessonBlocks(root);
 
     root.querySelectorAll('[data-reorder-source]').forEach((source) => {
